@@ -21,11 +21,15 @@ platform :ios do
   end
 
   desc "SwiftLints the project"
-  lane :lint do
+  lane :build do
     swiftlint(strict: true,
               quiet: true,
               config_file: ".swiftlint.yml",
               executable: "Pods/SwiftLint/swiftlint")
+
+    xcodebuild(scheme: "Capsule",
+               workspace: "Capsule.xcworkspace",
+               xcpretty_output: "simple")
   end
 
   after_all do |lane|
