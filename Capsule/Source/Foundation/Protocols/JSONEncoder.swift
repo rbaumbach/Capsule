@@ -22,7 +22,7 @@
 
 import Foundation
 
-protocol JSONEncoderProtocol {
+public protocol JSONEncoderProtocol {
     var outputFormatting: JSONEncoder.OutputFormatting { get set }
     var dateEncodingStrategy: JSONEncoder.DateEncodingStrategy { get set }
     

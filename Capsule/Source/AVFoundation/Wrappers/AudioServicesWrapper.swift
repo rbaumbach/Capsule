@@ -22,14 +22,14 @@
 
 import AVFoundation
 
-protocol AudioServicesWrapperProtocol {
+public protocol AudioServicesWrapperProtocol {
     func vibrate()
 }
 
-class AudioServicesWrapper: AudioServicesWrapperProtocol {
+public class AudioServicesWrapper: AudioServicesWrapperProtocol {
     // MARK: - Public methods
     
-    func vibrate() {
+    public func vibrate() {
         AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
     }
 }

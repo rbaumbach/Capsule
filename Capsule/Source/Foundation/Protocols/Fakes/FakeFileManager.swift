@@ -22,21 +22,21 @@
 
 import Foundation
 
-class FakeFileManager: FileManagerProtocol {
+public class FakeFileManager: FileManagerProtocol {
     // MARK: - Captured properties
     
-    var capturedSearchPathDirectory: FileManager.SearchPathDirectory?
-    var capturedSearchPathDomainMask: FileManager.SearchPathDomainMask?
+    public var capturedSearchPathDirectory: FileManager.SearchPathDirectory?
+    public var capturedSearchPathDomainMask: FileManager.SearchPathDomainMask?
     
-    var capturedFileExistsPath: String?
+    public var capturedFileExistsPath: String?
     
-    var capturedCreateDirectoryURL: URL?
-    var capturedCreateDirectoryCreateIntermediates: Bool?
-    var capturedCreateDirectoryAttributes: [FileAttributeKey: Any]?
+    public var capturedCreateDirectoryURL: URL?
+    public var capturedCreateDirectoryCreateIntermediates: Bool?
+    public var capturedCreateDirectoryAttributes: [FileAttributeKey: Any]?
     
     // MARK: - Stubbed properties
         
-    var stubbedTemporaryDirectory: URL = {
+    public var stubbedTemporaryDirectory: URL = {
         var components = URLComponents()
         components.scheme = "file"
         components.host = ""
@@ -45,7 +45,7 @@ class FakeFileManager: FileManagerProtocol {
         return components.url!
     }()
     
-    var stubbedURLs: [URL] = {
+    public var stubbedURLs: [URL] = {
         var components = URLComponents()
         components.scheme = "file"
         components.host = ""
@@ -54,29 +54,29 @@ class FakeFileManager: FileManagerProtocol {
         return [components.url!, URL(string: "https://theaccidentalengineer.com")!]
     }()
     
-    var stubbedFileExistsPath = false
+    public var stubbedFileExistsPath = false
     
     // MARK: - <FileManagerProtocol>
     
-    var temporaryDirectory: URL {
+    public var temporaryDirectory: URL {
         return stubbedTemporaryDirectory
     }
     
-    func urls(for directory: FileManager.SearchPathDirectory,
-              in domainMask: FileManager.SearchPathDomainMask) -> [URL] {
+    public func urls(for directory: FileManager.SearchPathDirectory,
+                     in domainMask: FileManager.SearchPathDomainMask) -> [URL] {
         capturedSearchPathDirectory = directory
         capturedSearchPathDomainMask = domainMask
         
         return stubbedURLs
     }
     
-    func fileExists(atPath path: String) -> Bool {
+    public func fileExists(atPath path: String) -> Bool {
         capturedFileExistsPath = path
         
         return stubbedFileExistsPath
     }
     
-    func createDirectory(at url: URL, withIntermediateDirectories createIntermediates: Bool, attributes: [FileAttributeKey: Any]?) throws {
+    public func createDirectory(at url: URL, withIntermediateDirectories createIntermediates: Bool, attributes: [FileAttributeKey: Any]?) throws {
         capturedCreateDirectoryURL = url
         capturedCreateDirectoryCreateIntermediates = createIntermediates
         capturedCreateDirectoryAttributes = attributes

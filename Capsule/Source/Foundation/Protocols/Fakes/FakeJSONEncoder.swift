@@ -22,23 +22,23 @@
 
 import Foundation
 
-class FakeJSONEncoder: JSONEncoderProtocol {
+public class FakeJSONEncoder: JSONEncoderProtocol {
     // MARK: - Captured properties
     
-    var capturedOutputFormatting: JSONEncoder.OutputFormatting?
-    var capturedDateEncodingStrategy: JSONEncoder.DateEncodingStrategy?
-    var capturedEncodeValue: Any?
+    public var capturedOutputFormatting: JSONEncoder.OutputFormatting?
+    public var capturedDateEncodingStrategy: JSONEncoder.DateEncodingStrategy?
+    public var capturedEncodeValue: Any?
         
     // MARK: - Stubbed properties
     
-    var stubbedOutputFormatting = JSONEncoder.OutputFormatting.prettyPrinted
-    var stubbedDateEncodingStrategy = JSONEncoder.DateEncodingStrategy.iso8601
+    public var stubbedOutputFormatting = JSONEncoder.OutputFormatting.prettyPrinted
+    public var stubbedDateEncodingStrategy = JSONEncoder.DateEncodingStrategy.iso8601
     
-    var stubbedEncodeData = "tacos".data(using: .utf8)!
+    public var stubbedEncodeData = "tacos".data(using: .utf8)!
         
     // MARK: - <JSONEncoderProtocol>
     
-    var outputFormatting: JSONEncoder.OutputFormatting {
+    public var outputFormatting: JSONEncoder.OutputFormatting {
         get {
             return stubbedOutputFormatting
         }
@@ -48,7 +48,7 @@ class FakeJSONEncoder: JSONEncoderProtocol {
         }
     }
     
-    var dateEncodingStrategy: JSONEncoder.DateEncodingStrategy {
+    public var dateEncodingStrategy: JSONEncoder.DateEncodingStrategy {
         get {
             return stubbedDateEncodingStrategy
         }
@@ -58,7 +58,7 @@ class FakeJSONEncoder: JSONEncoderProtocol {
         }
     }
     
-    func encode<T>(_ value: T) throws -> Data where T: Encodable {
+    public func encode<T>(_ value: T) throws -> Data where T: Encodable {
         capturedEncodeValue = value
         
         return stubbedEncodeData

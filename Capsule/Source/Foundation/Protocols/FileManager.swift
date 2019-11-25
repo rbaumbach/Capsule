@@ -24,7 +24,7 @@ import Foundation
 
 // MARK: - FileManager
 
-protocol FileManagerProtocol {
+public protocol FileManagerProtocol {
     var temporaryDirectory: URL { get }
 
     func urls(for directory: FileManager.SearchPathDirectory,

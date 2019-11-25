@@ -22,7 +22,7 @@
 
 import AVFoundation
 
-protocol AVCaptureSessionProtocol {
+public protocol AVCaptureSessionProtocol {
     func startRunning()
     func stopRunning()
 }

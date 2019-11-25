@@ -22,14 +22,14 @@
 
 import Foundation
 
-class FakeAudioServicesWrapper: AudioServicesWrapperProtocol {
+public class FakeAudioServicesWrapper: AudioServicesWrapperProtocol {
     // MARK: - Captured properties
     
-    var didCallVibrate = false
+    public var didCallVibrate = false
     
     // MARK: - <AudioServicesWrapperProtocol>
     
-    func vibrate() {
+    public func vibrate() {
         didCallVibrate = true
     }
 }

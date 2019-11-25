@@ -22,41 +22,41 @@
 
 import Foundation
 
-class FakeUserDefaults: UserDefaultsProtocol {
+public class FakeUserDefaults: UserDefaultsProtocol {
     // MARK: - Captured properties
     
-    var capturedSetValue: Any?
-    var capturedSetKey: String?
-    var capturedSetBoolKey: String?
-    var capturedSetBoolValue: Bool?
+    public var capturedSetValue: Any?
+    public var capturedSetKey: String?
+    public var capturedSetBoolKey: String?
+    public var capturedSetBoolValue: Bool?
     
-    var capturedStringKey: String?
-    var capturedBoolKey: String?
+    public var capturedStringKey: String?
+    public var capturedBoolKey: String?
     
     // MARK: - Stubbed properties
 
-    var stubbedString = "llaves"
-    var stubbedBool = false
+    public var stubbedString = "llaves"
+    public var stubbedBool = false
     
     // MARK: - <UserDefaultsProtocol>
     
-    func set(_ value: Any?, forKey defaultName: String) {
+    public func set(_ value: Any?, forKey defaultName: String) {
         capturedSetValue = value
         capturedSetKey = defaultName
     }
     
-    func set(_ value: Bool, forKey defaultName: String) {
+    public func set(_ value: Bool, forKey defaultName: String) {
         capturedSetBoolKey = defaultName
         capturedSetBoolValue = value
     }
     
-    func string(forKey defaultName: String) -> String? {
+    public func string(forKey defaultName: String) -> String? {
         capturedStringKey = defaultName
         
         return stubbedString
     }
     
-    func bool(forKey defaultName: String) -> Bool {
+    public func bool(forKey defaultName: String) -> Bool {
         capturedBoolKey = defaultName
         
         return stubbedBool

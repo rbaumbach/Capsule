@@ -22,14 +22,14 @@
 
 import Foundation
 
-class FakeSleepWrapper: SleepWrapperProtocol {
+public class FakeSleepWrapper: SleepWrapperProtocol {
     // MARK: - Captured properties
     
-    var capturedSleepSeconds: Int?
+    public var capturedSleepSeconds: Int?
     
     // MARK: - <SleeperProtocol>
     
-    func sleep(seconds: Int) {
+    public func sleep(seconds: Int) {
         capturedSleepSeconds = seconds
     }
 }

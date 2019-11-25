@@ -22,20 +22,20 @@
 
 import Foundation
 
-class FakeAVCaptureSession: AVCaptureSessionProtocol {
+public class FakeAVCaptureSession: AVCaptureSessionProtocol {
     // MARK: - Captured properties
     
-    var didStartRunning = false
+    public var didStartRunning = false
     
-    var didStopRunning = false
+    public var didStopRunning = false
     
     // MARK: - <AVCaptureSessionProtocol>
     
-    func startRunning() {
+    public func startRunning() {
         didStartRunning = true
     }
     
-    func stopRunning() {
+    public func stopRunning() {
         didStopRunning = true
     }
 }

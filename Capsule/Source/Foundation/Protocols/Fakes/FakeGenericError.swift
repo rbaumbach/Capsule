@@ -22,6 +22,6 @@
 
 import Foundation
 
-enum FakeGenericError: Error {
+public enum FakeGenericError: Error {
     case whoCares
 }

@@ -22,7 +22,7 @@
 
 import Foundation
 
-protocol CalendarProtocol {
+public protocol CalendarProtocol {
     func component(_ component: Calendar.Component, from date: Date) -> Int
 }
 

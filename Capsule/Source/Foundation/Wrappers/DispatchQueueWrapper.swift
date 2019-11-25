@@ -22,19 +22,19 @@
 
 import Foundation
 
-protocol DispatchQueueWrapperProtocol {
+public protocol DispatchQueueWrapperProtocol {
     func mainAsync(completionHandler: @escaping () -> Void)
     func mainAfter(seconds: Int, completionHandler: @escaping () -> Void)
 }
 
-class DispatchQueueWrapper: DispatchQueueWrapperProtocol {
+public class DispatchQueueWrapper: DispatchQueueWrapperProtocol {
     // MARK: - Public methods
     
-    func mainAsync(completionHandler: @escaping () -> Void) {
+    public func mainAsync(completionHandler: @escaping () -> Void) {
         DispatchQueue.main.async(execute: completionHandler)
     }
     
-    func mainAfter(seconds: Int, completionHandler: @escaping () -> Void) {
+    public func mainAfter(seconds: Int, completionHandler: @escaping () -> Void) {
         DispatchQueue.main.asyncAfter(deadline: .now() + Double(seconds), execute: completionHandler)
     }
 }

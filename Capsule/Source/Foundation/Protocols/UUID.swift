@@ -22,7 +22,7 @@
 
 import Foundation
 
-protocol UUIDProtocol {
+public protocol UUIDProtocol {
     var uuidString: String { get }
 }
 

@@ -22,12 +22,12 @@
 
 import Foundation
 
-protocol SleepWrapperProtocol {
+public protocol SleepWrapperProtocol {
     func sleep(seconds: Int)
 }
 
-class SleepWrapper: SleepWrapperProtocol {
-    func sleep(seconds: Int) {
+public class SleepWrapper: SleepWrapperProtocol {
+    public func sleep(seconds: Int) {
         systemSleep(seconds: seconds)
     }
 }
@@ -35,6 +35,6 @@ class SleepWrapper: SleepWrapperProtocol {
 // Note: This systemSleep function was created due to "collisions" between the SleepWrapper method
 // sleep() and the global Swift function sleep()
 
-func systemSleep(seconds: Int) {
+private func systemSleep(seconds: Int) {
     sleep(UInt32(seconds))
 }

@@ -22,7 +22,7 @@
 
 import Foundation
 
-protocol UserDefaultsProtocol {
+public protocol UserDefaultsProtocol {
     func set(_ value: Any?, forKey defaultName: String)
     func set(_ value: Bool, forKey defaultName: String)
     

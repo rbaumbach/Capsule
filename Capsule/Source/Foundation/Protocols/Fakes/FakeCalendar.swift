@@ -22,19 +22,19 @@
 
 import Foundation
 
-class FakeCalendar: CalendarProtocol {
+public class FakeCalendar: CalendarProtocol {
     // MARK: - Captured properties
     
-    var capturedComponent: Calendar.Component?
-    var capturedComponentDate: Date?
+    public var capturedComponent: Calendar.Component?
+    public var capturedComponentDate: Date?
     
     // MARK: - Stubbed properties
 
-    var stubbedComponent = 15
+    public var stubbedComponent = 15
     
     // MARK: - <CalendarProtocol>
     
-    func component(_ component: Calendar.Component, from date: Date) -> Int {
+    public func component(_ component: Calendar.Component, from date: Date) -> Int {
         capturedComponent = component
         capturedComponentDate = date
         

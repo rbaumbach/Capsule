@@ -22,26 +22,26 @@
 
 import Foundation
 
-class FakeJSONDecoder<T>: JSONDecoderProtocol {
+public class FakeJSONDecoder<T>: JSONDecoderProtocol {
     // MARK: - Captured properties
     
-    var capturedDateDecodingStrategy: JSONDecoder.DateDecodingStrategy?
+    public var capturedDateDecodingStrategy: JSONDecoder.DateDecodingStrategy?
     
-    var capturedDecodeTypeAsString: String?
-    var capturedDecodeData: Data?
+    public var capturedDecodeTypeAsString: String?
+    public var capturedDecodeData: Data?
         
     // MARK: - Stubbed properties
     
-    var stubbedDateDecodingStrategy = JSONDecoder.DateDecodingStrategy.iso8601
-    var stubbedDecodedJSON: T?
+    public var stubbedDateDecodingStrategy = JSONDecoder.DateDecodingStrategy.iso8601
+    public var stubbedDecodedJSON: T?
     
     // MARK: - Exceptions
     
-    var shouldThrowDecodeException = false
+    public var shouldThrowDecodeException = false
         
     // MARK: - <JSONDecoderProtocol>
     
-    var dateDecodingStrategy: JSONDecoder.DateDecodingStrategy {
+    public var dateDecodingStrategy: JSONDecoder.DateDecodingStrategy {
         get {
             return stubbedDateDecodingStrategy
         }
@@ -51,7 +51,7 @@ class FakeJSONDecoder<T>: JSONDecoderProtocol {
         }
     }
     
-    func decode<T>(_ type: T.Type, from data: Data) throws -> T where T: Decodable {
+    public func decode<T>(_ type: T.Type, from data: Data) throws -> T where T: Decodable {
         capturedDecodeTypeAsString = "\(T.Type.self)"
         capturedDecodeData = data
         

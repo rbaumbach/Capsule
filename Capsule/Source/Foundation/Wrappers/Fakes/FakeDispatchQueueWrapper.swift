@@ -22,21 +22,21 @@
 
 import Foundation
 
-class FakeDispatchQueueWrapper: DispatchQueueWrapperProtocol {
+public class FakeDispatchQueueWrapper: DispatchQueueWrapperProtocol {
     // MARK: - Captured properties
     
-    var capturedMainAsyncCompletionHandler: (() -> Void)?
+    public var capturedMainAsyncCompletionHandler: (() -> Void)?
     
-    var capturedMainAfterSeconds: Int?
-    var capturedMainAfterCompletionHandler: (() -> Void)?
+    public var capturedMainAfterSeconds: Int?
+    public var capturedMainAfterCompletionHandler: (() -> Void)?
     
     // MARK: - <DispatcherProtocol>
     
-    func mainAsync(completionHandler: @escaping () -> Void) {
+    public func mainAsync(completionHandler: @escaping () -> Void) {
         capturedMainAsyncCompletionHandler = completionHandler
     }
     
-    func mainAfter(seconds: Int, completionHandler: @escaping () -> Void) {
+    public func mainAfter(seconds: Int, completionHandler: @escaping () -> Void) {
         capturedMainAfterSeconds = seconds
         capturedMainAfterCompletionHandler = completionHandler
     }
