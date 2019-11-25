@@ -20,16 +20,16 @@ platform :ios do
     puts "Doin' some fastlane..."
   end
 
-  desc "SwiftLints the project"
+  desc "Builds and SwiftLints the workspace"
   lane :build do
-    swiftlint(strict: true,
-              quiet: true,
-              config_file: ".swiftlint.yml",
-              executable: "Pods/SwiftLint/swiftlint")
-
     xcodebuild(scheme: "Capsule",
                workspace: "Capsule.xcworkspace",
                xcpretty_output: "simple")
+
+   swiftlint(strict: true,
+             quiet: true,
+             config_file: ".swiftlint.yml",
+             executable: "Pods/SwiftLint/swiftlint")
   end
 
   after_all do |lane|
