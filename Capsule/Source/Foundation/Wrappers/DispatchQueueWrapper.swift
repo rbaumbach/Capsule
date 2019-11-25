@@ -20,22 +20,21 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 
-import AVFoundation
+import Foundation
 
-class FakeAVCaptureSession: AVCaptureSessionProtocol {
-    // MARK: - Captured properties
+protocol DispatchQueueWrapperProtocol {
+    func mainAsync(completionHandler: @escaping () -> Void)
+    func mainAfter(seconds: Int, completionHandler: @escaping () -> Void)
+}
+
+class DispatchQueueWrapper: DispatchQueueWrapperProtocol {
+    // MARK: - Public methods
     
-    var didStartRunning = false
-    
-    var didStopRunning = false
-    
-    // MARK: - <AVCaptureSessionProtocol>
-    
-    func startRunning() {
-        didStartRunning = true
+    func mainAsync(completionHandler: @escaping () -> Void) {
+        DispatchQueue.main.async(execute: completionHandler)
     }
     
-    func stopRunning() {
-        didStopRunning = true
+    func mainAfter(seconds: Int, completionHandler: @escaping () -> Void) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + Double(seconds), execute: completionHandler)
     }
 }

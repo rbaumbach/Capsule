@@ -1,7 +1,15 @@
 disabled_rules:
+  - force_cast
   - trailing_whitespace
 
 line_length: 150
+
+variable_name:
+  max_length:
+    warning: 45
+    error: 60
+  min_length:
+    error: 1
 
 excluded:
   - Capsule/Source/Foundation/Fakes

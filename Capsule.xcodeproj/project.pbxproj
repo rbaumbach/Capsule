@@ -26,6 +26,12 @@
 		94341A99238C751200BC8355 /* FakeUIPasteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A98238C751200BC8355 /* FakeUIPasteboard.swift */; };
 		94341A9B238C767C00BC8355 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A9A238C767C00BC8355 /* URLSession.swift */; };
 		94341A9D238C769000BC8355 /* FakeURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A9C238C769000BC8355 /* FakeURLSession.swift */; };
+		94341AA0238C990200BC8355 /* DispatchQueueWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A9F238C990200BC8355 /* DispatchQueueWrapper.swift */; };
+		94341AA3238C99E700BC8355 /* FakeDispatchQueueWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341AA2238C99E700BC8355 /* FakeDispatchQueueWrapper.swift */; };
+		94341AA5238C9B0700BC8355 /* AudioServicesWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341AA4238C9B0700BC8355 /* AudioServicesWrapper.swift */; };
+		94341AA9238C9B5D00BC8355 /* FakeAudioServicesWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341AA8238C9B5D00BC8355 /* FakeAudioServicesWrapper.swift */; };
+		94341AAB238C9BEA00BC8355 /* SleepWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341AAA238C9BEA00BC8355 /* SleepWrapper.swift */; };
+		94341AAD238C9D5F00BC8355 /* FakeSleepWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341AAC238C9D5F00BC8355 /* FakeSleepWrapper.swift */; };
 		94455B66238C45920063BB6E /* Capsule.h in Headers */ = {isa = PBXBuildFile; fileRef = 94455B64238C45920063BB6E /* Capsule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CF6AADE9586FD43AA3CFB857 /* Pods_Capsule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89185E854D912AF3945AB5A4 /* Pods_Capsule.framework */; };
 /* End PBXBuildFile section */
@@ -52,6 +58,12 @@
 		94341A98238C751200BC8355 /* FakeUIPasteboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUIPasteboard.swift; sourceTree = "<group>"; };
 		94341A9A238C767C00BC8355 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
 		94341A9C238C769000BC8355 /* FakeURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeURLSession.swift; sourceTree = "<group>"; };
+		94341A9F238C990200BC8355 /* DispatchQueueWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueWrapper.swift; sourceTree = "<group>"; };
+		94341AA2238C99E700BC8355 /* FakeDispatchQueueWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDispatchQueueWrapper.swift; sourceTree = "<group>"; };
+		94341AA4238C9B0700BC8355 /* AudioServicesWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioServicesWrapper.swift; sourceTree = "<group>"; };
+		94341AA8238C9B5D00BC8355 /* FakeAudioServicesWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAudioServicesWrapper.swift; sourceTree = "<group>"; };
+		94341AAA238C9BEA00BC8355 /* SleepWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepWrapper.swift; sourceTree = "<group>"; };
+		94341AAC238C9D5F00BC8355 /* FakeSleepWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeSleepWrapper.swift; sourceTree = "<group>"; };
 		94455B61238C45920063BB6E /* Capsule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Capsule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94455B64238C45920063BB6E /* Capsule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capsule.h; sourceTree = "<group>"; };
 		94455B65238C45920063BB6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,6 +85,7 @@
 		94341A79238C49F600BC8355 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				94341A7A238C4A0000BC8355 /* Fakes */,
 				94341A92238C74B300BC8355 /* Calendar.swift */,
 				94341A71238C48AC00BC8355 /* FileManager.swift */,
 				94341A75238C49A100BC8355 /* JSONDecoder.swift */,
@@ -102,8 +115,8 @@
 		94341A85238C735700BC8355 /* AVFoundation */ = {
 			isa = PBXGroup;
 			children = (
-				94341A88238C73A400BC8355 /* Fakes */,
 				94341A89238C73AC00BC8355 /* Protocols */,
+				94341AA6238C9B3D00BC8355 /* Wrappers */,
 			);
 			path = AVFoundation;
 			sourceTree = "<group>";
@@ -119,6 +132,7 @@
 		94341A89238C73AC00BC8355 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				94341A88238C73A400BC8355 /* Fakes */,
 				94341A86238C736C00BC8355 /* AVCaptureSession.swift */,
 			);
 			path = Protocols;
@@ -127,6 +141,7 @@
 		94341A94238C74E400BC8355 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				94341A97238C74FE00BC8355 /* Fakes */,
 				94341A95238C74EF00BC8355 /* UIPasteboard.swift */,
 			);
 			path = Protocols;
@@ -136,6 +151,42 @@
 			isa = PBXGroup;
 			children = (
 				94341A98238C751200BC8355 /* FakeUIPasteboard.swift */,
+			);
+			path = Fakes;
+			sourceTree = "<group>";
+		};
+		94341A9E238C98E400BC8355 /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				94341AA1238C99D800BC8355 /* Fakes */,
+				94341A9F238C990200BC8355 /* DispatchQueueWrapper.swift */,
+				94341AAA238C9BEA00BC8355 /* SleepWrapper.swift */,
+			);
+			path = Wrappers;
+			sourceTree = "<group>";
+		};
+		94341AA1238C99D800BC8355 /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				94341AA2238C99E700BC8355 /* FakeDispatchQueueWrapper.swift */,
+				94341AAC238C9D5F00BC8355 /* FakeSleepWrapper.swift */,
+			);
+			path = Fakes;
+			sourceTree = "<group>";
+		};
+		94341AA6238C9B3D00BC8355 /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				94341AA7238C9B4D00BC8355 /* Fakes */,
+				94341AA4238C9B0700BC8355 /* AudioServicesWrapper.swift */,
+			);
+			path = Wrappers;
+			sourceTree = "<group>";
+		};
+		94341AA7238C9B4D00BC8355 /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				94341AA8238C9B5D00BC8355 /* FakeAudioServicesWrapper.swift */,
 			);
 			path = Fakes;
 			sourceTree = "<group>";
@@ -189,8 +240,8 @@
 		94455B6E238C45E20063BB6E /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				94341A7A238C4A0000BC8355 /* Fakes */,
 				94341A79238C49F600BC8355 /* Protocols */,
+				94341A9E238C98E400BC8355 /* Wrappers */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -198,7 +249,6 @@
 		94455B6F238C45E70063BB6E /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				94341A97238C74FE00BC8355 /* Fakes */,
 				94341A94238C74E400BC8355 /* Protocols */,
 			);
 			path = UIKit;
@@ -348,13 +398,17 @@
 				94341A96238C74EF00BC8355 /* UIPasteboard.swift in Sources */,
 				94341A80238C4B5A00BC8355 /* FakeGenericError.swift in Sources */,
 				94341A8F238C747000BC8355 /* FakeUserDefaults.swift in Sources */,
+				94341AA0238C990200BC8355 /* DispatchQueueWrapper.swift in Sources */,
 				94341A82238C4B8100BC8355 /* FakeJSONEncoder.swift in Sources */,
 				94341A78238C49B500BC8355 /* UUID.swift in Sources */,
 				94341A93238C74B300BC8355 /* Calendar.swift in Sources */,
 				94341A84238C4B9700BC8355 /* FakeUUID.swift in Sources */,
+				94341AA5238C9B0700BC8355 /* AudioServicesWrapper.swift in Sources */,
 				94341A76238C49A100BC8355 /* JSONDecoder.swift in Sources */,
+				94341AAD238C9D5F00BC8355 /* FakeSleepWrapper.swift in Sources */,
 				94341A74238C498800BC8355 /* JSONEncoder.swift in Sources */,
 				94341A87238C736C00BC8355 /* AVCaptureSession.swift in Sources */,
+				94341AA9238C9B5D00BC8355 /* FakeAudioServicesWrapper.swift in Sources */,
 				94341A9D238C769000BC8355 /* FakeURLSession.swift in Sources */,
 				94341A8B238C73D800BC8355 /* FakeAVCaptureSession.swift in Sources */,
 				94341A8D238C743400BC8355 /* UserDefaults.swift in Sources */,
@@ -362,8 +416,10 @@
 				94341A91238C74AB00BC8355 /* FakeCalendar.swift in Sources */,
 				94341A9B238C767C00BC8355 /* URLSession.swift in Sources */,
 				94341A72238C48AC00BC8355 /* FileManager.swift in Sources */,
+				94341AA3238C99E700BC8355 /* FakeDispatchQueueWrapper.swift in Sources */,
 				94341A7C238C4A1700BC8355 /* FakeFileManager.swift in Sources */,
 				94341A7E238C4B4100BC8355 /* FakeJSONDecoder.swift in Sources */,
+				94341AAB238C9BEA00BC8355 /* SleepWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
