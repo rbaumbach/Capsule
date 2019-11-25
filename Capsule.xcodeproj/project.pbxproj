@@ -24,6 +24,8 @@
 		94341A93238C74B300BC8355 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A92238C74B300BC8355 /* Calendar.swift */; };
 		94341A96238C74EF00BC8355 /* UIPasteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A95238C74EF00BC8355 /* UIPasteboard.swift */; };
 		94341A99238C751200BC8355 /* FakeUIPasteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A98238C751200BC8355 /* FakeUIPasteboard.swift */; };
+		94341A9B238C767C00BC8355 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A9A238C767C00BC8355 /* URLSession.swift */; };
+		94341A9D238C769000BC8355 /* FakeURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A9C238C769000BC8355 /* FakeURLSession.swift */; };
 		94455B66238C45920063BB6E /* Capsule.h in Headers */ = {isa = PBXBuildFile; fileRef = 94455B64238C45920063BB6E /* Capsule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CF6AADE9586FD43AA3CFB857 /* Pods_Capsule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89185E854D912AF3945AB5A4 /* Pods_Capsule.framework */; };
 /* End PBXBuildFile section */
@@ -48,6 +50,8 @@
 		94341A92238C74B300BC8355 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		94341A95238C74EF00BC8355 /* UIPasteboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPasteboard.swift; sourceTree = "<group>"; };
 		94341A98238C751200BC8355 /* FakeUIPasteboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUIPasteboard.swift; sourceTree = "<group>"; };
+		94341A9A238C767C00BC8355 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
+		94341A9C238C769000BC8355 /* FakeURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeURLSession.swift; sourceTree = "<group>"; };
 		94455B61238C45920063BB6E /* Capsule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Capsule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94455B64238C45920063BB6E /* Capsule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capsule.h; sourceTree = "<group>"; };
 		94455B65238C45920063BB6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,6 +77,7 @@
 				94341A71238C48AC00BC8355 /* FileManager.swift */,
 				94341A75238C49A100BC8355 /* JSONDecoder.swift */,
 				94341A73238C498800BC8355 /* JSONEncoder.swift */,
+				94341A9A238C767C00BC8355 /* URLSession.swift */,
 				94341A8C238C743400BC8355 /* UserDefaults.swift */,
 				94341A77238C49B500BC8355 /* UUID.swift */,
 			);
@@ -87,6 +92,7 @@
 				94341A7F238C4B5A00BC8355 /* FakeGenericError.swift */,
 				94341A7D238C4B4100BC8355 /* FakeJSONDecoder.swift */,
 				94341A81238C4B8100BC8355 /* FakeJSONEncoder.swift */,
+				94341A9C238C769000BC8355 /* FakeURLSession.swift */,
 				94341A8E238C747000BC8355 /* FakeUserDefaults.swift */,
 				94341A83238C4B9700BC8355 /* FakeUUID.swift */,
 			);
@@ -349,10 +355,12 @@
 				94341A76238C49A100BC8355 /* JSONDecoder.swift in Sources */,
 				94341A74238C498800BC8355 /* JSONEncoder.swift in Sources */,
 				94341A87238C736C00BC8355 /* AVCaptureSession.swift in Sources */,
+				94341A9D238C769000BC8355 /* FakeURLSession.swift in Sources */,
 				94341A8B238C73D800BC8355 /* FakeAVCaptureSession.swift in Sources */,
 				94341A8D238C743400BC8355 /* UserDefaults.swift in Sources */,
 				94341A99238C751200BC8355 /* FakeUIPasteboard.swift in Sources */,
 				94341A91238C74AB00BC8355 /* FakeCalendar.swift in Sources */,
+				94341A9B238C767C00BC8355 /* URLSession.swift in Sources */,
 				94341A72238C48AC00BC8355 /* FileManager.swift in Sources */,
 				94341A7C238C4A1700BC8355 /* FakeFileManager.swift in Sources */,
 				94341A7E238C4B4100BC8355 /* FakeJSONDecoder.swift in Sources */,
