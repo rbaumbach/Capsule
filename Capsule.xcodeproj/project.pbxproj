@@ -16,6 +16,14 @@
 		94341A80238C4B5A00BC8355 /* FakeGenericError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A7F238C4B5A00BC8355 /* FakeGenericError.swift */; };
 		94341A82238C4B8100BC8355 /* FakeJSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A81238C4B8100BC8355 /* FakeJSONEncoder.swift */; };
 		94341A84238C4B9700BC8355 /* FakeUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A83238C4B9700BC8355 /* FakeUUID.swift */; };
+		94341A87238C736C00BC8355 /* AVCaptureSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A86238C736C00BC8355 /* AVCaptureSession.swift */; };
+		94341A8B238C73D800BC8355 /* FakeAVCaptureSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A8A238C73D800BC8355 /* FakeAVCaptureSession.swift */; };
+		94341A8D238C743400BC8355 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A8C238C743400BC8355 /* UserDefaults.swift */; };
+		94341A8F238C747000BC8355 /* FakeUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A8E238C747000BC8355 /* FakeUserDefaults.swift */; };
+		94341A91238C74AB00BC8355 /* FakeCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A90238C74AB00BC8355 /* FakeCalendar.swift */; };
+		94341A93238C74B300BC8355 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A92238C74B300BC8355 /* Calendar.swift */; };
+		94341A96238C74EF00BC8355 /* UIPasteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A95238C74EF00BC8355 /* UIPasteboard.swift */; };
+		94341A99238C751200BC8355 /* FakeUIPasteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A98238C751200BC8355 /* FakeUIPasteboard.swift */; };
 		94455B66238C45920063BB6E /* Capsule.h in Headers */ = {isa = PBXBuildFile; fileRef = 94455B64238C45920063BB6E /* Capsule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CF6AADE9586FD43AA3CFB857 /* Pods_Capsule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89185E854D912AF3945AB5A4 /* Pods_Capsule.framework */; };
 /* End PBXBuildFile section */
@@ -32,6 +40,14 @@
 		94341A7F238C4B5A00BC8355 /* FakeGenericError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeGenericError.swift; sourceTree = "<group>"; };
 		94341A81238C4B8100BC8355 /* FakeJSONEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeJSONEncoder.swift; sourceTree = "<group>"; };
 		94341A83238C4B9700BC8355 /* FakeUUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUUID.swift; sourceTree = "<group>"; };
+		94341A86238C736C00BC8355 /* AVCaptureSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVCaptureSession.swift; sourceTree = "<group>"; };
+		94341A8A238C73D800BC8355 /* FakeAVCaptureSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAVCaptureSession.swift; sourceTree = "<group>"; };
+		94341A8C238C743400BC8355 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		94341A8E238C747000BC8355 /* FakeUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUserDefaults.swift; sourceTree = "<group>"; };
+		94341A90238C74AB00BC8355 /* FakeCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeCalendar.swift; sourceTree = "<group>"; };
+		94341A92238C74B300BC8355 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		94341A95238C74EF00BC8355 /* UIPasteboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPasteboard.swift; sourceTree = "<group>"; };
+		94341A98238C751200BC8355 /* FakeUIPasteboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUIPasteboard.swift; sourceTree = "<group>"; };
 		94455B61238C45920063BB6E /* Capsule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Capsule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94455B64238C45920063BB6E /* Capsule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capsule.h; sourceTree = "<group>"; };
 		94455B65238C45920063BB6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,9 +69,11 @@
 		94341A79238C49F600BC8355 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				94341A92238C74B300BC8355 /* Calendar.swift */,
 				94341A71238C48AC00BC8355 /* FileManager.swift */,
 				94341A75238C49A100BC8355 /* JSONDecoder.swift */,
 				94341A73238C498800BC8355 /* JSONEncoder.swift */,
+				94341A8C238C743400BC8355 /* UserDefaults.swift */,
 				94341A77238C49B500BC8355 /* UUID.swift */,
 			);
 			path = Protocols;
@@ -64,11 +82,54 @@
 		94341A7A238C4A0000BC8355 /* Fakes */ = {
 			isa = PBXGroup;
 			children = (
+				94341A90238C74AB00BC8355 /* FakeCalendar.swift */,
 				94341A7B238C4A1700BC8355 /* FakeFileManager.swift */,
 				94341A7F238C4B5A00BC8355 /* FakeGenericError.swift */,
 				94341A7D238C4B4100BC8355 /* FakeJSONDecoder.swift */,
 				94341A81238C4B8100BC8355 /* FakeJSONEncoder.swift */,
+				94341A8E238C747000BC8355 /* FakeUserDefaults.swift */,
 				94341A83238C4B9700BC8355 /* FakeUUID.swift */,
+			);
+			path = Fakes;
+			sourceTree = "<group>";
+		};
+		94341A85238C735700BC8355 /* AVFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				94341A88238C73A400BC8355 /* Fakes */,
+				94341A89238C73AC00BC8355 /* Protocols */,
+			);
+			path = AVFoundation;
+			sourceTree = "<group>";
+		};
+		94341A88238C73A400BC8355 /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				94341A8A238C73D800BC8355 /* FakeAVCaptureSession.swift */,
+			);
+			path = Fakes;
+			sourceTree = "<group>";
+		};
+		94341A89238C73AC00BC8355 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				94341A86238C736C00BC8355 /* AVCaptureSession.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		94341A94238C74E400BC8355 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				94341A95238C74EF00BC8355 /* UIPasteboard.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		94341A97238C74FE00BC8355 /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				94341A98238C751200BC8355 /* FakeUIPasteboard.swift */,
 			);
 			path = Fakes;
 			sourceTree = "<group>";
@@ -112,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				94455B64238C45920063BB6E /* Capsule.h */,
+				94341A85238C735700BC8355 /* AVFoundation */,
 				94455B6E238C45E20063BB6E /* Foundation */,
 				94455B6F238C45E70063BB6E /* UIKit */,
 			);
@@ -130,6 +192,8 @@
 		94455B6F238C45E70063BB6E /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				94341A97238C74FE00BC8355 /* Fakes */,
+				94341A94238C74E400BC8355 /* Protocols */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -275,12 +339,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94341A96238C74EF00BC8355 /* UIPasteboard.swift in Sources */,
 				94341A80238C4B5A00BC8355 /* FakeGenericError.swift in Sources */,
+				94341A8F238C747000BC8355 /* FakeUserDefaults.swift in Sources */,
 				94341A82238C4B8100BC8355 /* FakeJSONEncoder.swift in Sources */,
 				94341A78238C49B500BC8355 /* UUID.swift in Sources */,
+				94341A93238C74B300BC8355 /* Calendar.swift in Sources */,
 				94341A84238C4B9700BC8355 /* FakeUUID.swift in Sources */,
 				94341A76238C49A100BC8355 /* JSONDecoder.swift in Sources */,
 				94341A74238C498800BC8355 /* JSONEncoder.swift in Sources */,
+				94341A87238C736C00BC8355 /* AVCaptureSession.swift in Sources */,
+				94341A8B238C73D800BC8355 /* FakeAVCaptureSession.swift in Sources */,
+				94341A8D238C743400BC8355 /* UserDefaults.swift in Sources */,
+				94341A99238C751200BC8355 /* FakeUIPasteboard.swift in Sources */,
+				94341A91238C74AB00BC8355 /* FakeCalendar.swift in Sources */,
 				94341A72238C48AC00BC8355 /* FileManager.swift in Sources */,
 				94341A7C238C4A1700BC8355 /* FakeFileManager.swift in Sources */,
 				94341A7E238C4B4100BC8355 /* FakeJSONDecoder.swift in Sources */,
