@@ -31,6 +31,10 @@ class FakeUIPasteboard: UIPasteboardProtocol {
     
     var stubbedString = "Xerox copy"
     
+    // MARK: - Init methods
+    
+    public init() { }
+    
     // MARK: - <UIPasteboardProtocol>
     
     var string: String? {

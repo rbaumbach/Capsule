@@ -27,6 +27,10 @@ public class FakeSleepWrapper: SleepWrapperProtocol {
     
     public var capturedSleepSeconds: Int?
     
+    // MARK: - Init methods
+    
+    public init() { }
+    
     // MARK: - <SleeperProtocol>
     
     public func sleep(seconds: Int) {

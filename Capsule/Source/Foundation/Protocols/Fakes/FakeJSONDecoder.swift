@@ -38,6 +38,10 @@ public class FakeJSONDecoder<T>: JSONDecoderProtocol {
     // MARK: - Exceptions
     
     public var shouldThrowDecodeException = false
+    
+    // MARK: - Init methods
+    
+    public init() { }
         
     // MARK: - <JSONDecoderProtocol>
     

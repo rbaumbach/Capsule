@@ -27,6 +27,12 @@ public protocol SleepWrapperProtocol {
 }
 
 public class SleepWrapper: SleepWrapperProtocol {
+    // MARK: - Init methods
+    
+    public init() { }
+    
+    // MARK: - Public methods
+    
     public func sleep(seconds: Int) {
         systemSleep(seconds: seconds)
     }

@@ -39,6 +39,10 @@ public class FakeDispatchQueueWrapper: DispatchQueueWrapperProtocol {
     public var capturedMainAfterWorkItemWrapperSecondsInt: Int?
     public var capturedMainAfterWorkItemWrapperProtocol: DispatchWorkItemWrapperProtocol?
     
+    // MARK: - Init methods
+    
+    public init() { }
+    
     // MARK: - <DispatcherProtocol>
     
     public func mainAsync(completionHandler: @escaping () -> Void) {

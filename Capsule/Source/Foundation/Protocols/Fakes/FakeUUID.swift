@@ -27,6 +27,10 @@ public class FakeUUID: UUIDProtocol {
     
     public var stubbedUUIDString = "uuid-amigos-012345"
     
+    // MARK: - Init methods
+    
+    public init() { }
+    
     // MARK: - <UUIDProtocol>
     
     public var uuidString: String {

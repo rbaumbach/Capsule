@@ -56,6 +56,10 @@ public class FakeFileManager: FileManagerProtocol {
     
     public var stubbedFileExistsPath = false
     
+    // MARK: - Init methods
+    
+    public init() { }
+    
     // MARK: - <FileManagerProtocol>
     
     public var temporaryDirectory: URL {

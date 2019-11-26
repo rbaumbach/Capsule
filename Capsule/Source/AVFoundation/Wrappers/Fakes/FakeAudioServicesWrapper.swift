@@ -27,6 +27,10 @@ public class FakeAudioServicesWrapper: AudioServicesWrapperProtocol {
     
     public var didCallVibrate = false
     
+    // MARK: - Init methods
+    
+    public init() { }
+    
     // MARK: - <AudioServicesWrapperProtocol>
     
     public func vibrate() {

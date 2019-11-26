@@ -38,6 +38,10 @@ public class FakeUserDefaults: UserDefaultsProtocol {
     public var stubbedString = "llaves"
     public var stubbedBool = false
     
+    // MARK: - Init methods
+    
+    public init() { }
+    
     // MARK: - <UserDefaultsProtocol>
     
     public func set(_ value: Any?, forKey defaultName: String) {

@@ -29,6 +29,10 @@ public class FakeAVCaptureSession: AVCaptureSessionProtocol {
     
     public var didStopRunning = false
     
+    // MARK: - Init methods
+
+    public init() { }
+    
     // MARK: - <AVCaptureSessionProtocol>
     
     public func startRunning() {

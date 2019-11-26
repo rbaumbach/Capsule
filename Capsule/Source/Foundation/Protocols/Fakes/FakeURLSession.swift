@@ -33,7 +33,7 @@ public class FakeURLSession: URLSessionProtocol {
     // MARK: - Stubbed properties
     
     public var stubbedDataTask = URLSession(configuration: .default).dataTask(with: URL(string: "https://whocares.com")!)
-    
+        
     // MARK: - <URLSessionProtocol>
     
     public required init(configuration: URLSessionConfiguration) {

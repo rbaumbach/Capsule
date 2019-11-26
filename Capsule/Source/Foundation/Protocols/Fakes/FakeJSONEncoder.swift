@@ -35,6 +35,10 @@ public class FakeJSONEncoder: JSONEncoderProtocol {
     public var stubbedDateEncodingStrategy = JSONEncoder.DateEncodingStrategy.iso8601
     
     public var stubbedEncodeData = "tacos".data(using: .utf8)!
+    
+    // MARK: - Init methods
+    
+    public init() { }
         
     // MARK: - <JSONEncoderProtocol>
     

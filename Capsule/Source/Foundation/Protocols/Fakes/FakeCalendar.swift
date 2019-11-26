@@ -32,6 +32,10 @@ public class FakeCalendar: CalendarProtocol {
 
     public var stubbedComponent = 15
     
+    // MARK: - Init methods
+    
+    public init() { }
+    
     // MARK: - <CalendarProtocol>
     
     public func component(_ component: Calendar.Component, from date: Date) -> Int {

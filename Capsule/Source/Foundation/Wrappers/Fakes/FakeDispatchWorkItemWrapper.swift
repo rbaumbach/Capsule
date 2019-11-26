@@ -29,7 +29,7 @@ class FakeDispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol {
     var capturedInitWork: (() -> Void)?
     
     var didCancel = false
-    
+        
     // MARK: - <DispatchWorkItemWrapperProtocol>
     
     let dispatchWorkItem: DispatchWorkItem

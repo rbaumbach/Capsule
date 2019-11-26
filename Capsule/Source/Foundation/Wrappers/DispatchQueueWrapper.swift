@@ -33,6 +33,10 @@ public protocol DispatchQueueWrapperProtocol {
 }
 
 public class DispatchQueueWrapper: DispatchQueueWrapperProtocol {
+    // MARK: - Init methods
+    
+    public init() { }
+    
     // MARK: - Public methods
     
     public func mainAsync(completionHandler: @escaping () -> Void) {
