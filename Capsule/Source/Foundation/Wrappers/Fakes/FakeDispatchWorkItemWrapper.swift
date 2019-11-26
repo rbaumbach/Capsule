@@ -22,17 +22,17 @@
 
 import Foundation
 
-class FakeDispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol {
+public class FakeDispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol {
     // MARK: - Captured properties
     
-    var capturedInitQOS: DispatchQoS?
-    var capturedInitWork: (() -> Void)?
+    public var capturedInitQOS: DispatchQoS?
+    public var capturedInitWork: (() -> Void)?
     
-    var didCancel = false
+    public var didCancel = false
         
     // MARK: - <DispatchWorkItemWrapperProtocol>
     
-    let dispatchWorkItem: DispatchWorkItem
+    public let dispatchWorkItem: DispatchWorkItem
     
     required public init(qos: DispatchQoS = .unspecified, work: @escaping () -> Void) {
         self.dispatchWorkItem = DispatchWorkItem(qos: qos, block: work)
@@ -41,7 +41,7 @@ class FakeDispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol {
         capturedInitWork = work
     }
     
-    func cancel() {
+    public func cancel() {
         didCancel = true
     }
 }
