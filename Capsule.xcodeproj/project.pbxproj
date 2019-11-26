@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		940682A4238D9E55004278CB /* DispatchWorkItemWrapperBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940682A3238D9E55004278CB /* DispatchWorkItemWrapperBuilder.swift */; };
+		940682A6238D9E79004278CB /* FakeDispatchWorkItemWrapperBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940682A5238D9E79004278CB /* FakeDispatchWorkItemWrapperBuilder.swift */; };
 		94341A72238C48AC00BC8355 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A71238C48AC00BC8355 /* FileManager.swift */; };
 		94341A74238C498800BC8355 /* JSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A73238C498800BC8355 /* JSONEncoder.swift */; };
 		94341A76238C49A100BC8355 /* JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A75238C49A100BC8355 /* JSONDecoder.swift */; };
@@ -41,6 +43,8 @@
 /* Begin PBXFileReference section */
 		7D51463544DA444020A22BD0 /* Pods-Capsule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capsule.debug.xcconfig"; path = "Target Support Files/Pods-Capsule/Pods-Capsule.debug.xcconfig"; sourceTree = "<group>"; };
 		89185E854D912AF3945AB5A4 /* Pods_Capsule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Capsule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		940682A3238D9E55004278CB /* DispatchWorkItemWrapperBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchWorkItemWrapperBuilder.swift; sourceTree = "<group>"; };
+		940682A5238D9E79004278CB /* FakeDispatchWorkItemWrapperBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDispatchWorkItemWrapperBuilder.swift; sourceTree = "<group>"; };
 		94341A71238C48AC00BC8355 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		94341A73238C498800BC8355 /* JSONEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONEncoder.swift; sourceTree = "<group>"; };
 		94341A75238C49A100BC8355 /* JSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoder.swift; sourceTree = "<group>"; };
@@ -86,6 +90,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		940682A1238D9E3F004278CB /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				940682A2238D9E48004278CB /* Fakes */,
+				940682A3238D9E55004278CB /* DispatchWorkItemWrapperBuilder.swift */,
+			);
+			path = Builders;
+			sourceTree = "<group>";
+		};
+		940682A2238D9E48004278CB /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				940682A5238D9E79004278CB /* FakeDispatchWorkItemWrapperBuilder.swift */,
+			);
+			path = Fakes;
+			sourceTree = "<group>";
+		};
 		94341A79238C49F600BC8355 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +267,7 @@
 		94455B6E238C45E20063BB6E /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				940682A1238D9E3F004278CB /* Builders */,
 				94341A79238C49F600BC8355 /* Protocols */,
 				94341A9E238C98E400BC8355 /* Wrappers */,
 			);
@@ -401,7 +423,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				940682A6238D9E79004278CB /* FakeDispatchWorkItemWrapperBuilder.swift in Sources */,
 				94341A96238C74EF00BC8355 /* UIPasteboard.swift in Sources */,
+				940682A4238D9E55004278CB /* DispatchWorkItemWrapperBuilder.swift in Sources */,
 				94341A80238C4B5A00BC8355 /* FakeGenericError.swift in Sources */,
 				94341A8F238C747000BC8355 /* FakeUserDefaults.swift in Sources */,
 				94341AA0238C990200BC8355 /* DispatchQueueWrapper.swift in Sources */,
