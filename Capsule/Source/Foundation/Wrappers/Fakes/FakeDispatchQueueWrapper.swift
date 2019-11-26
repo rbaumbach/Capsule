@@ -27,8 +27,17 @@ public class FakeDispatchQueueWrapper: DispatchQueueWrapperProtocol {
     
     public var capturedMainAsyncCompletionHandler: (() -> Void)?
     
-    public var capturedMainAfterSeconds: Int?
-    public var capturedMainAfterCompletionHandler: (() -> Void)?
+    public var capturedMainAfterSecondsInt: Int?
+    public var capturedMainAfterSecondsIntCompletionHandler: (() -> Void)?
+    
+    public var capturedMainAfterSecondsDouble: Double?
+    public var capturedMainAfterSecondsDoubleCompletionHandler: (() -> Void)?
+    
+    public var capturedAsyncQOS: DispatchQoS.QoSClass?
+    public var capturedAsyncQOSCompletionHandler: (() -> Void)?
+    
+    public var capturedMainAfterWorkItemWrapperSecondsInt: Int?
+    public var capturedMainAfterWorkItemWrapperProtocol: DispatchWorkItemWrapperProtocol?
     
     // MARK: - <DispatcherProtocol>
     
@@ -37,7 +46,22 @@ public class FakeDispatchQueueWrapper: DispatchQueueWrapperProtocol {
     }
     
     public func mainAfter(seconds: Int, completionHandler: @escaping () -> Void) {
-        capturedMainAfterSeconds = seconds
-        capturedMainAfterCompletionHandler = completionHandler
+        capturedMainAfterSecondsInt = seconds
+        capturedMainAfterSecondsIntCompletionHandler = completionHandler
+    }
+    
+    public func mainAfter(seconds: Double, completionHandler: @escaping () -> Void) {
+        capturedMainAfterSecondsDouble = seconds
+        capturedMainAfterSecondsDoubleCompletionHandler = completionHandler
+    }
+    
+    public func async(qos: DispatchQoS.QoSClass, completionHandler: @escaping () -> Void) {
+        capturedAsyncQOS = qos
+        capturedAsyncQOSCompletionHandler = completionHandler
+    }
+    
+    public func mainAfter(seconds: Int, dispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol) {
+        capturedMainAfterWorkItemWrapperSecondsInt = seconds
+        capturedMainAfterWorkItemWrapperProtocol = dispatchWorkItemWrapper
     }
 }

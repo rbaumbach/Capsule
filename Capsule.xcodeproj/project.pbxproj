@@ -32,6 +32,8 @@
 		94341AA9238C9B5D00BC8355 /* FakeAudioServicesWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341AA8238C9B5D00BC8355 /* FakeAudioServicesWrapper.swift */; };
 		94341AAB238C9BEA00BC8355 /* SleepWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341AAA238C9BEA00BC8355 /* SleepWrapper.swift */; };
 		94341AAD238C9D5F00BC8355 /* FakeSleepWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341AAC238C9D5F00BC8355 /* FakeSleepWrapper.swift */; };
+		94341AAF238CB9BE00BC8355 /* FakeDispatchWorkItemWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341AAE238CB9BE00BC8355 /* FakeDispatchWorkItemWrapper.swift */; };
+		94341AB1238CBD0A00BC8355 /* DispatchWorkItemWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341AB0238CBD0A00BC8355 /* DispatchWorkItemWrapper.swift */; };
 		94455B66238C45920063BB6E /* Capsule.h in Headers */ = {isa = PBXBuildFile; fileRef = 94455B64238C45920063BB6E /* Capsule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CF6AADE9586FD43AA3CFB857 /* Pods_Capsule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89185E854D912AF3945AB5A4 /* Pods_Capsule.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +66,8 @@
 		94341AA8238C9B5D00BC8355 /* FakeAudioServicesWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAudioServicesWrapper.swift; sourceTree = "<group>"; };
 		94341AAA238C9BEA00BC8355 /* SleepWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepWrapper.swift; sourceTree = "<group>"; };
 		94341AAC238C9D5F00BC8355 /* FakeSleepWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeSleepWrapper.swift; sourceTree = "<group>"; };
+		94341AAE238CB9BE00BC8355 /* FakeDispatchWorkItemWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDispatchWorkItemWrapper.swift; sourceTree = "<group>"; };
+		94341AB0238CBD0A00BC8355 /* DispatchWorkItemWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchWorkItemWrapper.swift; sourceTree = "<group>"; };
 		94455B61238C45920063BB6E /* Capsule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Capsule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94455B64238C45920063BB6E /* Capsule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capsule.h; sourceTree = "<group>"; };
 		94455B65238C45920063BB6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 			children = (
 				94341AA1238C99D800BC8355 /* Fakes */,
 				94341A9F238C990200BC8355 /* DispatchQueueWrapper.swift */,
+				94341AB0238CBD0A00BC8355 /* DispatchWorkItemWrapper.swift */,
 				94341AAA238C9BEA00BC8355 /* SleepWrapper.swift */,
 			);
 			path = Wrappers;
@@ -169,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				94341AA2238C99E700BC8355 /* FakeDispatchQueueWrapper.swift */,
+				94341AAE238CB9BE00BC8355 /* FakeDispatchWorkItemWrapper.swift */,
 				94341AAC238C9D5F00BC8355 /* FakeSleepWrapper.swift */,
 			);
 			path = Fakes;
@@ -404,6 +410,7 @@
 				94341A93238C74B300BC8355 /* Calendar.swift in Sources */,
 				94341A84238C4B9700BC8355 /* FakeUUID.swift in Sources */,
 				94341AA5238C9B0700BC8355 /* AudioServicesWrapper.swift in Sources */,
+				94341AB1238CBD0A00BC8355 /* DispatchWorkItemWrapper.swift in Sources */,
 				94341A76238C49A100BC8355 /* JSONDecoder.swift in Sources */,
 				94341AAD238C9D5F00BC8355 /* FakeSleepWrapper.swift in Sources */,
 				94341A74238C498800BC8355 /* JSONEncoder.swift in Sources */,
@@ -411,6 +418,7 @@
 				94341AA9238C9B5D00BC8355 /* FakeAudioServicesWrapper.swift in Sources */,
 				94341A9D238C769000BC8355 /* FakeURLSession.swift in Sources */,
 				94341A8B238C73D800BC8355 /* FakeAVCaptureSession.swift in Sources */,
+				94341AAF238CB9BE00BC8355 /* FakeDispatchWorkItemWrapper.swift in Sources */,
 				94341A8D238C743400BC8355 /* UserDefaults.swift in Sources */,
 				94341A99238C751200BC8355 /* FakeUIPasteboard.swift in Sources */,
 				94341A91238C74AB00BC8355 /* FakeCalendar.swift in Sources */,

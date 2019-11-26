@@ -25,6 +25,11 @@ import Foundation
 public protocol DispatchQueueWrapperProtocol {
     func mainAsync(completionHandler: @escaping () -> Void)
     func mainAfter(seconds: Int, completionHandler: @escaping () -> Void)
+    func mainAfter(seconds: Double, completionHandler: @escaping () -> Void)
+    
+    func async(qos: DispatchQoS.QoSClass, completionHandler: @escaping () -> Void)
+    
+    func mainAfter(seconds: Int, dispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol)
 }
 
 public class DispatchQueueWrapper: DispatchQueueWrapperProtocol {
@@ -36,5 +41,19 @@ public class DispatchQueueWrapper: DispatchQueueWrapperProtocol {
     
     public func mainAfter(seconds: Int, completionHandler: @escaping () -> Void) {
         DispatchQueue.main.asyncAfter(deadline: .now() + Double(seconds), execute: completionHandler)
+    }
+    
+    public func mainAfter(seconds: Double, completionHandler: @escaping () -> Void) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + seconds, execute: completionHandler)
+    }
+    
+    public func async(qos: DispatchQoS.QoSClass, completionHandler: @escaping () -> Void) {
+        DispatchQueue.global(qos: qos).async(execute: completionHandler)
+    }
+    
+    public func mainAfter(seconds: Int, dispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol) {
+        let dispatchWorkItem = dispatchWorkItemWrapper.dispatchWorkItem
+        
+        DispatchQueue.main.async(execute: dispatchWorkItem)
     }
 }
