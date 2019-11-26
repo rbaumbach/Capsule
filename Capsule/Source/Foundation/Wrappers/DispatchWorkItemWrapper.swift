@@ -37,7 +37,7 @@ public class DispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol {
     
     // MARK: - Init methods
     
-    required public init(qos: DispatchQoS = .unspecified, work: @escaping () -> Void) {
+    required public init(qos: DispatchQoS, work: @escaping () -> Void) {
         self.dispatchWorkItem = DispatchWorkItem(qos: qos, block: work)
     }
     

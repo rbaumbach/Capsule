@@ -33,11 +33,15 @@ public class FakeDispatchQueueWrapper: DispatchQueueWrapperProtocol {
     public var capturedMainAfterSecondsDouble: Double?
     public var capturedMainAfterSecondsDoubleCompletionHandler: (() -> Void)?
     
-    public var capturedAsyncQOS: DispatchQoS.QoSClass?
+    public var capturedAsyncQOS: DispatchQoS?
     public var capturedAsyncQOSCompletionHandler: (() -> Void)?
     
     public var capturedMainAfterWorkItemWrapperSecondsInt: Int?
     public var capturedMainAfterWorkItemWrapperProtocol: DispatchWorkItemWrapperProtocol?
+    
+    public var capturedAsyncAfterSecondsDouble: Double?
+    public var capturedAsyncAfterQOS: DispatchQoS?
+    public var capturedAsyncAfterDispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol?
     
     // MARK: - Init methods
     
@@ -59,7 +63,7 @@ public class FakeDispatchQueueWrapper: DispatchQueueWrapperProtocol {
         capturedMainAfterSecondsDoubleCompletionHandler = completionHandler
     }
     
-    public func async(qos: DispatchQoS.QoSClass, completionHandler: @escaping () -> Void) {
+    public func async(qos: DispatchQoS, completionHandler: @escaping () -> Void) {
         capturedAsyncQOS = qos
         capturedAsyncQOSCompletionHandler = completionHandler
     }
@@ -67,5 +71,11 @@ public class FakeDispatchQueueWrapper: DispatchQueueWrapperProtocol {
     public func mainAfter(seconds: Int, dispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol) {
         capturedMainAfterWorkItemWrapperSecondsInt = seconds
         capturedMainAfterWorkItemWrapperProtocol = dispatchWorkItemWrapper
+    }
+    
+    public func asyncAfter(seconds: Double, qos: DispatchQoS, dispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol) {
+        capturedAsyncAfterSecondsDouble = seconds
+        capturedAsyncAfterQOS = qos
+        capturedAsyncAfterDispatchWorkItemWrapper = dispatchWorkItemWrapper
     }
 }
