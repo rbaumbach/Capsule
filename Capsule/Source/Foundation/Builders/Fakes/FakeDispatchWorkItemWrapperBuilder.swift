@@ -38,6 +38,10 @@ public class FakeDispatchWorkItemWrapperBuilder: DispatchWorkItemWrapperBuilderP
                                                         FakeDispatchWorkItemWrapper(work: { }),
                                                         FakeDispatchWorkItemWrapper(work: { })]
     
+    // MARK: - Init methods
+    
+    public init() { }
+    
     // MARK: - <DispatchWorkItemBuilderProtocol>
     
     public func build(qos: DispatchQoS, work: @escaping () -> Void) -> DispatchWorkItemWrapperProtocol {
@@ -49,7 +53,6 @@ public class FakeDispatchWorkItemWrapperBuilder: DispatchWorkItemWrapperBuilderP
         }
         
         let fakeDispatchWorkItemWrapper = stubbedDispatchWorkItemWrappersArray[currentDispatchWorkItemWrapperIndex]
-        
         
         // Note: The index just wraps around back to the beginning
         
