@@ -6,8 +6,8 @@ line_length: 150
 
 variable_name:
   max_length:
-    warning: 45
-    error: 60
+    warning: 50
+    error: 70
   min_length:
     error: 1
 
