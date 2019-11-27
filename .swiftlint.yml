@@ -4,9 +4,11 @@ disabled_rules:
 
 line_length: 150
 
-variable_name:
+identifier_name:
+  excluded:
+    - id
   max_length:
-    warning: 50
+    warning: 60
     error: 70
   min_length:
     error: 1
