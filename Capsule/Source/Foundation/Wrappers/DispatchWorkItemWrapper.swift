@@ -24,9 +24,7 @@ import Foundation
 
 public protocol DispatchWorkItemWrapperProtocol {
     var dispatchWorkItem: DispatchWorkItem { get }
-    
-    init(qos: DispatchQoS, work: @escaping () -> Void)
-        
+            
     func cancel()
 }
 
@@ -37,11 +35,7 @@ public class DispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol {
     
     // MARK: - Init methods
     
-    public convenience init() {
-        self.init(qos: .userInteractive) {  }
-    }
-    
-    required public init(qos: DispatchQoS, work: @escaping () -> Void) {
+    public init(qos: DispatchQoS = .unspecified, work: @escaping () -> Void) {
         self.dispatchWorkItem = DispatchWorkItem(qos: qos, block: work)
     }
     

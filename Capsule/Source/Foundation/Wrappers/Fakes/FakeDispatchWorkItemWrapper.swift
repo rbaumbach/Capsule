@@ -29,17 +29,14 @@ public class FakeDispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol {
     public var capturedInitWork: (() -> Void)?
     
     public var didCancel = false
+    
+    // MARK: - Extras
+    
+    public var id: Int?
         
     // MARK: - <DispatchWorkItemWrapperProtocol>
     
-    public let dispatchWorkItem: DispatchWorkItem
-    
-    required public init(qos: DispatchQoS = .unspecified, work: @escaping () -> Void) {
-        self.dispatchWorkItem = DispatchWorkItem(qos: qos, block: work)
-        
-        capturedInitQOS = qos
-        capturedInitWork = work
-    }
+    public var dispatchWorkItem: DispatchWorkItem =  DispatchWorkItem(block: { })
     
     public func cancel() {
         didCancel = true

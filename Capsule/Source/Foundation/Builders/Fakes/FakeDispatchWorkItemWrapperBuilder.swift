@@ -32,11 +32,19 @@ public class FakeDispatchWorkItemWrapperBuilder: DispatchWorkItemWrapperBuilderP
         
     public var shouldUseDispatchWorkItemWrappersArray = false
     public var currentDispatchWorkItemWrapperIndex = 0
-    public var stubbedDispatchWorkItemWrappersArray = [ FakeDispatchWorkItemWrapper(work: { }),
-                                                        FakeDispatchWorkItemWrapper(work: { }),
-                                                        FakeDispatchWorkItemWrapper(work: { }),
-                                                        FakeDispatchWorkItemWrapper(work: { }),
-                                                        FakeDispatchWorkItemWrapper(work: { })]
+    
+    public var stubbedDispatchWorkItemWrappersArray: [FakeDispatchWorkItemWrapper] = {
+        var array: [FakeDispatchWorkItemWrapper] = []
+        
+        (0..<5).forEach { index in
+            let fakeDispatchWorkItemWrapper = FakeDispatchWorkItemWrapper()
+            fakeDispatchWorkItemWrapper.id = index
+            
+            array.append(fakeDispatchWorkItemWrapper)
+        }
+        
+        return array
+    }()
     
     // MARK: - Init methods
     
@@ -44,7 +52,7 @@ public class FakeDispatchWorkItemWrapperBuilder: DispatchWorkItemWrapperBuilderP
     
     // MARK: - <DispatchWorkItemBuilderProtocol>
     
-    public func build(qos: DispatchQoS, work: @escaping () -> Void) -> DispatchWorkItemWrapperProtocol {
+    public func build(qos: DispatchQoS = .unspecified, work: @escaping () -> Void) -> DispatchWorkItemWrapperProtocol {
         capturedBuildQOS = qos
         capturedBuildWork = work
         

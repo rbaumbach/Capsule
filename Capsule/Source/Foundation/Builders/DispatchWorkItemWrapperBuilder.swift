@@ -33,7 +33,7 @@ public class DispatchWorkItemWrapperBuilder: DispatchWorkItemWrapperBuilderProto
     
     // MARK: - Public methods
     
-    public func build(qos: DispatchQoS, work: @escaping () -> Void) -> DispatchWorkItemWrapperProtocol {
+    public func build(qos: DispatchQoS = .unspecified, work: @escaping () -> Void) -> DispatchWorkItemWrapperProtocol {
         return DispatchWorkItemWrapper(qos: qos, work: work)
     }
 }

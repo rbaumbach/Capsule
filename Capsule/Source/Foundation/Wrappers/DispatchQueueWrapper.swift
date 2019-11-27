@@ -26,42 +26,74 @@ public protocol DispatchQueueWrapperProtocol {
     func mainAsync(completionHandler: @escaping () -> Void)
     func mainAfter(seconds: Int, completionHandler: @escaping () -> Void)
     func mainAfter(seconds: Double, completionHandler: @escaping () -> Void)
-    func async(qos: DispatchQoS, completionHandler: @escaping () -> Void)
-    
     func mainAfter(seconds: Int, dispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol)
-    func asyncAfter(seconds: Double, qos: DispatchQoS, dispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol)
+    func mainAfter(seconds: Double, dispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol)
+    
+    func globalAsync(qos: DispatchQoS, completionHandler: @escaping () -> Void)
+    func globalAsyncAfter(seconds: Int, qos: DispatchQoS, completionHandler: @escaping () -> Void)
+    func globalAsyncAfter(seconds: Double, qos: DispatchQoS, completionHandler: @escaping () -> Void)
+    func globalAsyncAfter(seconds: Int, qos: DispatchQoS, dispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol)
+    func globalAsyncAfter(seconds: Double, qos: DispatchQoS, dispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol)
 }
 
 public class DispatchQueueWrapper: DispatchQueueWrapperProtocol {
+    // MARK: - Private properties
+    
+    private let mainDispatchQueue = DispatchQueue.main
+    
     // MARK: - Init methods
     
     public init() { }
     
     // MARK: - Public methods
     
+    // MARK: - Main Queue
+    
     public func mainAsync(completionHandler: @escaping () -> Void) {
-        DispatchQueue.main.async(execute: completionHandler)
+        mainDispatchQueue.async(execute: completionHandler)
     }
     
     public func mainAfter(seconds: Int, completionHandler: @escaping () -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + Double(seconds), execute: completionHandler)
+        mainDispatchQueue.asyncAfter(deadline: .now() + Double(seconds), execute: completionHandler)
     }
     
     public func mainAfter(seconds: Double, completionHandler: @escaping () -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + seconds, execute: completionHandler)
-    }
-    
-    public func async(qos: DispatchQoS, completionHandler: @escaping () -> Void) {
-        DispatchQueue.global(qos: qos.qosClass).async(execute: completionHandler)
+        mainDispatchQueue.asyncAfter(deadline: .now() + seconds, execute: completionHandler)
     }
     
     public func mainAfter(seconds: Int, dispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol) {
         let dispatchWorkItem = dispatchWorkItemWrapper.dispatchWorkItem
         
-        DispatchQueue.main.async(execute: dispatchWorkItem)
+        mainDispatchQueue.asyncAfter(deadline: .now() + Double(seconds), execute: dispatchWorkItem)
     }
     
-    public func asyncAfter(seconds: Double, qos: DispatchQoS, dispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol) {
+    public func mainAfter(seconds: Double, dispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol) {
+        let dispatchWorkItem = dispatchWorkItemWrapper.dispatchWorkItem
+        
+        mainDispatchQueue.asyncAfter(deadline: .now() + seconds, execute: dispatchWorkItem)
+    }
+    
+    // MARK: - Global Queue
+    
+    public func globalAsync(qos: DispatchQoS, completionHandler: @escaping () -> Void) {
+        DispatchQueue.global(qos: qos.qosClass).async(execute: completionHandler)
+    }
+    
+    public func globalAsyncAfter(seconds: Int, qos: DispatchQoS, completionHandler: @escaping () -> Void) {
+        DispatchQueue.global(qos: qos.qosClass).asyncAfter(deadline: .now() + Double(seconds), execute: completionHandler)
+    }
+    
+    public func globalAsyncAfter(seconds: Double, qos: DispatchQoS, completionHandler: @escaping () -> Void) {
+        DispatchQueue.global(qos: qos.qosClass).asyncAfter(deadline: .now() + seconds, execute: completionHandler)
+    }
+    
+    public func globalAsyncAfter(seconds: Int, qos: DispatchQoS, dispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol) {
+        let dispatchWorkItem = dispatchWorkItemWrapper.dispatchWorkItem
+        
+        DispatchQueue.global(qos: qos.qosClass).asyncAfter(deadline: .now() + Double(seconds), execute: dispatchWorkItem)
+    }
+    
+    public func globalAsyncAfter(seconds: Double, qos: DispatchQoS, dispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol) {
         let dispatchWorkItem = dispatchWorkItemWrapper.dispatchWorkItem
         
         DispatchQueue.global(qos: qos.qosClass).asyncAfter(deadline: .now() + seconds, execute: dispatchWorkItem)
