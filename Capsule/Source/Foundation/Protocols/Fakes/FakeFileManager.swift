@@ -45,15 +45,6 @@ public class FakeFileManager: FileManagerProtocol {
         return components.url!
     }()
     
-    public var stubbedURLs: [URL] = {
-        var components = URLComponents()
-        components.scheme = "file"
-        components.host = ""
-        components.path = "/fake-directory/extra-fake-directory"
-        
-        return [components.url!, URL(string: "https://theaccidentalengineer.com")!]
-    }()
-    
     public var stubbedFileExistsPath = false
     
     // MARK: - Init methods
@@ -70,8 +61,8 @@ public class FakeFileManager: FileManagerProtocol {
                      in domainMask: FileManager.SearchPathDomainMask) -> [URL] {
         capturedSearchPathDirectory = directory
         capturedSearchPathDomainMask = domainMask
-        
-        return stubbedURLs
+                        
+        return [stubSystemDirectory(for: directory)]
     }
     
     public func fileExists(atPath path: String) -> Bool {
@@ -80,9 +71,33 @@ public class FakeFileManager: FileManagerProtocol {
         return stubbedFileExistsPath
     }
     
-    public func createDirectory(at url: URL, withIntermediateDirectories createIntermediates: Bool, attributes: [FileAttributeKey: Any]?) throws {
+    public func createDirectory(at url: URL,
+                                withIntermediateDirectories createIntermediates: Bool,
+                                attributes: [FileAttributeKey: Any]?) throws {
         capturedCreateDirectoryURL = url
         capturedCreateDirectoryCreateIntermediates = createIntermediates
         capturedCreateDirectoryAttributes = attributes
+    }
+    
+    // MARK: - Private stub methods
+    
+    private func stubSystemDirectory(for searchPathDirectory: FileManager.SearchPathDirectory) -> URL {
+        var components = URLComponents()
+        components.scheme = "file"
+        components.host = ""
+        
+        if searchPathDirectory == .documentDirectory {
+            components.path = "/fake-documents-directory"
+        } else if searchPathDirectory == .libraryDirectory {
+            components.path = "/fake-library-directory"
+        } else if searchPathDirectory == .cachesDirectory {
+            components.path = "/fake-caches-directory"
+        } else if searchPathDirectory == .applicationSupportDirectory {
+            components.path = "/fake-application-support-directory"
+        } else {
+            preconditionFailure("Attempted to create invalid iOS searchPathDirectory: \(searchPathDirectory)")
+        }
+
+        return components.url!
     }
 }
