@@ -34,16 +34,14 @@ public class FakeDispatchWorkItemWrapperBuilder: DispatchWorkItemWrapperBuilderP
     public var currentDispatchWorkItemWrapperIndex = 0
     
     public var stubbedDispatchWorkItemWrappersArray: [FakeDispatchWorkItemWrapper] = {
-        var array: [FakeDispatchWorkItemWrapper] = []
-        
-        (0..<5).forEach { index in
+        let fakeDispatchWorkItemWrappers = Array(0...4).map { number -> FakeDispatchWorkItemWrapper in
             let fakeDispatchWorkItemWrapper = FakeDispatchWorkItemWrapper()
-            fakeDispatchWorkItemWrapper.id = index
-            
-            array.append(fakeDispatchWorkItemWrapper)
+            fakeDispatchWorkItemWrapper.id = number
+
+            return fakeDispatchWorkItemWrapper
         }
         
-        return array
+        return fakeDispatchWorkItemWrappers
     }()
     
     // MARK: - Init methods
