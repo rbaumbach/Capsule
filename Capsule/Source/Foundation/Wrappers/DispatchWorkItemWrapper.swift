@@ -33,6 +33,12 @@ public class DispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol {
     
     public let dispatchWorkItem: DispatchWorkItem
     
+    // MARK: - Static helpers
+    
+    public static var empty: DispatchWorkItemWrapper = {
+        return DispatchWorkItemWrapper(work: { })
+    }()
+    
     // MARK: - Init methods
     
     public init(qos: DispatchQoS = .unspecified, work: @escaping () -> Void) {
