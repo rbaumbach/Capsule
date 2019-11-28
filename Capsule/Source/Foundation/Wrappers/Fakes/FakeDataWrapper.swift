@@ -38,6 +38,10 @@ public class FakeDataWrapper: DataWrapperProtocol {
     public var shouldThrowLoadDataException = false
     public var shouldThrowWriteException = false
     
+    // MARK: - Init methods
+    
+    public init() { }
+    
     // MARK: - <DataUtilsProtocol>
     
     public func loadData(contentsOfPath path: URL) throws -> Data {

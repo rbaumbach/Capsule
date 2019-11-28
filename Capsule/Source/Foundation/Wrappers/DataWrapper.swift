@@ -28,6 +28,10 @@ public protocol DataWrapperProtocol {
 }
 
 public class DataWrapper: DataWrapperProtocol {
+    // MARK: - Init methods
+    
+    public init() { }
+    
     // MARK: - Public methods
     
     public func loadData(contentsOfPath path: URL) throws -> Data {
