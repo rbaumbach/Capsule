@@ -47,6 +47,9 @@
 		94DB462B239321E600D0C0A2 /* FakeTimerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB462A239321E600D0C0A2 /* FakeTimerWrapper.swift */; };
 		94DB462D2393248400D0C0A2 /* TableViewCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB462C2393248400D0C0A2 /* TableViewCellBuilder.swift */; };
 		94DB462F239325AD00D0C0A2 /* FakeTableViewCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB462E239325AD00D0C0A2 /* FakeTableViewCellBuilder.swift */; };
+		94DB46312393276C00D0C0A2 /* UIAlertControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB46302393276C00D0C0A2 /* UIAlertControllerBuilder.swift */; };
+		94DB463323932B1B00D0C0A2 /* FakeUIAlertControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB463223932B1B00D0C0A2 /* FakeUIAlertControllerBuilder.swift */; };
+		94DB463723932B5D00D0C0A2 /* UIAlertActionWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB463623932B5D00D0C0A2 /* UIAlertActionWrapper.swift */; };
 		94E7A8702392174700C3A04F /* JSONCodableWrapper+Capsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7A86F2392174700C3A04F /* JSONCodableWrapper+Capsule.swift */; };
 		CF6AADE9586FD43AA3CFB857 /* Pods_Capsule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89185E854D912AF3945AB5A4 /* Pods_Capsule.framework */; };
 /* End PBXBuildFile section */
@@ -96,6 +99,9 @@
 		94DB462A239321E600D0C0A2 /* FakeTimerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeTimerWrapper.swift; sourceTree = "<group>"; };
 		94DB462C2393248400D0C0A2 /* TableViewCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellBuilder.swift; sourceTree = "<group>"; };
 		94DB462E239325AD00D0C0A2 /* FakeTableViewCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeTableViewCellBuilder.swift; sourceTree = "<group>"; };
+		94DB46302393276C00D0C0A2 /* UIAlertControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerBuilder.swift; sourceTree = "<group>"; };
+		94DB463223932B1B00D0C0A2 /* FakeUIAlertControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUIAlertControllerBuilder.swift; sourceTree = "<group>"; };
+		94DB463623932B5D00D0C0A2 /* UIAlertActionWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertActionWrapper.swift; sourceTree = "<group>"; };
 		94E7A86F2392174700C3A04F /* JSONCodableWrapper+Capsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONCodableWrapper+Capsule.swift"; sourceTree = "<group>"; };
 		E263C35345D6A3BA91898755 /* Pods-Capsule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capsule.release.xcconfig"; path = "Target Support Files/Pods-Capsule/Pods-Capsule.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -308,6 +314,7 @@
 			children = (
 				94DB462223931A1600D0C0A2 /* Builders */,
 				94341A94238C74E400BC8355 /* Protocols */,
+				94DB463423932B4900D0C0A2 /* Wrappers */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -318,6 +325,7 @@
 				94DB462523931E3600D0C0A2 /* Fakes */,
 				94DB462323931A2700D0C0A2 /* StoryboardBuilder.swift */,
 				94DB462C2393248400D0C0A2 /* TableViewCellBuilder.swift */,
+				94DB46302393276C00D0C0A2 /* UIAlertControllerBuilder.swift */,
 			);
 			path = Builders;
 			sourceTree = "<group>";
@@ -327,6 +335,23 @@
 			children = (
 				94DB462623931E4000D0C0A2 /* FakeStoryboardBuilder.swift */,
 				94DB462E239325AD00D0C0A2 /* FakeTableViewCellBuilder.swift */,
+				94DB463223932B1B00D0C0A2 /* FakeUIAlertControllerBuilder.swift */,
+			);
+			path = Fakes;
+			sourceTree = "<group>";
+		};
+		94DB463423932B4900D0C0A2 /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				94DB463523932B4D00D0C0A2 /* Fakes */,
+				94DB463623932B5D00D0C0A2 /* UIAlertActionWrapper.swift */,
+			);
+			path = Wrappers;
+			sourceTree = "<group>";
+		};
+		94DB463523932B4D00D0C0A2 /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Fakes;
 			sourceTree = "<group>";
@@ -499,17 +524,20 @@
 				94341AAF238CB9BE00BC8355 /* FakeDispatchWorkItemWrapper.swift in Sources */,
 				94341A8D238C743400BC8355 /* UserDefaults.swift in Sources */,
 				94341A99238C751200BC8355 /* FakeUIPasteboard.swift in Sources */,
+				94DB463323932B1B00D0C0A2 /* FakeUIAlertControllerBuilder.swift in Sources */,
 				94341A91238C74AB00BC8355 /* FakeCalendar.swift in Sources */,
 				946AB17523904C72003D0016 /* JSONCodableWrapper.swift in Sources */,
 				94341A9B238C767C00BC8355 /* URLSession.swift in Sources */,
 				94341A72238C48AC00BC8355 /* FileManager.swift in Sources */,
 				94DB46292393203C00D0C0A2 /* TimerWrapper.swift in Sources */,
 				94A8A467238F4AF10085E8E0 /* DataWrapper.swift in Sources */,
+				94DB46312393276C00D0C0A2 /* UIAlertControllerBuilder.swift in Sources */,
 				94DB462723931E4000D0C0A2 /* FakeStoryboardBuilder.swift in Sources */,
 				94341AA3238C99E700BC8355 /* FakeDispatchQueueWrapper.swift in Sources */,
 				94DB462423931A2700D0C0A2 /* StoryboardBuilder.swift in Sources */,
 				94341A7C238C4A1700BC8355 /* FakeFileManager.swift in Sources */,
 				94341A7E238C4B4100BC8355 /* FakeJSONDecoder.swift in Sources */,
+				94DB463723932B5D00D0C0A2 /* UIAlertActionWrapper.swift in Sources */,
 				94E7A8702392174700C3A04F /* JSONCodableWrapper+Capsule.swift in Sources */,
 				94341AAB238C9BEA00BC8355 /* SleepWrapper.swift in Sources */,
 			);
