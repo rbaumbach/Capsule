@@ -22,23 +22,27 @@
 
 import UIKit
 
-class FakeStoyboardBuilder: StoryboardBuilderProtocol {
+public class FakeStoyboardBuilder: StoryboardBuilderProtocol {
     // MARK: - Captured properties
     
-    var capturedBuildInitialViewControllerName: String?
+    public var capturedBuildInitialViewControllerName: String?
     
-    var capturedBuildViewControllerName: String?
-    var capturedBuildViewControllerIdentifier: String?
+    public var capturedBuildViewControllerName: String?
+    public var capturedBuildViewControllerIdentifier: String?
     
     // MARK: - Stubbed properties
     
-    var stubbedBuildInitialViewController = UIViewController()
+    public var stubbedBuildInitialViewController = UIViewController()
     
-    var stubbedBuildViewController = UIViewController()
+    public var stubbedBuildViewController = UIViewController()
+    
+    // MARK: - Init methods
+    
+    public init() { }
     
     // MARK: - <StoryboardBuilderProtocol>
     
-    func buildInitialViewController<T: UIViewController>(name: String) -> T {
+    public func buildInitialViewController<T: UIViewController>(name: String) -> T {
         guard let stubbedBuildInitialViewController = stubbedBuildViewController as? T else {
             preconditionFailure("FakeStoryboardBuilder.stubbedBuildInitialViewController property has not been set properly")
         }
@@ -48,7 +52,7 @@ class FakeStoyboardBuilder: StoryboardBuilderProtocol {
         return stubbedBuildInitialViewController
     }
     
-    func buildViewController<T: UIViewController>(name: String, identifier: String) -> T {
+    public func buildViewController<T: UIViewController>(name: String, identifier: String) -> T {
         guard let stubbedBuildViewController = stubbedBuildViewController as? T else {
             preconditionFailure("FakeStoryboardBuilder.stubbedBuildViewController property has not been set properly")
         }

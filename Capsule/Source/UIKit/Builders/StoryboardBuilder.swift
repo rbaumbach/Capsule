@@ -28,6 +28,10 @@ public protocol StoryboardBuilderProtocol {
 }
 
 public class StoryboardBuilder: StoryboardBuilderProtocol {
+    // MARK: - Init methods
+    
+    public init() { }
+    
     // MARK: - Public methods
     
     public func buildInitialViewController<T: UIViewController>(name: String) -> T {
