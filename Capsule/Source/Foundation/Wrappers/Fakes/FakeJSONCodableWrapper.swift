@@ -25,7 +25,7 @@ import Foundation
 public class FakeJSONCodableWrapper: JSONCodableWrapperProtocol {
     // MARK: - Captured properties
     
-    public var capturedOutputFormatting: JSONCodableWrapper.OutputFormat?
+    public var capturedOutputFormat: JSONCodableWrapper.OutputFormat?
     public var capturedDateFormat: JSONCodableWrapper.DateFormat?
     
     public var capturedEncodeValue: Any?
@@ -35,7 +35,7 @@ public class FakeJSONCodableWrapper: JSONCodableWrapperProtocol {
         
     // MARK: - Stubbed properties
     
-    public var stubbedOutputFormatting = JSONCodableWrapper.OutputFormat.default
+    public var stubbedOutputFormat = JSONCodableWrapper.OutputFormat.default
     public var stubbedDateEncodingStrategy = JSONCodableWrapper.DateFormat.default
     
     public var stubbedEncodeData = "tacos".data(using: .utf8)!
@@ -53,13 +53,13 @@ public class FakeJSONCodableWrapper: JSONCodableWrapperProtocol {
     
     // MARK: - <JSONCodableWrapperProtocol>
     
-    public var outputFormatting: JSONCodableWrapper.OutputFormat {
+    public var outputFormat: JSONCodableWrapper.OutputFormat {
         get {
-            return stubbedOutputFormatting
+            return stubbedOutputFormat
         }
         
-        set(newOutputFormatting) {
-            capturedOutputFormatting = newOutputFormatting
+        set(newOutputFormat) {
+            capturedOutputFormat = newOutputFormat
         }
     }
     

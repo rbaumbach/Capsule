@@ -39,9 +39,9 @@
 		94455B66238C45920063BB6E /* Capsule.h in Headers */ = {isa = PBXBuildFile; fileRef = 94455B64238C45920063BB6E /* Capsule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		946AB17523904C72003D0016 /* JSONCodableWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946AB17423904C72003D0016 /* JSONCodableWrapper.swift */; };
 		946AB17723904CCD003D0016 /* FakeJSONCodableWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946AB17623904CCD003D0016 /* FakeJSONCodableWrapper.swift */; };
-		946AB17B23918C02003D0016 /* JSONCodableWrapperTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946AB17A23918C02003D0016 /* JSONCodableWrapperTransformer.swift */; };
 		94A8A467238F4AF10085E8E0 /* DataWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A466238F4AF10085E8E0 /* DataWrapper.swift */; };
 		94A8A469238F4AFF0085E8E0 /* FakeDataWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A468238F4AFF0085E8E0 /* FakeDataWrapper.swift */; };
+		94E7A8702392174700C3A04F /* JSONCodableWrapper+Capsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7A86F2392174700C3A04F /* JSONCodableWrapper+Capsule.swift */; };
 		CF6AADE9586FD43AA3CFB857 /* Pods_Capsule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89185E854D912AF3945AB5A4 /* Pods_Capsule.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,9 +82,9 @@
 		94455B65238C45920063BB6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		946AB17423904C72003D0016 /* JSONCodableWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCodableWrapper.swift; sourceTree = "<group>"; };
 		946AB17623904CCD003D0016 /* FakeJSONCodableWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeJSONCodableWrapper.swift; sourceTree = "<group>"; };
-		946AB17A23918C02003D0016 /* JSONCodableWrapperTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCodableWrapperTransformer.swift; sourceTree = "<group>"; };
 		94A8A466238F4AF10085E8E0 /* DataWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataWrapper.swift; sourceTree = "<group>"; };
 		94A8A468238F4AFF0085E8E0 /* FakeDataWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDataWrapper.swift; sourceTree = "<group>"; };
+		94E7A86F2392174700C3A04F /* JSONCodableWrapper+Capsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONCodableWrapper+Capsule.swift"; sourceTree = "<group>"; };
 		E263C35345D6A3BA91898755 /* Pods-Capsule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capsule.release.xcconfig"; path = "Target Support Files/Pods-Capsule/Pods-Capsule.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,7 +198,7 @@
 				94341A9F238C990200BC8355 /* DispatchQueueWrapper.swift */,
 				94341AB0238CBD0A00BC8355 /* DispatchWorkItemWrapper.swift */,
 				946AB17423904C72003D0016 /* JSONCodableWrapper.swift */,
-				946AB17A23918C02003D0016 /* JSONCodableWrapperTransformer.swift */,
+				94E7A86F2392174700C3A04F /* JSONCodableWrapper+Capsule.swift */,
 				94341AAA238C9BEA00BC8355 /* SleepWrapper.swift */,
 			);
 			path = Wrappers;
@@ -449,7 +449,6 @@
 				94341A78238C49B500BC8355 /* UUID.swift in Sources */,
 				94341A93238C74B300BC8355 /* Calendar.swift in Sources */,
 				94341A84238C4B9700BC8355 /* FakeUUID.swift in Sources */,
-				946AB17B23918C02003D0016 /* JSONCodableWrapperTransformer.swift in Sources */,
 				94341AA5238C9B0700BC8355 /* AudioServicesWrapper.swift in Sources */,
 				94341AB1238CBD0A00BC8355 /* DispatchWorkItemWrapper.swift in Sources */,
 				946AB17723904CCD003D0016 /* FakeJSONCodableWrapper.swift in Sources */,
@@ -471,6 +470,7 @@
 				94341AA3238C99E700BC8355 /* FakeDispatchQueueWrapper.swift in Sources */,
 				94341A7C238C4A1700BC8355 /* FakeFileManager.swift in Sources */,
 				94341A7E238C4B4100BC8355 /* FakeJSONDecoder.swift in Sources */,
+				94E7A8702392174700C3A04F /* JSONCodableWrapper+Capsule.swift in Sources */,
 				94341AAB238C9BEA00BC8355 /* SleepWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -23,7 +23,7 @@
 import Foundation
 
 public protocol JSONCodableWrapperProtocol {
-    var outputFormatting: JSONCodableWrapper.OutputFormat { get set }
+    var outputFormat: JSONCodableWrapper.OutputFormat { get set }
     var dateFormat: JSONCodableWrapper.DateFormat { get set }
     
     func encode<T: Codable>(_ value: T) throws -> Data
@@ -47,28 +47,29 @@ public class JSONCodableWrapper: JSONCodableWrapperProtocol {
     
     private var jsonEncoder = JSONEncoder()
     private var jsonDecoder = JSONDecoder()
-    private var jsonCodableWrappertransformer = JSONCodableWrapperTransformer()
     
     // MARK: - Public properties
     
-    public var outputFormatting: OutputFormat {
+    public var outputFormat: OutputFormat {
         get {
-            return jsonCodableWrappertransformer.transform(jsonEncoder.outputFormatting)
+            return OutputFormat(rawValue: jsonEncoder.outputFormatting)!
         }
         
         set(newOutputFormatting) {
-            jsonEncoder.outputFormatting = jsonCodableWrappertransformer.transform(newOutputFormatting)
+            jsonEncoder.outputFormatting = newOutputFormatting.rawValue
         }
     }
     
     public var dateFormat: DateFormat {
         get {
-            return jsonCodableWrappertransformer.transform(jsonEncoder.dateEncodingStrategy)
+            return DateFormat(rawValue: (jsonEncoder.dateEncodingStrategy, jsonDecoder.dateDecodingStrategy))!
         }
         
         set(newDateFormat) {
-            jsonEncoder.dateEncodingStrategy = jsonCodableWrappertransformer.transform(newDateFormat)
-            jsonDecoder.dateDecodingStrategy = jsonCodableWrappertransformer.transform(newDateFormat)
+            let rawDateFormat = newDateFormat.rawValue
+            
+            jsonEncoder.dateEncodingStrategy = rawDateFormat.jsonEncoderDateFormat
+            jsonDecoder.dateDecodingStrategy = rawDateFormat.jsonDecoderDateFormat
         }
     }
     
