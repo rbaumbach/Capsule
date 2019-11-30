@@ -23,51 +23,52 @@
 import Foundation
 
 public protocol JSONCodableWrapperProtocol {
-    var outputFormatting: JSONEncoder.OutputFormatting { get set }
-    var dateEncodingStrategy: JSONEncoder.DateEncodingStrategy { get set }
+    var outputFormatting: JSONCodableWrapper.OutputFormat { get set }
+    var dateFormat: JSONCodableWrapper.DateFormat { get set }
     
     func encode<T: Codable>(_ value: T) throws -> Data
-    
-    var dateDecodingStrategy: JSONDecoder.DateDecodingStrategy { get set }
-
     func decode<T: Codable>(_ type: T.Type, from data: Data) throws -> T
 }
 
 public class JSONCodableWrapper: JSONCodableWrapperProtocol {
+    // MARK: - Public enums
+    
+    public enum OutputFormat {
+        case `default`
+        case pretty
+    }
+    
+    public enum DateFormat {
+        case `default`
+        case iso8601
+    }
+    
     // MARK: - Private properties
     
-    private var jsonEncoder: JSONEncoder = JSONEncoder()
-    private var jsonDecoder: JSONDecoder = JSONDecoder()
+    private var jsonEncoder = JSONEncoder()
+    private var jsonDecoder = JSONDecoder()
+    private var jsonCodableWrappertransformer = JSONCodableWrapperTransformer()
     
     // MARK: - Public properties
     
-    public var outputFormatting: JSONEncoder.OutputFormatting {
+    public var outputFormatting: OutputFormat {
         get {
-            return jsonEncoder.outputFormatting
+            return jsonCodableWrappertransformer.transform(jsonEncoder.outputFormatting)
         }
         
         set(newOutputFormatting) {
-            jsonEncoder.outputFormatting = newOutputFormatting
+            jsonEncoder.outputFormatting = jsonCodableWrappertransformer.transform(newOutputFormatting)
         }
     }
     
-    public var dateEncodingStrategy: JSONEncoder.DateEncodingStrategy {
+    public var dateFormat: DateFormat {
         get {
-            return jsonEncoder.dateEncodingStrategy
+            return jsonCodableWrappertransformer.transform(jsonEncoder.dateEncodingStrategy)
         }
         
-        set(newDateEncodingStrategy) {
-            jsonEncoder.dateEncodingStrategy = newDateEncodingStrategy
-        }
-    }
-    
-    public var dateDecodingStrategy: JSONDecoder.DateDecodingStrategy {
-        get {
-            return jsonDecoder.dateDecodingStrategy
-        }
-        
-        set(newDateDecodingStrategy) {
-            jsonDecoder.dateDecodingStrategy = newDateDecodingStrategy
+        set(newDateFormat) {
+            jsonEncoder.dateEncodingStrategy = jsonCodableWrappertransformer.transform(newDateFormat)
+            jsonDecoder.dateDecodingStrategy = jsonCodableWrappertransformer.transform(newDateFormat)
         }
     }
     

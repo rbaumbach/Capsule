@@ -25,23 +25,21 @@ import Foundation
 public class FakeJSONCodableWrapper: JSONCodableWrapperProtocol {
     // MARK: - Captured properties
     
-    public var capturedOutputFormatting: JSONEncoder.OutputFormatting?
-    public var capturedDateEncodingStrategy: JSONEncoder.DateEncodingStrategy?
+    public var capturedOutputFormatting: JSONCodableWrapper.OutputFormat?
+    public var capturedDateFormat: JSONCodableWrapper.DateFormat?
+    
     public var capturedEncodeValue: Any?
-    
-    public var capturedDateDecodingStrategy: JSONDecoder.DateDecodingStrategy?
-    
+        
     public var capturedDecodeTypeAsString: String?
     public var capturedDecodeData: Data?
         
     // MARK: - Stubbed properties
     
-    public var stubbedOutputFormatting = JSONEncoder.OutputFormatting.prettyPrinted
-    public var stubbedDateEncodingStrategy = JSONEncoder.DateEncodingStrategy.iso8601
+    public var stubbedOutputFormatting = JSONCodableWrapper.OutputFormat.default
+    public var stubbedDateEncodingStrategy = JSONCodableWrapper.DateFormat.default
     
     public var stubbedEncodeData = "tacos".data(using: .utf8)!
     
-    public var stubbedDateDecodingStrategy = JSONDecoder.DateDecodingStrategy.iso8601
     public var stubbedDecodedData: Any?
     
     // MARK: - Exceptions
@@ -55,36 +53,26 @@ public class FakeJSONCodableWrapper: JSONCodableWrapperProtocol {
     
     // MARK: - <JSONCodableWrapperProtocol>
     
-    public var dateDecodingStrategy: JSONDecoder.DateDecodingStrategy {
-        get {
-            return stubbedDateDecodingStrategy
-        }
-
-        set(newDateDecodingStrategy) {
-            capturedDateDecodingStrategy = newDateDecodingStrategy
-        }
-    }
-
-    public var outputFormatting: JSONEncoder.OutputFormatting {
+    public var outputFormatting: JSONCodableWrapper.OutputFormat {
         get {
             return stubbedOutputFormatting
         }
-
+        
         set(newOutputFormatting) {
             capturedOutputFormatting = newOutputFormatting
         }
     }
-
-    public var dateEncodingStrategy: JSONEncoder.DateEncodingStrategy {
+    
+    public var dateFormat: JSONCodableWrapper.DateFormat {
         get {
             return stubbedDateEncodingStrategy
         }
-
-        set(newDateEncodingStrategy) {
-            capturedDateEncodingStrategy = newDateEncodingStrategy
+        
+        set(newDateFormat) {
+            capturedDateFormat = newDateFormat
         }
     }
-    
+
     public func encode<T: Codable>(_ value: T) throws -> Data {
         capturedEncodeValue = value
         
