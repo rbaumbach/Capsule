@@ -45,6 +45,8 @@
 		94DB462723931E4000D0C0A2 /* FakeStoryboardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB462623931E4000D0C0A2 /* FakeStoryboardBuilder.swift */; };
 		94DB46292393203C00D0C0A2 /* TimerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB46282393203C00D0C0A2 /* TimerWrapper.swift */; };
 		94DB462B239321E600D0C0A2 /* FakeTimerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB462A239321E600D0C0A2 /* FakeTimerWrapper.swift */; };
+		94DB462D2393248400D0C0A2 /* TableViewCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB462C2393248400D0C0A2 /* TableViewCellBuilder.swift */; };
+		94DB462F239325AD00D0C0A2 /* FakeTableViewCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB462E239325AD00D0C0A2 /* FakeTableViewCellBuilder.swift */; };
 		94E7A8702392174700C3A04F /* JSONCodableWrapper+Capsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7A86F2392174700C3A04F /* JSONCodableWrapper+Capsule.swift */; };
 		CF6AADE9586FD43AA3CFB857 /* Pods_Capsule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89185E854D912AF3945AB5A4 /* Pods_Capsule.framework */; };
 /* End PBXBuildFile section */
@@ -92,6 +94,8 @@
 		94DB462623931E4000D0C0A2 /* FakeStoryboardBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeStoryboardBuilder.swift; sourceTree = "<group>"; };
 		94DB46282393203C00D0C0A2 /* TimerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerWrapper.swift; sourceTree = "<group>"; };
 		94DB462A239321E600D0C0A2 /* FakeTimerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeTimerWrapper.swift; sourceTree = "<group>"; };
+		94DB462C2393248400D0C0A2 /* TableViewCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellBuilder.swift; sourceTree = "<group>"; };
+		94DB462E239325AD00D0C0A2 /* FakeTableViewCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeTableViewCellBuilder.swift; sourceTree = "<group>"; };
 		94E7A86F2392174700C3A04F /* JSONCodableWrapper+Capsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONCodableWrapper+Capsule.swift"; sourceTree = "<group>"; };
 		E263C35345D6A3BA91898755 /* Pods-Capsule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capsule.release.xcconfig"; path = "Target Support Files/Pods-Capsule/Pods-Capsule.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -207,8 +211,8 @@
 				94341AB0238CBD0A00BC8355 /* DispatchWorkItemWrapper.swift */,
 				946AB17423904C72003D0016 /* JSONCodableWrapper.swift */,
 				94E7A86F2392174700C3A04F /* JSONCodableWrapper+Capsule.swift */,
-				94DB46282393203C00D0C0A2 /* TimerWrapper.swift */,
 				94341AAA238C9BEA00BC8355 /* SleepWrapper.swift */,
+				94DB46282393203C00D0C0A2 /* TimerWrapper.swift */,
 			);
 			path = Wrappers;
 			sourceTree = "<group>";
@@ -313,6 +317,7 @@
 			children = (
 				94DB462523931E3600D0C0A2 /* Fakes */,
 				94DB462323931A2700D0C0A2 /* StoryboardBuilder.swift */,
+				94DB462C2393248400D0C0A2 /* TableViewCellBuilder.swift */,
 			);
 			path = Builders;
 			sourceTree = "<group>";
@@ -321,6 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				94DB462623931E4000D0C0A2 /* FakeStoryboardBuilder.swift */,
+				94DB462E239325AD00D0C0A2 /* FakeTableViewCellBuilder.swift */,
 			);
 			path = Fakes;
 			sourceTree = "<group>";
@@ -484,10 +490,12 @@
 				94341A76238C49A100BC8355 /* JSONDecoder.swift in Sources */,
 				94341AAD238C9D5F00BC8355 /* FakeSleepWrapper.swift in Sources */,
 				94341A74238C498800BC8355 /* JSONEncoder.swift in Sources */,
+				94DB462F239325AD00D0C0A2 /* FakeTableViewCellBuilder.swift in Sources */,
 				94341A87238C736C00BC8355 /* AVCaptureSession.swift in Sources */,
 				94341AA9238C9B5D00BC8355 /* FakeAudioServicesWrapper.swift in Sources */,
 				94341A9D238C769000BC8355 /* FakeURLSession.swift in Sources */,
 				94341A8B238C73D800BC8355 /* FakeAVCaptureSession.swift in Sources */,
+				94DB462D2393248400D0C0A2 /* TableViewCellBuilder.swift in Sources */,
 				94341AAF238CB9BE00BC8355 /* FakeDispatchWorkItemWrapper.swift in Sources */,
 				94341A8D238C743400BC8355 /* UserDefaults.swift in Sources */,
 				94341A99238C751200BC8355 /* FakeUIPasteboard.swift in Sources */,
