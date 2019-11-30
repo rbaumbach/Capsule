@@ -85,7 +85,7 @@ public class FakeJSONCodableWrapper: JSONCodableWrapperProtocol {
     
     public func decode<T: Codable>(_ type: T.Type, from data: Data) throws -> T {
         guard let stubbedDecodedData = stubbedDecodedData as? T else {
-            preconditionFailure("FakeJSONCodableWrapper.stubbedDecodedData property has not been set")
+            preconditionFailure("FakeJSONCodableWrapper.stubbedDecodedData property has not been set properly")
         }
         
         capturedDecodeTypeAsString = "\(T.Type.self)"
