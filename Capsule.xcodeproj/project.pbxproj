@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		940682A4238D9E55004278CB /* DispatchWorkItemWrapperBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940682A3238D9E55004278CB /* DispatchWorkItemWrapperBuilder.swift */; };
 		940682A6238D9E79004278CB /* FakeDispatchWorkItemWrapperBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940682A5238D9E79004278CB /* FakeDispatchWorkItemWrapperBuilder.swift */; };
+		940F9C5E2396B4930028937B /* Bundle+Capsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9C5D2396B4930028937B /* Bundle+Capsule.swift */; };
 		94341A72238C48AC00BC8355 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A71238C48AC00BC8355 /* FileManager.swift */; };
 		94341A74238C498800BC8355 /* JSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A73238C498800BC8355 /* JSONEncoder.swift */; };
 		94341A76238C49A100BC8355 /* JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A75238C49A100BC8355 /* JSONDecoder.swift */; };
@@ -59,6 +60,7 @@
 		89185E854D912AF3945AB5A4 /* Pods_Capsule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Capsule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		940682A3238D9E55004278CB /* DispatchWorkItemWrapperBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchWorkItemWrapperBuilder.swift; sourceTree = "<group>"; };
 		940682A5238D9E79004278CB /* FakeDispatchWorkItemWrapperBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDispatchWorkItemWrapperBuilder.swift; sourceTree = "<group>"; };
+		940F9C5D2396B4930028937B /* Bundle+Capsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Capsule.swift"; sourceTree = "<group>"; };
 		94341A71238C48AC00BC8355 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		94341A73238C498800BC8355 /* JSONEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONEncoder.swift; sourceTree = "<group>"; };
 		94341A75238C49A100BC8355 /* JSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoder.swift; sourceTree = "<group>"; };
@@ -133,6 +135,14 @@
 				940682A5238D9E79004278CB /* FakeDispatchWorkItemWrapperBuilder.swift */,
 			);
 			path = Fakes;
+			sourceTree = "<group>";
+		};
+		940F9C5C2396B4800028937B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				940F9C5D2396B4930028937B /* Bundle+Capsule.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		94341A79238C49F600BC8355 /* Protocols */ = {
@@ -293,6 +303,7 @@
 			children = (
 				94455B64238C45920063BB6E /* Capsule.h */,
 				94341A85238C735700BC8355 /* AVFoundation */,
+				940F9C5C2396B4800028937B /* Extensions */,
 				94455B6E238C45E20063BB6E /* Foundation */,
 				94455B6F238C45E70063BB6E /* UIKit */,
 			);
@@ -518,6 +529,7 @@
 				94DB462F239325AD00D0C0A2 /* FakeTableViewCellBuilder.swift in Sources */,
 				94341A87238C736C00BC8355 /* AVCaptureSession.swift in Sources */,
 				94341AA9238C9B5D00BC8355 /* FakeAudioServicesWrapper.swift in Sources */,
+				940F9C5E2396B4930028937B /* Bundle+Capsule.swift in Sources */,
 				94341A9D238C769000BC8355 /* FakeURLSession.swift in Sources */,
 				94341A8B238C73D800BC8355 /* FakeAVCaptureSession.swift in Sources */,
 				94DB462D2393248400D0C0A2 /* TableViewCellBuilder.swift in Sources */,
@@ -684,7 +696,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = teamthick.capsule;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -715,7 +727,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = teamthick.capsule;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
