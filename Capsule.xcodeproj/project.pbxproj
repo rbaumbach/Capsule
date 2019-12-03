@@ -302,8 +302,8 @@
 			isa = PBXGroup;
 			children = (
 				94455B64238C45920063BB6E /* Capsule.h */,
-				94341A85238C735700BC8355 /* AVFoundation */,
 				940F9C5C2396B4800028937B /* Extensions */,
+				94341A85238C735700BC8355 /* AVFoundation */,
 				94455B6E238C45E20063BB6E /* Foundation */,
 				94455B6F238C45E70063BB6E /* UIKit */,
 			);
