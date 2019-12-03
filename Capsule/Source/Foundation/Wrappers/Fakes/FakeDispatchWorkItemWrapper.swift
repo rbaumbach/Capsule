@@ -33,6 +33,10 @@ public class FakeDispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol {
     // MARK: - Extras
     
     public var id: Int?
+    
+    // MARK: - Init methods
+    
+    public init() { }
         
     // MARK: - <DispatchWorkItemWrapperProtocol>
     
