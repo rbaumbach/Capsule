@@ -145,6 +145,173 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		940F9CE3239968950028937B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				940F9CE4239969800028937B /* Extensions */,
+				940F9CE5239969890028937B /* AVFoundation */,
+				940F9CE6239969910028937B /* Foundation */,
+				940F9CE72399699A0028937B /* UIKit */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		940F9CE4239969800028937B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		940F9CE5239969890028937B /* AVFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				940F9CE8239969C00028937B /* Protocols */,
+				940F9CE9239969C50028937B /* Wrappers */,
+			);
+			name = AVFoundation;
+			sourceTree = "<group>";
+		};
+		940F9CE6239969910028937B /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				940F9CEC239969E00028937B /* Builders */,
+				940F9CED239969E50028937B /* Protocols */,
+				940F9CEE23996A290028937B /* Wrappers */,
+			);
+			name = Foundation;
+			sourceTree = "<group>";
+		};
+		940F9CE72399699A0028937B /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				940F9CF223996A4C0028937B /* Builders */,
+				940F9CF323996A520028937B /* Protocols */,
+				940F9CF423996A570028937B /* Wrappers */,
+			);
+			name = UIKit;
+			sourceTree = "<group>";
+		};
+		940F9CE8239969C00028937B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				940F9CEB239969D00028937B /* Fakes */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		940F9CE9239969C50028937B /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				940F9CEA239969CC0028937B /* Fakes */,
+			);
+			name = Wrappers;
+			sourceTree = "<group>";
+		};
+		940F9CEA239969CC0028937B /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Fakes;
+			sourceTree = "<group>";
+		};
+		940F9CEB239969D00028937B /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Fakes;
+			sourceTree = "<group>";
+		};
+		940F9CEC239969E00028937B /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				940F9CEF23996A360028937B /* Fakes */,
+			);
+			name = Builders;
+			sourceTree = "<group>";
+		};
+		940F9CED239969E50028937B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				940F9CF023996A390028937B /* Fakes */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		940F9CEE23996A290028937B /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				940F9CF123996A3D0028937B /* Fakes */,
+			);
+			name = Wrappers;
+			sourceTree = "<group>";
+		};
+		940F9CEF23996A360028937B /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Fakes;
+			sourceTree = "<group>";
+		};
+		940F9CF023996A390028937B /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Fakes;
+			sourceTree = "<group>";
+		};
+		940F9CF123996A3D0028937B /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Fakes;
+			sourceTree = "<group>";
+		};
+		940F9CF223996A4C0028937B /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				940F9CF723996A610028937B /* Fakes */,
+			);
+			name = Builders;
+			sourceTree = "<group>";
+		};
+		940F9CF323996A520028937B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				940F9CF623996A5E0028937B /* Fakes */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		940F9CF423996A570028937B /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				940F9CF523996A5A0028937B /* Fakes */,
+			);
+			name = Wrappers;
+			sourceTree = "<group>";
+		};
+		940F9CF523996A5A0028937B /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Fakes;
+			sourceTree = "<group>";
+		};
+		940F9CF623996A5E0028937B /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Fakes;
+			sourceTree = "<group>";
+		};
+		940F9CF723996A610028937B /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Fakes;
+			sourceTree = "<group>";
+		};
 		94341A79238C49F600BC8355 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +433,7 @@
 		94455B57238C45920063BB6E = {
 			isa = PBXGroup;
 			children = (
+				940F9CE3239968950028937B /* Source */,
 				94455B63238C45920063BB6E /* Capsule */,
 				94455B62238C45920063BB6E /* Products */,
 				B289504A663128C42BC699FF /* Pods */,
@@ -284,8 +452,8 @@
 		94455B63238C45920063BB6E /* Capsule */ = {
 			isa = PBXGroup;
 			children = (
-				94455B6D238C45D90063BB6E /* Source */,
 				94455B6C238C45B10063BB6E /* Supporting Files */,
+				94455B6D238C45D90063BB6E /* Source */,
 			);
 			path = Capsule;
 			sourceTree = "<group>";
