@@ -30,4 +30,4 @@ let package = Package(name: "Capsule",
                       products: [.library(name: "Capsule",
                                           targets: ["Capsule"])],
                       targets: [.target(name: "Capsule")],
-                      swiftLanguageVersions: [.v5.1])
+                      swiftLanguageVersions: [.v5])
