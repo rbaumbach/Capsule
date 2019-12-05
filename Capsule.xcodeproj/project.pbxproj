@@ -7,104 +7,104 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		940682A4238D9E55004278CB /* DispatchWorkItemWrapperBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940682A3238D9E55004278CB /* DispatchWorkItemWrapperBuilder.swift */; };
-		940682A6238D9E79004278CB /* FakeDispatchWorkItemWrapperBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940682A5238D9E79004278CB /* FakeDispatchWorkItemWrapperBuilder.swift */; };
-		940F9C5E2396B4930028937B /* Bundle+Capsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9C5D2396B4930028937B /* Bundle+Capsule.swift */; };
-		94341A72238C48AC00BC8355 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A71238C48AC00BC8355 /* FileManager.swift */; };
-		94341A74238C498800BC8355 /* JSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A73238C498800BC8355 /* JSONEncoder.swift */; };
-		94341A76238C49A100BC8355 /* JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A75238C49A100BC8355 /* JSONDecoder.swift */; };
-		94341A78238C49B500BC8355 /* UUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A77238C49B500BC8355 /* UUID.swift */; };
-		94341A7C238C4A1700BC8355 /* FakeFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A7B238C4A1700BC8355 /* FakeFileManager.swift */; };
-		94341A7E238C4B4100BC8355 /* FakeJSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A7D238C4B4100BC8355 /* FakeJSONDecoder.swift */; };
-		94341A80238C4B5A00BC8355 /* FakeGenericError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A7F238C4B5A00BC8355 /* FakeGenericError.swift */; };
-		94341A82238C4B8100BC8355 /* FakeJSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A81238C4B8100BC8355 /* FakeJSONEncoder.swift */; };
-		94341A84238C4B9700BC8355 /* FakeUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A83238C4B9700BC8355 /* FakeUUID.swift */; };
-		94341A87238C736C00BC8355 /* AVCaptureSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A86238C736C00BC8355 /* AVCaptureSession.swift */; };
-		94341A8B238C73D800BC8355 /* FakeAVCaptureSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A8A238C73D800BC8355 /* FakeAVCaptureSession.swift */; };
-		94341A8D238C743400BC8355 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A8C238C743400BC8355 /* UserDefaults.swift */; };
-		94341A8F238C747000BC8355 /* FakeUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A8E238C747000BC8355 /* FakeUserDefaults.swift */; };
-		94341A91238C74AB00BC8355 /* FakeCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A90238C74AB00BC8355 /* FakeCalendar.swift */; };
-		94341A93238C74B300BC8355 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A92238C74B300BC8355 /* Calendar.swift */; };
-		94341A96238C74EF00BC8355 /* UIPasteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A95238C74EF00BC8355 /* UIPasteboard.swift */; };
-		94341A99238C751200BC8355 /* FakeUIPasteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A98238C751200BC8355 /* FakeUIPasteboard.swift */; };
-		94341A9B238C767C00BC8355 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A9A238C767C00BC8355 /* URLSession.swift */; };
-		94341A9D238C769000BC8355 /* FakeURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A9C238C769000BC8355 /* FakeURLSession.swift */; };
-		94341AA0238C990200BC8355 /* DispatchQueueWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341A9F238C990200BC8355 /* DispatchQueueWrapper.swift */; };
-		94341AA3238C99E700BC8355 /* FakeDispatchQueueWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341AA2238C99E700BC8355 /* FakeDispatchQueueWrapper.swift */; };
-		94341AA5238C9B0700BC8355 /* AudioServicesWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341AA4238C9B0700BC8355 /* AudioServicesWrapper.swift */; };
-		94341AA9238C9B5D00BC8355 /* FakeAudioServicesWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341AA8238C9B5D00BC8355 /* FakeAudioServicesWrapper.swift */; };
-		94341AAB238C9BEA00BC8355 /* SleepWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341AAA238C9BEA00BC8355 /* SleepWrapper.swift */; };
-		94341AAD238C9D5F00BC8355 /* FakeSleepWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341AAC238C9D5F00BC8355 /* FakeSleepWrapper.swift */; };
-		94341AAF238CB9BE00BC8355 /* FakeDispatchWorkItemWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341AAE238CB9BE00BC8355 /* FakeDispatchWorkItemWrapper.swift */; };
-		94341AB1238CBD0A00BC8355 /* DispatchWorkItemWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94341AB0238CBD0A00BC8355 /* DispatchWorkItemWrapper.swift */; };
+		940F9CF923999B070028937B /* Bundle+Capsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9CF823999B070028937B /* Bundle+Capsule.swift */; };
+		940F9CFB23999B270028937B /* FakeAVCaptureSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9CFA23999B270028937B /* FakeAVCaptureSession.swift */; };
+		940F9CFD23999B310028937B /* AVCaptureSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9CFC23999B310028937B /* AVCaptureSession.swift */; };
+		940F9CFF23999B410028937B /* FakeAudioServicesWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9CFE23999B410028937B /* FakeAudioServicesWrapper.swift */; };
+		940F9D0123999B480028937B /* AudioServicesWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D0023999B480028937B /* AudioServicesWrapper.swift */; };
+		940F9D0323999B650028937B /* DispatchWorkItemWrapperBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D0223999B650028937B /* DispatchWorkItemWrapperBuilder.swift */; };
+		940F9D0523999B6C0028937B /* FakeDispatchWorkItemWrapperBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D0423999B6C0028937B /* FakeDispatchWorkItemWrapperBuilder.swift */; };
+		940F9D0E23999BA00028937B /* FakeCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D0623999B9F0028937B /* FakeCalendar.swift */; };
+		940F9D0F23999BA00028937B /* FakeFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D0723999BA00028937B /* FakeFileManager.swift */; };
+		940F9D1023999BA00028937B /* FakeJSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D0823999BA00028937B /* FakeJSONEncoder.swift */; };
+		940F9D1123999BA00028937B /* FakeGenericError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D0923999BA00028937B /* FakeGenericError.swift */; };
+		940F9D1223999BA00028937B /* FakeURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D0A23999BA00028937B /* FakeURLSession.swift */; };
+		940F9D1323999BA00028937B /* FakeJSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D0B23999BA00028937B /* FakeJSONDecoder.swift */; };
+		940F9D1423999BA00028937B /* FakeUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D0C23999BA00028937B /* FakeUUID.swift */; };
+		940F9D1523999BA00028937B /* FakeUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D0D23999BA00028937B /* FakeUserDefaults.swift */; };
+		940F9D1D23999BB90028937B /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D1623999BB90028937B /* UserDefaults.swift */; };
+		940F9D1E23999BB90028937B /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D1723999BB90028937B /* URLSession.swift */; };
+		940F9D1F23999BB90028937B /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D1823999BB90028937B /* FileManager.swift */; };
+		940F9D2023999BB90028937B /* JSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D1923999BB90028937B /* JSONEncoder.swift */; };
+		940F9D2123999BB90028937B /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D1A23999BB90028937B /* Calendar.swift */; };
+		940F9D2223999BB90028937B /* JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D1B23999BB90028937B /* JSONDecoder.swift */; };
+		940F9D2323999BB90028937B /* UUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D1C23999BB90028937B /* UUID.swift */; };
+		940F9D2A23999BDA0028937B /* FakeTimerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D2423999BDA0028937B /* FakeTimerWrapper.swift */; };
+		940F9D2B23999BDA0028937B /* FakeDataWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D2523999BDA0028937B /* FakeDataWrapper.swift */; };
+		940F9D2C23999BDA0028937B /* FakeJSONCodableWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D2623999BDA0028937B /* FakeJSONCodableWrapper.swift */; };
+		940F9D2D23999BDA0028937B /* FakeSleepWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D2723999BDA0028937B /* FakeSleepWrapper.swift */; };
+		940F9D2E23999BDA0028937B /* FakeDispatchWorkItemWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D2823999BDA0028937B /* FakeDispatchWorkItemWrapper.swift */; };
+		940F9D2F23999BDA0028937B /* FakeDispatchQueueWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D2923999BDA0028937B /* FakeDispatchQueueWrapper.swift */; };
+		940F9D3723999BEF0028937B /* SleepWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D3023999BEF0028937B /* SleepWrapper.swift */; };
+		940F9D3823999BEF0028937B /* DispatchQueueWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D3123999BEF0028937B /* DispatchQueueWrapper.swift */; };
+		940F9D3923999BEF0028937B /* JSONCodableWrapper+Capsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D3223999BEF0028937B /* JSONCodableWrapper+Capsule.swift */; };
+		940F9D3A23999BEF0028937B /* DispatchWorkItemWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D3323999BEF0028937B /* DispatchWorkItemWrapper.swift */; };
+		940F9D3B23999BEF0028937B /* TimerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D3423999BEF0028937B /* TimerWrapper.swift */; };
+		940F9D3C23999BEF0028937B /* JSONCodableWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D3523999BEF0028937B /* JSONCodableWrapper.swift */; };
+		940F9D3D23999BEF0028937B /* DataWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D3623999BEF0028937B /* DataWrapper.swift */; };
+		940F9D4123999C100028937B /* FakeTableViewCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D3E23999C100028937B /* FakeTableViewCellBuilder.swift */; };
+		940F9D4223999C100028937B /* FakeUIAlertControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D3F23999C100028937B /* FakeUIAlertControllerBuilder.swift */; };
+		940F9D4323999C100028937B /* FakeStoryboardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D4023999C100028937B /* FakeStoryboardBuilder.swift */; };
+		940F9D4723999C1E0028937B /* TableViewCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D4423999C1E0028937B /* TableViewCellBuilder.swift */; };
+		940F9D4823999C1E0028937B /* UIAlertControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D4523999C1E0028937B /* UIAlertControllerBuilder.swift */; };
+		940F9D4923999C1E0028937B /* StoryboardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D4623999C1E0028937B /* StoryboardBuilder.swift */; };
+		940F9D4B23999C310028937B /* FakeUIPasteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D4A23999C310028937B /* FakeUIPasteboard.swift */; };
+		940F9D4D23999C3E0028937B /* UIPasteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D4C23999C3E0028937B /* UIPasteboard.swift */; };
+		940F9D4F23999C570028937B /* UIAlertActionWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D4E23999C570028937B /* UIAlertActionWrapper.swift */; };
 		94455B66238C45920063BB6E /* Capsule.h in Headers */ = {isa = PBXBuildFile; fileRef = 94455B64238C45920063BB6E /* Capsule.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		946AB17523904C72003D0016 /* JSONCodableWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946AB17423904C72003D0016 /* JSONCodableWrapper.swift */; };
-		946AB17723904CCD003D0016 /* FakeJSONCodableWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946AB17623904CCD003D0016 /* FakeJSONCodableWrapper.swift */; };
-		94A8A467238F4AF10085E8E0 /* DataWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A466238F4AF10085E8E0 /* DataWrapper.swift */; };
-		94A8A469238F4AFF0085E8E0 /* FakeDataWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A8A468238F4AFF0085E8E0 /* FakeDataWrapper.swift */; };
-		94DB462423931A2700D0C0A2 /* StoryboardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB462323931A2700D0C0A2 /* StoryboardBuilder.swift */; };
-		94DB462723931E4000D0C0A2 /* FakeStoryboardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB462623931E4000D0C0A2 /* FakeStoryboardBuilder.swift */; };
-		94DB46292393203C00D0C0A2 /* TimerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB46282393203C00D0C0A2 /* TimerWrapper.swift */; };
-		94DB462B239321E600D0C0A2 /* FakeTimerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB462A239321E600D0C0A2 /* FakeTimerWrapper.swift */; };
-		94DB462D2393248400D0C0A2 /* TableViewCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB462C2393248400D0C0A2 /* TableViewCellBuilder.swift */; };
-		94DB462F239325AD00D0C0A2 /* FakeTableViewCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB462E239325AD00D0C0A2 /* FakeTableViewCellBuilder.swift */; };
-		94DB46312393276C00D0C0A2 /* UIAlertControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB46302393276C00D0C0A2 /* UIAlertControllerBuilder.swift */; };
-		94DB463323932B1B00D0C0A2 /* FakeUIAlertControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB463223932B1B00D0C0A2 /* FakeUIAlertControllerBuilder.swift */; };
-		94DB463723932B5D00D0C0A2 /* UIAlertActionWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB463623932B5D00D0C0A2 /* UIAlertActionWrapper.swift */; };
-		94E7A8702392174700C3A04F /* JSONCodableWrapper+Capsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7A86F2392174700C3A04F /* JSONCodableWrapper+Capsule.swift */; };
 		CF6AADE9586FD43AA3CFB857 /* Pods_Capsule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89185E854D912AF3945AB5A4 /* Pods_Capsule.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7D51463544DA444020A22BD0 /* Pods-Capsule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capsule.debug.xcconfig"; path = "Target Support Files/Pods-Capsule/Pods-Capsule.debug.xcconfig"; sourceTree = "<group>"; };
 		89185E854D912AF3945AB5A4 /* Pods_Capsule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Capsule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		940682A3238D9E55004278CB /* DispatchWorkItemWrapperBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchWorkItemWrapperBuilder.swift; sourceTree = "<group>"; };
-		940682A5238D9E79004278CB /* FakeDispatchWorkItemWrapperBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDispatchWorkItemWrapperBuilder.swift; sourceTree = "<group>"; };
-		940F9C5D2396B4930028937B /* Bundle+Capsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Capsule.swift"; sourceTree = "<group>"; };
-		94341A71238C48AC00BC8355 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
-		94341A73238C498800BC8355 /* JSONEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONEncoder.swift; sourceTree = "<group>"; };
-		94341A75238C49A100BC8355 /* JSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoder.swift; sourceTree = "<group>"; };
-		94341A77238C49B500BC8355 /* UUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUID.swift; sourceTree = "<group>"; };
-		94341A7B238C4A1700BC8355 /* FakeFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeFileManager.swift; sourceTree = "<group>"; };
-		94341A7D238C4B4100BC8355 /* FakeJSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeJSONDecoder.swift; sourceTree = "<group>"; };
-		94341A7F238C4B5A00BC8355 /* FakeGenericError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeGenericError.swift; sourceTree = "<group>"; };
-		94341A81238C4B8100BC8355 /* FakeJSONEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeJSONEncoder.swift; sourceTree = "<group>"; };
-		94341A83238C4B9700BC8355 /* FakeUUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUUID.swift; sourceTree = "<group>"; };
-		94341A86238C736C00BC8355 /* AVCaptureSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVCaptureSession.swift; sourceTree = "<group>"; };
-		94341A8A238C73D800BC8355 /* FakeAVCaptureSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAVCaptureSession.swift; sourceTree = "<group>"; };
-		94341A8C238C743400BC8355 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
-		94341A8E238C747000BC8355 /* FakeUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUserDefaults.swift; sourceTree = "<group>"; };
-		94341A90238C74AB00BC8355 /* FakeCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeCalendar.swift; sourceTree = "<group>"; };
-		94341A92238C74B300BC8355 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
-		94341A95238C74EF00BC8355 /* UIPasteboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPasteboard.swift; sourceTree = "<group>"; };
-		94341A98238C751200BC8355 /* FakeUIPasteboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUIPasteboard.swift; sourceTree = "<group>"; };
-		94341A9A238C767C00BC8355 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
-		94341A9C238C769000BC8355 /* FakeURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeURLSession.swift; sourceTree = "<group>"; };
-		94341A9F238C990200BC8355 /* DispatchQueueWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueWrapper.swift; sourceTree = "<group>"; };
-		94341AA2238C99E700BC8355 /* FakeDispatchQueueWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDispatchQueueWrapper.swift; sourceTree = "<group>"; };
-		94341AA4238C9B0700BC8355 /* AudioServicesWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioServicesWrapper.swift; sourceTree = "<group>"; };
-		94341AA8238C9B5D00BC8355 /* FakeAudioServicesWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAudioServicesWrapper.swift; sourceTree = "<group>"; };
-		94341AAA238C9BEA00BC8355 /* SleepWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepWrapper.swift; sourceTree = "<group>"; };
-		94341AAC238C9D5F00BC8355 /* FakeSleepWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeSleepWrapper.swift; sourceTree = "<group>"; };
-		94341AAE238CB9BE00BC8355 /* FakeDispatchWorkItemWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDispatchWorkItemWrapper.swift; sourceTree = "<group>"; };
-		94341AB0238CBD0A00BC8355 /* DispatchWorkItemWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchWorkItemWrapper.swift; sourceTree = "<group>"; };
+		940F9CF823999B070028937B /* Bundle+Capsule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Capsule.swift"; sourceTree = "<group>"; };
+		940F9CFA23999B270028937B /* FakeAVCaptureSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeAVCaptureSession.swift; sourceTree = "<group>"; };
+		940F9CFC23999B310028937B /* AVCaptureSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVCaptureSession.swift; sourceTree = "<group>"; };
+		940F9CFE23999B410028937B /* FakeAudioServicesWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeAudioServicesWrapper.swift; sourceTree = "<group>"; };
+		940F9D0023999B480028937B /* AudioServicesWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioServicesWrapper.swift; sourceTree = "<group>"; };
+		940F9D0223999B650028937B /* DispatchWorkItemWrapperBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchWorkItemWrapperBuilder.swift; sourceTree = "<group>"; };
+		940F9D0423999B6C0028937B /* FakeDispatchWorkItemWrapperBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeDispatchWorkItemWrapperBuilder.swift; sourceTree = "<group>"; };
+		940F9D0623999B9F0028937B /* FakeCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeCalendar.swift; sourceTree = "<group>"; };
+		940F9D0723999BA00028937B /* FakeFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeFileManager.swift; sourceTree = "<group>"; };
+		940F9D0823999BA00028937B /* FakeJSONEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeJSONEncoder.swift; sourceTree = "<group>"; };
+		940F9D0923999BA00028937B /* FakeGenericError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeGenericError.swift; sourceTree = "<group>"; };
+		940F9D0A23999BA00028937B /* FakeURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeURLSession.swift; sourceTree = "<group>"; };
+		940F9D0B23999BA00028937B /* FakeJSONDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeJSONDecoder.swift; sourceTree = "<group>"; };
+		940F9D0C23999BA00028937B /* FakeUUID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeUUID.swift; sourceTree = "<group>"; };
+		940F9D0D23999BA00028937B /* FakeUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeUserDefaults.swift; sourceTree = "<group>"; };
+		940F9D1623999BB90028937B /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		940F9D1723999BB90028937B /* URLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
+		940F9D1823999BB90028937B /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		940F9D1923999BB90028937B /* JSONEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONEncoder.swift; sourceTree = "<group>"; };
+		940F9D1A23999BB90028937B /* Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		940F9D1B23999BB90028937B /* JSONDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecoder.swift; sourceTree = "<group>"; };
+		940F9D1C23999BB90028937B /* UUID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUID.swift; sourceTree = "<group>"; };
+		940F9D2423999BDA0028937B /* FakeTimerWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeTimerWrapper.swift; sourceTree = "<group>"; };
+		940F9D2523999BDA0028937B /* FakeDataWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeDataWrapper.swift; sourceTree = "<group>"; };
+		940F9D2623999BDA0028937B /* FakeJSONCodableWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeJSONCodableWrapper.swift; sourceTree = "<group>"; };
+		940F9D2723999BDA0028937B /* FakeSleepWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeSleepWrapper.swift; sourceTree = "<group>"; };
+		940F9D2823999BDA0028937B /* FakeDispatchWorkItemWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeDispatchWorkItemWrapper.swift; sourceTree = "<group>"; };
+		940F9D2923999BDA0028937B /* FakeDispatchQueueWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeDispatchQueueWrapper.swift; sourceTree = "<group>"; };
+		940F9D3023999BEF0028937B /* SleepWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepWrapper.swift; sourceTree = "<group>"; };
+		940F9D3123999BEF0028937B /* DispatchQueueWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueueWrapper.swift; sourceTree = "<group>"; };
+		940F9D3223999BEF0028937B /* JSONCodableWrapper+Capsule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONCodableWrapper+Capsule.swift"; sourceTree = "<group>"; };
+		940F9D3323999BEF0028937B /* DispatchWorkItemWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchWorkItemWrapper.swift; sourceTree = "<group>"; };
+		940F9D3423999BEF0028937B /* TimerWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerWrapper.swift; sourceTree = "<group>"; };
+		940F9D3523999BEF0028937B /* JSONCodableWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONCodableWrapper.swift; sourceTree = "<group>"; };
+		940F9D3623999BEF0028937B /* DataWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataWrapper.swift; sourceTree = "<group>"; };
+		940F9D3E23999C100028937B /* FakeTableViewCellBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeTableViewCellBuilder.swift; sourceTree = "<group>"; };
+		940F9D3F23999C100028937B /* FakeUIAlertControllerBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeUIAlertControllerBuilder.swift; sourceTree = "<group>"; };
+		940F9D4023999C100028937B /* FakeStoryboardBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeStoryboardBuilder.swift; sourceTree = "<group>"; };
+		940F9D4423999C1E0028937B /* TableViewCellBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellBuilder.swift; sourceTree = "<group>"; };
+		940F9D4523999C1E0028937B /* UIAlertControllerBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerBuilder.swift; sourceTree = "<group>"; };
+		940F9D4623999C1E0028937B /* StoryboardBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardBuilder.swift; sourceTree = "<group>"; };
+		940F9D4A23999C310028937B /* FakeUIPasteboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeUIPasteboard.swift; sourceTree = "<group>"; };
+		940F9D4C23999C3E0028937B /* UIPasteboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPasteboard.swift; sourceTree = "<group>"; };
+		940F9D4E23999C570028937B /* UIAlertActionWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertActionWrapper.swift; sourceTree = "<group>"; };
 		94455B61238C45920063BB6E /* Capsule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Capsule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94455B64238C45920063BB6E /* Capsule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capsule.h; sourceTree = "<group>"; };
 		94455B65238C45920063BB6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		946AB17423904C72003D0016 /* JSONCodableWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCodableWrapper.swift; sourceTree = "<group>"; };
-		946AB17623904CCD003D0016 /* FakeJSONCodableWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeJSONCodableWrapper.swift; sourceTree = "<group>"; };
-		94A8A466238F4AF10085E8E0 /* DataWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataWrapper.swift; sourceTree = "<group>"; };
-		94A8A468238F4AFF0085E8E0 /* FakeDataWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDataWrapper.swift; sourceTree = "<group>"; };
-		94DB462323931A2700D0C0A2 /* StoryboardBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardBuilder.swift; sourceTree = "<group>"; };
-		94DB462623931E4000D0C0A2 /* FakeStoryboardBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeStoryboardBuilder.swift; sourceTree = "<group>"; };
-		94DB46282393203C00D0C0A2 /* TimerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerWrapper.swift; sourceTree = "<group>"; };
-		94DB462A239321E600D0C0A2 /* FakeTimerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeTimerWrapper.swift; sourceTree = "<group>"; };
-		94DB462C2393248400D0C0A2 /* TableViewCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellBuilder.swift; sourceTree = "<group>"; };
-		94DB462E239325AD00D0C0A2 /* FakeTableViewCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeTableViewCellBuilder.swift; sourceTree = "<group>"; };
-		94DB46302393276C00D0C0A2 /* UIAlertControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerBuilder.swift; sourceTree = "<group>"; };
-		94DB463223932B1B00D0C0A2 /* FakeUIAlertControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUIAlertControllerBuilder.swift; sourceTree = "<group>"; };
-		94DB463623932B5D00D0C0A2 /* UIAlertActionWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertActionWrapper.swift; sourceTree = "<group>"; };
-		94E7A86F2392174700C3A04F /* JSONCodableWrapper+Capsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONCodableWrapper+Capsule.swift"; sourceTree = "<group>"; };
 		E263C35345D6A3BA91898755 /* Pods-Capsule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capsule.release.xcconfig"; path = "Target Support Files/Pods-Capsule/Pods-Capsule.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,31 +120,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		940682A1238D9E3F004278CB /* Builders */ = {
-			isa = PBXGroup;
-			children = (
-				940682A2238D9E48004278CB /* Fakes */,
-				940682A3238D9E55004278CB /* DispatchWorkItemWrapperBuilder.swift */,
-			);
-			path = Builders;
-			sourceTree = "<group>";
-		};
-		940682A2238D9E48004278CB /* Fakes */ = {
-			isa = PBXGroup;
-			children = (
-				940682A5238D9E79004278CB /* FakeDispatchWorkItemWrapperBuilder.swift */,
-			);
-			path = Fakes;
-			sourceTree = "<group>";
-		};
-		940F9C5C2396B4800028937B /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				940F9C5D2396B4930028937B /* Bundle+Capsule.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		940F9CE3239968950028937B /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +134,7 @@
 		940F9CE4239969800028937B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				940F9CF823999B070028937B /* Bundle+Capsule.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -196,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				940F9CEB239969D00028937B /* Fakes */,
+				940F9CFC23999B310028937B /* AVCaptureSession.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -204,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				940F9CEA239969CC0028937B /* Fakes */,
+				940F9D0023999B480028937B /* AudioServicesWrapper.swift */,
 			);
 			name = Wrappers;
 			sourceTree = "<group>";
@@ -211,6 +189,7 @@
 		940F9CEA239969CC0028937B /* Fakes */ = {
 			isa = PBXGroup;
 			children = (
+				940F9CFE23999B410028937B /* FakeAudioServicesWrapper.swift */,
 			);
 			name = Fakes;
 			sourceTree = "<group>";
@@ -218,6 +197,7 @@
 		940F9CEB239969D00028937B /* Fakes */ = {
 			isa = PBXGroup;
 			children = (
+				940F9CFA23999B270028937B /* FakeAVCaptureSession.swift */,
 			);
 			name = Fakes;
 			sourceTree = "<group>";
@@ -226,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				940F9CEF23996A360028937B /* Fakes */,
+				940F9D0423999B6C0028937B /* FakeDispatchWorkItemWrapperBuilder.swift */,
 			);
 			name = Builders;
 			sourceTree = "<group>";
@@ -234,6 +215,13 @@
 			isa = PBXGroup;
 			children = (
 				940F9CF023996A390028937B /* Fakes */,
+				940F9D1A23999BB90028937B /* Calendar.swift */,
+				940F9D1823999BB90028937B /* FileManager.swift */,
+				940F9D1B23999BB90028937B /* JSONDecoder.swift */,
+				940F9D1923999BB90028937B /* JSONEncoder.swift */,
+				940F9D1723999BB90028937B /* URLSession.swift */,
+				940F9D1623999BB90028937B /* UserDefaults.swift */,
+				940F9D1C23999BB90028937B /* UUID.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -242,6 +230,13 @@
 			isa = PBXGroup;
 			children = (
 				940F9CF123996A3D0028937B /* Fakes */,
+				940F9D3623999BEF0028937B /* DataWrapper.swift */,
+				940F9D3123999BEF0028937B /* DispatchQueueWrapper.swift */,
+				940F9D3323999BEF0028937B /* DispatchWorkItemWrapper.swift */,
+				940F9D3523999BEF0028937B /* JSONCodableWrapper.swift */,
+				940F9D3223999BEF0028937B /* JSONCodableWrapper+Capsule.swift */,
+				940F9D3023999BEF0028937B /* SleepWrapper.swift */,
+				940F9D3423999BEF0028937B /* TimerWrapper.swift */,
 			);
 			name = Wrappers;
 			sourceTree = "<group>";
@@ -249,6 +244,7 @@
 		940F9CEF23996A360028937B /* Fakes */ = {
 			isa = PBXGroup;
 			children = (
+				940F9D0223999B650028937B /* DispatchWorkItemWrapperBuilder.swift */,
 			);
 			name = Fakes;
 			sourceTree = "<group>";
@@ -256,6 +252,14 @@
 		940F9CF023996A390028937B /* Fakes */ = {
 			isa = PBXGroup;
 			children = (
+				940F9D0623999B9F0028937B /* FakeCalendar.swift */,
+				940F9D0723999BA00028937B /* FakeFileManager.swift */,
+				940F9D0923999BA00028937B /* FakeGenericError.swift */,
+				940F9D0B23999BA00028937B /* FakeJSONDecoder.swift */,
+				940F9D0823999BA00028937B /* FakeJSONEncoder.swift */,
+				940F9D0A23999BA00028937B /* FakeURLSession.swift */,
+				940F9D0D23999BA00028937B /* FakeUserDefaults.swift */,
+				940F9D0C23999BA00028937B /* FakeUUID.swift */,
 			);
 			name = Fakes;
 			sourceTree = "<group>";
@@ -263,6 +267,12 @@
 		940F9CF123996A3D0028937B /* Fakes */ = {
 			isa = PBXGroup;
 			children = (
+				940F9D2523999BDA0028937B /* FakeDataWrapper.swift */,
+				940F9D2923999BDA0028937B /* FakeDispatchQueueWrapper.swift */,
+				940F9D2823999BDA0028937B /* FakeDispatchWorkItemWrapper.swift */,
+				940F9D2623999BDA0028937B /* FakeJSONCodableWrapper.swift */,
+				940F9D2723999BDA0028937B /* FakeSleepWrapper.swift */,
+				940F9D2423999BDA0028937B /* FakeTimerWrapper.swift */,
 			);
 			name = Fakes;
 			sourceTree = "<group>";
@@ -271,6 +281,9 @@
 			isa = PBXGroup;
 			children = (
 				940F9CF723996A610028937B /* Fakes */,
+				940F9D4623999C1E0028937B /* StoryboardBuilder.swift */,
+				940F9D4423999C1E0028937B /* TableViewCellBuilder.swift */,
+				940F9D4523999C1E0028937B /* UIAlertControllerBuilder.swift */,
 			);
 			name = Builders;
 			sourceTree = "<group>";
@@ -279,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				940F9CF623996A5E0028937B /* Fakes */,
+				940F9D4C23999C3E0028937B /* UIPasteboard.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -286,21 +300,15 @@
 		940F9CF423996A570028937B /* Wrappers */ = {
 			isa = PBXGroup;
 			children = (
-				940F9CF523996A5A0028937B /* Fakes */,
+				940F9D4E23999C570028937B /* UIAlertActionWrapper.swift */,
 			);
 			name = Wrappers;
-			sourceTree = "<group>";
-		};
-		940F9CF523996A5A0028937B /* Fakes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Fakes;
 			sourceTree = "<group>";
 		};
 		940F9CF623996A5E0028937B /* Fakes */ = {
 			isa = PBXGroup;
 			children = (
+				940F9D4A23999C310028937B /* FakeUIPasteboard.swift */,
 			);
 			name = Fakes;
 			sourceTree = "<group>";
@@ -308,126 +316,11 @@
 		940F9CF723996A610028937B /* Fakes */ = {
 			isa = PBXGroup;
 			children = (
+				940F9D4023999C100028937B /* FakeStoryboardBuilder.swift */,
+				940F9D3E23999C100028937B /* FakeTableViewCellBuilder.swift */,
+				940F9D3F23999C100028937B /* FakeUIAlertControllerBuilder.swift */,
 			);
 			name = Fakes;
-			sourceTree = "<group>";
-		};
-		94341A79238C49F600BC8355 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				94341A7A238C4A0000BC8355 /* Fakes */,
-				94341A92238C74B300BC8355 /* Calendar.swift */,
-				94341A71238C48AC00BC8355 /* FileManager.swift */,
-				94341A75238C49A100BC8355 /* JSONDecoder.swift */,
-				94341A73238C498800BC8355 /* JSONEncoder.swift */,
-				94341A9A238C767C00BC8355 /* URLSession.swift */,
-				94341A8C238C743400BC8355 /* UserDefaults.swift */,
-				94341A77238C49B500BC8355 /* UUID.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		94341A7A238C4A0000BC8355 /* Fakes */ = {
-			isa = PBXGroup;
-			children = (
-				94341A90238C74AB00BC8355 /* FakeCalendar.swift */,
-				94341A7B238C4A1700BC8355 /* FakeFileManager.swift */,
-				94341A7F238C4B5A00BC8355 /* FakeGenericError.swift */,
-				94341A7D238C4B4100BC8355 /* FakeJSONDecoder.swift */,
-				94341A81238C4B8100BC8355 /* FakeJSONEncoder.swift */,
-				94341A9C238C769000BC8355 /* FakeURLSession.swift */,
-				94341A8E238C747000BC8355 /* FakeUserDefaults.swift */,
-				94341A83238C4B9700BC8355 /* FakeUUID.swift */,
-			);
-			path = Fakes;
-			sourceTree = "<group>";
-		};
-		94341A85238C735700BC8355 /* AVFoundation */ = {
-			isa = PBXGroup;
-			children = (
-				94341A89238C73AC00BC8355 /* Protocols */,
-				94341AA6238C9B3D00BC8355 /* Wrappers */,
-			);
-			path = AVFoundation;
-			sourceTree = "<group>";
-		};
-		94341A88238C73A400BC8355 /* Fakes */ = {
-			isa = PBXGroup;
-			children = (
-				94341A8A238C73D800BC8355 /* FakeAVCaptureSession.swift */,
-			);
-			path = Fakes;
-			sourceTree = "<group>";
-		};
-		94341A89238C73AC00BC8355 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				94341A88238C73A400BC8355 /* Fakes */,
-				94341A86238C736C00BC8355 /* AVCaptureSession.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		94341A94238C74E400BC8355 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				94341A97238C74FE00BC8355 /* Fakes */,
-				94341A95238C74EF00BC8355 /* UIPasteboard.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		94341A97238C74FE00BC8355 /* Fakes */ = {
-			isa = PBXGroup;
-			children = (
-				94341A98238C751200BC8355 /* FakeUIPasteboard.swift */,
-			);
-			path = Fakes;
-			sourceTree = "<group>";
-		};
-		94341A9E238C98E400BC8355 /* Wrappers */ = {
-			isa = PBXGroup;
-			children = (
-				94341AA1238C99D800BC8355 /* Fakes */,
-				94A8A466238F4AF10085E8E0 /* DataWrapper.swift */,
-				94341A9F238C990200BC8355 /* DispatchQueueWrapper.swift */,
-				94341AB0238CBD0A00BC8355 /* DispatchWorkItemWrapper.swift */,
-				946AB17423904C72003D0016 /* JSONCodableWrapper.swift */,
-				94E7A86F2392174700C3A04F /* JSONCodableWrapper+Capsule.swift */,
-				94341AAA238C9BEA00BC8355 /* SleepWrapper.swift */,
-				94DB46282393203C00D0C0A2 /* TimerWrapper.swift */,
-			);
-			path = Wrappers;
-			sourceTree = "<group>";
-		};
-		94341AA1238C99D800BC8355 /* Fakes */ = {
-			isa = PBXGroup;
-			children = (
-				94A8A468238F4AFF0085E8E0 /* FakeDataWrapper.swift */,
-				94341AA2238C99E700BC8355 /* FakeDispatchQueueWrapper.swift */,
-				94341AAE238CB9BE00BC8355 /* FakeDispatchWorkItemWrapper.swift */,
-				946AB17623904CCD003D0016 /* FakeJSONCodableWrapper.swift */,
-				94341AAC238C9D5F00BC8355 /* FakeSleepWrapper.swift */,
-				94DB462A239321E600D0C0A2 /* FakeTimerWrapper.swift */,
-			);
-			path = Fakes;
-			sourceTree = "<group>";
-		};
-		94341AA6238C9B3D00BC8355 /* Wrappers */ = {
-			isa = PBXGroup;
-			children = (
-				94341AA7238C9B4D00BC8355 /* Fakes */,
-				94341AA4238C9B0700BC8355 /* AudioServicesWrapper.swift */,
-			);
-			path = Wrappers;
-			sourceTree = "<group>";
-		};
-		94341AA7238C9B4D00BC8355 /* Fakes */ = {
-			isa = PBXGroup;
-			children = (
-				94341AA8238C9B5D00BC8355 /* FakeAudioServicesWrapper.swift */,
-			);
-			path = Fakes;
 			sourceTree = "<group>";
 		};
 		94455B57238C45920063BB6E = {
@@ -452,87 +345,10 @@
 		94455B63238C45920063BB6E /* Capsule */ = {
 			isa = PBXGroup;
 			children = (
-				94455B6C238C45B10063BB6E /* Supporting Files */,
-				94455B6D238C45D90063BB6E /* Source */,
-			);
-			path = Capsule;
-			sourceTree = "<group>";
-		};
-		94455B6C238C45B10063BB6E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
+				94455B64238C45920063BB6E /* Capsule.h */,
 				94455B65238C45920063BB6E /* Info.plist */,
 			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		94455B6D238C45D90063BB6E /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				94455B64238C45920063BB6E /* Capsule.h */,
-				940F9C5C2396B4800028937B /* Extensions */,
-				94341A85238C735700BC8355 /* AVFoundation */,
-				94455B6E238C45E20063BB6E /* Foundation */,
-				94455B6F238C45E70063BB6E /* UIKit */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		94455B6E238C45E20063BB6E /* Foundation */ = {
-			isa = PBXGroup;
-			children = (
-				940682A1238D9E3F004278CB /* Builders */,
-				94341A79238C49F600BC8355 /* Protocols */,
-				94341A9E238C98E400BC8355 /* Wrappers */,
-			);
-			path = Foundation;
-			sourceTree = "<group>";
-		};
-		94455B6F238C45E70063BB6E /* UIKit */ = {
-			isa = PBXGroup;
-			children = (
-				94DB462223931A1600D0C0A2 /* Builders */,
-				94341A94238C74E400BC8355 /* Protocols */,
-				94DB463423932B4900D0C0A2 /* Wrappers */,
-			);
-			path = UIKit;
-			sourceTree = "<group>";
-		};
-		94DB462223931A1600D0C0A2 /* Builders */ = {
-			isa = PBXGroup;
-			children = (
-				94DB462523931E3600D0C0A2 /* Fakes */,
-				94DB462323931A2700D0C0A2 /* StoryboardBuilder.swift */,
-				94DB462C2393248400D0C0A2 /* TableViewCellBuilder.swift */,
-				94DB46302393276C00D0C0A2 /* UIAlertControllerBuilder.swift */,
-			);
-			path = Builders;
-			sourceTree = "<group>";
-		};
-		94DB462523931E3600D0C0A2 /* Fakes */ = {
-			isa = PBXGroup;
-			children = (
-				94DB462623931E4000D0C0A2 /* FakeStoryboardBuilder.swift */,
-				94DB462E239325AD00D0C0A2 /* FakeTableViewCellBuilder.swift */,
-				94DB463223932B1B00D0C0A2 /* FakeUIAlertControllerBuilder.swift */,
-			);
-			path = Fakes;
-			sourceTree = "<group>";
-		};
-		94DB463423932B4900D0C0A2 /* Wrappers */ = {
-			isa = PBXGroup;
-			children = (
-				94DB463523932B4D00D0C0A2 /* Fakes */,
-				94DB463623932B5D00D0C0A2 /* UIAlertActionWrapper.swift */,
-			);
-			path = Wrappers;
-			sourceTree = "<group>";
-		};
-		94DB463523932B4D00D0C0A2 /* Fakes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Fakes;
+			path = Capsule;
 			sourceTree = "<group>";
 		};
 		A0C0F8F733D544C3B4D5809C /* Frameworks */ = {
@@ -676,50 +492,50 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				940682A6238D9E79004278CB /* FakeDispatchWorkItemWrapperBuilder.swift in Sources */,
-				94341A96238C74EF00BC8355 /* UIPasteboard.swift in Sources */,
-				94DB462B239321E600D0C0A2 /* FakeTimerWrapper.swift in Sources */,
-				940682A4238D9E55004278CB /* DispatchWorkItemWrapperBuilder.swift in Sources */,
-				94341A80238C4B5A00BC8355 /* FakeGenericError.swift in Sources */,
-				94341A8F238C747000BC8355 /* FakeUserDefaults.swift in Sources */,
-				94A8A469238F4AFF0085E8E0 /* FakeDataWrapper.swift in Sources */,
-				94341AA0238C990200BC8355 /* DispatchQueueWrapper.swift in Sources */,
-				94341A82238C4B8100BC8355 /* FakeJSONEncoder.swift in Sources */,
-				94341A78238C49B500BC8355 /* UUID.swift in Sources */,
-				94341A93238C74B300BC8355 /* Calendar.swift in Sources */,
-				94341A84238C4B9700BC8355 /* FakeUUID.swift in Sources */,
-				94341AA5238C9B0700BC8355 /* AudioServicesWrapper.swift in Sources */,
-				94341AB1238CBD0A00BC8355 /* DispatchWorkItemWrapper.swift in Sources */,
-				946AB17723904CCD003D0016 /* FakeJSONCodableWrapper.swift in Sources */,
-				94341A76238C49A100BC8355 /* JSONDecoder.swift in Sources */,
-				94341AAD238C9D5F00BC8355 /* FakeSleepWrapper.swift in Sources */,
-				94341A74238C498800BC8355 /* JSONEncoder.swift in Sources */,
-				94DB462F239325AD00D0C0A2 /* FakeTableViewCellBuilder.swift in Sources */,
-				94341A87238C736C00BC8355 /* AVCaptureSession.swift in Sources */,
-				94341AA9238C9B5D00BC8355 /* FakeAudioServicesWrapper.swift in Sources */,
-				940F9C5E2396B4930028937B /* Bundle+Capsule.swift in Sources */,
-				94341A9D238C769000BC8355 /* FakeURLSession.swift in Sources */,
-				94341A8B238C73D800BC8355 /* FakeAVCaptureSession.swift in Sources */,
-				94DB462D2393248400D0C0A2 /* TableViewCellBuilder.swift in Sources */,
-				94341AAF238CB9BE00BC8355 /* FakeDispatchWorkItemWrapper.swift in Sources */,
-				94341A8D238C743400BC8355 /* UserDefaults.swift in Sources */,
-				94341A99238C751200BC8355 /* FakeUIPasteboard.swift in Sources */,
-				94DB463323932B1B00D0C0A2 /* FakeUIAlertControllerBuilder.swift in Sources */,
-				94341A91238C74AB00BC8355 /* FakeCalendar.swift in Sources */,
-				946AB17523904C72003D0016 /* JSONCodableWrapper.swift in Sources */,
-				94341A9B238C767C00BC8355 /* URLSession.swift in Sources */,
-				94341A72238C48AC00BC8355 /* FileManager.swift in Sources */,
-				94DB46292393203C00D0C0A2 /* TimerWrapper.swift in Sources */,
-				94A8A467238F4AF10085E8E0 /* DataWrapper.swift in Sources */,
-				94DB46312393276C00D0C0A2 /* UIAlertControllerBuilder.swift in Sources */,
-				94DB462723931E4000D0C0A2 /* FakeStoryboardBuilder.swift in Sources */,
-				94341AA3238C99E700BC8355 /* FakeDispatchQueueWrapper.swift in Sources */,
-				94DB462423931A2700D0C0A2 /* StoryboardBuilder.swift in Sources */,
-				94341A7C238C4A1700BC8355 /* FakeFileManager.swift in Sources */,
-				94341A7E238C4B4100BC8355 /* FakeJSONDecoder.swift in Sources */,
-				94DB463723932B5D00D0C0A2 /* UIAlertActionWrapper.swift in Sources */,
-				94E7A8702392174700C3A04F /* JSONCodableWrapper+Capsule.swift in Sources */,
-				94341AAB238C9BEA00BC8355 /* SleepWrapper.swift in Sources */,
+				940F9D2323999BB90028937B /* UUID.swift in Sources */,
+				940F9D4223999C100028937B /* FakeUIAlertControllerBuilder.swift in Sources */,
+				940F9D4823999C1E0028937B /* UIAlertControllerBuilder.swift in Sources */,
+				940F9D1123999BA00028937B /* FakeGenericError.swift in Sources */,
+				940F9D4323999C100028937B /* FakeStoryboardBuilder.swift in Sources */,
+				940F9D3723999BEF0028937B /* SleepWrapper.swift in Sources */,
+				940F9D2123999BB90028937B /* Calendar.swift in Sources */,
+				940F9D3B23999BEF0028937B /* TimerWrapper.swift in Sources */,
+				940F9D4923999C1E0028937B /* StoryboardBuilder.swift in Sources */,
+				940F9D1F23999BB90028937B /* FileManager.swift in Sources */,
+				940F9D3A23999BEF0028937B /* DispatchWorkItemWrapper.swift in Sources */,
+				940F9D2D23999BDA0028937B /* FakeSleepWrapper.swift in Sources */,
+				940F9D2E23999BDA0028937B /* FakeDispatchWorkItemWrapper.swift in Sources */,
+				940F9CF923999B070028937B /* Bundle+Capsule.swift in Sources */,
+				940F9D1323999BA00028937B /* FakeJSONDecoder.swift in Sources */,
+				940F9D3D23999BEF0028937B /* DataWrapper.swift in Sources */,
+				940F9D1423999BA00028937B /* FakeUUID.swift in Sources */,
+				940F9D1223999BA00028937B /* FakeURLSession.swift in Sources */,
+				940F9D2A23999BDA0028937B /* FakeTimerWrapper.swift in Sources */,
+				940F9D1E23999BB90028937B /* URLSession.swift in Sources */,
+				940F9D4F23999C570028937B /* UIAlertActionWrapper.swift in Sources */,
+				940F9D3823999BEF0028937B /* DispatchQueueWrapper.swift in Sources */,
+				940F9D4B23999C310028937B /* FakeUIPasteboard.swift in Sources */,
+				940F9D2F23999BDA0028937B /* FakeDispatchQueueWrapper.swift in Sources */,
+				940F9CFD23999B310028937B /* AVCaptureSession.swift in Sources */,
+				940F9D1023999BA00028937B /* FakeJSONEncoder.swift in Sources */,
+				940F9D0523999B6C0028937B /* FakeDispatchWorkItemWrapperBuilder.swift in Sources */,
+				940F9D1523999BA00028937B /* FakeUserDefaults.swift in Sources */,
+				940F9CFF23999B410028937B /* FakeAudioServicesWrapper.swift in Sources */,
+				940F9D4D23999C3E0028937B /* UIPasteboard.swift in Sources */,
+				940F9D0323999B650028937B /* DispatchWorkItemWrapperBuilder.swift in Sources */,
+				940F9D0123999B480028937B /* AudioServicesWrapper.swift in Sources */,
+				940F9D4723999C1E0028937B /* TableViewCellBuilder.swift in Sources */,
+				940F9D0F23999BA00028937B /* FakeFileManager.swift in Sources */,
+				940F9D4123999C100028937B /* FakeTableViewCellBuilder.swift in Sources */,
+				940F9D0E23999BA00028937B /* FakeCalendar.swift in Sources */,
+				940F9D3C23999BEF0028937B /* JSONCodableWrapper.swift in Sources */,
+				940F9CFB23999B270028937B /* FakeAVCaptureSession.swift in Sources */,
+				940F9D3923999BEF0028937B /* JSONCodableWrapper+Capsule.swift in Sources */,
+				940F9D2C23999BDA0028937B /* FakeJSONCodableWrapper.swift in Sources */,
+				940F9D2B23999BDA0028937B /* FakeDataWrapper.swift in Sources */,
+				940F9D2223999BB90028937B /* JSONDecoder.swift in Sources */,
+				940F9D2023999BB90028937B /* JSONEncoder.swift in Sources */,
+				940F9D1D23999BB90028937B /* UserDefaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -857,7 +673,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Capsule/Supporting Files/Info.plist";
+				INFOPLIST_FILE = Capsule/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -888,7 +704,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Capsule/Supporting Files/Info.plist";
+				INFOPLIST_FILE = Capsule/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
