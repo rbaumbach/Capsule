@@ -120,7 +120,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		940F9CE3239968950028937B /* Source */ = {
+		940F9CE3239968950028937B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				940F9CE4239969800028937B /* Extensions */,
@@ -128,7 +128,7 @@
 				940F9CE6239969910028937B /* Foundation */,
 				940F9CE72399699A0028937B /* UIKit */,
 			);
-			path = Source;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		940F9CE4239969800028937B /* Extensions */ = {
@@ -326,8 +326,8 @@
 		94455B57238C45920063BB6E = {
 			isa = PBXGroup;
 			children = (
-				940F9CE3239968950028937B /* Source */,
 				94455B63238C45920063BB6E /* Capsule */,
+				940F9CE3239968950028937B /* Sources */,
 				94455B62238C45920063BB6E /* Products */,
 				B289504A663128C42BC699FF /* Pods */,
 				A0C0F8F733D544C3B4D5809C /* Frameworks */,
