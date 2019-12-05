@@ -19,7 +19,6 @@ profile
 *.moved-aside
 DerivedData
 .idea/
-Pods/
 ObjectiveC.gcda
 ObjectiveC.gcno
 
@@ -30,6 +29,10 @@ Pods
 # Carthage
 
 Carthage
+
+# Swift Package Manager
+
+.build
 
 # Fastlane
 
