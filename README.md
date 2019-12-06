@@ -10,18 +10,24 @@ This project contains many protocols, wrappers, builders that can be used with a
 
 ### CocoaPods
 
-[CocoaPods](http://cocoapods.org) is the recommended way to add Capsule to your project.
+[CocoaPods](http://cocoapods.org) is the recommended way to add Capsule to your project:
 
 1.  Add Capsule to your Podfile `pod 'Capsule'`.
 2.  Install the pod(s) by running `pod install`.
-3.  Add Capsule to your files with `import Capsule`.
 
 ### Carthage
 
-You can also use [Carthage](https://github.com/Carthage/Carthage) to manually add the Capsule dynamic framework to your project.
+[Carthage](https://github.com/Carthage/Carthage) can be used to manually add the Capsule framework to your project:
 
 1. Add `github "rbaumbach/Capsule"` to your [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile).
-2. [Follow instructions to manually add](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application) Capsule dynamic framework to your project.
+2. [Follow instructions to manually add](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application) the Capsule framework to your project.
+
+### Swift Package manager
+
+[Swift Package Manager](https://swift.org/package-manager/) is another way to add the to your project:
+
+1.  Add `.package(url: "https://github.com/rbaumbach/Capsule", from: "0.1.3")`
+2.  [Follow intructions to add](https://swift.org/getting-started/#using-the-package-manager) the Capsule package to your project.
 
 ### Clone from Github
 
