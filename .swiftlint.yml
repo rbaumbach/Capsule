@@ -12,6 +12,3 @@ identifier_name:
     error: 70
   min_length:
     error: 1
-
-excluded:
-  - Capsule/Source/Foundation/Fakes
