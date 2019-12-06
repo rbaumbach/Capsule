@@ -51,6 +51,7 @@
 		940F9DA52399A5630028937B /* FakeUIPasteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9DA42399A5630028937B /* FakeUIPasteboard.swift */; };
 		940F9DA72399A56F0028937B /* UIPasteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9DA62399A56F0028937B /* UIPasteboard.swift */; };
 		940F9DA92399A57D0028937B /* UIAlertActionWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9DA82399A57D0028937B /* UIAlertActionWrapper.swift */; };
+		940F9DEA239AFB8A0028937B /* Capsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9DE9239AFB8A0028937B /* Capsule.swift */; };
 		94455B66238C45920063BB6E /* Capsule.h in Headers */ = {isa = PBXBuildFile; fileRef = 94455B64238C45920063BB6E /* Capsule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CF6AADE9586FD43AA3CFB857 /* Pods_Capsule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89185E854D912AF3945AB5A4 /* Pods_Capsule.framework */; };
 /* End PBXBuildFile section */
@@ -102,6 +103,7 @@
 		940F9DA42399A5630028937B /* FakeUIPasteboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeUIPasteboard.swift; path = Capsule/FakeUIPasteboard.swift; sourceTree = "<group>"; };
 		940F9DA62399A56F0028937B /* UIPasteboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIPasteboard.swift; path = Capsule/UIPasteboard.swift; sourceTree = "<group>"; };
 		940F9DA82399A57D0028937B /* UIAlertActionWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlertActionWrapper.swift; path = Capsule/UIAlertActionWrapper.swift; sourceTree = "<group>"; };
+		940F9DE9239AFB8A0028937B /* Capsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capsule.swift; sourceTree = "<group>"; };
 		94455B61238C45920063BB6E /* Capsule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Capsule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94455B64238C45920063BB6E /* Capsule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capsule.h; sourceTree = "<group>"; };
 		94455B65238C45920063BB6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -327,12 +329,21 @@
 		940F9D512399A3940028937B /* Capsule */ = {
 			isa = PBXGroup;
 			children = (
+				940F9DE8239AFB6F0028937B /* Library */,
 				940F9CE4239969800028937B /* Extensions */,
 				940F9CE5239969890028937B /* AVFoundation */,
 				940F9CE6239969910028937B /* Foundation */,
 				940F9CE72399699A0028937B /* UIKit */,
 			);
 			path = Capsule;
+			sourceTree = "<group>";
+		};
+		940F9DE8239AFB6F0028937B /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				940F9DE9239AFB8A0028937B /* Capsule.swift */,
+			);
+			name = Library;
 			sourceTree = "<group>";
 		};
 		94455B57238C45920063BB6E = {
@@ -505,6 +516,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				940F9D942399A5160028937B /* JSONCodableWrapper+Capsule.swift in Sources */,
+				940F9DEA239AFB8A0028937B /* Capsule.swift in Sources */,
 				940F9D9B2399A5310028937B /* FakeTableViewCellBuilder.swift in Sources */,
 				940F9DA32399A5510028937B /* StoryboardBuilder.swift in Sources */,
 				940F9D532399A3E30028937B /* Bundle+Capsule.swift in Sources */,
