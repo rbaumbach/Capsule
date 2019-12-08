@@ -46,6 +46,8 @@ Snapshots/en-US
 
 # Artifacts
 
+*.a
+*.framework
 *.ipa
 *.zip
 *.dSYM
