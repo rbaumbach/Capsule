@@ -62,12 +62,17 @@ public class FakeDispatchQueueWrapper: DispatchQueueWrapperProtocol {
     public var capturedGlobalAsyncAfterWorkItemWrapperSecondsDoubleQOS: DispatchQoS?
     public var capturedGlobalAsyncAfterWorkItemWrapperSecondsDoubleProtocol: DispatchWorkItemWrapperProtocol?
     
+    // MARK: - Custom Queue
+    
+    public var capturedCustomAsyncFlags: DispatchWorkItemFlags?
+    public var capturedCustomAsyncExecutionBlock: (() -> Void)?
+    
     // MARK: - Init methods
     
     public init() { }
     
     // MARK: - <DispatcherProtocol>
-    
+
     // MARK: - Main Queue
     
     public func mainAsync(completionHandler: @escaping () -> Void) {
@@ -123,5 +128,12 @@ public class FakeDispatchQueueWrapper: DispatchQueueWrapperProtocol {
         capturedGlobalAsyncAfterWorkItemWrapperSecondsDouble = seconds
         capturedGlobalAsyncAfterWorkItemWrapperSecondsDoubleQOS = qos
         capturedGlobalAsyncAfterWorkItemWrapperSecondsDoubleProtocol = dispatchWorkItemWrapper
+    }
+    
+    // MARK: - Custom Queue
+    
+    public func customAsync(flags: DispatchWorkItemFlags, execute: @escaping () -> Void) {
+        capturedCustomAsyncFlags = flags
+        capturedCustomAsyncExecutionBlock = execute
     }
 }

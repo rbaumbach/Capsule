@@ -34,16 +34,25 @@ public protocol DispatchQueueWrapperProtocol {
     func globalAsyncAfter(seconds: Double, qos: DispatchQoS, completionHandler: @escaping () -> Void)
     func globalAsyncAfter(seconds: Int, qos: DispatchQoS, dispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol)
     func globalAsyncAfter(seconds: Double, qos: DispatchQoS, dispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol)
+    
+    func customAsync(flags: DispatchWorkItemFlags, execute: @escaping () -> Void)
 }
 
 public class DispatchQueueWrapper: DispatchQueueWrapperProtocol {
     // MARK: - Private properties
     
     private let mainDispatchQueue = DispatchQueue.main
+    private let customQueue: DispatchQueue
     
     // MARK: - Init methods
     
-    public init() { }
+    public init() {
+        customQueue = DispatchQueue(label: "Standard", attributes: [])
+    }
+    
+    public init(name: String, attributes: DispatchQueue.Attributes) {
+        customQueue = DispatchQueue(label: name, attributes: attributes)
+    }
     
     // MARK: - Public methods
     
@@ -97,5 +106,11 @@ public class DispatchQueueWrapper: DispatchQueueWrapperProtocol {
         let dispatchWorkItem = dispatchWorkItemWrapper.dispatchWorkItem
         
         DispatchQueue.global(qos: qos.qosClass).asyncAfter(deadline: .now() + seconds, execute: dispatchWorkItem)
+    }
+    
+    // MARK: - Custom Queue
+    
+    public func customAsync(flags: DispatchWorkItemFlags, execute: @escaping () -> Void) {
+        customQueue.async(flags: flags, execute: execute)
     }
 }
