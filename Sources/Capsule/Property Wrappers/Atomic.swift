@@ -48,21 +48,21 @@ public struct Atomic<T> {
     }
     
     public func atomicGet() -> T {
-        lock.lock()
-
         defer {
             lock.unlock()
         }
+        
+        lock.lock()
 
         return value
     }
     
     public mutating func atomicSet(_ value: T) {
-        lock.lock()
-        
         defer {
             lock.unlock()
         }
+        
+        lock.lock()
         
         self.wrappedValue = value
     }
