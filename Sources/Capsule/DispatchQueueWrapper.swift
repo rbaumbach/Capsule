@@ -47,11 +47,11 @@ public class DispatchQueueWrapper: DispatchQueueWrapperProtocol {
     // MARK: - Init methods
     
     public convenience init() {
-        self.init(name: "Standard", attributes: [])
+        self.init(label: "Default", attributes: [])
     }
     
-    public init(name: String, attributes: DispatchQueue.Attributes) {
-        customQueue = DispatchQueue(label: name, attributes: attributes)
+    public init(label: String, attributes: DispatchQueue.Attributes) {
+        customQueue = DispatchQueue(label: label, attributes: attributes)
     }
     
     // MARK: - Public methods
