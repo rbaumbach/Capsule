@@ -34,7 +34,10 @@ platform :ios do
 
   desc "Builds Capsule.framework.zip using Carthage"
   lane :build_carthage_framework do
-    sh "cd .. && carthage build --no-skip-current && carthage archive Capsule"
+    carthage(command: "build",
+         no_skip_current: true)
+
+    carthage(command: "archive")
   end
 
   after_all do |lane|
