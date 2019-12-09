@@ -36,6 +36,7 @@ public protocol DispatchQueueWrapperProtocol {
     func globalAsyncAfter(seconds: Double, qos: DispatchQoS, dispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol)
     
     func customAsync(flags: DispatchWorkItemFlags, execute: @escaping () -> Void)
+    func customSync(flags: DispatchWorkItemFlags, execute: @escaping () -> Void)
 }
 
 public class DispatchQueueWrapper: DispatchQueueWrapperProtocol {
@@ -112,5 +113,9 @@ public class DispatchQueueWrapper: DispatchQueueWrapperProtocol {
     
     public func customAsync(flags: DispatchWorkItemFlags, execute: @escaping () -> Void) {
         customQueue.async(flags: flags, execute: execute)
+    }
+    
+    public func customSync(flags: DispatchWorkItemFlags, execute: @escaping () -> Void) {
+        customQueue.sync(flags: flags, execute: execute)
     }
 }

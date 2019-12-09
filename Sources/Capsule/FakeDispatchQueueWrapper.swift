@@ -67,6 +67,9 @@ public class FakeDispatchQueueWrapper: DispatchQueueWrapperProtocol {
     public var capturedCustomAsyncFlags: DispatchWorkItemFlags?
     public var capturedCustomAsyncExecutionBlock: (() -> Void)?
     
+    public var capturedCustomSyncFlags: DispatchWorkItemFlags?
+    public var capturedCustomSyncExecutionBlock: (() -> Void)?
+    
     // MARK: - Init methods
     
     public init() { }
@@ -135,5 +138,10 @@ public class FakeDispatchQueueWrapper: DispatchQueueWrapperProtocol {
     public func customAsync(flags: DispatchWorkItemFlags, execute: @escaping () -> Void) {
         capturedCustomAsyncFlags = flags
         capturedCustomAsyncExecutionBlock = execute
+    }
+    
+    public func customSync(flags: DispatchWorkItemFlags, execute: @escaping () -> Void) {
+        capturedCustomSyncFlags = flags
+        capturedCustomSyncExecutionBlock = execute
     }
 }
