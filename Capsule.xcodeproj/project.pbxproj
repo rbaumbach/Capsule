@@ -53,6 +53,8 @@
 		940F9DA92399A57D0028937B /* UIAlertActionWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9DA82399A57D0028937B /* UIAlertActionWrapper.swift */; };
 		940F9DEA239AFB8A0028937B /* Capsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9DE9239AFB8A0028937B /* Capsule.swift */; };
 		94455B66238C45920063BB6E /* Capsule.h in Headers */ = {isa = PBXBuildFile; fileRef = 94455B64238C45920063BB6E /* Capsule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94A3F61D239DE2A30075235B /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A3F61C239DE2A30075235B /* Atomic.swift */; };
+		94A3F61F239DF28F0075235B /* FakeNSLocking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A3F61E239DF28F0075235B /* FakeNSLocking.swift */; };
 		CF6AADE9586FD43AA3CFB857 /* Pods_Capsule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89185E854D912AF3945AB5A4 /* Pods_Capsule.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +109,8 @@
 		94455B61238C45920063BB6E /* Capsule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Capsule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94455B64238C45920063BB6E /* Capsule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capsule.h; sourceTree = "<group>"; };
 		94455B65238C45920063BB6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94A3F61C239DE2A30075235B /* Atomic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
+		94A3F61E239DF28F0075235B /* FakeNSLocking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FakeNSLocking.swift; path = Capsule/FakeNSLocking.swift; sourceTree = "<group>"; };
 		E263C35345D6A3BA91898755 /* Pods-Capsule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capsule.release.xcconfig"; path = "Target Support Files/Pods-Capsule/Pods-Capsule.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -260,6 +264,7 @@
 				940F9D622399A49D0028937B /* FakeGenericError.swift */,
 				940F9D612399A49D0028937B /* FakeJSONDecoder.swift */,
 				940F9D652399A49D0028937B /* FakeJSONEncoder.swift */,
+				94A3F61E239DF28F0075235B /* FakeNSLocking.swift */,
 				940F9D662399A49D0028937B /* FakeURLSession.swift */,
 				940F9D672399A49E0028937B /* FakeUserDefaults.swift */,
 				940F9D642399A49D0028937B /* FakeUUID.swift */,
@@ -329,21 +334,22 @@
 		940F9D512399A3940028937B /* Capsule */ = {
 			isa = PBXGroup;
 			children = (
-				940F9DE8239AFB6F0028937B /* Library */,
-				940F9CE4239969800028937B /* Extensions */,
 				940F9CE5239969890028937B /* AVFoundation */,
+				940F9DE8239AFB6F0028937B /* Constants */,
+				940F9CE4239969800028937B /* Extensions */,
 				940F9CE6239969910028937B /* Foundation */,
+				94A3F61B239DE2930075235B /* Property Wrappers */,
 				940F9CE72399699A0028937B /* UIKit */,
 			);
 			path = Capsule;
 			sourceTree = "<group>";
 		};
-		940F9DE8239AFB6F0028937B /* Library */ = {
+		940F9DE8239AFB6F0028937B /* Constants */ = {
 			isa = PBXGroup;
 			children = (
 				940F9DE9239AFB8A0028937B /* Capsule.swift */,
 			);
-			name = Library;
+			name = Constants;
 			sourceTree = "<group>";
 		};
 		94455B57238C45920063BB6E = {
@@ -372,6 +378,14 @@
 				94455B65238C45920063BB6E /* Info.plist */,
 			);
 			path = Capsule;
+			sourceTree = "<group>";
+		};
+		94A3F61B239DE2930075235B /* Property Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				94A3F61C239DE2A30075235B /* Atomic.swift */,
+			);
+			path = "Property Wrappers";
 			sourceTree = "<group>";
 		};
 		A0C0F8F733D544C3B4D5809C /* Frameworks */ = {
@@ -516,6 +530,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				940F9D942399A5160028937B /* JSONCodableWrapper+Capsule.swift in Sources */,
+				94A3F61F239DF28F0075235B /* FakeNSLocking.swift in Sources */,
 				940F9DEA239AFB8A0028937B /* Capsule.swift in Sources */,
 				940F9D9B2399A5310028937B /* FakeTableViewCellBuilder.swift in Sources */,
 				940F9DA32399A5510028937B /* StoryboardBuilder.swift in Sources */,
@@ -537,6 +552,7 @@
 				940F9D7A2399A4BA0028937B /* Calendar.swift in Sources */,
 				940F9D882399A4ED0028937B /* FakeDispatchWorkItemWrapper.swift in Sources */,
 				940F9DA52399A5630028937B /* FakeUIPasteboard.swift in Sources */,
+				94A3F61D239DE2A30075235B /* Atomic.swift in Sources */,
 				940F9D6F2399A49E0028937B /* FakeUserDefaults.swift in Sources */,
 				940F9DA12399A5510028937B /* TableViewCellBuilder.swift in Sources */,
 				940F9D952399A5160028937B /* TimerWrapper.swift in Sources */,
