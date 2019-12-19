@@ -15,13 +15,6 @@ This project contains many protocols, wrappers, property wrappers, and builders 
 1.  Add Capsule to your Podfile `pod 'Capsule'`.
 2.  Install the pod(s) by running `pod install`.
 
-### Carthage
-
-[Carthage](https://github.com/Carthage/Carthage) can be used to manually add the `Capsule` framework to your project:
-
-1. Add `github "rbaumbach/Capsule"` to your [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile).
-2. [Follow instructions to manually add](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application) the Capsule framework to your project.
-
 ### Swift Package manager
 
 [Swift Package Manager](https://swift.org/package-manager/) can be used to add `Capsule` the to your project:
