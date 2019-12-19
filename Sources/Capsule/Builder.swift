@@ -74,7 +74,7 @@ public class AnyBuilder<BuildType: Initializable>: Builder {
 
 // MARK: - Private AnyBuilderBase
 
-private  class AnyBuilderBase<BuildType: Initializable>: Builder {
+private class AnyBuilderBase<BuildType: Initializable>: Builder {
     // MARK: - Abstract methods
     
     func build() -> BuildType {
