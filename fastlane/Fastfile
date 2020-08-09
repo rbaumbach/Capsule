@@ -32,14 +32,6 @@ platform :ios do
              executable: "Pods/SwiftLint/swiftlint")
   end
 
-  desc "Builds Capsule.framework.zip using Carthage"
-  lane :build_carthage_framework do
-    carthage(command: "build",
-         no_skip_current: true)
-
-    carthage(command: "archive")
-  end
-
   after_all do |lane|
     puts "🌮 🌮 🌮  Taco Time! 🌮 🌮 🌮"
   end
