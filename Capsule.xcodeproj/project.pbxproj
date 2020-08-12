@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		940DD6DF23B7B1FE001B509A /* SimulatorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940DD6DE23B7B1FE001B509A /* SimulatorWrapper.swift */; };
-		940DD6E123B7B2BB001B509A /* FakeSimulatorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940DD6E023B7B2BB001B509A /* FakeSimulatorWrapper.swift */; };
 		940F9D532399A3E30028937B /* Bundle+Capsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D522399A3E30028937B /* Bundle+Capsule.swift */; };
 		940F9D552399A3FA0028937B /* FakeAVCaptureSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D542399A3FA0028937B /* FakeAVCaptureSession.swift */; };
 		940F9D572399A40A0028937B /* AVCaptureSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D562399A40A0028937B /* AVCaptureSession.swift */; };
@@ -54,6 +52,8 @@
 		940F9DA72399A56F0028937B /* UIPasteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9DA62399A56F0028937B /* UIPasteboard.swift */; };
 		940F9DA92399A57D0028937B /* UIAlertActionWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9DA82399A57D0028937B /* UIAlertActionWrapper.swift */; };
 		940F9DEA239AFB8A0028937B /* Capsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9DE9239AFB8A0028937B /* Capsule.swift */; };
+		9415A09E24E37D750078B502 /* FakeSimulatorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9415A09D24E37D750078B502 /* FakeSimulatorWrapper.swift */; };
+		9415A0A024E37D890078B502 /* SimulatorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9415A09F24E37D890078B502 /* SimulatorWrapper.swift */; };
 		94455B66238C45920063BB6E /* Capsule.h in Headers */ = {isa = PBXBuildFile; fileRef = 94455B64238C45920063BB6E /* Capsule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		949A594123A729CA0039E542 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949A594023A729CA0039E542 /* Atomic.swift */; };
 		949A594523A72AA80039E542 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949A594423A72AA80039E542 /* Builder.swift */; };
@@ -64,8 +64,6 @@
 /* Begin PBXFileReference section */
 		7D51463544DA444020A22BD0 /* Pods-Capsule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capsule.debug.xcconfig"; path = "Target Support Files/Pods-Capsule/Pods-Capsule.debug.xcconfig"; sourceTree = "<group>"; };
 		89185E854D912AF3945AB5A4 /* Pods_Capsule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Capsule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		940DD6DE23B7B1FE001B509A /* SimulatorWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorWrapper.swift; sourceTree = "<group>"; };
-		940DD6E023B7B2BB001B509A /* FakeSimulatorWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeSimulatorWrapper.swift; sourceTree = "<group>"; };
 		940F9D522399A3E30028937B /* Bundle+Capsule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Bundle+Capsule.swift"; path = "Capsule/Bundle+Capsule.swift"; sourceTree = "<group>"; };
 		940F9D542399A3FA0028937B /* FakeAVCaptureSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeAVCaptureSession.swift; path = Capsule/FakeAVCaptureSession.swift; sourceTree = "<group>"; };
 		940F9D562399A40A0028937B /* AVCaptureSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AVCaptureSession.swift; path = Capsule/AVCaptureSession.swift; sourceTree = "<group>"; };
@@ -111,6 +109,8 @@
 		940F9DA62399A56F0028937B /* UIPasteboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIPasteboard.swift; path = Capsule/UIPasteboard.swift; sourceTree = "<group>"; };
 		940F9DA82399A57D0028937B /* UIAlertActionWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlertActionWrapper.swift; path = Capsule/UIAlertActionWrapper.swift; sourceTree = "<group>"; };
 		940F9DE9239AFB8A0028937B /* Capsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capsule.swift; sourceTree = "<group>"; };
+		9415A09D24E37D750078B502 /* FakeSimulatorWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeSimulatorWrapper.swift; path = Capsule/FakeSimulatorWrapper.swift; sourceTree = "<group>"; };
+		9415A09F24E37D890078B502 /* SimulatorWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimulatorWrapper.swift; path = Capsule/SimulatorWrapper.swift; sourceTree = "<group>"; };
 		94455B61238C45920063BB6E /* Capsule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Capsule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94455B64238C45920063BB6E /* Capsule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capsule.h; sourceTree = "<group>"; };
 		94455B65238C45920063BB6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -243,12 +243,12 @@
 			isa = PBXGroup;
 			children = (
 				940F9CF123996A3D0028937B /* Fakes */,
+				9415A09F24E37D890078B502 /* SimulatorWrapper.swift */,
 				940F9D8B2399A5150028937B /* DataWrapper.swift */,
 				940F9D8C2399A5150028937B /* DispatchQueueWrapper.swift */,
 				940F9D902399A5160028937B /* DispatchWorkItemWrapper.swift */,
 				940F9D8F2399A5160028937B /* JSONCodableWrapper.swift */,
 				940F9D8D2399A5160028937B /* JSONCodableWrapper+Capsule.swift */,
-				940DD6DE23B7B1FE001B509A /* SimulatorWrapper.swift */,
 				940F9D8A2399A5150028937B /* SleepWrapper.swift */,
 				940F9D8E2399A5160028937B /* TimerWrapper.swift */,
 			);
@@ -286,7 +286,7 @@
 				940F9D7E2399A4ED0028937B /* FakeDispatchQueueWrapper.swift */,
 				940F9D822399A4ED0028937B /* FakeDispatchWorkItemWrapper.swift */,
 				940F9D7F2399A4ED0028937B /* FakeJSONCodableWrapper.swift */,
-				940DD6E023B7B2BB001B509A /* FakeSimulatorWrapper.swift */,
+				9415A09D24E37D750078B502 /* FakeSimulatorWrapper.swift */,
 				940F9D802399A4ED0028937B /* FakeSleepWrapper.swift */,
 				940F9D832399A4ED0028937B /* FakeTimerWrapper.swift */,
 			);
@@ -587,7 +587,7 @@
 				940F9D892399A4EE0028937B /* FakeTimerWrapper.swift in Sources */,
 				940F9D6A2399A49E0028937B /* FakeGenericError.swift in Sources */,
 				940F9D5F2399A4690028937B /* FakeDispatchWorkItemWrapperBuilder.swift in Sources */,
-				940DD6E123B7B2BB001B509A /* FakeSimulatorWrapper.swift in Sources */,
+				9415A09E24E37D750078B502 /* FakeSimulatorWrapper.swift in Sources */,
 				940F9D572399A40A0028937B /* AVCaptureSession.swift in Sources */,
 				940F9D782399A4BA0028937B /* URLSession.swift in Sources */,
 				940F9D922399A5160028937B /* DataWrapper.swift in Sources */,
@@ -602,7 +602,7 @@
 				940F9D6B2399A49E0028937B /* FakeCalendar.swift in Sources */,
 				940F9D592399A4300028937B /* FakeAudioServicesWrapper.swift in Sources */,
 				940F9DA92399A57D0028937B /* UIAlertActionWrapper.swift in Sources */,
-				940DD6DF23B7B1FE001B509A /* SimulatorWrapper.swift in Sources */,
+				9415A0A024E37D890078B502 /* SimulatorWrapper.swift in Sources */,
 				949A594523A72AA80039E542 /* Builder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
