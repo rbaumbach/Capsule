@@ -25,7 +25,11 @@ import Foundation
 public class FakeSimulatorWrapper: SimulatorWrapperProtocol {
     // MARK: - Stubbed properties
     
-    var stubbedIsSimulatorEnvironment = false
+    public var stubbedIsSimulatorEnvironment = false
+    
+    // MARK: - Init methods
+    
+    public init() { }
     
     // MARK: - <SimulatorWrapperProtocol>
     

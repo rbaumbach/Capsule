@@ -27,6 +27,10 @@ public protocol SimulatorWrapperProtocol {
 }
 
 public class SimulatorWrapper: SimulatorWrapperProtocol {
+    // MARK: - Init methods
+    
+    public init() { }
+    
     // MARK: - Public methods
     
     public func isSimulatorEnvironment() -> Bool {
