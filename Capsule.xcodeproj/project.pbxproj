@@ -54,6 +54,8 @@
 		940F9DEA239AFB8A0028937B /* Capsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9DE9239AFB8A0028937B /* Capsule.swift */; };
 		9415A09E24E37D750078B502 /* FakeSimulatorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9415A09D24E37D750078B502 /* FakeSimulatorWrapper.swift */; };
 		9415A0A024E37D890078B502 /* SimulatorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9415A09F24E37D890078B502 /* SimulatorWrapper.swift */; };
+		9415A0A224E37F180078B502 /* UIViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9415A0A124E37F180078B502 /* UIViewWrapper.swift */; };
+		9415A0A524E380390078B502 /* FakeUIViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9415A0A424E380390078B502 /* FakeUIViewWrapper.swift */; };
 		94455B66238C45920063BB6E /* Capsule.h in Headers */ = {isa = PBXBuildFile; fileRef = 94455B64238C45920063BB6E /* Capsule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		949A594123A729CA0039E542 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949A594023A729CA0039E542 /* Atomic.swift */; };
 		949A594523A72AA80039E542 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949A594423A72AA80039E542 /* Builder.swift */; };
@@ -111,6 +113,8 @@
 		940F9DE9239AFB8A0028937B /* Capsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capsule.swift; sourceTree = "<group>"; };
 		9415A09D24E37D750078B502 /* FakeSimulatorWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeSimulatorWrapper.swift; path = Capsule/FakeSimulatorWrapper.swift; sourceTree = "<group>"; };
 		9415A09F24E37D890078B502 /* SimulatorWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimulatorWrapper.swift; path = Capsule/SimulatorWrapper.swift; sourceTree = "<group>"; };
+		9415A0A124E37F180078B502 /* UIViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewWrapper.swift; sourceTree = "<group>"; };
+		9415A0A424E380390078B502 /* FakeUIViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUIViewWrapper.swift; sourceTree = "<group>"; };
 		94455B61238C45920063BB6E /* Capsule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Capsule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94455B64238C45920063BB6E /* Capsule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capsule.h; sourceTree = "<group>"; };
 		94455B65238C45920063BB6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -316,7 +320,9 @@
 		940F9CF423996A570028937B /* Wrappers */ = {
 			isa = PBXGroup;
 			children = (
+				9415A0A324E3802E0078B502 /* Fakes */,
 				940F9DA82399A57D0028937B /* UIAlertActionWrapper.swift */,
+				9415A0A124E37F180078B502 /* UIViewWrapper.swift */,
 			);
 			name = Wrappers;
 			sourceTree = "<group>";
@@ -357,6 +363,14 @@
 				940F9DE9239AFB8A0028937B /* Capsule.swift */,
 			);
 			name = Constants;
+			sourceTree = "<group>";
+		};
+		9415A0A324E3802E0078B502 /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				9415A0A424E380390078B502 /* FakeUIViewWrapper.swift */,
+			);
+			name = Fakes;
 			sourceTree = "<group>";
 		};
 		94455B57238C45920063BB6E = {
@@ -573,6 +587,7 @@
 				940F9D772399A4BA0028937B /* FileManager.swift in Sources */,
 				940F9D912399A5160028937B /* SleepWrapper.swift in Sources */,
 				940F9D7C2399A4BA0028937B /* UUID.swift in Sources */,
+				9415A0A524E380390078B502 /* FakeUIViewWrapper.swift in Sources */,
 				940F9D5D2399A4510028937B /* DispatchWorkItemWrapperBuilder.swift in Sources */,
 				940F9D7D2399A4BA0028937B /* JSONDecoder.swift in Sources */,
 				940F9D7A2399A4BA0028937B /* Calendar.swift in Sources */,
@@ -585,6 +600,7 @@
 				940F9D682399A49E0028937B /* FakeFileManager.swift in Sources */,
 				940F9D962399A5160028937B /* JSONCodableWrapper.swift in Sources */,
 				940F9D892399A4EE0028937B /* FakeTimerWrapper.swift in Sources */,
+				9415A0A224E37F180078B502 /* UIViewWrapper.swift in Sources */,
 				940F9D6A2399A49E0028937B /* FakeGenericError.swift in Sources */,
 				940F9D5F2399A4690028937B /* FakeDispatchWorkItemWrapperBuilder.swift in Sources */,
 				9415A09E24E37D750078B502 /* FakeSimulatorWrapper.swift in Sources */,

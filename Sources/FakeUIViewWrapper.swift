@@ -22,18 +22,25 @@
 
 import UIKit
 
-public protocol UIViewWrapperProtocol {
-    func animate(duration: TimeInterval, animations: @escaping () -> Void)
-}
-
-public class UIViewWrapper: UIViewWrapperProtocol {
+public class FakeUIViewWrapper: UIViewWrapperProtocol {
+    // MARK: - Captured properties
+    
+    public var capturedAnimateDuration: TimeInterval?
+    
+    public var capturedAnimateAnimations: (() -> Void)?
+    
+    // MARK: - Stubbed properties
+    
+    public var stubbedString = "Xerox copy"
+    
     // MARK: - Init methods
     
     public init() { }
     
-    // MARK: - Public methods
+    // MARK: - <UIViewWrapperProtocol>
     
     public func animate(duration: TimeInterval, animations: @escaping () -> Void) {
-        UIView.animate(withDuration: duration, animations: animations)
+        capturedAnimateDuration = duration
+        capturedAnimateAnimations = animations
     }
 }
