@@ -22,7 +22,7 @@
 
 import UIKit
 
-protocol UIPasteboardProtocol {
+public protocol UIPasteboardProtocol {
     var string: String? { get set }
 }
 

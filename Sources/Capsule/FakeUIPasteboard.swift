@@ -22,14 +22,14 @@
 
 import UIKit
 
-class FakeUIPasteboard: UIPasteboardProtocol {
+public class FakeUIPasteboard: UIPasteboardProtocol {
     // MARK: - Captured properties
     
-    var capturedString: String?
+    public var capturedString: String?
     
     // MARK: - Stubbed properties
     
-    var stubbedString = "Xerox copy"
+    public var stubbedString = "Xerox copy"
     
     // MARK: - Init methods
     
@@ -37,7 +37,7 @@ class FakeUIPasteboard: UIPasteboardProtocol {
     
     // MARK: - <UIPasteboardProtocol>
     
-    var string: String? {
+    public var string: String? {
         get {
             return stubbedString
         }
