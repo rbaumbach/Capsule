@@ -1,4 +1,4 @@
-# Capsule [![Bitrise](https://app.bitrise.io/app/e9b6e9645d7c5731/status.svg?token=9PaWYidx-KT_cmHr0mPagw&branch=master)](https://app.bitrise.io/app/e9b6e9645d7c5731) [![Cocoapod Version](https://img.shields.io/cocoapods/v/Capsule.svg)](https://github.com/rbaumbach/Capsule) [![SPM Compatible](https://img.shields.io/badge/SPM-Compatible-blue)](https://swift.org/package-manager/) [![Cocoapod Platform](https://img.shields.io/badge/platform-iOS-blue.svg)](https://github.com/rbaumbach/Capsule) [![License](https://img.shields.io/dub/l/vibe-d.svg)](https://github.com/rbaumbach/InstagramSimpleOAuth/blob/master/MIT-LICENSE.txt)
+# Capsule [![Bitrise](https://app.bitrise.io/app/e9b6e9645d7c5731/status.svg?token=9PaWYidx-KT_cmHr0mPagw&branch=master)](https://app.bitrise.io/app/e9b6e9645d7c5731) [![Cocoapod Version](https://img.shields.io/cocoapods/v/Capsule.svg)](https://github.com/rbaumbach/Capsule) [![SPM Compatible](https://img.shields.io/badge/SPM-Compatible-blue)](https://swift.org/package-manager/) [![Cocoapod Platform](https://img.shields.io/badge/platform-iOS-blue.svg)](https://github.com/rbaumbach/Capsule) [![License](https://img.shields.io/dub/l/vibe-d.svg)](https://github.com/rbaumbach/Capsule/blob/master/MIT-LICENSE.txt)
 
 A collection of Swift iOS protocols and wrappers for native iOS libraries and frameworks.
 
@@ -19,7 +19,7 @@ This project contains many protocols, wrappers, property wrappers, and builders 
 
 [Swift Package Manager](https://swift.org/package-manager/) can be used to add `Capsule` the to your project:
 
-1.  Add `.package(url: "https://github.com/rbaumbach/Capsule", from: "0.2.4")`
+1.  Add `.package(url: "https://github.com/rbaumbach/Capsule", from: "1.0.0")`
 2.  [Follow intructions to add](https://swift.org/getting-started/#using-the-package-manager) the Capsule package to your project.
 
 ### Clone from Github

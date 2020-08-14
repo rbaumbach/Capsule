@@ -20,35 +20,24 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 
-import UIKit
+import Foundation
 
-public class FakeUIAlertControllerBuilderProtocol: UIAlertControllerBuilderProtocol {
-    // MARK: - Captured properties
-    
-    public var buildAlertTitle: String?
-    public var buildAlertMessage: String?
-    public var buildAlertStyle: UIAlertController.Style?
-    public var buildAlertActions: [UIAlertActionWrapper]?
-    
-    // MARK: - Stubbed properties
-    
-    public var stubbedAlertController = UIAlertController()
-    
+public protocol SimulatorWrapperProtocol {
+    func isSimulatorEnvironment() -> Bool
+}
+
+public class SimulatorWrapper: SimulatorWrapperProtocol {
     // MARK: - Init methods
     
     public init() { }
     
-    // MARK: - <UIAlertControllerBuilderProtocol>
+    // MARK: - Public methods
     
-    public func buildAlertController(title: String,
-                                     message: String,
-                                     style: UIAlertController.Style,
-                                     actions: [UIAlertActionWrapper]) -> UIAlertController {
-        buildAlertTitle = title
-        buildAlertMessage = message
-        buildAlertStyle = style
-        buildAlertActions = actions
-        
-        return stubbedAlertController
+    public func isSimulatorEnvironment() -> Bool {
+        #if targetEnvironment(simulator)
+          return true
+        #else
+          return false
+        #endif
     }
 }

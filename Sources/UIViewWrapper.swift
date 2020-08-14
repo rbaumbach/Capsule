@@ -1,6 +1,6 @@
 //MIT License
 //
-//Copyright (c) 2019 Ryan Baumbach <github@ryan.codes>
+//Copyright (c) 2020 Ryan Baumbach <github@ryan.codes>
 //
 //Permission is hereby granted, free of charge, to any person obtaining a copy
 //of this software and associated documentation files (the "Software"), to deal
@@ -20,20 +20,20 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 
-import Foundation
+import UIKit
 
-public protocol SimulatorWrapperProtocol {
-    func isSimulatorEnvironment() -> Bool
+public protocol UIViewWrapperProtocol {
+    func animate(duration: TimeInterval, animations: @escaping () -> Void)
 }
 
-public class SimulatorWrapper: SimulatorWrapperProtocol {
+public class UIViewWrapper: UIViewWrapperProtocol {
+    // MARK: - Init methods
+    
+    public init() { }
+    
     // MARK: - Public methods
     
-    public func isSimulatorEnvironment() -> Bool {
-        #if targetEnvironment(simulator)
-          return true
-        #else
-          return false
-        #endif
+    public func animate(duration: TimeInterval, animations: @escaping () -> Void) {
+        UIView.animate(withDuration: duration, animations: animations)
     }
 }

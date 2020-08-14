@@ -5,5 +5,5 @@ use_frameworks!
 inhibit_all_warnings!
 
 target :Capsule do
-  pod 'SwiftLint', '0.37.0'
+  pod 'SwiftLint', '0.40.0'
 end

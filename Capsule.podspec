@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name                  = 'Capsule'
-  spec.version               = '0.2.4'
+  spec.version               = '1.0.0'
   spec.summary               = 'A collection of Swift iOS protocols and wrappers for native iOS libraries and frameworks.'
   spec.homepage              = 'https://github.com/rbaumbach/Capsule'
   spec.license               = { :type => 'MIT', :file => 'MIT-LICENSE.txt' }

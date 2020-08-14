@@ -1,6 +1,6 @@
 //MIT License
 //
-//Copyright (c) 2019 Ryan Baumbach <github@ryan.codes>
+//Copyright (c) 2020 Ryan Baumbach <github@ryan.codes>
 //
 //Permission is hereby granted, free of charge, to any person obtaining a copy
 //of this software and associated documentation files (the "Software"), to deal
@@ -22,14 +22,14 @@
 
 import UIKit
 
-class FakeUIPasteboard: UIPasteboardProtocol {
+public class FakeUIPasteboard: UIPasteboardProtocol {
     // MARK: - Captured properties
     
-    var capturedString: String?
+    public var capturedString: String?
     
     // MARK: - Stubbed properties
     
-    var stubbedString = "Xerox copy"
+    public var stubbedString = "Xerox copy"
     
     // MARK: - Init methods
     
@@ -37,7 +37,7 @@ class FakeUIPasteboard: UIPasteboardProtocol {
     
     // MARK: - <UIPasteboardProtocol>
     
-    var string: String? {
+    public var string: String? {
         get {
             return stubbedString
         }

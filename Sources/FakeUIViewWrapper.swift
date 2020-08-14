@@ -22,33 +22,25 @@
 
 import UIKit
 
-public class FakeUIAlertControllerBuilderProtocol: UIAlertControllerBuilderProtocol {
+public class FakeUIViewWrapper: UIViewWrapperProtocol {
     // MARK: - Captured properties
     
-    public var buildAlertTitle: String?
-    public var buildAlertMessage: String?
-    public var buildAlertStyle: UIAlertController.Style?
-    public var buildAlertActions: [UIAlertActionWrapper]?
+    public var capturedAnimateDuration: TimeInterval?
+    
+    public var capturedAnimateAnimations: (() -> Void)?
     
     // MARK: - Stubbed properties
     
-    public var stubbedAlertController = UIAlertController()
+    public var stubbedString = "Xerox copy"
     
     // MARK: - Init methods
     
     public init() { }
     
-    // MARK: - <UIAlertControllerBuilderProtocol>
+    // MARK: - <UIViewWrapperProtocol>
     
-    public func buildAlertController(title: String,
-                                     message: String,
-                                     style: UIAlertController.Style,
-                                     actions: [UIAlertActionWrapper]) -> UIAlertController {
-        buildAlertTitle = title
-        buildAlertMessage = message
-        buildAlertStyle = style
-        buildAlertActions = actions
-        
-        return stubbedAlertController
+    public func animate(duration: TimeInterval, animations: @escaping () -> Void) {
+        capturedAnimateDuration = duration
+        capturedAnimateAnimations = animations
     }
 }

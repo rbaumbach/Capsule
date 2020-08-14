@@ -1,6 +1,6 @@
 //MIT License
 //
-//Copyright (c) 2019 Ryan Baumbach <github@ryan.codes>
+//Copyright (c) 2020 Ryan Baumbach <github@ryan.codes>
 //
 //Permission is hereby granted, free of charge, to any person obtaining a copy
 //of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,11 @@ import Foundation
 public class FakeSimulatorWrapper: SimulatorWrapperProtocol {
     // MARK: - Stubbed properties
     
-    var stubbedIsSimulatorEnvironment = false
+    public var stubbedIsSimulatorEnvironment = false
+    
+    // MARK: - Init methods
+    
+    public init() { }
     
     // MARK: - <SimulatorWrapperProtocol>
     
