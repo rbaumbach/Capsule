@@ -56,6 +56,8 @@
 		9415A0A024E37D890078B502 /* SimulatorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9415A09F24E37D890078B502 /* SimulatorWrapper.swift */; };
 		9419FE07254DA4CE00DA4A28 /* FakeUIViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9419FE06254DA4CE00DA4A28 /* FakeUIViewWrapper.swift */; };
 		9419FE0C254DA4DB00DA4A28 /* UIViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9419FE0B254DA4DB00DA4A28 /* UIViewWrapper.swift */; };
+		9419FE12254DAAD500DA4A28 /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9419FE11254DAAD500DA4A28 /* NotificationCenter.swift */; };
+		9419FE17254DAC9300DA4A28 /* FakeNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9419FE16254DAC9300DA4A28 /* FakeNotificationCenter.swift */; };
 		94455B66238C45920063BB6E /* Capsule.h in Headers */ = {isa = PBXBuildFile; fileRef = 94455B64238C45920063BB6E /* Capsule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		949A594123A729CA0039E542 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949A594023A729CA0039E542 /* Atomic.swift */; };
 		949A594523A72AA80039E542 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949A594423A72AA80039E542 /* Builder.swift */; };
@@ -115,6 +117,8 @@
 		9415A09F24E37D890078B502 /* SimulatorWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimulatorWrapper.swift; path = Capsule/SimulatorWrapper.swift; sourceTree = "<group>"; };
 		9419FE06254DA4CE00DA4A28 /* FakeUIViewWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeUIViewWrapper.swift; path = Capsule/FakeUIViewWrapper.swift; sourceTree = "<group>"; };
 		9419FE0B254DA4DB00DA4A28 /* UIViewWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewWrapper.swift; path = Capsule/UIViewWrapper.swift; sourceTree = "<group>"; };
+		9419FE11254DAAD500DA4A28 /* NotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
+		9419FE16254DAC9300DA4A28 /* FakeNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNotificationCenter.swift; sourceTree = "<group>"; };
 		94455B61238C45920063BB6E /* Capsule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Capsule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94455B64238C45920063BB6E /* Capsule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capsule.h; sourceTree = "<group>"; };
 		94455B65238C45920063BB6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -236,6 +240,7 @@
 				940F9D702399A4BA0028937B /* FileManager.swift */,
 				940F9D762399A4BA0028937B /* JSONDecoder.swift */,
 				940F9D722399A4BA0028937B /* JSONEncoder.swift */,
+				9419FE11254DAAD500DA4A28 /* NotificationCenter.swift */,
 				940F9D712399A4BA0028937B /* URLSession.swift */,
 				940F9D742399A4BA0028937B /* UserDefaults.swift */,
 				940F9D752399A4BA0028937B /* UUID.swift */,
@@ -275,6 +280,7 @@
 				940F9D622399A49D0028937B /* FakeGenericError.swift */,
 				940F9D612399A49D0028937B /* FakeJSONDecoder.swift */,
 				940F9D652399A49D0028937B /* FakeJSONEncoder.swift */,
+				9419FE16254DAC9300DA4A28 /* FakeNotificationCenter.swift */,
 				94A3F61E239DF28F0075235B /* FakeNSLocking.swift */,
 				940F9D662399A49D0028937B /* FakeURLSession.swift */,
 				940F9D672399A49E0028937B /* FakeUserDefaults.swift */,
@@ -588,6 +594,7 @@
 				940F9D772399A4BA0028937B /* FileManager.swift in Sources */,
 				940F9D912399A5160028937B /* SleepWrapper.swift in Sources */,
 				940F9D7C2399A4BA0028937B /* UUID.swift in Sources */,
+				9419FE17254DAC9300DA4A28 /* FakeNotificationCenter.swift in Sources */,
 				9419FE07254DA4CE00DA4A28 /* FakeUIViewWrapper.swift in Sources */,
 				940F9D5D2399A4510028937B /* DispatchWorkItemWrapperBuilder.swift in Sources */,
 				940F9D7D2399A4BA0028937B /* JSONDecoder.swift in Sources */,
@@ -602,6 +609,7 @@
 				940F9D962399A5160028937B /* JSONCodableWrapper.swift in Sources */,
 				940F9D892399A4EE0028937B /* FakeTimerWrapper.swift in Sources */,
 				940F9D6A2399A49E0028937B /* FakeGenericError.swift in Sources */,
+				9419FE12254DAAD500DA4A28 /* NotificationCenter.swift in Sources */,
 				940F9D5F2399A4690028937B /* FakeDispatchWorkItemWrapperBuilder.swift in Sources */,
 				9415A09E24E37D750078B502 /* FakeSimulatorWrapper.swift in Sources */,
 				940F9D572399A40A0028937B /* AVCaptureSession.swift in Sources */,
