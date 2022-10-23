@@ -1,4 +1,5 @@
 disabled_rules:
+  - comment_spacing
   - force_cast
   - trailing_whitespace
 
