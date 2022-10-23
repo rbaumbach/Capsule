@@ -31,9 +31,9 @@ public class FakeURLSession: URLSessionProtocol {
     public var capturedCompletionHandler: ((Data?, URLResponse?, Error?) -> Void)?
     
     // MARK: - Stubbed properties
+            
+    public var stubbedDataTask = URLSession.shared.dataTask(with: URL(string: "https://8jnYY7-nope-not-working-jj009.codes")!)
     
-    public var stubbedDataTask = URLSession(configuration: .default).dataTask(with: URL(string: "https://whocares.com")!)
-        
     // MARK: - <URLSessionProtocol>
     
     public required init(configuration: URLSessionConfiguration) {
