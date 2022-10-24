@@ -25,7 +25,11 @@ import Foundation
 public protocol URLSessionProtocol {
     init(configuration: URLSessionConfiguration)
 
+#if swift(>=5.5)
+    func dataTask(with url: URL, completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
+#else
     func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
+#endif
 }
 
 extension URLSession: URLSessionProtocol { }

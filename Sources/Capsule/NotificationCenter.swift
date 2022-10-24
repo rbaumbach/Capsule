@@ -27,12 +27,17 @@ public protocol NotificationCenterProtocol {
                      selector aSelector: Selector,
                      name aName: NSNotification.Name?,
                      object anObject: Any?)
-    
+#if swift(>=5.5)
+    func addObserver(forName name: NSNotification.Name?,
+                     object obj: Any?,
+                     queue: OperationQueue?,
+                     using block: @escaping @Sendable (Notification) -> Void) -> NSObjectProtocol
+#else
     func addObserver(forName name: NSNotification.Name?,
                      object obj: Any?,
                      queue: OperationQueue?,
                      using block: @escaping (Notification) -> Void) -> NSObjectProtocol
-    
+#endif
     func removeObserver(_ observer: Any)
     func removeObserver(_ observer: Any,
                         name aName: NSNotification.Name?,
