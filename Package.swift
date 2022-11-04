@@ -25,9 +25,21 @@
 
 import PackageDescription
 
-let package = Package(name: "Capsule",
-                      platforms: [.iOS(.v10)],
-                      products: [.library(name: "Capsule",
-                                          targets: ["Capsule"])],
-                      targets: [.target(name: "Capsule")],
-                      swiftLanguageVersions: [.v5])
+let package = Package(
+    name: "Capsule",
+    platforms: [
+        .iOS(.v10)
+    ],
+    products: [
+        .library(
+            name: "Capsule",
+            targets: ["Capsule"]
+        )
+    ],
+    targets: [
+        .target(
+            name: "Capsule"
+        )
+    ],
+    swiftLanguageVersions: [.v5]
+)
