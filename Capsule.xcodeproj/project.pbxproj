@@ -68,64 +68,64 @@
 /* Begin PBXFileReference section */
 		7D51463544DA444020A22BD0 /* Pods-Capsule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capsule.debug.xcconfig"; path = "Target Support Files/Pods-Capsule/Pods-Capsule.debug.xcconfig"; sourceTree = "<group>"; };
 		89185E854D912AF3945AB5A4 /* Pods_Capsule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Capsule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		940F9D522399A3E30028937B /* Bundle+Capsule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Bundle+Capsule.swift"; path = "Capsule/Bundle+Capsule.swift"; sourceTree = "<group>"; };
-		940F9D542399A3FA0028937B /* FakeAVCaptureSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeAVCaptureSession.swift; path = Capsule/FakeAVCaptureSession.swift; sourceTree = "<group>"; };
-		940F9D562399A40A0028937B /* AVCaptureSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AVCaptureSession.swift; path = Capsule/AVCaptureSession.swift; sourceTree = "<group>"; };
-		940F9D582399A4300028937B /* FakeAudioServicesWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeAudioServicesWrapper.swift; path = Capsule/FakeAudioServicesWrapper.swift; sourceTree = "<group>"; };
-		940F9D5A2399A43B0028937B /* AudioServicesWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioServicesWrapper.swift; path = Capsule/AudioServicesWrapper.swift; sourceTree = "<group>"; };
-		940F9D5C2399A4510028937B /* DispatchWorkItemWrapperBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DispatchWorkItemWrapperBuilder.swift; path = Capsule/DispatchWorkItemWrapperBuilder.swift; sourceTree = "<group>"; };
-		940F9D5E2399A4690028937B /* FakeDispatchWorkItemWrapperBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeDispatchWorkItemWrapperBuilder.swift; path = Capsule/FakeDispatchWorkItemWrapperBuilder.swift; sourceTree = "<group>"; };
-		940F9D602399A49D0028937B /* FakeFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeFileManager.swift; path = Capsule/FakeFileManager.swift; sourceTree = "<group>"; };
-		940F9D612399A49D0028937B /* FakeJSONDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeJSONDecoder.swift; path = Capsule/FakeJSONDecoder.swift; sourceTree = "<group>"; };
-		940F9D622399A49D0028937B /* FakeGenericError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeGenericError.swift; path = Capsule/FakeGenericError.swift; sourceTree = "<group>"; };
-		940F9D632399A49D0028937B /* FakeCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeCalendar.swift; path = Capsule/FakeCalendar.swift; sourceTree = "<group>"; };
-		940F9D642399A49D0028937B /* FakeUUID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeUUID.swift; path = Capsule/FakeUUID.swift; sourceTree = "<group>"; };
-		940F9D652399A49D0028937B /* FakeJSONEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeJSONEncoder.swift; path = Capsule/FakeJSONEncoder.swift; sourceTree = "<group>"; };
-		940F9D662399A49D0028937B /* FakeURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeURLSession.swift; path = Capsule/FakeURLSession.swift; sourceTree = "<group>"; };
-		940F9D672399A49E0028937B /* FakeUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeUserDefaults.swift; path = Capsule/FakeUserDefaults.swift; sourceTree = "<group>"; };
-		940F9D702399A4BA0028937B /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileManager.swift; path = Capsule/FileManager.swift; sourceTree = "<group>"; };
-		940F9D712399A4BA0028937B /* URLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLSession.swift; path = Capsule/URLSession.swift; sourceTree = "<group>"; };
-		940F9D722399A4BA0028937B /* JSONEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONEncoder.swift; path = Capsule/JSONEncoder.swift; sourceTree = "<group>"; };
-		940F9D732399A4BA0028937B /* Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Calendar.swift; path = Capsule/Calendar.swift; sourceTree = "<group>"; };
-		940F9D742399A4BA0028937B /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefaults.swift; path = Capsule/UserDefaults.swift; sourceTree = "<group>"; };
-		940F9D752399A4BA0028937B /* UUID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UUID.swift; path = Capsule/UUID.swift; sourceTree = "<group>"; };
-		940F9D762399A4BA0028937B /* JSONDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONDecoder.swift; path = Capsule/JSONDecoder.swift; sourceTree = "<group>"; };
-		940F9D7E2399A4ED0028937B /* FakeDispatchQueueWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeDispatchQueueWrapper.swift; path = Capsule/FakeDispatchQueueWrapper.swift; sourceTree = "<group>"; };
-		940F9D7F2399A4ED0028937B /* FakeJSONCodableWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeJSONCodableWrapper.swift; path = Capsule/FakeJSONCodableWrapper.swift; sourceTree = "<group>"; };
-		940F9D802399A4ED0028937B /* FakeSleepWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeSleepWrapper.swift; path = Capsule/FakeSleepWrapper.swift; sourceTree = "<group>"; };
-		940F9D812399A4ED0028937B /* FakeDataWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeDataWrapper.swift; path = Capsule/FakeDataWrapper.swift; sourceTree = "<group>"; };
-		940F9D822399A4ED0028937B /* FakeDispatchWorkItemWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeDispatchWorkItemWrapper.swift; path = Capsule/FakeDispatchWorkItemWrapper.swift; sourceTree = "<group>"; };
-		940F9D832399A4ED0028937B /* FakeTimerWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeTimerWrapper.swift; path = Capsule/FakeTimerWrapper.swift; sourceTree = "<group>"; };
-		940F9D8A2399A5150028937B /* SleepWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SleepWrapper.swift; path = Capsule/SleepWrapper.swift; sourceTree = "<group>"; };
-		940F9D8B2399A5150028937B /* DataWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataWrapper.swift; path = Capsule/DataWrapper.swift; sourceTree = "<group>"; };
-		940F9D8C2399A5150028937B /* DispatchQueueWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DispatchQueueWrapper.swift; path = Capsule/DispatchQueueWrapper.swift; sourceTree = "<group>"; };
-		940F9D8D2399A5160028937B /* JSONCodableWrapper+Capsule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "JSONCodableWrapper+Capsule.swift"; path = "Capsule/JSONCodableWrapper+Capsule.swift"; sourceTree = "<group>"; };
-		940F9D8E2399A5160028937B /* TimerWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimerWrapper.swift; path = Capsule/TimerWrapper.swift; sourceTree = "<group>"; };
-		940F9D8F2399A5160028937B /* JSONCodableWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONCodableWrapper.swift; path = Capsule/JSONCodableWrapper.swift; sourceTree = "<group>"; };
-		940F9D902399A5160028937B /* DispatchWorkItemWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DispatchWorkItemWrapper.swift; path = Capsule/DispatchWorkItemWrapper.swift; sourceTree = "<group>"; };
-		940F9D982399A5310028937B /* FakeTableViewCellBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeTableViewCellBuilder.swift; path = Capsule/FakeTableViewCellBuilder.swift; sourceTree = "<group>"; };
-		940F9D992399A5310028937B /* FakeStoryboardBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeStoryboardBuilder.swift; path = Capsule/FakeStoryboardBuilder.swift; sourceTree = "<group>"; };
-		940F9D9A2399A5310028937B /* FakeUIAlertControllerBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeUIAlertControllerBuilder.swift; path = Capsule/FakeUIAlertControllerBuilder.swift; sourceTree = "<group>"; };
-		940F9D9E2399A5500028937B /* TableViewCellBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCellBuilder.swift; path = Capsule/TableViewCellBuilder.swift; sourceTree = "<group>"; };
-		940F9D9F2399A5510028937B /* UIAlertControllerBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlertControllerBuilder.swift; path = Capsule/UIAlertControllerBuilder.swift; sourceTree = "<group>"; };
-		940F9DA02399A5510028937B /* StoryboardBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoryboardBuilder.swift; path = Capsule/StoryboardBuilder.swift; sourceTree = "<group>"; };
-		940F9DA42399A5630028937B /* FakeUIPasteboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeUIPasteboard.swift; path = Capsule/FakeUIPasteboard.swift; sourceTree = "<group>"; };
-		940F9DA62399A56F0028937B /* UIPasteboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIPasteboard.swift; path = Capsule/UIPasteboard.swift; sourceTree = "<group>"; };
-		940F9DA82399A57D0028937B /* UIAlertActionWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlertActionWrapper.swift; path = Capsule/UIAlertActionWrapper.swift; sourceTree = "<group>"; };
+		940F9D522399A3E30028937B /* Bundle+Capsule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Capsule.swift"; sourceTree = "<group>"; };
+		940F9D542399A3FA0028937B /* FakeAVCaptureSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeAVCaptureSession.swift; sourceTree = "<group>"; };
+		940F9D562399A40A0028937B /* AVCaptureSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVCaptureSession.swift; sourceTree = "<group>"; };
+		940F9D582399A4300028937B /* FakeAudioServicesWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeAudioServicesWrapper.swift; sourceTree = "<group>"; };
+		940F9D5A2399A43B0028937B /* AudioServicesWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioServicesWrapper.swift; sourceTree = "<group>"; };
+		940F9D5C2399A4510028937B /* DispatchWorkItemWrapperBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchWorkItemWrapperBuilder.swift; sourceTree = "<group>"; };
+		940F9D5E2399A4690028937B /* FakeDispatchWorkItemWrapperBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeDispatchWorkItemWrapperBuilder.swift; sourceTree = "<group>"; };
+		940F9D602399A49D0028937B /* FakeFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeFileManager.swift; sourceTree = "<group>"; };
+		940F9D612399A49D0028937B /* FakeJSONDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeJSONDecoder.swift; sourceTree = "<group>"; };
+		940F9D622399A49D0028937B /* FakeGenericError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeGenericError.swift; sourceTree = "<group>"; };
+		940F9D632399A49D0028937B /* FakeCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeCalendar.swift; sourceTree = "<group>"; };
+		940F9D642399A49D0028937B /* FakeUUID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeUUID.swift; sourceTree = "<group>"; };
+		940F9D652399A49D0028937B /* FakeJSONEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeJSONEncoder.swift; sourceTree = "<group>"; };
+		940F9D662399A49D0028937B /* FakeURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeURLSession.swift; sourceTree = "<group>"; };
+		940F9D672399A49E0028937B /* FakeUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeUserDefaults.swift; sourceTree = "<group>"; };
+		940F9D702399A4BA0028937B /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		940F9D712399A4BA0028937B /* URLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
+		940F9D722399A4BA0028937B /* JSONEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONEncoder.swift; sourceTree = "<group>"; };
+		940F9D732399A4BA0028937B /* Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		940F9D742399A4BA0028937B /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		940F9D752399A4BA0028937B /* UUID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUID.swift; sourceTree = "<group>"; };
+		940F9D762399A4BA0028937B /* JSONDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecoder.swift; sourceTree = "<group>"; };
+		940F9D7E2399A4ED0028937B /* FakeDispatchQueueWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeDispatchQueueWrapper.swift; sourceTree = "<group>"; };
+		940F9D7F2399A4ED0028937B /* FakeJSONCodableWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeJSONCodableWrapper.swift; sourceTree = "<group>"; };
+		940F9D802399A4ED0028937B /* FakeSleepWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeSleepWrapper.swift; sourceTree = "<group>"; };
+		940F9D812399A4ED0028937B /* FakeDataWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeDataWrapper.swift; sourceTree = "<group>"; };
+		940F9D822399A4ED0028937B /* FakeDispatchWorkItemWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeDispatchWorkItemWrapper.swift; sourceTree = "<group>"; };
+		940F9D832399A4ED0028937B /* FakeTimerWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeTimerWrapper.swift; sourceTree = "<group>"; };
+		940F9D8A2399A5150028937B /* SleepWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepWrapper.swift; sourceTree = "<group>"; };
+		940F9D8B2399A5150028937B /* DataWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataWrapper.swift; sourceTree = "<group>"; };
+		940F9D8C2399A5150028937B /* DispatchQueueWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueueWrapper.swift; sourceTree = "<group>"; };
+		940F9D8D2399A5160028937B /* JSONCodableWrapper+Capsule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONCodableWrapper+Capsule.swift"; sourceTree = "<group>"; };
+		940F9D8E2399A5160028937B /* TimerWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerWrapper.swift; sourceTree = "<group>"; };
+		940F9D8F2399A5160028937B /* JSONCodableWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONCodableWrapper.swift; sourceTree = "<group>"; };
+		940F9D902399A5160028937B /* DispatchWorkItemWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchWorkItemWrapper.swift; sourceTree = "<group>"; };
+		940F9D982399A5310028937B /* FakeTableViewCellBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeTableViewCellBuilder.swift; sourceTree = "<group>"; };
+		940F9D992399A5310028937B /* FakeStoryboardBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeStoryboardBuilder.swift; sourceTree = "<group>"; };
+		940F9D9A2399A5310028937B /* FakeUIAlertControllerBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeUIAlertControllerBuilder.swift; sourceTree = "<group>"; };
+		940F9D9E2399A5500028937B /* TableViewCellBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellBuilder.swift; sourceTree = "<group>"; };
+		940F9D9F2399A5510028937B /* UIAlertControllerBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerBuilder.swift; sourceTree = "<group>"; };
+		940F9DA02399A5510028937B /* StoryboardBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardBuilder.swift; sourceTree = "<group>"; };
+		940F9DA42399A5630028937B /* FakeUIPasteboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeUIPasteboard.swift; sourceTree = "<group>"; };
+		940F9DA62399A56F0028937B /* UIPasteboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPasteboard.swift; sourceTree = "<group>"; };
+		940F9DA82399A57D0028937B /* UIAlertActionWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertActionWrapper.swift; sourceTree = "<group>"; };
 		940F9DE9239AFB8A0028937B /* Capsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capsule.swift; sourceTree = "<group>"; };
-		9415A09D24E37D750078B502 /* FakeSimulatorWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeSimulatorWrapper.swift; path = Capsule/FakeSimulatorWrapper.swift; sourceTree = "<group>"; };
-		9415A09F24E37D890078B502 /* SimulatorWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimulatorWrapper.swift; path = Capsule/SimulatorWrapper.swift; sourceTree = "<group>"; };
-		9419FE06254DA4CE00DA4A28 /* FakeUIViewWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeUIViewWrapper.swift; path = Capsule/FakeUIViewWrapper.swift; sourceTree = "<group>"; };
-		9419FE0B254DA4DB00DA4A28 /* UIViewWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewWrapper.swift; path = Capsule/UIViewWrapper.swift; sourceTree = "<group>"; };
+		9415A09D24E37D750078B502 /* FakeSimulatorWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeSimulatorWrapper.swift; sourceTree = "<group>"; };
+		9415A09F24E37D890078B502 /* SimulatorWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulatorWrapper.swift; sourceTree = "<group>"; };
+		9419FE06254DA4CE00DA4A28 /* FakeUIViewWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeUIViewWrapper.swift; sourceTree = "<group>"; };
+		9419FE0B254DA4DB00DA4A28 /* UIViewWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewWrapper.swift; sourceTree = "<group>"; };
 		94455B61238C45920063BB6E /* Capsule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Capsule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94455B64238C45920063BB6E /* Capsule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capsule.h; sourceTree = "<group>"; };
 		94455B65238C45920063BB6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94872AEC290F7C4400D3528B /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		949A594023A729CA0039E542 /* Atomic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
 		949A594423A72AA80039E542 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
-		94A3F61E239DF28F0075235B /* FakeNSLocking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FakeNSLocking.swift; path = Capsule/FakeNSLocking.swift; sourceTree = "<group>"; };
-		94F0B75A256817E900C47488 /* FakeNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeNotificationCenter.swift; path = Capsule/FakeNotificationCenter.swift; sourceTree = "<group>"; };
-		94F0B75D256817F900C47488 /* NotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationCenter.swift; path = Capsule/NotificationCenter.swift; sourceTree = "<group>"; };
+		94A3F61E239DF28F0075235B /* FakeNSLocking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNSLocking.swift; sourceTree = "<group>"; };
+		94F0B75A256817E900C47488 /* FakeNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeNotificationCenter.swift; sourceTree = "<group>"; };
+		94F0B75D256817F900C47488 /* NotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
 		E263C35345D6A3BA91898755 /* Pods-Capsule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capsule.release.xcconfig"; path = "Target Support Files/Pods-Capsule/Pods-Capsule.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,235 +149,16 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		940F9CE4239969800028937B /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				940F9D522399A3E30028937B /* Bundle+Capsule.swift */,
-			);
-			name = Extensions;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		940F9CE5239969890028937B /* AVFoundation */ = {
-			isa = PBXGroup;
-			children = (
-				940F9CE8239969C00028937B /* Protocols */,
-				940F9CE9239969C50028937B /* Wrappers */,
-			);
-			name = AVFoundation;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		940F9CE6239969910028937B /* Foundation */ = {
-			isa = PBXGroup;
-			children = (
-				940F9CEC239969E00028937B /* Builders */,
-				940F9CED239969E50028937B /* Protocols */,
-				940F9CEE23996A290028937B /* Wrappers */,
-			);
-			name = Foundation;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		940F9CE72399699A0028937B /* UIKit */ = {
-			isa = PBXGroup;
-			children = (
-				940F9CF223996A4C0028937B /* Builders */,
-				940F9CF323996A520028937B /* Protocols */,
-				940F9CF423996A570028937B /* Wrappers */,
-			);
-			name = UIKit;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		940F9CE8239969C00028937B /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				940F9CEB239969D00028937B /* Fakes */,
-				940F9D562399A40A0028937B /* AVCaptureSession.swift */,
-			);
-			name = Protocols;
-			sourceTree = "<group>";
-		};
-		940F9CE9239969C50028937B /* Wrappers */ = {
-			isa = PBXGroup;
-			children = (
-				940F9CEA239969CC0028937B /* Fakes */,
-				940F9D5A2399A43B0028937B /* AudioServicesWrapper.swift */,
-			);
-			name = Wrappers;
-			sourceTree = "<group>";
-		};
-		940F9CEA239969CC0028937B /* Fakes */ = {
-			isa = PBXGroup;
-			children = (
-				940F9D582399A4300028937B /* FakeAudioServicesWrapper.swift */,
-			);
-			name = Fakes;
-			sourceTree = "<group>";
-		};
-		940F9CEB239969D00028937B /* Fakes */ = {
-			isa = PBXGroup;
-			children = (
-				940F9D542399A3FA0028937B /* FakeAVCaptureSession.swift */,
-			);
-			name = Fakes;
-			sourceTree = "<group>";
-		};
-		940F9CEC239969E00028937B /* Builders */ = {
-			isa = PBXGroup;
-			children = (
-				940F9CEF23996A360028937B /* Fakes */,
-				940F9D5C2399A4510028937B /* DispatchWorkItemWrapperBuilder.swift */,
-			);
-			name = Builders;
-			sourceTree = "<group>";
-		};
-		940F9CED239969E50028937B /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				940F9CF023996A390028937B /* Fakes */,
-				940F9D732399A4BA0028937B /* Calendar.swift */,
-				940F9D702399A4BA0028937B /* FileManager.swift */,
-				940F9D762399A4BA0028937B /* JSONDecoder.swift */,
-				940F9D722399A4BA0028937B /* JSONEncoder.swift */,
-				94F0B75D256817F900C47488 /* NotificationCenter.swift */,
-				940F9D712399A4BA0028937B /* URLSession.swift */,
-				940F9D742399A4BA0028937B /* UserDefaults.swift */,
-				940F9D752399A4BA0028937B /* UUID.swift */,
-			);
-			name = Protocols;
-			sourceTree = "<group>";
-		};
-		940F9CEE23996A290028937B /* Wrappers */ = {
-			isa = PBXGroup;
-			children = (
-				940F9CF123996A3D0028937B /* Fakes */,
-				9415A09F24E37D890078B502 /* SimulatorWrapper.swift */,
-				940F9D8B2399A5150028937B /* DataWrapper.swift */,
-				940F9D8C2399A5150028937B /* DispatchQueueWrapper.swift */,
-				940F9D902399A5160028937B /* DispatchWorkItemWrapper.swift */,
-				940F9D8F2399A5160028937B /* JSONCodableWrapper.swift */,
-				940F9D8D2399A5160028937B /* JSONCodableWrapper+Capsule.swift */,
-				940F9D8A2399A5150028937B /* SleepWrapper.swift */,
-				940F9D8E2399A5160028937B /* TimerWrapper.swift */,
-			);
-			name = Wrappers;
-			sourceTree = "<group>";
-		};
-		940F9CEF23996A360028937B /* Fakes */ = {
-			isa = PBXGroup;
-			children = (
-				940F9D5E2399A4690028937B /* FakeDispatchWorkItemWrapperBuilder.swift */,
-			);
-			name = Fakes;
-			sourceTree = "<group>";
-		};
-		940F9CF023996A390028937B /* Fakes */ = {
-			isa = PBXGroup;
-			children = (
-				940F9D632399A49D0028937B /* FakeCalendar.swift */,
-				940F9D602399A49D0028937B /* FakeFileManager.swift */,
-				940F9D622399A49D0028937B /* FakeGenericError.swift */,
-				940F9D612399A49D0028937B /* FakeJSONDecoder.swift */,
-				940F9D652399A49D0028937B /* FakeJSONEncoder.swift */,
-				94F0B75A256817E900C47488 /* FakeNotificationCenter.swift */,
-				94A3F61E239DF28F0075235B /* FakeNSLocking.swift */,
-				940F9D662399A49D0028937B /* FakeURLSession.swift */,
-				940F9D672399A49E0028937B /* FakeUserDefaults.swift */,
-				940F9D642399A49D0028937B /* FakeUUID.swift */,
-			);
-			name = Fakes;
-			sourceTree = "<group>";
-		};
-		940F9CF123996A3D0028937B /* Fakes */ = {
-			isa = PBXGroup;
-			children = (
-				940F9D812399A4ED0028937B /* FakeDataWrapper.swift */,
-				940F9D7E2399A4ED0028937B /* FakeDispatchQueueWrapper.swift */,
-				940F9D822399A4ED0028937B /* FakeDispatchWorkItemWrapper.swift */,
-				940F9D7F2399A4ED0028937B /* FakeJSONCodableWrapper.swift */,
-				9415A09D24E37D750078B502 /* FakeSimulatorWrapper.swift */,
-				940F9D802399A4ED0028937B /* FakeSleepWrapper.swift */,
-				940F9D832399A4ED0028937B /* FakeTimerWrapper.swift */,
-			);
-			name = Fakes;
-			sourceTree = "<group>";
-		};
-		940F9CF223996A4C0028937B /* Builders */ = {
-			isa = PBXGroup;
-			children = (
-				940F9CF723996A610028937B /* Fakes */,
-				940F9DA02399A5510028937B /* StoryboardBuilder.swift */,
-				940F9D9E2399A5500028937B /* TableViewCellBuilder.swift */,
-				940F9D9F2399A5510028937B /* UIAlertControllerBuilder.swift */,
-			);
-			name = Builders;
-			sourceTree = "<group>";
-		};
-		940F9CF323996A520028937B /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				940F9CF623996A5E0028937B /* Fakes */,
-				940F9DA62399A56F0028937B /* UIPasteboard.swift */,
-			);
-			name = Protocols;
-			sourceTree = "<group>";
-		};
-		940F9CF423996A570028937B /* Wrappers */ = {
-			isa = PBXGroup;
-			children = (
-				9415A0A324E3802E0078B502 /* Fakes */,
-				9419FE0B254DA4DB00DA4A28 /* UIViewWrapper.swift */,
-				940F9DA82399A57D0028937B /* UIAlertActionWrapper.swift */,
-			);
-			name = Wrappers;
-			sourceTree = "<group>";
-		};
-		940F9CF623996A5E0028937B /* Fakes */ = {
-			isa = PBXGroup;
-			children = (
-				940F9DA42399A5630028937B /* FakeUIPasteboard.swift */,
-			);
-			name = Fakes;
-			sourceTree = "<group>";
-		};
-		940F9CF723996A610028937B /* Fakes */ = {
-			isa = PBXGroup;
-			children = (
-				940F9D992399A5310028937B /* FakeStoryboardBuilder.swift */,
-				940F9D982399A5310028937B /* FakeTableViewCellBuilder.swift */,
-				940F9D9A2399A5310028937B /* FakeUIAlertControllerBuilder.swift */,
-			);
-			name = Fakes;
-			sourceTree = "<group>";
-		};
 		940F9D512399A3940028937B /* Capsule */ = {
 			isa = PBXGroup;
 			children = (
-				940F9DE8239AFB6F0028937B /* Constants */,
-				940F9CE4239969800028937B /* Extensions */,
-				949A594323A72A810039E542 /* Misc */,
-				949A593F23A729B70039E542 /* Property Wrappers */,
-				949A594223A72A6C0039E542 /* SDKs */,
+				94872B002918107200D3528B /* Constants */,
+				94872B012918109700D3528B /* Extensions */,
+				94872B04291810BB00D3528B /* Misc */,
+				94872B05291810E100D3528B /* Property Wrappers */,
+				94872B062918110100D3528B /* SDKs */,
 			);
 			path = Capsule;
-			sourceTree = "<group>";
-		};
-		940F9DE8239AFB6F0028937B /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				940F9DE9239AFB8A0028937B /* Capsule.swift */,
-			);
-			name = Constants;
-			sourceTree = "<group>";
-		};
-		9415A0A324E3802E0078B502 /* Fakes */ = {
-			isa = PBXGroup;
-			children = (
-				9419FE06254DA4CE00DA4A28 /* FakeUIViewWrapper.swift */,
-			);
-			name = Fakes;
 			sourceTree = "<group>";
 		};
 		94455B57238C45920063BB6E = {
@@ -409,30 +190,245 @@
 			path = Capsule;
 			sourceTree = "<group>";
 		};
-		949A593F23A729B70039E542 /* Property Wrappers */ = {
+		94872B002918107200D3528B /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				949A594023A729CA0039E542 /* Atomic.swift */,
+				940F9DE9239AFB8A0028937B /* Capsule.swift */,
 			);
-			name = "Property Wrappers";
+			path = Constants;
 			sourceTree = "<group>";
 		};
-		949A594223A72A6C0039E542 /* SDKs */ = {
+		94872B012918109700D3528B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				940F9CE5239969890028937B /* AVFoundation */,
-				940F9CE6239969910028937B /* Foundation */,
-				940F9CE72399699A0028937B /* UIKit */,
+				940F9D522399A3E30028937B /* Bundle+Capsule.swift */,
 			);
-			name = SDKs;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
-		949A594323A72A810039E542 /* Misc */ = {
+		94872B04291810BB00D3528B /* Misc */ = {
 			isa = PBXGroup;
 			children = (
 				949A594423A72AA80039E542 /* Builder.swift */,
 			);
-			name = Misc;
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		94872B05291810E100D3528B /* Property Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				949A594023A729CA0039E542 /* Atomic.swift */,
+			);
+			path = "Property Wrappers";
+			sourceTree = "<group>";
+		};
+		94872B062918110100D3528B /* SDKs */ = {
+			isa = PBXGroup;
+			children = (
+				94872B072918110800D3528B /* AVFoundation */,
+				94872B0C2918115B00D3528B /* Foundation */,
+				94872B14291811FB00D3528B /* UIKit */,
+			);
+			path = SDKs;
+			sourceTree = "<group>";
+		};
+		94872B072918110800D3528B /* AVFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				94872B082918111000D3528B /* Protocols */,
+				94872B0A2918113600D3528B /* Wrappers */,
+			);
+			path = AVFoundation;
+			sourceTree = "<group>";
+		};
+		94872B082918111000D3528B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				94872B092918111700D3528B /* Fakes */,
+				940F9D562399A40A0028937B /* AVCaptureSession.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		94872B092918111700D3528B /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				940F9D542399A3FA0028937B /* FakeAVCaptureSession.swift */,
+			);
+			path = Fakes;
+			sourceTree = "<group>";
+		};
+		94872B0A2918113600D3528B /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				94872B0B2918113E00D3528B /* Fakes */,
+				940F9D5A2399A43B0028937B /* AudioServicesWrapper.swift */,
+			);
+			path = Wrappers;
+			sourceTree = "<group>";
+		};
+		94872B0B2918113E00D3528B /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				940F9D582399A4300028937B /* FakeAudioServicesWrapper.swift */,
+			);
+			path = Fakes;
+			sourceTree = "<group>";
+		};
+		94872B0C2918115B00D3528B /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				94872B0D2918116400D3528B /* Builders */,
+				94872B0F2918118400D3528B /* Protocols */,
+				94872B12291811B400D3528B /* Wrappers */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		94872B0D2918116400D3528B /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				94872B0E2918116A00D3528B /* Fakes */,
+				940F9D5C2399A4510028937B /* DispatchWorkItemWrapperBuilder.swift */,
+			);
+			path = Builders;
+			sourceTree = "<group>";
+		};
+		94872B0E2918116A00D3528B /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				940F9D5E2399A4690028937B /* FakeDispatchWorkItemWrapperBuilder.swift */,
+			);
+			path = Fakes;
+			sourceTree = "<group>";
+		};
+		94872B0F2918118400D3528B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				94872B102918119300D3528B /* Fakes */,
+				940F9D732399A4BA0028937B /* Calendar.swift */,
+				940F9D702399A4BA0028937B /* FileManager.swift */,
+				940F9D762399A4BA0028937B /* JSONDecoder.swift */,
+				940F9D722399A4BA0028937B /* JSONEncoder.swift */,
+				94F0B75D256817F900C47488 /* NotificationCenter.swift */,
+				940F9D712399A4BA0028937B /* URLSession.swift */,
+				940F9D742399A4BA0028937B /* UserDefaults.swift */,
+				940F9D752399A4BA0028937B /* UUID.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		94872B102918119300D3528B /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				940F9D632399A49D0028937B /* FakeCalendar.swift */,
+				940F9D602399A49D0028937B /* FakeFileManager.swift */,
+				940F9D622399A49D0028937B /* FakeGenericError.swift */,
+				940F9D612399A49D0028937B /* FakeJSONDecoder.swift */,
+				940F9D652399A49D0028937B /* FakeJSONEncoder.swift */,
+				94F0B75A256817E900C47488 /* FakeNotificationCenter.swift */,
+				94A3F61E239DF28F0075235B /* FakeNSLocking.swift */,
+				940F9D662399A49D0028937B /* FakeURLSession.swift */,
+				940F9D672399A49E0028937B /* FakeUserDefaults.swift */,
+				940F9D642399A49D0028937B /* FakeUUID.swift */,
+			);
+			path = Fakes;
+			sourceTree = "<group>";
+		};
+		94872B12291811B400D3528B /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				94872B13291811C800D3528B /* Fakes */,
+				940F9D8B2399A5150028937B /* DataWrapper.swift */,
+				940F9D8C2399A5150028937B /* DispatchQueueWrapper.swift */,
+				940F9D902399A5160028937B /* DispatchWorkItemWrapper.swift */,
+				940F9D8F2399A5160028937B /* JSONCodableWrapper.swift */,
+				940F9D8D2399A5160028937B /* JSONCodableWrapper+Capsule.swift */,
+				9415A09F24E37D890078B502 /* SimulatorWrapper.swift */,
+				940F9D8A2399A5150028937B /* SleepWrapper.swift */,
+				940F9D8E2399A5160028937B /* TimerWrapper.swift */,
+			);
+			path = Wrappers;
+			sourceTree = "<group>";
+		};
+		94872B13291811C800D3528B /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				940F9D812399A4ED0028937B /* FakeDataWrapper.swift */,
+				940F9D7E2399A4ED0028937B /* FakeDispatchQueueWrapper.swift */,
+				940F9D822399A4ED0028937B /* FakeDispatchWorkItemWrapper.swift */,
+				940F9D7F2399A4ED0028937B /* FakeJSONCodableWrapper.swift */,
+				9415A09D24E37D750078B502 /* FakeSimulatorWrapper.swift */,
+				940F9D802399A4ED0028937B /* FakeSleepWrapper.swift */,
+				940F9D832399A4ED0028937B /* FakeTimerWrapper.swift */,
+			);
+			path = Fakes;
+			sourceTree = "<group>";
+		};
+		94872B14291811FB00D3528B /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				94872B152918120700D3528B /* Builders */,
+				94872B172918122300D3528B /* Protocols */,
+				94872B192918123F00D3528B /* Wrappers */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		94872B152918120700D3528B /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				94872B162918121000D3528B /* Fakes */,
+				940F9DA02399A5510028937B /* StoryboardBuilder.swift */,
+				940F9D9E2399A5500028937B /* TableViewCellBuilder.swift */,
+				940F9D9F2399A5510028937B /* UIAlertControllerBuilder.swift */,
+			);
+			path = Builders;
+			sourceTree = "<group>";
+		};
+		94872B162918121000D3528B /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				940F9D992399A5310028937B /* FakeStoryboardBuilder.swift */,
+				940F9D982399A5310028937B /* FakeTableViewCellBuilder.swift */,
+				940F9D9A2399A5310028937B /* FakeUIAlertControllerBuilder.swift */,
+			);
+			path = Fakes;
+			sourceTree = "<group>";
+		};
+		94872B172918122300D3528B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				94872B182918122F00D3528B /* Fakes */,
+				940F9DA62399A56F0028937B /* UIPasteboard.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		94872B182918122F00D3528B /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				940F9DA42399A5630028937B /* FakeUIPasteboard.swift */,
+			);
+			path = Fakes;
+			sourceTree = "<group>";
+		};
+		94872B192918123F00D3528B /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				94872B1A2918124F00D3528B /* Fakes */,
+				9419FE0B254DA4DB00DA4A28 /* UIViewWrapper.swift */,
+				940F9DA82399A57D0028937B /* UIAlertActionWrapper.swift */,
+			);
+			path = Wrappers;
+			sourceTree = "<group>";
+		};
+		94872B1A2918124F00D3528B /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				9419FE06254DA4CE00DA4A28 /* FakeUIViewWrapper.swift */,
+			);
+			path = Fakes;
 			sourceTree = "<group>";
 		};
 		A0C0F8F733D544C3B4D5809C /* Frameworks */ = {
@@ -776,7 +772,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = teamthick.capsule;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -807,7 +803,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = teamthick.capsule;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
