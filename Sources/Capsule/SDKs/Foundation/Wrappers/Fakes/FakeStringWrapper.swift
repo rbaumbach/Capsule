@@ -22,7 +22,7 @@
 
 import Foundation
 
-public class FakeStringWrapper, StringWrapperaProtocol {
+public class FakeStringWrapper: StringWrapperaProtocol {
     // MARK: - Captured properties
     
     public var capturedLoadStringPath: String?
