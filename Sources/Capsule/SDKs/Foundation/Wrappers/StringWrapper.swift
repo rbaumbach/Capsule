@@ -20,30 +20,20 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 
-import UIKit
+import Foundation
 
-public class FakeTableViewCellBuilder: TableViewCellBuilderProtocol {
-    // MARK: - Captured properties
-    
-    public var capturedBuildName: String?
-    
-    // MARK: - Stubbed properties
-    
-    public var stubbedTableViewCell = UITableViewCell()
-    
+public protocol StringWrapperaProtocol {
+    func loadString(contentsOfFile path: String) throws -> String
+}
+
+public class StringWrapper: StringWrapperaProtocol {
     // MARK: - Init methods
     
     public init() { }
     
-    // MARK: - <TableViewCellBuilderProtocol>
+    // MARK: - Public methods
     
-    public func build<T: UITableViewCell>(name: String) -> T {
-        guard let tableViewCell = stubbedTableViewCell as? T else {
-            preconditionFailure("FakeTableViewCellBuilder.stubbedTableViewCell property has not been set properly")
-        }
-        
-        capturedBuildName = name
-        
-        return tableViewCell
+    public func loadString(contentsOfFile path: String) throws -> String {
+        return try String(contentsOfFile: path)
     }
 }

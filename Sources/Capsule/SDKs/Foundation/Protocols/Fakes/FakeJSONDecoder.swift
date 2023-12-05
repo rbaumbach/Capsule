@@ -1,6 +1,6 @@
 //MIT License
 //
-//Copyright (c) 2020-2022 Ryan Baumbach <github@ryan.codes>
+//Copyright (c) 2020-2023 Ryan Baumbach <github@ryan.codes>
 //
 //Permission is hereby granted, free of charge, to any person obtaining a copy
 //of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +22,7 @@
 
 import Foundation
 
-public class FakeJSONDecoder<T>: JSONDecoderProtocol {
+public class FakeJSONDecoder: JSONDecoderProtocol {
     // MARK: - Captured properties
     
     public var capturedDateDecodingStrategy: JSONDecoder.DateDecodingStrategy?
@@ -33,7 +33,7 @@ public class FakeJSONDecoder<T>: JSONDecoderProtocol {
     // MARK: - Stubbed properties
     
     public var stubbedDateDecodingStrategy = JSONDecoder.DateDecodingStrategy.iso8601
-    public var stubbedDecodedJSON: T?
+    public var stubbedDecodedJSON: Any?
     
     // MARK: - Exceptions
     

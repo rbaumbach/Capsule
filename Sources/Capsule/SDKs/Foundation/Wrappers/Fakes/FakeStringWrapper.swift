@@ -22,49 +22,32 @@
 
 import Foundation
 
-public class FakeJSONEncoder: JSONEncoderProtocol {
+public class FakeStringWrapper, StringWrapperaProtocol {
     // MARK: - Captured properties
     
-    public var capturedOutputFormatting: JSONEncoder.OutputFormatting?
-    public var capturedDateEncodingStrategy: JSONEncoder.DateEncodingStrategy?
-    public var capturedEncodeValue: Any?
-        
+    public var capturedLoadStringPath: String?
+    
     // MARK: - Stubbed properties
     
-    public var stubbedOutputFormatting = JSONEncoder.OutputFormatting.prettyPrinted
-    public var stubbedDateEncodingStrategy = JSONEncoder.DateEncodingStrategy.iso8601
+    public var shouldThrowErrowLoadingString = false
     
-    public var stubbedEncodeData = "tacos".data(using: .utf8)!
+    // MARK: - Stubbed properties
+    
+    public var stubbedLoadString = "Loaded"
     
     // MARK: - Init methods
     
     public init() { }
-        
-    // MARK: - <JSONEncoderProtocol>
     
-    public var outputFormatting: JSONEncoder.OutputFormatting {
-        get {
-            return stubbedOutputFormatting
-        }
-        
-        set(newOutputFormatting) {
-            capturedOutputFormatting = newOutputFormatting
-        }
-    }
+    // MARK: - <StringWrapperaProtocol>
     
-    public var dateEncodingStrategy: JSONEncoder.DateEncodingStrategy {
-        get {
-            return stubbedDateEncodingStrategy
+    public func loadString(contentsOfFile path: String) throws -> String {
+        capturedLoadStringPath = path
+        
+        if shouldThrowErrowLoadingString {
+            throw FakeGenericError.whoCares
         }
         
-        set(newDateEncodingStrategy) {
-            capturedDateEncodingStrategy = newDateEncodingStrategy
-        }
-    }
-    
-    public func encode<T>(_ value: T) throws -> Data where T: Encodable {
-        capturedEncodeValue = value
-        
-        return stubbedEncodeData
+        return stubbedLoadString
     }
 }

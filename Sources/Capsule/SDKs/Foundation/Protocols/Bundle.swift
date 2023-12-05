@@ -20,30 +20,13 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 
-import UIKit
+import Foundation
 
-public class FakeTableViewCellBuilder: TableViewCellBuilderProtocol {
-    // MARK: - Captured properties
+public protocol BundleProtocol {
+    static var capsule: Bundle { get }
     
-    public var capturedBuildName: String?
-    
-    // MARK: - Stubbed properties
-    
-    public var stubbedTableViewCell = UITableViewCell()
-    
-    // MARK: - Init methods
-    
-    public init() { }
-    
-    // MARK: - <TableViewCellBuilderProtocol>
-    
-    public func build<T: UITableViewCell>(name: String) -> T {
-        guard let tableViewCell = stubbedTableViewCell as? T else {
-            preconditionFailure("FakeTableViewCellBuilder.stubbedTableViewCell property has not been set properly")
-        }
-        
-        capturedBuildName = name
-        
-        return tableViewCell
-    }
+    func path(forResource name: String?,
+              ofType ext: String?) -> String?
 }
+
+extension Bundle: BundleProtocol { }

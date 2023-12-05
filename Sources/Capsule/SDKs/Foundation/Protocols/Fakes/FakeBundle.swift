@@ -22,49 +22,32 @@
 
 import Foundation
 
-public class FakeJSONEncoder: JSONEncoderProtocol {
+public class FakeBundle: BundleProtocol {
     // MARK: - Captured properties
     
-    public var capturedOutputFormatting: JSONEncoder.OutputFormatting?
-    public var capturedDateEncodingStrategy: JSONEncoder.DateEncodingStrategy?
-    public var capturedEncodeValue: Any?
-        
-    // MARK: - Stubbed properties
+    public var capturedPathForResource: String?
+    public var capturedPathOfType: String?
     
-    public var stubbedOutputFormatting = JSONEncoder.OutputFormatting.prettyPrinted
-    public var stubbedDateEncodingStrategy = JSONEncoder.DateEncodingStrategy.iso8601
+    // MARK: - Stubbed propreties
+
+    public static var stubbedBundle = Bundle.main
     
-    public var stubbedEncodeData = "tacos".data(using: .utf8)!
+    public var stubbedPath: String? = "/a/fake/path.json"
     
     // MARK: - Init methods
     
     public init() { }
-        
-    // MARK: - <JSONEncoderProtocol>
     
-    public var outputFormatting: JSONEncoder.OutputFormatting {
-        get {
-            return stubbedOutputFormatting
-        }
-        
-        set(newOutputFormatting) {
-            capturedOutputFormatting = newOutputFormatting
-        }
+    // MARK: - <BundleProtocol>
+    
+    public static var capsule: Bundle {
+        return stubbedBundle
     }
     
-    public var dateEncodingStrategy: JSONEncoder.DateEncodingStrategy {
-        get {
-            return stubbedDateEncodingStrategy
-        }
+    public func path(forResource name: String?, ofType ext: String?) -> String? {
+        capturedPathForResource = name
+        capturedPathOfType = ext
         
-        set(newDateEncodingStrategy) {
-            capturedDateEncodingStrategy = newDateEncodingStrategy
-        }
-    }
-    
-    public func encode<T>(_ value: T) throws -> Data where T: Encodable {
-        capturedEncodeValue = value
-        
-        return stubbedEncodeData
+        return stubbedPath
     }
 }
