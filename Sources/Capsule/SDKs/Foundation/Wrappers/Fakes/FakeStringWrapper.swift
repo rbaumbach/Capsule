@@ -22,51 +22,28 @@
 
 import Foundation
 
-public class FakeJSONDecoder: JSONDecoderProtocol {
+public class FakeStringWrapper {
     // MARK: - Captured properties
     
-    public var capturedDateDecodingStrategy: JSONDecoder.DateDecodingStrategy?
+    public var capturedLoadStringPath: String?
     
-    public var capturedDecodeTypeAsString: String?
-    public var capturedDecodeData: Data?
-        
     // MARK: - Stubbed properties
     
-    public var stubbedDateDecodingStrategy = JSONDecoder.DateDecodingStrategy.iso8601
-    public var stubbedDecodedJSON: Any?
+    public var shouldThrowErrowLoadingString = false
     
-    // MARK: - Exceptions
+    // MARK: - Stubbed properties
     
-    public var shouldThrowDecodeException = false
+    public var stubbedLoadString = "Loaded"
     
-    // MARK: - Init methods
+    // MARK: - StringFileLoaderProtocol
     
-    public init() { }
+    public func loadString(contentsOfFile path: String) throws -> String {
+        capturedLoadStringPath = path
         
-    // MARK: - <JSONDecoderProtocol>
-    
-    public var dateDecodingStrategy: JSONDecoder.DateDecodingStrategy {
-        get {
-            return stubbedDateDecodingStrategy
-        }
-        
-        set(newDateDecodingStrategy) {
-            capturedDateDecodingStrategy = newDateDecodingStrategy
-        }
-    }
-    
-    public func decode<T>(_ type: T.Type, from data: Data) throws -> T where T: Decodable {
-        capturedDecodeTypeAsString = "\(T.Type.self)"
-        capturedDecodeData = data
-        
-        if shouldThrowDecodeException {
+        if shouldThrowErrowLoadingString {
             throw FakeGenericError.whoCares
         }
         
-        if let stubbedDecodedJSON = stubbedDecodedJSON {
-            return stubbedDecodedJSON as! T
-        } else {
-            preconditionFailure("FakeJSONDecoder.stubbedDecodedJSON property has not been set")
-        }
+        return stubbedLoadString
     }
 }
