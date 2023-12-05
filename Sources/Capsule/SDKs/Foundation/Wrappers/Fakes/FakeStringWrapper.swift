@@ -22,7 +22,7 @@
 
 import Foundation
 
-public class FakeStringWrapper {
+public class FakeStringWrapper, StringWrapperaProtocol {
     // MARK: - Captured properties
     
     public var capturedLoadStringPath: String?
@@ -35,7 +35,11 @@ public class FakeStringWrapper {
     
     public var stubbedLoadString = "Loaded"
     
-    // MARK: - StringFileLoaderProtocol
+    // MARK: - Init methods
+    
+    public init() { }
+    
+    // MARK: - <StringWrapperaProtocol>
     
     public func loadString(contentsOfFile path: String) throws -> String {
         capturedLoadStringPath = path
