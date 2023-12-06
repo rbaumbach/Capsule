@@ -19,7 +19,7 @@ This project contains many protocols, wrappers, property wrappers, and builders 
 
 [Swift Package Manager](https://swift.org/package-manager/) can be used to add `Capsule` the to your project:
 
-1.  Add `.package(url: "https://github.com/rbaumbach/Capsule", from: "1.3.2")`
+1.  Add `.package(url: "https://github.com/rbaumbach/Capsule", from: "1.3.3")`
 2.  [Follow intructions to add](https://swift.org/getting-started/#using-the-package-manager) the Capsule package to your project.
 
 ### Clone from Github

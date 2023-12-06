@@ -22,11 +22,13 @@
 
 import Foundation
 
-public protocol StringWrapperaProtocol {
+public protocol StringWrapperProtocol {
     func loadString(contentsOfFile path: String) throws -> String
+    func loadData(contentsOfFile path: String,
+                  encoding: String.Encoding) throws -> Data?
 }
 
-public class StringWrapper: StringWrapperaProtocol {
+public class StringWrapper: StringWrapperProtocol {
     // MARK: - Init methods
     
     public init() { }
@@ -35,5 +37,10 @@ public class StringWrapper: StringWrapperaProtocol {
     
     public func loadString(contentsOfFile path: String) throws -> String {
         return try String(contentsOfFile: path)
+    }
+    
+    public func loadData(contentsOfFile path: String,
+                         encoding: String.Encoding) throws -> Data? {
+        return try loadString(contentsOfFile: path).data(using: encoding)
     }
 }

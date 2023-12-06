@@ -22,18 +22,25 @@
 
 import Foundation
 
-public class FakeStringWrapper: StringWrapperaProtocol {
+public class FakeStringWrapper: StringWrapperProtocol {
     // MARK: - Captured properties
     
     public var capturedLoadStringPath: String?
+    
+    public var capturedLoadDataPath: String?
+    public var capturedLoadDataEncoding: String.Encoding?
     
     // MARK: - Stubbed properties
     
     public var shouldThrowErrowLoadingString = false
     
+    public var shouldThrowErrorLoadingData = false
+    
     // MARK: - Stubbed properties
     
     public var stubbedLoadString = "Loaded"
+    
+    public var stubbedLoadData = "Loaded".data(using: .utf8)
     
     // MARK: - Init methods
     
@@ -49,5 +56,17 @@ public class FakeStringWrapper: StringWrapperaProtocol {
         }
         
         return stubbedLoadString
+    }
+    
+    public func loadData(contentsOfFile path: String, 
+                         encoding: String.Encoding) throws -> Data? {
+        capturedLoadDataPath = path
+        capturedLoadDataEncoding = encoding
+        
+        if shouldThrowErrorLoadingData {
+            throw FakeGenericError.whoCares
+        }
+        
+        return stubbedLoadData
     }
 }
