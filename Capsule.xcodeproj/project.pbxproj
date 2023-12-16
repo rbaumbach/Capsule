@@ -60,6 +60,7 @@
 		9419FE07254DA4CE00DA4A28 /* FakeUIViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9419FE06254DA4CE00DA4A28 /* FakeUIViewWrapper.swift */; };
 		9419FE0C254DA4DB00DA4A28 /* UIViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9419FE0B254DA4DB00DA4A28 /* UIViewWrapper.swift */; };
 		94455B66238C45920063BB6E /* Capsule.h in Headers */ = {isa = PBXBuildFile; fileRef = 94455B64238C45920063BB6E /* Capsule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94569E3D2B2DE3CE008494E1 /* EmptyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94569E3C2B2DE3CE008494E1 /* EmptyError.swift */; };
 		9464C1882B1F8E250096F8AF /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9464C1872B1F8E250096F8AF /* Bundle.swift */; };
 		947BFA9B2B1F9005009A6771 /* FakeStringWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947BFA9A2B1F9005009A6771 /* FakeStringWrapper.swift */; };
 		949A594123A729CA0039E542 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949A594023A729CA0039E542 /* Atomic.swift */; };
@@ -128,6 +129,7 @@
 		94455B61238C45920063BB6E /* Capsule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Capsule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94455B64238C45920063BB6E /* Capsule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capsule.h; sourceTree = "<group>"; };
 		94455B65238C45920063BB6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94569E3C2B2DE3CE008494E1 /* EmptyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyError.swift; sourceTree = "<group>"; };
 		9464C1872B1F8E250096F8AF /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		947BFA9A2B1F9005009A6771 /* FakeStringWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeStringWrapper.swift; sourceTree = "<group>"; };
 		94872AEC290F7C4400D3528B /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -198,6 +200,14 @@
 				94455B65238C45920063BB6E /* Info.plist */,
 			);
 			path = Capsule;
+			sourceTree = "<group>";
+		};
+		94569E3B2B2DE3B4008494E1 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				94569E3C2B2DE3CE008494E1 /* EmptyError.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 		9484AC5F2B1F8AEC009DAB1A /* Extensions */ = {
@@ -290,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				94872B0D2918116400D3528B /* Builders */,
+				94569E3B2B2DE3B4008494E1 /* Errors */,
 				94872B0F2918118400D3528B /* Protocols */,
 				94872B12291811B400D3528B /* Wrappers */,
 			);
@@ -637,6 +648,7 @@
 				940F9D7B2399A4BA0028937B /* UserDefaults.swift in Sources */,
 				940F9D842399A4ED0028937B /* FakeDispatchQueueWrapper.swift in Sources */,
 				940F9D6D2399A49E0028937B /* FakeJSONEncoder.swift in Sources */,
+				94569E3D2B2DE3CE008494E1 /* EmptyError.swift in Sources */,
 				940F9D6E2399A49E0028937B /* FakeURLSession.swift in Sources */,
 				940F9D9D2399A5310028937B /* FakeUIAlertControllerBuilder.swift in Sources */,
 				940F9D6B2399A49E0028937B /* FakeCalendar.swift in Sources */,
@@ -804,7 +816,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.3;
+				MARKETING_VERSION = 1.3.4;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = teamthick.capsule;
@@ -841,7 +853,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.3;
+				MARKETING_VERSION = 1.3.4;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = teamthick.capsule;
