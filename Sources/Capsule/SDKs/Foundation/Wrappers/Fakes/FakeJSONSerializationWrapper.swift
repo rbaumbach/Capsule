@@ -36,6 +36,10 @@ public class FakeJSONSerializationWrapper: JSONSerializationWrapperProtocol {
     
     public var shouldThrowJSONObjectException = false
     
+    // MARK: - Init methods
+    
+    public init() { }
+    
     // MARK: - <JSONSerializationWrapperProtocol>
     
     public func jsonObject(with data: Data,
