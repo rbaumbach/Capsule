@@ -22,51 +22,31 @@
 
 import Foundation
 
-public class FakeStringWrapper: StringWrapperProtocol {
+public class FakeJSONSerializationWrapper: JSONSerializationWrapperProtocol {
     // MARK: - Captured properties
     
-    public var capturedLoadStringPath: String?
+    public var capturedJSONObjectData: Data?
+    public var capturedJSONObjectOptions: JSONSerialization.ReadingOptions?
     
-    public var capturedLoadDataPath: String?
-    public var capturedLoadDataEncoding: String.Encoding?
-
     // MARK: - Stubbed properties
     
-    public var stubbedLoadString = "Loaded"
-    
-    public var stubbedLoadData = "Loaded".data(using: .utf8)
+    public var stubbedJSONObject: Any = "{ not-real: json }"
     
     // MARK: - Exceptions
     
-    public var shouldThrowErrowLoadingString = false
+    public var shouldThrowJSONObjectException = false
     
-    public var shouldThrowErrorLoadingData = false
+    // MARK: - <JSONSerializationWrapperProtocol>
     
-    // MARK: - Init methods
-    
-    public init() { }
-    
-    // MARK: - <StringWrapperaProtocol>
-    
-    public func loadString(contentsOfFile path: String) throws -> String {
-        capturedLoadStringPath = path
+    public func jsonObject(with data: Data,
+                           options opt: JSONSerialization.ReadingOptions) throws -> Any {
+        capturedJSONObjectData = data
+        capturedJSONObjectOptions = opt
         
-        if shouldThrowErrowLoadingString {
+        if shouldThrowJSONObjectException {
             throw FakeGenericError.whoCares
         }
         
-        return stubbedLoadString
-    }
-    
-    public func loadData(contentsOfFile path: String, 
-                         encoding: String.Encoding) throws -> Data? {
-        capturedLoadDataPath = path
-        capturedLoadDataEncoding = encoding
-        
-        if shouldThrowErrorLoadingData {
-            throw FakeGenericError.whoCares
-        }
-        
-        return stubbedLoadData
+        return stubbedJSONObject
     }
 }

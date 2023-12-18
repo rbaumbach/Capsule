@@ -11,6 +11,8 @@
 		35A4B1A0E817038586AC71CE /* StringWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4BBE77FF06E95FCD4640F /* StringWrapper.swift */; };
 		35A4B5F9A6B13BCE6CD7187B /* Bundle+Capsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4BA908BD12876F103F769 /* Bundle+Capsule.swift */; };
 		35A4B63CFF7D1716305F0BB5 /* String+Capsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4BB3B80EBB04A4650CBBC /* String+Capsule.swift */; };
+		35A4B96D5C6D9EFFF2F73398 /* FakeURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4BEC3E3DF3518F057A879 /* FakeURLSessionDataTask.swift */; };
+		35A4BDF754E522DC495B3604 /* URLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4B593353B0E76C3C15FA1 /* URLSessionDataTask.swift */; };
 		940F9D552399A3FA0028937B /* FakeAVCaptureSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D542399A3FA0028937B /* FakeAVCaptureSession.swift */; };
 		940F9D572399A40A0028937B /* AVCaptureSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D562399A40A0028937B /* AVCaptureSession.swift */; };
 		940F9D592399A4300028937B /* FakeAudioServicesWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D582399A4300028937B /* FakeAudioServicesWrapper.swift */; };
@@ -61,6 +63,8 @@
 		9419FE0C254DA4DB00DA4A28 /* UIViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9419FE0B254DA4DB00DA4A28 /* UIViewWrapper.swift */; };
 		94455B66238C45920063BB6E /* Capsule.h in Headers */ = {isa = PBXBuildFile; fileRef = 94455B64238C45920063BB6E /* Capsule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		94569E3D2B2DE3CE008494E1 /* EmptyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94569E3C2B2DE3CE008494E1 /* EmptyError.swift */; };
+		94569E4C2B2FBE51008494E1 /* JSONSerializationWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94569E4B2B2FBE51008494E1 /* JSONSerializationWrapper.swift */; };
+		94569E4E2B2FC05B008494E1 /* FakeJSONSerializationWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94569E4D2B2FC05B008494E1 /* FakeJSONSerializationWrapper.swift */; };
 		9464C1882B1F8E250096F8AF /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9464C1872B1F8E250096F8AF /* Bundle.swift */; };
 		947BFA9B2B1F9005009A6771 /* FakeStringWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947BFA9A2B1F9005009A6771 /* FakeStringWrapper.swift */; };
 		949A594123A729CA0039E542 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949A594023A729CA0039E542 /* Atomic.swift */; };
@@ -74,9 +78,11 @@
 /* Begin PBXFileReference section */
 		31D7B35ACF2AC94C2FEFEE23 /* Pods-Capsule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capsule.debug.xcconfig"; path = "Target Support Files/Pods-Capsule/Pods-Capsule.debug.xcconfig"; sourceTree = "<group>"; };
 		35A4B26D7A22755932617CE9 /* FakeBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeBundle.swift; sourceTree = "<group>"; };
+		35A4B593353B0E76C3C15FA1 /* URLSessionDataTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionDataTask.swift; sourceTree = "<group>"; };
 		35A4BA908BD12876F103F769 /* Bundle+Capsule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Capsule.swift"; sourceTree = "<group>"; };
 		35A4BB3B80EBB04A4650CBBC /* String+Capsule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Capsule.swift"; sourceTree = "<group>"; };
 		35A4BBE77FF06E95FCD4640F /* StringWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringWrapper.swift; sourceTree = "<group>"; };
+		35A4BEC3E3DF3518F057A879 /* FakeURLSessionDataTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeURLSessionDataTask.swift; sourceTree = "<group>"; };
 		89185E854D912AF3945AB5A4 /* Pods_Capsule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Capsule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		940F9D542399A3FA0028937B /* FakeAVCaptureSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeAVCaptureSession.swift; sourceTree = "<group>"; };
 		940F9D562399A40A0028937B /* AVCaptureSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVCaptureSession.swift; sourceTree = "<group>"; };
@@ -130,6 +136,8 @@
 		94455B64238C45920063BB6E /* Capsule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capsule.h; sourceTree = "<group>"; };
 		94455B65238C45920063BB6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94569E3C2B2DE3CE008494E1 /* EmptyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyError.swift; sourceTree = "<group>"; };
+		94569E4B2B2FBE51008494E1 /* JSONSerializationWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerializationWrapper.swift; sourceTree = "<group>"; };
+		94569E4D2B2FC05B008494E1 /* FakeJSONSerializationWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeJSONSerializationWrapper.swift; sourceTree = "<group>"; };
 		9464C1872B1F8E250096F8AF /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		947BFA9A2B1F9005009A6771 /* FakeStringWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeStringWrapper.swift; sourceTree = "<group>"; };
 		94872AEC290F7C4400D3528B /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -335,6 +343,7 @@
 				940F9D722399A4BA0028937B /* JSONEncoder.swift */,
 				94F0B75D256817F900C47488 /* NotificationCenter.swift */,
 				940F9D712399A4BA0028937B /* URLSession.swift */,
+				35A4B593353B0E76C3C15FA1 /* URLSessionDataTask.swift */,
 				940F9D742399A4BA0028937B /* UserDefaults.swift */,
 				940F9D752399A4BA0028937B /* UUID.swift */,
 			);
@@ -353,6 +362,7 @@
 				94F0B75A256817E900C47488 /* FakeNotificationCenter.swift */,
 				94A3F61E239DF28F0075235B /* FakeNSLocking.swift */,
 				940F9D662399A49D0028937B /* FakeURLSession.swift */,
+				35A4BEC3E3DF3518F057A879 /* FakeURLSessionDataTask.swift */,
 				940F9D672399A49E0028937B /* FakeUserDefaults.swift */,
 				940F9D642399A49D0028937B /* FakeUUID.swift */,
 			);
@@ -368,10 +378,11 @@
 				940F9D902399A5160028937B /* DispatchWorkItemWrapper.swift */,
 				940F9D8F2399A5160028937B /* JSONCodableWrapper.swift */,
 				940F9D8D2399A5160028937B /* JSONCodableWrapper+Capsule.swift */,
+				94569E4B2B2FBE51008494E1 /* JSONSerializationWrapper.swift */,
 				9415A09F24E37D890078B502 /* SimulatorWrapper.swift */,
 				940F9D8A2399A5150028937B /* SleepWrapper.swift */,
-				940F9D8E2399A5160028937B /* TimerWrapper.swift */,
 				35A4BBE77FF06E95FCD4640F /* StringWrapper.swift */,
+				940F9D8E2399A5160028937B /* TimerWrapper.swift */,
 			);
 			path = Wrappers;
 			sourceTree = "<group>";
@@ -383,6 +394,7 @@
 				940F9D7E2399A4ED0028937B /* FakeDispatchQueueWrapper.swift */,
 				940F9D822399A4ED0028937B /* FakeDispatchWorkItemWrapper.swift */,
 				940F9D7F2399A4ED0028937B /* FakeJSONCodableWrapper.swift */,
+				94569E4D2B2FC05B008494E1 /* FakeJSONSerializationWrapper.swift */,
 				9415A09D24E37D750078B502 /* FakeSimulatorWrapper.swift */,
 				940F9D802399A4ED0028937B /* FakeSleepWrapper.swift */,
 				947BFA9A2B1F9005009A6771 /* FakeStringWrapper.swift */,
@@ -607,6 +619,7 @@
 				949A594123A729CA0039E542 /* Atomic.swift in Sources */,
 				940F9DA32399A5510028937B /* StoryboardBuilder.swift in Sources */,
 				94F0B75E256817F900C47488 /* NotificationCenter.swift in Sources */,
+				94569E4C2B2FBE51008494E1 /* JSONSerializationWrapper.swift in Sources */,
 				940F9D862399A4ED0028937B /* FakeSleepWrapper.swift in Sources */,
 				940F9D972399A5160028937B /* DispatchWorkItemWrapper.swift in Sources */,
 				940F9D932399A5160028937B /* DispatchQueueWrapper.swift in Sources */,
@@ -632,6 +645,7 @@
 				940F9D6F2399A49E0028937B /* FakeUserDefaults.swift in Sources */,
 				940F9DA12399A5510028937B /* TableViewCellBuilder.swift in Sources */,
 				940F9D952399A5160028937B /* TimerWrapper.swift in Sources */,
+				94569E4E2B2FC05B008494E1 /* FakeJSONSerializationWrapper.swift in Sources */,
 				940F9D792399A4BA0028937B /* JSONEncoder.swift in Sources */,
 				940F9D682399A49E0028937B /* FakeFileManager.swift in Sources */,
 				940F9D962399A5160028937B /* JSONCodableWrapper.swift in Sources */,
@@ -660,6 +674,8 @@
 				35A4B63CFF7D1716305F0BB5 /* String+Capsule.swift in Sources */,
 				35A4B0B7F14A2ADDBBECE131 /* FakeBundle.swift in Sources */,
 				35A4B1A0E817038586AC71CE /* StringWrapper.swift in Sources */,
+				35A4BDF754E522DC495B3604 /* URLSessionDataTask.swift in Sources */,
+				35A4B96D5C6D9EFFF2F73398 /* FakeURLSessionDataTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -721,7 +737,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.3.3;
+				MARKETING_VERSION = 1.3.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -782,7 +798,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.3.3;
+				MARKETING_VERSION = 1.3.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -816,7 +832,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.4;
+				MARKETING_VERSION = 1.3.5;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = teamthick.capsule;
@@ -853,7 +869,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.4;
+				MARKETING_VERSION = 1.3.5;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = teamthick.capsule;

@@ -22,51 +22,21 @@
 
 import Foundation
 
-public class FakeStringWrapper: StringWrapperProtocol {
-    // MARK: - Captured properties
-    
-    public var capturedLoadStringPath: String?
-    
-    public var capturedLoadDataPath: String?
-    public var capturedLoadDataEncoding: String.Encoding?
+public protocol JSONSerializationWrapperProtocol {
+    func jsonObject(with data: Data,
+                    options opt: JSONSerialization.ReadingOptions) throws -> Any
+}
 
-    // MARK: - Stubbed properties
-    
-    public var stubbedLoadString = "Loaded"
-    
-    public var stubbedLoadData = "Loaded".data(using: .utf8)
-    
-    // MARK: - Exceptions
-    
-    public var shouldThrowErrowLoadingString = false
-    
-    public var shouldThrowErrorLoadingData = false
-    
+public class JSONSerializationWrapper: JSONSerializationWrapperProtocol {
     // MARK: - Init methods
     
     public init() { }
     
-    // MARK: - <StringWrapperaProtocol>
+    // MARK: - Public methods
     
-    public func loadString(contentsOfFile path: String) throws -> String {
-        capturedLoadStringPath = path
-        
-        if shouldThrowErrowLoadingString {
-            throw FakeGenericError.whoCares
-        }
-        
-        return stubbedLoadString
-    }
-    
-    public func loadData(contentsOfFile path: String, 
-                         encoding: String.Encoding) throws -> Data? {
-        capturedLoadDataPath = path
-        capturedLoadDataEncoding = encoding
-        
-        if shouldThrowErrorLoadingData {
-            throw FakeGenericError.whoCares
-        }
-        
-        return stubbedLoadData
+    public func jsonObject(with data: Data,
+                           options opt: JSONSerialization.ReadingOptions) throws -> Any {
+        try JSONSerialization.jsonObject(with: data,
+                                         options: opt)
     }
 }

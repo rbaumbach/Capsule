@@ -22,6 +22,10 @@
 
 import Foundation
 
+// Note: This is an easier way to package both JSONEncoder and JSONDecoder
+// functionality into one convienece class.  Use the JSONEncoder and JSONDecoder
+// protocol extensions if you need specific ligher functionality instead.
+
 public protocol JSONCodableWrapperProtocol {
     var outputFormat: JSONCodableWrapper.OutputFormat { get set }
     var dateFormat: JSONCodableWrapper.DateFormat { get set }
