@@ -25,14 +25,27 @@ import Foundation
 public class FakeURLSession: URLSessionProtocol {
     // MARK: - Captured properties
     
-    public var capturedInitConfiguration: URLSessionConfiguration
+    public var capturedInitConfiguration: URLSessionConfiguration?
     
-    public var capturedURL: URL?
-    public var capturedCompletionHandler: ((Data?, URLResponse?, Error?) -> Void)?
+    public var capturedDataTaskURL: URL?
+    public var capturedDataTaskCompletionHandler: ((Data?, URLResponse?, Error?) -> Void)?
+    
+    public var capturedDataTaskURLRequest: URLRequest?
+    public var capturedDataTaskURLRequestCompletionHandler: ((Data?, URLResponse?, Error?) -> Void)?
     
     // MARK: - Stubbed properties
+    
+    // Note: Unfortunately there isn't away to "init()" an instance of a URLSessionDataTask or it's parent
+    // URLSessionTask without creating a deprecation warning. Unfortunately using URLSession.shared.dataTask()
+    // does some real networking even if the URL is fake as shown below.
             
     public var stubbedDataTask = URLSession.shared.dataTask(with: URL(string: "https://8jnYY7-nope-not-working-jj009.codes")!)
+    
+    public var stubbedDataTaskWithURLRequest = FakeURLSessionDataTask()
+    
+    // MARK: - Init methods
+    
+    public init() { }
     
     // MARK: - <URLSessionProtocol>
     
@@ -40,10 +53,37 @@ public class FakeURLSession: URLSessionProtocol {
         capturedInitConfiguration = configuration
     }
     
-    public func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
+#if swift(>=5.5)
+    public func dataTask(with url: URL,
+                         completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
+        capturedDataTaskURL = url
+        capturedDataTaskCompletionHandler = completionHandler
+        
+        return stubbedDataTask
+    }
+    
+    public func dataTask(with request: URLRequest,
+                         completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
+        capturedDataTaskURLRequest = request
+        capturedDataTaskURLRequestCompletionHandler = completionHandler
+        
+        return stubbedDataTaskWithURLRequest
+    }
+#else
+    public func dataTask(with url: URL,
+                         completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
         capturedURL = url
         capturedCompletionHandler = completionHandler
         
         return stubbedDataTask
     }
+    
+    public func dataTask(with request: URLRequest,
+                         completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
+        capturedDataTaskURLRequest = request
+        capturedDataTaskURLRequestCompletionHandler = completionHandler
+        
+        return stubbedDataTaskWithURLRequest
+    }
+#endif
 }

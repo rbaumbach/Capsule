@@ -22,23 +22,8 @@
 
 import Foundation
 
-public class FakeNSLocking: NSLocking {
-    // MARK: - Captured propertiers
-    
-    var didLock = false
-    var didUnlock = false
-    
-    // MARK: - Init methods
-    
-    public init() { }
-    
-    // MARK: - <NSLocking>
-    
-    public func lock() {
-        didLock = true
-    }
-    
-    public func unlock() {
-        didUnlock = false
-    }
+public protocol URLSessionDataTaskProtocol {
+    func resume()
 }
+
+extension URLSessionDataTask: URLSessionDataTaskProtocol { }

@@ -26,10 +26,35 @@ public protocol URLSessionProtocol {
     init(configuration: URLSessionConfiguration)
 
 #if swift(>=5.5)
-    func dataTask(with url: URL, completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
+    func dataTask(with url: URL, 
+                  completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
+    
+    func dataTask(with request: URLRequest,
+                  completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol
 #else
     func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
+    
+    func dataTask(with request: URLRequest,
+                  completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol
 #endif
 }
 
-extension URLSession: URLSessionProtocol { }
+extension URLSession: URLSessionProtocol {
+#if swift(>=5.5)
+    public func dataTask(with request: URLRequest,
+                         completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
+        let dataTask: URLSessionDataTask = dataTask(with: request,
+                                                    completionHandler: completionHandler)
+        
+        return dataTask
+    }
+#else
+    public func dataTask(with request: URLRequest,
+                         completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
+        let dataTask: URLSessionDataTask = dataTask(with: request,
+                                                    completionHandler: completionHandler)
+        
+        return dataTask
+    }
+#endif
+}
