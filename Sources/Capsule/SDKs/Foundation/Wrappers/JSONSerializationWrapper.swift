@@ -23,6 +23,8 @@
 import Foundation
 
 public protocol JSONSerializationWrapperProtocol {
+    func data(withJSONObject: Any) throws -> Data
+    
     func jsonObject(with data: Data,
                     options opt: JSONSerialization.ReadingOptions) throws -> Any
 }
@@ -33,6 +35,10 @@ public class JSONSerializationWrapper: JSONSerializationWrapperProtocol {
     public init() { }
     
     // MARK: - Public methods
+    
+    public func data(withJSONObject: Any) throws -> Data {
+        try JSONSerialization.data(withJSONObject: withJSONObject)
+    }
     
     public func jsonObject(with data: Data,
                            options opt: JSONSerialization.ReadingOptions) throws -> Any {
