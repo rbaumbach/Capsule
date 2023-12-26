@@ -25,14 +25,20 @@ import Foundation
 public class FakeJSONSerializationWrapper: JSONSerializationWrapperProtocol {
     // MARK: - Captured properties
     
+    public var capturedJSONObject: Any?
+    
     public var capturedJSONObjectData: Data?
     public var capturedJSONObjectOptions: JSONSerialization.ReadingOptions?
     
     // MARK: - Stubbed properties
     
+    public var stubbedJSONData = "fake-data".data(using: .utf8)!
+    
     public var stubbedJSONObject: Any = "{ not-real: json }"
     
     // MARK: - Exceptions
+    
+    public var shouldThrowJSONDataException = false
     
     public var shouldThrowJSONObjectException = false
     
@@ -41,6 +47,16 @@ public class FakeJSONSerializationWrapper: JSONSerializationWrapperProtocol {
     public init() { }
     
     // MARK: - <JSONSerializationWrapperProtocol>
+    
+    public func data(withJSONObject: Any) throws -> Data {
+        capturedJSONObject = withJSONObject
+        
+        if shouldThrowJSONDataException {
+            throw FakeGenericError.whoCares
+        }
+        
+        return stubbedJSONData
+    }
     
     public func jsonObject(with data: Data,
                            options opt: JSONSerialization.ReadingOptions) throws -> Any {
