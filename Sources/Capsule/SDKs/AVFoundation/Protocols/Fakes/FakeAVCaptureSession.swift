@@ -1,6 +1,6 @@
 //MIT License
 //
-//Copyright (c) 2020-2023 Ryan Baumbach <github@ryan.codes>
+//Copyright (c) 2020-2024 Ryan Baumbach <github@ryan.codes>
 //
 //Permission is hereby granted, free of charge, to any person obtaining a copy
 //of this software and associated documentation files (the "Software"), to deal
@@ -25,9 +25,9 @@ import Foundation
 public class FakeAVCaptureSession: AVCaptureSessionProtocol {
     // MARK: - Captured properties
     
-    public var didStartRunning = false
+    public var didCallStartRunning = false
     
-    public var didStopRunning = false
+    public var didCallStopRunning = false
     
     // MARK: - Init methods
 
@@ -36,10 +36,10 @@ public class FakeAVCaptureSession: AVCaptureSessionProtocol {
     // MARK: - <AVCaptureSessionProtocol>
     
     public func startRunning() {
-        didStartRunning = true
+        didCallStartRunning = true
     }
     
     public func stopRunning() {
-        didStopRunning = true
+        didCallStopRunning = true
     }
 }

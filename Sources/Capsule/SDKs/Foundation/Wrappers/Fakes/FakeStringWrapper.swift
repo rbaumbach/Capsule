@@ -1,6 +1,6 @@
 //MIT License
 //
-//Copyright (c) 2020-2023 Ryan Baumbach <github@ryan.codes>
+//Copyright (c) 2020-2024 Ryan Baumbach <github@ryan.codes>
 //
 //Permission is hereby granted, free of charge, to any person obtaining a copy
 //of this software and associated documentation files (the "Software"), to deal
@@ -36,7 +36,7 @@ public class FakeStringWrapper: StringWrapperProtocol {
     
     public var stubbedLoadData = "Loaded".data(using: .utf8)
     
-    // MARK: - Exceptions
+    // MARK: - Public properties
     
     public var shouldThrowErrowLoadingString = false
     

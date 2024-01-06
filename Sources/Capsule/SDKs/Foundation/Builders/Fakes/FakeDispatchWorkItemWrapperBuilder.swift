@@ -1,6 +1,6 @@
 //MIT License
 //
-//Copyright (c) 2020-2023 Ryan Baumbach <github@ryan.codes>
+//Copyright (c) 2020-2024 Ryan Baumbach <github@ryan.codes>
 //
 //Permission is hereby granted, free of charge, to any person obtaining a copy
 //of this software and associated documentation files (the "Software"), to deal
@@ -30,9 +30,6 @@ public class FakeDispatchWorkItemWrapperBuilder: DispatchWorkItemWrapperBuilderP
     
     // MARK: - Stubbed properties
         
-    public var shouldUseDispatchWorkItemWrappersArray = false
-    public var currentDispatchWorkItemWrapperIndex = 0
-    
     public var stubbedDispatchWorkItemWrappersArray: [FakeDispatchWorkItemWrapper] = {
         let fakeDispatchWorkItemWrappers = Array(0...4).map { number -> FakeDispatchWorkItemWrapper in
             let fakeDispatchWorkItemWrapper = FakeDispatchWorkItemWrapper()
@@ -44,6 +41,11 @@ public class FakeDispatchWorkItemWrapperBuilder: DispatchWorkItemWrapperBuilderP
         return fakeDispatchWorkItemWrappers
     }()
     
+    // MARK: - Public properties
+    
+    public var shouldUseDispatchWorkItemWrappersArray = false
+    public var currentDispatchWorkItemWrapperIndex = 0
+        
     // MARK: - Init methods
     
     public init() { }

@@ -1,6 +1,6 @@
 //MIT License
 //
-//Copyright (c) 2020-2023 Ryan Baumbach <github@ryan.codes>
+//Copyright (c) 2020-2024 Ryan Baumbach <github@ryan.codes>
 //
 //Permission is hereby granted, free of charge, to any person obtaining a copy
 //of this software and associated documentation files (the "Software"), to deal
@@ -33,6 +33,10 @@ public class FakeUIViewWrapper: UIViewWrapperProtocol {
     
     public var stubbedString = "Xerox copy"
     
+    // MARK: - Public properties
+    
+    public var shouldAnimateImmediately = false
+    
     // MARK: - Init methods
     
     public init() { }
@@ -42,5 +46,9 @@ public class FakeUIViewWrapper: UIViewWrapperProtocol {
     public func animate(duration: TimeInterval, animations: @escaping () -> Void) {
         capturedAnimateDuration = duration
         capturedAnimateAnimations = animations
+        
+        if shouldAnimateImmediately {
+            animations()
+        }
     }
 }

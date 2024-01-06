@@ -1,6 +1,6 @@
 //MIT License
 //
-//Copyright (c) 2020-2023 Ryan Baumbach <github@ryan.codes>
+//Copyright (c) 2020-2024 Ryan Baumbach <github@ryan.codes>
 //
 //Permission is hereby granted, free of charge, to any person obtaining a copy
 //of this software and associated documentation files (the "Software"), to deal
@@ -25,8 +25,8 @@ import Foundation
 public class FakeNSLocking: NSLocking {
     // MARK: - Captured propertiers
     
-    var didLock = false
-    var didUnlock = false
+    var didCallLock = false
+    var didCallUnlock = false
     
     // MARK: - Init methods
     
@@ -35,10 +35,10 @@ public class FakeNSLocking: NSLocking {
     // MARK: - <NSLocking>
     
     public func lock() {
-        didLock = true
+        didCallLock = true
     }
     
     public func unlock() {
-        didUnlock = false
+        didCallUnlock = false
     }
 }

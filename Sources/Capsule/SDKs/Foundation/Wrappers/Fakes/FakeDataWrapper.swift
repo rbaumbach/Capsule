@@ -1,6 +1,6 @@
 //MIT License
 //
-//Copyright (c) 2020-2023 Ryan Baumbach <github@ryan.codes>
+//Copyright (c) 2020-2024 Ryan Baumbach <github@ryan.codes>
 //
 //Permission is hereby granted, free of charge, to any person obtaining a copy
 //of this software and associated documentation files (the "Software"), to deal
@@ -33,7 +33,7 @@ public class FakeDataWrapper: DataWrapperProtocol {
     
     public var stubbedLoadData = "burritos".data(using: .utf8)!
     
-    // MARK: - Exceptions
+    // MARK: - Public properties
     
     public var shouldThrowLoadDataException = false
     public var shouldThrowWriteException = false
@@ -42,16 +42,16 @@ public class FakeDataWrapper: DataWrapperProtocol {
     
     public init() { }
     
-    // MARK: - <DataUtilsProtocol>
+    // MARK: - <DataWrapperProtocol>
     
     public func loadData(contentsOfPath path: URL) throws -> Data {
         capturedLoadDataURL = path
         
         if shouldThrowLoadDataException {
             throw FakeGenericError.whoCares
-        } else {
-            return stubbedLoadData
         }
+        
+        return stubbedLoadData
     }
     
     public func write(data: Data, toPath path: URL) throws {

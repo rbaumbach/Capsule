@@ -1,6 +1,6 @@
 //MIT License
 //
-//Copyright (c) 2020-2023 Ryan Baumbach <github@ryan.codes>
+//Copyright (c) 2020-2024 Ryan Baumbach <github@ryan.codes>
 //
 //Permission is hereby granted, free of charge, to any person obtaining a copy
 //of this software and associated documentation files (the "Software"), to deal
@@ -35,7 +35,7 @@ public class FakeJSONDecoder: JSONDecoderProtocol {
     public var stubbedDateDecodingStrategy = JSONDecoder.DateDecodingStrategy.iso8601
     public var stubbedDecodedJSON: Any?
     
-    // MARK: - Exceptions
+    // MARK: - Public properties
     
     public var shouldThrowDecodeException = false
     

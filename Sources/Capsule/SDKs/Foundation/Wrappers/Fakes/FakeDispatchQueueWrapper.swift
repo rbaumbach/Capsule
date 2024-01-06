@@ -1,6 +1,6 @@
 //MIT License
 //
-//Copyright (c) 2020-2023 Ryan Baumbach <github@ryan.codes>
+//Copyright (c) 2020-2024 Ryan Baumbach <github@ryan.codes>
 //
 //Permission is hereby granted, free of charge, to any person obtaining a copy
 //of this software and associated documentation files (the "Software"), to deal
@@ -70,6 +70,10 @@ public class FakeDispatchQueueWrapper: DispatchQueueWrapperProtocol {
     public var capturedCustomSyncFlags: DispatchWorkItemFlags?
     public var capturedCustomSyncExecutionBlock: (() -> Void)?
     
+    // MARK: - Public properties
+    
+    public var shouldExecuteImmediately = false
+    
     // MARK: - Init methods
     
     public init() { }
@@ -80,16 +84,28 @@ public class FakeDispatchQueueWrapper: DispatchQueueWrapperProtocol {
     
     public func mainAsync(execute: @escaping () -> Void) {
         capturedMainAsyncExecutionBlock = execute
+        
+        if shouldExecuteImmediately {
+            execute()
+        }
     }
     
     public func mainAfter(seconds: Int, execute: @escaping () -> Void) {
         capturedMainAfterSecondsInt = seconds
         capturedMainAfterSecondsIntExecutionBlock = execute
+        
+        if shouldExecuteImmediately {
+            execute()
+        }
     }
     
     public func mainAfter(seconds: Double, execute: @escaping () -> Void) {
         capturedMainAfterSecondsDouble = seconds
         capturedMainAfterSecondsDoubleExecutionBlock = execute
+        
+        if shouldExecuteImmediately {
+            execute()
+        }
     }
     
     public func mainAfter(seconds: Int, dispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol) {
@@ -107,18 +123,30 @@ public class FakeDispatchQueueWrapper: DispatchQueueWrapperProtocol {
     public func globalAsync(qos: DispatchQoS, execute: @escaping () -> Void) {
         capturedGlobalAsyncQOS = qos
         capturedGlobalAsyncExecutionBlock = execute
+        
+        if shouldExecuteImmediately {
+            execute()
+        }
     }
     
     public func globalAsyncAfter(seconds: Int, qos: DispatchQoS, execute: @escaping () -> Void) {
         capturedGlobalAsyncAfterSecondsInt = seconds
         capturedGlobalAsyncAfterSecondsIntQOS = qos
         capturedGlobalAsyncAfterSecondsIntExecutionBlock = execute
+        
+        if shouldExecuteImmediately {
+            execute()
+        }
     }
     
     public func globalAsyncAfter(seconds: Double, qos: DispatchQoS, execute: @escaping () -> Void) {
         capturedGlobalAsyncAfterSecondsDouble = seconds
         capturedGlobalAsyncAfterSecondsDoubleQOS = qos
         capturedGlobalAsyncAfterSecondsDoubleExecutionBlock = execute
+        
+        if shouldExecuteImmediately {
+            execute()
+        }
     }
     
     public func globalAsyncAfter(seconds: Int, qos: DispatchQoS, dispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol) {
@@ -138,10 +166,18 @@ public class FakeDispatchQueueWrapper: DispatchQueueWrapperProtocol {
     public func customAsync(flags: DispatchWorkItemFlags, execute: @escaping () -> Void) {
         capturedCustomAsyncFlags = flags
         capturedCustomAsyncExecutionBlock = execute
+        
+        if shouldExecuteImmediately {
+            execute()
+        }
     }
     
     public func customSync(flags: DispatchWorkItemFlags, execute: @escaping () -> Void) {
         capturedCustomSyncFlags = flags
         capturedCustomSyncExecutionBlock = execute
+        
+        if shouldExecuteImmediately {
+            execute()
+        }
     }
 }

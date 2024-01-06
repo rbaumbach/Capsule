@@ -1,6 +1,6 @@
 //MIT License
 //
-//Copyright (c) 2020-2023 Ryan Baumbach <github@ryan.codes>
+//Copyright (c) 2020-2024 Ryan Baumbach <github@ryan.codes>
 //
 //Permission is hereby granted, free of charge, to any person obtaining a copy
 //of this software and associated documentation files (the "Software"), to deal
@@ -29,6 +29,14 @@ public class FakeTimerWrapper: TimerWrapperProtocol {
     public var capturedScheduledTimerShouldRepeat: Bool?
     public var capturedScheduledTimerOnTimerFiring: ((Timer) -> Void)?
     
+    // MARK: - Stubbed properties
+    
+    public var stubbedScheduledTimer = Timer()
+    
+    // MARK: - Public properties
+    
+    public var shouldExecuteOnTimerFiringImmediately = false
+    
     // MARK: - Init methods
     
     public init() { }
@@ -39,5 +47,9 @@ public class FakeTimerWrapper: TimerWrapperProtocol {
         capturedScheduledTimerSeconds = seconds
         capturedScheduledTimerShouldRepeat = shouldRepeat
         capturedScheduledTimerOnTimerFiring = onTimerFiring
+        
+        if shouldExecuteOnTimerFiringImmediately {
+            onTimerFiring(stubbedScheduledTimer)
+        }
     }
 }
