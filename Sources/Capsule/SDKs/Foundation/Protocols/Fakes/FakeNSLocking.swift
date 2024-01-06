@@ -25,8 +25,8 @@ import Foundation
 public class FakeNSLocking: NSLocking {
     // MARK: - Captured propertiers
     
-    var didLock = false
-    var didUnlock = false
+    var didCallLock = false
+    var didCallUnlock = false
     
     // MARK: - Init methods
     
@@ -35,10 +35,10 @@ public class FakeNSLocking: NSLocking {
     // MARK: - <NSLocking>
     
     public func lock() {
-        didLock = true
+        didCallLock = true
     }
     
     public func unlock() {
-        didUnlock = false
+        didCallUnlock = false
     }
 }

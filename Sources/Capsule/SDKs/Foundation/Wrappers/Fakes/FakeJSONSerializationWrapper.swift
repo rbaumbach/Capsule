@@ -36,7 +36,7 @@ public class FakeJSONSerializationWrapper: JSONSerializationWrapperProtocol {
     
     public var stubbedJSONObject: Any = "{ not-real: json }"
     
-    // MARK: - Exceptions
+    // MARK: - Public properties
     
     public var shouldThrowJSONDataException = false
     

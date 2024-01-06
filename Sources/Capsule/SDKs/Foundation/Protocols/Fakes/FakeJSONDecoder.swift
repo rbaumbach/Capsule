@@ -35,7 +35,7 @@ public class FakeJSONDecoder: JSONDecoderProtocol {
     public var stubbedDateDecodingStrategy = JSONDecoder.DateDecodingStrategy.iso8601
     public var stubbedDecodedJSON: Any?
     
-    // MARK: - Exceptions
+    // MARK: - Public properties
     
     public var shouldThrowDecodeException = false
     

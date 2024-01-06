@@ -29,6 +29,14 @@ public class FakeTimerWrapper: TimerWrapperProtocol {
     public var capturedScheduledTimerShouldRepeat: Bool?
     public var capturedScheduledTimerOnTimerFiring: ((Timer) -> Void)?
     
+    // MARK: - Stubbed properties
+    
+    public var stubbedScheduledTimer = Timer()
+    
+    // MARK: - Public properties
+    
+    public var shouldExecuteOnTimerFiringImmediately = false
+    
     // MARK: - Init methods
     
     public init() { }
@@ -39,5 +47,9 @@ public class FakeTimerWrapper: TimerWrapperProtocol {
         capturedScheduledTimerSeconds = seconds
         capturedScheduledTimerShouldRepeat = shouldRepeat
         capturedScheduledTimerOnTimerFiring = onTimerFiring
+        
+        if shouldExecuteOnTimerFiringImmediately {
+            onTimerFiring(stubbedScheduledTimer)
+        }
     }
 }

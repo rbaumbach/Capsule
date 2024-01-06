@@ -28,9 +28,9 @@ public class FakeDispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol {
     public var capturedInitQOS: DispatchQoS?
     public var capturedInitWork: (() -> Void)?
     
-    public var didCancel = false
+    public var didCallCancel = false
     
-    // MARK: - Extras
+    // MARK: - Public properties
     
     public var id: Int?
     
@@ -43,6 +43,6 @@ public class FakeDispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol {
     public var dispatchWorkItem: DispatchWorkItem =  DispatchWorkItem(block: { })
     
     public func cancel() {
-        didCancel = true
+        didCallCancel = true
     }
 }

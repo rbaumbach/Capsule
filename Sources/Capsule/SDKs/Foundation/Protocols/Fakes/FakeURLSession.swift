@@ -40,8 +40,18 @@ public class FakeURLSession: URLSessionProtocol {
     // does some real networking even if the URL is fake as shown below.
             
     public var stubbedDataTask = URLSession.shared.dataTask(with: URL(string: "https://8jnYY7-nope-not-working-jj009.codes")!)
+    public var stubbedDataTaskData: Data? = "simon".data(using: .utf8)
+    public var stubbedDataTaskURLResponse: URLResponse? = URLResponse()
+    public var stubbedDataTaskURLError: Error? = FakeGenericError.whoCares
     
     public var stubbedDataTaskWithURLRequest = FakeURLSessionDataTask()
+    public var stubbedDataTaskWithURLRequestData: Data? = "simon".data(using: .utf8)
+    public var stubbedDataTaskWithURLRequestURLResponse: URLResponse? = URLResponse()
+    public var stubbedDataTaskWithURLRequestURLError: Error? = FakeGenericError.whoCares
+    
+    // MARK: - Public properties
+    
+    public var shouldExecuteCompletionHandlersImmediately = false
     
     // MARK: - Init methods
     
@@ -59,6 +69,10 @@ public class FakeURLSession: URLSessionProtocol {
         capturedDataTaskURL = url
         capturedDataTaskCompletionHandler = completionHandler
         
+        if shouldExecuteCompletionHandlersImmediately {
+            completionHandler(stubbedDataTaskData, stubbedDataTaskURLResponse, stubbedDataTaskURLError)
+        }
+        
         return stubbedDataTask
     }
     
@@ -66,6 +80,10 @@ public class FakeURLSession: URLSessionProtocol {
                          completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
         capturedDataTaskURLRequest = request
         capturedDataTaskURLRequestCompletionHandler = completionHandler
+        
+        if shouldExecuteCompletionHandlersImmediately {
+            completionHandler(stubbedDataTaskWithURLRequestData, stubbedDataTaskWithURLRequestURLResponse, stubbedDataTaskWithURLRequestURLError)
+        }
         
         return stubbedDataTaskWithURLRequest
     }
@@ -75,6 +93,10 @@ public class FakeURLSession: URLSessionProtocol {
         capturedURL = url
         capturedCompletionHandler = completionHandler
         
+        if shouldExecuteCompletionHandlersImmediately {
+            completionHandler(stubbedDataTaskData, stubbedDataTaskURLResponse, stubbedDataTaskURLError)
+        }
+        
         return stubbedDataTask
     }
     
@@ -82,6 +104,10 @@ public class FakeURLSession: URLSessionProtocol {
                          completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
         capturedDataTaskURLRequest = request
         capturedDataTaskURLRequestCompletionHandler = completionHandler
+        
+        if shouldExecuteCompletionHandlersImmediately {
+            completionHandler(stubbedDataTaskWithURLRequestData, stubbedDataTaskWithURLRequestURLResponse, stubbedDataTaskWithURLRequestURLError)
+        }
         
         return stubbedDataTaskWithURLRequest
     }

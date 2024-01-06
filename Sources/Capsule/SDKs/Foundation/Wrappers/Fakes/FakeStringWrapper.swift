@@ -36,7 +36,7 @@ public class FakeStringWrapper: StringWrapperProtocol {
     
     public var stubbedLoadData = "Loaded".data(using: .utf8)
     
-    // MARK: - Exceptions
+    // MARK: - Public properties
     
     public var shouldThrowErrowLoadingString = false
     

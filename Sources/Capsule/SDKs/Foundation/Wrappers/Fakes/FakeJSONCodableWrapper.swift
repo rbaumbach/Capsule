@@ -42,7 +42,7 @@ public class FakeJSONCodableWrapper: JSONCodableWrapperProtocol {
     
     public var stubbedDecodedData: Any?
     
-    // MARK: - Exceptions
+    // MARK: - Public properties
     
     public var shouldThrowEncodeException = false
     public var shouldThrowDecodeException = false

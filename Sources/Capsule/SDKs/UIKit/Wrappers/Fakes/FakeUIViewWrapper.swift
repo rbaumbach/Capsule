@@ -33,6 +33,10 @@ public class FakeUIViewWrapper: UIViewWrapperProtocol {
     
     public var stubbedString = "Xerox copy"
     
+    // MARK: - Public properties
+    
+    public var shouldAnimateImmediately = false
+    
     // MARK: - Init methods
     
     public init() { }
@@ -42,5 +46,9 @@ public class FakeUIViewWrapper: UIViewWrapperProtocol {
     public func animate(duration: TimeInterval, animations: @escaping () -> Void) {
         capturedAnimateDuration = duration
         capturedAnimateAnimations = animations
+        
+        if shouldAnimateImmediately {
+            animations()
+        }
     }
 }
