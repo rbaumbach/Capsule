@@ -33,7 +33,6 @@
 		35A4BA9B9C2B982E1A3957B3 /* DispatchQueueWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4B4C314C2A83F1DE9009C /* DispatchQueueWrapper.swift */; };
 		35A4BACC6E7EE4103DBF63B7 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4BC301D858E1CFDC46B66 /* URLSession.swift */; };
 		35A4BB0BFF0BF03AFD11AFEE /* FakeTimerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4BC3F3C7D27870289AED9 /* FakeTimerWrapper.swift */; };
-		35A4BB353AC8AA8F4FABBF8E /* FakeURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4BC778B5DF86E88F2989A /* FakeURLSessionDataTask.swift */; };
 		35A4BB9562DAF57255E4FF20 /* FakeDataWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4B092AC4AF94D1848CBCB /* FakeDataWrapper.swift */; };
 		35A4BBAFFCC67900FD60A608 /* DataWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4B31524EEAFDF2611A522 /* DataWrapper.swift */; };
 		35A4BBDD9363C25E0337ECBE /* UIViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4B1B676CFBAE8B4EB5FD0 /* UIViewWrapper.swift */; };
@@ -45,7 +44,6 @@
 		35A4BE293370EF121EBA2E5E /* SimulatorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4B3A20D28490B6739E8D6 /* SimulatorWrapper.swift */; };
 		35A4BE29F9C570E1F8F515AD /* FakeSimulatorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4B9B6025554B82C953F4F /* FakeSimulatorWrapper.swift */; };
 		35A4BF37E9A925A6751161BF /* FakeURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4BAE24E3951C6056AA7E5 /* FakeURLSession.swift */; };
-		35A4BFADA0FB4A389A915DF0 /* URLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4B91FF050BC96AF593CC5 /* URLSessionDataTask.swift */; };
 		35A4BFB05643D72A7CEB6C5C /* JSONSerializationWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4BBABB87511E996FE8168 /* JSONSerializationWrapper.swift */; };
 		940F9D552399A3FA0028937B /* FakeAVCaptureSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D542399A3FA0028937B /* FakeAVCaptureSession.swift */; };
 		940F9D572399A40A0028937B /* AVCaptureSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D562399A40A0028937B /* AVCaptureSession.swift */; };
@@ -65,10 +63,9 @@
 		940F9D7A2399A4BA0028937B /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D732399A4BA0028937B /* Calendar.swift */; };
 		940F9D7D2399A4BA0028937B /* JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9D762399A4BA0028937B /* JSONDecoder.swift */; };
 		940F9DEA239AFB8A0028937B /* Capsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9DE9239AFB8A0028937B /* Capsule.swift */; };
-		94284F662B4CCDDB00F76BDA /* URLSessionDownloadTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94284F652B4CCDDB00F76BDA /* URLSessionDownloadTask.swift */; };
-		94284F682B4CCDEF00F76BDA /* URLSessionUploadTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94284F672B4CCDEF00F76BDA /* URLSessionUploadTask.swift */; };
-		94284F6D2B4CD01F00F76BDA /* FakeURLSessionDownloadTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94284F6C2B4CD01F00F76BDA /* FakeURLSessionDownloadTask.swift */; };
-		94284F6F2B4CD03400F76BDA /* FakeURLSessionUploadTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94284F6E2B4CD03400F76BDA /* FakeURLSessionUploadTask.swift */; };
+		94284F712B4CF92A00F76BDA /* URLSessionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94284F702B4CF92A00F76BDA /* URLSessionTask.swift */; };
+		94284F732B4CFC7000F76BDA /* FakeURLSessionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94284F722B4CFC7000F76BDA /* FakeURLSessionTask.swift */; };
+		94284F772B4D9CB900F76BDA /* FakeURLSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94284F762B4D9CB900F76BDA /* FakeURLSessionDelegate.swift */; };
 		94455B66238C45920063BB6E /* Capsule.h in Headers */ = {isa = PBXBuildFile; fileRef = 94455B64238C45920063BB6E /* Capsule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		94569E3D2B2DE3CE008494E1 /* EmptyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94569E3C2B2DE3CE008494E1 /* EmptyError.swift */; };
 		9464C1882B1F8E250096F8AF /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9464C1872B1F8E250096F8AF /* Bundle.swift */; };
@@ -104,7 +101,6 @@
 		35A4B670CBD47AEB69F81FFD /* FakeStoryboardBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeStoryboardBuilder.swift; sourceTree = "<group>"; };
 		35A4B7044E0268551F0D49A3 /* UIPasteboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPasteboard.swift; sourceTree = "<group>"; };
 		35A4B88090A08C69A0672E80 /* FakeUIPasteboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeUIPasteboard.swift; sourceTree = "<group>"; };
-		35A4B91FF050BC96AF593CC5 /* URLSessionDataTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionDataTask.swift; sourceTree = "<group>"; };
 		35A4B987F01DFD8D4AC753E9 /* FakeUIAlertControllerBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeUIAlertControllerBuilder.swift; sourceTree = "<group>"; };
 		35A4B9B6025554B82C953F4F /* FakeSimulatorWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeSimulatorWrapper.swift; sourceTree = "<group>"; };
 		35A4BA8089A4E1FA8694CD48 /* FakeSleepWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeSleepWrapper.swift; sourceTree = "<group>"; };
@@ -115,7 +111,6 @@
 		35A4BC301D858E1CFDC46B66 /* URLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
 		35A4BC338C253C5F4B6948EF /* TableViewCellBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellBuilder.swift; sourceTree = "<group>"; };
 		35A4BC3F3C7D27870289AED9 /* FakeTimerWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeTimerWrapper.swift; sourceTree = "<group>"; };
-		35A4BC778B5DF86E88F2989A /* FakeURLSessionDataTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeURLSessionDataTask.swift; sourceTree = "<group>"; };
 		35A4BCC8105ECC90DD60989A /* FakeDispatchQueueWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeDispatchQueueWrapper.swift; sourceTree = "<group>"; };
 		35A4BD26F28B62C64C769B14 /* JSONCodableWrapper+Capsule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONCodableWrapper+Capsule.swift"; sourceTree = "<group>"; };
 		35A4BE8601F5A051B85FCD63 /* FakeDispatchWorkItemWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeDispatchWorkItemWrapper.swift; sourceTree = "<group>"; };
@@ -140,10 +135,9 @@
 		940F9D732399A4BA0028937B /* Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		940F9D762399A4BA0028937B /* JSONDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecoder.swift; sourceTree = "<group>"; };
 		940F9DE9239AFB8A0028937B /* Capsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capsule.swift; sourceTree = "<group>"; };
-		94284F652B4CCDDB00F76BDA /* URLSessionDownloadTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDownloadTask.swift; sourceTree = "<group>"; };
-		94284F672B4CCDEF00F76BDA /* URLSessionUploadTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionUploadTask.swift; sourceTree = "<group>"; };
-		94284F6C2B4CD01F00F76BDA /* FakeURLSessionDownloadTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeURLSessionDownloadTask.swift; sourceTree = "<group>"; };
-		94284F6E2B4CD03400F76BDA /* FakeURLSessionUploadTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeURLSessionUploadTask.swift; sourceTree = "<group>"; };
+		94284F702B4CF92A00F76BDA /* URLSessionTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionTask.swift; sourceTree = "<group>"; };
+		94284F722B4CFC7000F76BDA /* FakeURLSessionTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeURLSessionTask.swift; sourceTree = "<group>"; };
+		94284F762B4D9CB900F76BDA /* FakeURLSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeURLSessionDelegate.swift; sourceTree = "<group>"; };
 		94455B61238C45920063BB6E /* Capsule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Capsule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94455B64238C45920063BB6E /* Capsule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capsule.h; sourceTree = "<group>"; };
 		94455B65238C45920063BB6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -193,9 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				35A4BC301D858E1CFDC46B66 /* URLSession.swift */,
-				35A4B91FF050BC96AF593CC5 /* URLSessionDataTask.swift */,
-				94284F652B4CCDDB00F76BDA /* URLSessionDownloadTask.swift */,
-				94284F672B4CCDEF00F76BDA /* URLSessionUploadTask.swift */,
+				94284F702B4CF92A00F76BDA /* URLSessionTask.swift */,
 			);
 			path = URLSession;
 			sourceTree = "<group>";
@@ -204,9 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				35A4BAE24E3951C6056AA7E5 /* FakeURLSession.swift */,
-				35A4BC778B5DF86E88F2989A /* FakeURLSessionDataTask.swift */,
-				94284F6C2B4CD01F00F76BDA /* FakeURLSessionDownloadTask.swift */,
-				94284F6E2B4CD03400F76BDA /* FakeURLSessionUploadTask.swift */,
+				94284F762B4D9CB900F76BDA /* FakeURLSessionDelegate.swift */,
+				94284F722B4CFC7000F76BDA /* FakeURLSessionTask.swift */,
 			);
 			path = URLSession;
 			sourceTree = "<group>";
@@ -648,6 +639,7 @@
 				940F9D5B2399A43B0028937B /* AudioServicesWrapper.swift in Sources */,
 				940F9D692399A49E0028937B /* FakeJSONDecoder.swift in Sources */,
 				940F9D772399A4BA0028937B /* FileManager.swift in Sources */,
+				94284F712B4CF92A00F76BDA /* URLSessionTask.swift in Sources */,
 				94F0B75B256817E900C47488 /* FakeNotificationCenter.swift in Sources */,
 				9464C1882B1F8E250096F8AF /* Bundle.swift in Sources */,
 				940F9D5D2399A4510028937B /* DispatchWorkItemWrapperBuilder.swift in Sources */,
@@ -659,6 +651,7 @@
 				940F9D6A2399A49E0028937B /* FakeGenericError.swift in Sources */,
 				940F9D5F2399A4690028937B /* FakeDispatchWorkItemWrapperBuilder.swift in Sources */,
 				940F9D572399A40A0028937B /* AVCaptureSession.swift in Sources */,
+				94284F732B4CFC7000F76BDA /* FakeURLSessionTask.swift in Sources */,
 				940F9D6D2399A49E0028937B /* FakeJSONEncoder.swift in Sources */,
 				94569E3D2B2DE3CE008494E1 /* EmptyError.swift in Sources */,
 				940F9D6B2399A49E0028937B /* FakeCalendar.swift in Sources */,
@@ -669,9 +662,7 @@
 				35A4B0B7F14A2ADDBBECE131 /* FakeBundle.swift in Sources */,
 				35A4B7F042923B4376230BCB /* FakeNSLocking.swift in Sources */,
 				35A4BF37E9A925A6751161BF /* FakeURLSession.swift in Sources */,
-				35A4BB353AC8AA8F4FABBF8E /* FakeURLSessionDataTask.swift in Sources */,
 				35A4BACC6E7EE4103DBF63B7 /* URLSession.swift in Sources */,
-				35A4BFADA0FB4A389A915DF0 /* URLSessionDataTask.swift in Sources */,
 				35A4B00DC7615E05F337C4C6 /* UUID.swift in Sources */,
 				35A4B43660B88CFDD4A87638 /* UserDefaults.swift in Sources */,
 				35A4BBAFFCC67900FD60A608 /* DataWrapper.swift in Sources */,
@@ -681,10 +672,10 @@
 				35A4BC417068094351CCC7FA /* FakeDispatchQueueWrapper.swift in Sources */,
 				35A4B9E198F5F6BD4F469880 /* FakeDispatchWorkItemWrapper.swift in Sources */,
 				35A4BA45D8A248F383B81782 /* FakeJSONCodableWrapper.swift in Sources */,
+				94284F772B4D9CB900F76BDA /* FakeURLSessionDelegate.swift in Sources */,
 				35A4BDB6BF4C69D80EF8E334 /* FakeJSONSerializationWrapper.swift in Sources */,
 				35A4BE29F9C570E1F8F515AD /* FakeSimulatorWrapper.swift in Sources */,
 				35A4B6294B65D44828FC96A7 /* FakeSleepWrapper.swift in Sources */,
-				94284F682B4CCDEF00F76BDA /* URLSessionUploadTask.swift in Sources */,
 				35A4B5E76B17E0D80F625075 /* FakeStringWrapper.swift in Sources */,
 				35A4BB0BFF0BF03AFD11AFEE /* FakeTimerWrapper.swift in Sources */,
 				35A4BCC69EB3298A87DA5F63 /* JSONCodableWrapper+Capsule.swift in Sources */,
@@ -699,13 +690,10 @@
 				35A4B2DB98BB2C22F9D88EB0 /* FakeUIAlertControllerBuilder.swift in Sources */,
 				35A4B860C4376B00713EEB2D /* StoryboardBuilder.swift in Sources */,
 				35A4B91CB102C6CE981F5787 /* TableViewCellBuilder.swift in Sources */,
-				94284F6F2B4CD03400F76BDA /* FakeURLSessionUploadTask.swift in Sources */,
 				35A4B93B193B2927A672A83B /* UIAlertControllerBuilder.swift in Sources */,
 				35A4BC87C4019E1E42516415 /* FakeUIPasteboard.swift in Sources */,
 				35A4B013911A3E07D676752D /* UIPasteboard.swift in Sources */,
 				35A4B669FB4767432E8FB643 /* FakeUIViewWrapper.swift in Sources */,
-				94284F6D2B4CD01F00F76BDA /* FakeURLSessionDownloadTask.swift in Sources */,
-				94284F662B4CCDDB00F76BDA /* URLSessionDownloadTask.swift in Sources */,
 				35A4B6DC3B6175BF668C4FDE /* UIAlertActionWrapper.swift in Sources */,
 				35A4BBDD9363C25E0337ECBE /* UIViewWrapper.swift in Sources */,
 			);

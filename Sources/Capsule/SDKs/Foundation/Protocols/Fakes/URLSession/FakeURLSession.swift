@@ -29,10 +29,21 @@ public class FakeURLSession: URLSessionProtocol {
     
     public var capturedInitConfiguration: URLSessionConfiguration?
     
+    public var capturedDelegateInitConfiguration: URLSessionConfiguration?
+    public var capturedDelegateInitDelegate: URLSessionDelegate?
+    public var capturedDelegateInitDelegateQueue: OperationQueue?
+    
     public var capturedSessionDescription: String?
+    
+    public var capturedURLSessionConfiguration: URLSessionConfiguration?
     
     public var didCallFinishTasksAndInvalidate = false
     public var didCallInvalidateAndCancel = false
+    
+    public var capturedFlushCompletionHandler: (() -> Void)?
+    public var capturedResetCompletionHandler: (() -> Void)?
+    
+    public var capturedGetTasksWithCompletionHandler: (([URLSessionDataTask], [URLSessionUploadTask], [URLSessionDownloadTask]) -> Void)?
     
     // MARK: - URLSession
     
@@ -81,6 +92,16 @@ public class FakeURLSession: URLSessionProtocol {
     // MARK: - Stubbed properties
     
     public var stubbedSessionDescription: String? = "A Sesh"
+    
+    public var stubbedURLSessionConfiguration: URLSessionConfiguration = URLSessionConfiguration()
+    
+    public var stubbedDelegateQueue = OperationQueue()
+    
+    public var stubbedDelegate: URLSessionDelegate? = FakeURLSessionDelegate()
+    
+    public var stubbedGetDataTasks: [URLSessionDataTask] = []
+    public var stubbedGetUploadTasks: [URLSessionUploadTask] = []
+    public var stubbedGetDowloadTasks: [URLSessionDownloadTask] = []
     
     // MARK: - URLSession
     
@@ -141,32 +162,32 @@ public class FakeURLSession: URLSessionProtocol {
 
     // MARK: - Extended protocol return types
     
-    public var stubbedExtendedDataTaskForURL = FakeURLSessionDataTask()
+    public var stubbedExtendedDataTaskForURL = FakeURLSessionTask()
     public var stubbedExtendedDataTaskWithURLData: Data? = "sypha".data(using: .utf8)
     public var stubbedExtendedDataTaskWithURLResponse: URLResponse? = URLResponse()
     public var stubbedExtendedDataTaskWithURLError: Error? = FakeGenericError.whoCares
     
-    public var stubbedExtendedDataTaskForURLRequest = FakeURLSessionDataTask()
+    public var stubbedExtendedDataTaskForURLRequest = FakeURLSessionTask()
     public var stubbedExtendedDataTaskWithURLRequestData: Data? = "royd".data(using: .utf8)
     public var stubbedExtendedDataTaskWithURLRequestURLResponse: URLResponse? = URLResponse()
     public var stubbedExtendedDataTaskWithURLRequestURLError: Error? = FakeGenericError.whoCares
     
-    public var stubbedExtendedDownloadTaskForURL = FakeURLSessionDownloadTask()
+    public var stubbedExtendedDownloadTaskForURL = FakeURLSessionTask()
     public var stubbedExtendedDownloadTaskURL: URL? = URL(string: "https://cynthia-nope-not-working-jj009.codes")!
     public var stubbedExtendedDownloadTaskURLResponse: URLResponse? = URLResponse()
     public var stubbedExtendedDownloadTaskURLError: Error? = FakeGenericError.whoCares
     
-    public var stubbedExtendedDownloadTaskForURLRequest = FakeURLSessionDownloadTask()
+    public var stubbedExtendedDownloadTaskForURLRequest = FakeURLSessionTask()
     public var stubbedExtendedDownloadTaskURLRequestURL: URL? = URL(string: "https://annette-nope-not-working-jj009.codes")!
     public var stubbedExtendedDownloadTaskURLRequestResponse: URLResponse? = URLResponse()
     public var stubbedExtendedDownloadTaskURLRequestError: Error? = FakeGenericError.whoCares
     
-    public var stubbedExtendedUploadTaskForURLRequest = FakeURLSessionUploadTask()
+    public var stubbedExtendedUploadTaskForURLRequest = FakeURLSessionTask()
     public var stubbedExtendedUploadTaskURLRequestData: Data? = "rayph".data(using: .utf8)
     public var stubbedExtendedUploadTaskURLRequestResponse: URLResponse? = URLResponse()
     public var stubbedExtendedUploadTaskURLRequestError: Error? = FakeGenericError.whoCares
     
-    public var stubbedExtendedUploadTaskFileURLForURL = FakeURLSessionUploadTask()
+    public var stubbedExtendedUploadTaskFileURLForURL = FakeURLSessionTask()
     public var stubbedExtendedUploadTaskFileURLData: Data? = "janis".data(using: .utf8)
     public var stubbedExtendedUploadTaskFileURLResponse: URLResponse? = URLResponse()
     public var stubbedExtendedUploadTaskFileURLError: Error? = FakeGenericError.whoCares
@@ -185,6 +206,14 @@ public class FakeURLSession: URLSessionProtocol {
         capturedInitConfiguration = configuration
     }
     
+    public required init(configuration: URLSessionConfiguration, 
+                         delegate: URLSessionDelegate?,
+                         delegateQueue queue: OperationQueue?) {
+        capturedDelegateInitConfiguration = configuration
+        capturedDelegateInitDelegate = delegate
+        capturedDelegateInitDelegateQueue = delegateQueue
+    }
+    
     public var sessionDescription: String? {
         get {
             return stubbedSessionDescription
@@ -195,6 +224,24 @@ public class FakeURLSession: URLSessionProtocol {
         }
     }
     
+    public var configuration: URLSessionConfiguration {
+        get {
+            return stubbedURLSessionConfiguration
+        }
+        
+        set {
+            capturedURLSessionConfiguration = newValue
+        }
+    }
+    
+    public var delegateQueue: OperationQueue {
+        return stubbedDelegateQueue
+    }
+    
+    public var delegate: URLSessionDelegate? {
+        return stubbedDelegate
+    }
+    
     public func finishTasksAndInvalidate() {
         didCallFinishTasksAndInvalidate = true
     }
@@ -202,6 +249,62 @@ public class FakeURLSession: URLSessionProtocol {
     public func invalidateAndCancel() {
         didCallInvalidateAndCancel = true
     }
+    
+#if swift(>=5.5)
+    public func flush(completionHandler: @escaping @Sendable () -> Void) {
+        capturedFlushCompletionHandler = completionHandler
+        
+        if shouldExecuteCompletionHandlersImmediately {
+            completionHandler()
+        }
+    }
+    
+    public func reset(completionHandler: @escaping @Sendable () -> Void) {
+        capturedResetCompletionHandler = completionHandler
+        
+        if shouldExecuteCompletionHandlersImmediately {
+            completionHandler()
+        }
+    }
+    
+    public func getTasksWithCompletionHandler(_ completionHandler: 
+                                              @escaping @Sendable ([URLSessionDataTask], [URLSessionUploadTask], [URLSessionDownloadTask]) -> Void) {
+        capturedGetTasksWithCompletionHandler = completionHandler
+        
+        if shouldExecuteCompletionHandlersImmediately {
+            completionHandler(stubbedGetDataTasks,
+                              stubbedGetUploadTasks,
+                              stubbedGetDowloadTasks)
+        }
+    }
+#else
+    public func flush(completionHandler: @escaping () -> Void) {
+        capturedFlushCompletionHandler = completionHandler
+        
+        if shouldExecuteCompletionHandlersImmediately {
+            completionHandler()
+        }
+    }
+    
+    public func reset(completionHandler: @escaping () -> Void) {
+        capturedResetCompletionHandler = completionHandler
+        
+        if shouldExecuteCompletionHandlersImmediately {
+            completionHandler()
+        }
+    }
+    
+    public func getTasksWithCompletionHandler(_ completionHandler: 
+                                              @escaping ([URLSessionDataTask], [URLSessionUploadTask], [URLSessionDownloadTask]) -> Void) {
+        capturedGetTasksWithCompletionHandler = completionHandler
+        
+        if shouldExecuteCompletionHandlersImmediately {
+            completionHandler(stubbedGetDataTasks,
+                              stubbedGetUploadTasks,
+                              stubbedGetDowloadTasks)
+        }
+    }
+#endif
     
 #if swift(>=5.5)
     // MARK: - URLSession
@@ -296,8 +399,8 @@ public class FakeURLSession: URLSessionProtocol {
     
     // MARK: - Extended protocol return types
     
-    public func dataTask(with url: URL,
-                         completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
+    public func dataTask(url: URL,
+                         completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
         capturedExtendedDataTaskURL = url
         capturedExtendedDataTaskURLCompletionHandler = completionHandler
         
@@ -310,8 +413,8 @@ public class FakeURLSession: URLSessionProtocol {
         return stubbedExtendedDataTaskForURL
     }
     
-    public func dataTask(with request: URLRequest,
-                         completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
+    public func dataTask(request: URLRequest,
+                         completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
         capturedExtendedDataTaskURLRequest = request
         capturedExtendedDataTaskURLRequestCompletionHandler = completionHandler
         
@@ -324,8 +427,8 @@ public class FakeURLSession: URLSessionProtocol {
         return stubbedExtendedDataTaskForURLRequest
     }
     
-    public func downloadTask(with url: URL,
-                             completionHandler: @escaping @Sendable (URL?, URLResponse?, Error?) -> Void) -> URLSessionDownloadTaskProtocol {
+    public func downloadTask(url: URL,
+                             completionHandler: @escaping @Sendable (URL?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
         capturedExtendedDownloadTaskURL = url
         capturedExtendedDownloadTaskURLCompletionHandler = completionHandler
         
@@ -338,8 +441,8 @@ public class FakeURLSession: URLSessionProtocol {
         return stubbedExtendedDownloadTaskForURL
     }
     
-    public func downloadTask(with request: URLRequest,
-                             completionHandler: @escaping @Sendable (URL?, URLResponse?, Error?) -> Void) -> URLSessionDownloadTaskProtocol {
+    public func downloadTask(request: URLRequest,
+                             completionHandler: @escaping @Sendable (URL?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
         capturedExtendedDownloadTaskURLRequest = request
         capturedExtendedDownloadTaskURLRequestCompletionHandler = completionHandler
         
@@ -352,9 +455,9 @@ public class FakeURLSession: URLSessionProtocol {
         return stubbedExtendedDownloadTaskForURLRequest
     }
     
-    public func uploadTask(with request: URLRequest,
+    public func uploadTask(request: URLRequest,
                            from bodyData: Data?,
-                           completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionUploadTaskProtocol {
+                           completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
         capturedExtendedUploadTaskURLRequest = request
         capturedExtendedUploadTaskURLRequestBodyData = bodyData
         capturedExtendedUploadTaskURLRequestCompletionHandler = completionHandler
@@ -368,9 +471,9 @@ public class FakeURLSession: URLSessionProtocol {
         return stubbedExtendedUploadTaskForURLRequest
     }
     
-    public func uploadTask(with request: URLRequest,
+    public func uploadTask(request: URLRequest,
                            fromFile fileURL: URL,
-                           completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionUploadTaskProtocol {
+                           completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
         capturedExtendedUploadTaskFileURLRequest = request
         capturedExtendedUploadTaskFileURL = fileURL
         capturedExtendedUploadTaskFileURLRequestCompletionHandler = completionHandler
@@ -474,8 +577,8 @@ public class FakeURLSession: URLSessionProtocol {
         
     // MARK: - Extended protocol return types
     
-    public func dataTask(with url: URL,
-                         completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
+    public func dataTask(url: URL,
+                         completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
         capturedExtendedDataTaskURL = url
         capturedExtendedDataTaskURLCompletionHandler = completionHandler
         
@@ -488,8 +591,8 @@ public class FakeURLSession: URLSessionProtocol {
         return stubbedExtendedDataTaskForURL
     }
     
-    public func dataTask(with request: URLRequest,
-                         completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
+    public func dataTask(request: URLRequest,
+                         completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
         capturedExtendedDataTaskURLRequest = request
         capturedExtendedDataTaskURLRequestCompletionHandler = completionHandler
         
@@ -502,8 +605,8 @@ public class FakeURLSession: URLSessionProtocol {
         return stubbedExtendedDataTaskForURLRequest
     }
     
-    public func downloadTask(with url: URL,
-                             completionHandler: @escaping (URL?, URLResponse?, Error?) -> Void) -> URLSessionDownloadTaskProtocol {
+    public func downloadTask(url: URL,
+                             completionHandler: @escaping (URL?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
         capturedExtendedDownloadTaskURL = url
         capturedExtendedDownloadTaskURLCompletionHandler = completionHandler
         
@@ -516,8 +619,8 @@ public class FakeURLSession: URLSessionProtocol {
         return stubbedExtendedDownloadTaskForURL
     }
     
-    public func downloadTask(with request: URLRequest,
-                             completionHandler: @escaping (URL?, URLResponse?, Error?) -> Void) -> URLSessionDownloadTaskProtocol {
+    public func downloadTask(request: URLRequest,
+                             completionHandler: @escaping (URL?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
         capturedExtendedDownloadTaskURLRequest = request
         capturedExtendedDownloadTaskURLRequestCompletionHandler = completionHandler
         
@@ -530,9 +633,9 @@ public class FakeURLSession: URLSessionProtocol {
         return stubbedExtendedDownloadTaskForURLRequest
     }
     
-    public func uploadTask(with request: URLRequest,
+    public func uploadTask(request: URLRequest,
                            from bodyData: Data?,
-                           completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionUploadTaskProtocol {
+                           completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
         capturedExtendedUploadTaskURLRequest = request
         capturedExtendedUploadTaskURLRequestBodyData = bodyData
         capturedExtendedUploadTaskURLRequestCompletionHandler = completionHandler
@@ -546,9 +649,9 @@ public class FakeURLSession: URLSessionProtocol {
         return stubbedExtendedUploadTaskForURLRequest
     }
     
-    public func uploadTask(with request: URLRequest,
+    public func uploadTask(request: URLRequest,
                            fromFile fileURL: URL,
-                           completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionUploadTaskProtocol {
+                           completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
         capturedExtendedUploadTaskFileURLRequest = request
         capturedExtendedUploadTaskFileURL = fileURL
         capturedExtendedUploadTaskFileURLRequestCompletionHandler = completionHandler

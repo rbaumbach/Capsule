@@ -22,8 +22,26 @@
 
 import Foundation
 
-public protocol URLSessionDataTaskProtocol {
+public protocol URLSessionTaskProtocol {
+    var state: URLSessionTask.State { get }
+    var progress: Progress { get }
+    var priority: Float { get set }
+    
+    var currentRequest: URLRequest? { get }
+    var originalRequest: URLRequest? { get }
+    
+    var response: URLResponse? { get }
+    
+    var taskDescription: String? { get set }
+    var taskIdentifier: Int { get }
+    
+    var error: Error? { get }
+    
     func resume()
+    func cancel()
+    func suspend()
 }
 
-extension URLSessionDataTask: URLSessionDataTaskProtocol { }
+// I 'git' stashed this
+
+extension URLSessionTask: URLSessionTaskProtocol { }

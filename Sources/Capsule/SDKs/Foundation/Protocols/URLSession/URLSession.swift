@@ -23,14 +23,38 @@
 import Foundation
 
 public protocol URLSessionProtocol {
-    var sessionDescription: String? { get set }
-    
     init(configuration: URLSessionConfiguration)
+    init(configuration: URLSessionConfiguration,
+         delegate: URLSessionDelegate?,
+         delegateQueue queue: OperationQueue?)
+    
+    var sessionDescription: String? { get set }
+    var configuration: URLSessionConfiguration { get }
+    
+    var delegateQueue: OperationQueue { get }
+    var delegate: URLSessionDelegate? { get }
     
     func finishTasksAndInvalidate()
     func invalidateAndCancel()
-
+    
 #if swift(>=5.5)
+    func flush(completionHandler: @escaping @Sendable () -> Void)
+    func reset(completionHandler: @escaping @Sendable () -> Void)
+    
+    func getTasksWithCompletionHandler(_ completionHandler: 
+                                       @escaping @Sendable ([URLSessionDataTask], [URLSessionUploadTask], [URLSessionDownloadTask]) -> Void)
+#else
+    func flush(completionHandler: @escaping () -> Void)
+    func reset(completionHandler: @escaping () -> Void)
+    
+    func getTasksWithCompletionHandler(_ completionHandler: 
+                                       @escaping ([URLSessionDataTask], [URLSessionUploadTask], [URLSessionDownloadTask]) -> Void)
+#endif
+    
+    // MARK: - URLSessionTask
+    
+#if swift(>=5.5)
+    
     // MARK: - URLSession
     
     func dataTask(with url: URL,
@@ -55,25 +79,32 @@ public protocol URLSessionProtocol {
     
     // MARK: - Extended protocol return types
     
-    func dataTask(with url: URL,
-                  completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol
+    // Note: In order to bypass the 'Ambiguous use of 'data/download/uploadTask(with:completionHandler:)''
+    // compile time error, the method signaure of these methods differ only by a slight parameter name change
+    // from the Foundation method signatures.
+    // Ex: Foundation Method -> func dataTask(with:completionHandler:)
+    //     Extension Method  -> func dataTask(url:completionHandler:)
+    // 'with' is replaced by 'url'
     
-    func dataTask(with request: URLRequest,
-                  completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol
+    func dataTask(url: URL,
+                  completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol
     
-    func downloadTask(with url: URL,
-                      completionHandler: @escaping @Sendable (URL?, URLResponse?, Error?) -> Void) -> URLSessionDownloadTaskProtocol
+    func dataTask(request: URLRequest,
+                  completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol
     
-    func downloadTask(with request: URLRequest,
-                      completionHandler: @escaping @Sendable (URL?, URLResponse?, Error?) -> Void) -> URLSessionDownloadTaskProtocol
+    func downloadTask(url: URL,
+                      completionHandler: @escaping @Sendable (URL?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol
     
-    func uploadTask(with request: URLRequest,
+    func downloadTask(request: URLRequest,
+                      completionHandler: @escaping @Sendable (URL?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol
+    
+    func uploadTask(request: URLRequest,
                     from bodyData: Data?,
-                    completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionUploadTaskProtocol
+                    completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol
     
-    func uploadTask(with request: URLRequest,
+    func uploadTask(request: URLRequest,
                     fromFile fileURL: URL,
-                    completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionUploadTaskProtocol
+                    completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol
 #else
     // MARK: - URLSession
     
@@ -99,63 +130,63 @@ public protocol URLSessionProtocol {
     
     // MARK: - Extended protocol return types
     
-    func dataTask(with url: URL,
-                  completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol
+    func dataTask(url: URL,
+                  completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol
     
-    func dataTask(with request: URLRequest,
-                  completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol
+    func dataTask(request: URLRequest,
+                  completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol
     
-    func downloadTask(with url: URL,
-                      completionHandler: @escaping (URL?, URLResponse?, Error?) -> Void) -> URLSessionDownloadTaskProtocol
+    func downloadTask(url: URL,
+                      completionHandler: @escaping (URL?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol
     
-    func downloadTask(with request: URLRequest,
-                      completionHandler: @escaping (URL?, URLResponse?, Error?) -> Void) -> URLSessionDownloadTaskProtocol
+    func downloadTask(request: URLRequest,
+                      completionHandler: @escaping (URL?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol
     
-    func uploadTask(with request: URLRequest,
+    func uploadTask(request: URLRequest,
                     from bodyData: Data?,
-                    completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionUploadTaskProtocol
+                    completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol
     
-    func uploadTask(with request: URLRequest,
+    func uploadTask(request: URLRequest,
                     fromFile fileURL: URL,
-                    completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionUploadTaskProtocol
+                    completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol
 #endif
 }
 
 extension URLSession: URLSessionProtocol {
 #if swift(>=5.5)
-    public func dataTask(with url: URL,
-                         completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
+    public func dataTask(url: URL,
+                         completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
         let dataTask: URLSessionDataTask = dataTask(with: url,
                                                     completionHandler: completionHandler)
         return dataTask
     }
     
-    public func dataTask(with request: URLRequest,
-                         completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
+    public func dataTask(request: URLRequest,
+                         completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
         let dataTask: URLSessionDataTask = dataTask(with: request,
                                                     completionHandler: completionHandler)
         return dataTask
     }
     
-    public func downloadTask(with url: URL,
-                             completionHandler: @escaping @Sendable (URL?, URLResponse?, Error?) -> Void) -> URLSessionDownloadTaskProtocol {
+    public func downloadTask(url: URL,
+                             completionHandler: @escaping @Sendable (URL?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
         let downloadTask: URLSessionDownloadTask = downloadTask(with: url,
                                                                 completionHandler: completionHandler)
         
         return downloadTask
     }
     
-    public func downloadTask(with request: URLRequest,
-                             completionHandler: @escaping @Sendable (URL?, URLResponse?, Error?) -> Void) -> URLSessionDownloadTaskProtocol {
+    public func downloadTask(request: URLRequest,
+                             completionHandler: @escaping @Sendable (URL?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
         let downloadTask: URLSessionDownloadTask = downloadTask(with: request,
                                                                 completionHandler: completionHandler)
         
         return downloadTask
     }
     
-    public func uploadTask(with request: URLRequest,
+    public func uploadTask(request: URLRequest,
                            from bodyData: Data?,
-                           completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionUploadTaskProtocol {
+                           completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
         let uploadTask: URLSessionUploadTask = uploadTask(with: request,
                                                           from: bodyData,
                                                           completionHandler: completionHandler)
@@ -163,9 +194,9 @@ extension URLSession: URLSessionProtocol {
         return uploadTask
     }
     
-    public func uploadTask(with request: URLRequest,
+    public func uploadTask(request: URLRequest,
                            fromFile fileURL: URL,
-                           completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionUploadTaskProtocol {
+                           completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
         let uploadTask: URLSessionUploadTask = uploadTask(with: request,
                                                           fromFile: fileURL,
                                                           completionHandler: completionHandler)
@@ -173,39 +204,39 @@ extension URLSession: URLSessionProtocol {
         return uploadTask
     }
 #else
-    public func dataTask(with url: URL,
-                         completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
+    public func dataTask(url: URL,
+                         completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
         let dataTask: URLSessionDataTask = dataTask(with: url,
                                                     completionHandler: completionHandler)
         return dataTask
     }
     
-    public func dataTask(with request: URLRequest,
-                         completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
+    public func dataTask(request: URLRequest,
+                         completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
         let dataTask: URLSessionDataTask = dataTask(with: request,
                                                     completionHandler: completionHandler)
         return dataTask
     }
     
-    public func downloadTask(with url: URL,
-                             completionHandler: @escaping (URL?, URLResponse?, Error?) -> Void) -> URLSessionDownloadTaskProtocol {
+    public func downloadTask(url: URL,
+                             completionHandler: @escaping (URL?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
         let downloadTask: URLSessionDownloadTask = downloadTask(with: url,
                                                                 completionHandler: completionHandler)
         
         return downloadTask
     }
     
-    public func downloadTask(with request: URLRequest,
-                             completionHandler: @escaping (URL?, URLResponse?, Error?) -> Void) -> URLSessionDownloadTaskProtocol {
+    public func downloadTask(request: URLRequest,
+                             completionHandler: @escaping (URL?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
         let downloadTask: URLSessionDownloadTask = downloadTask(with: request,
                                                                 completionHandler: completionHandler)
         
         return downloadTask
     }
     
-    public func uploadTask(with request: URLRequest,
+    public func uploadTask(request: URLRequest,
                            from bodyData: Data?,
-                           completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionUploadTaskProtocol {
+                           completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
         let uploadTask: URLSessionUploadTask = uploadTask(with: request,
                                                           from: bodyData,
                                                           completionHandler: completionHandler)
@@ -213,9 +244,9 @@ extension URLSession: URLSessionProtocol {
         return uploadTask
     }
     
-    public func uploadTask(with request: URLRequest,
+    public func uploadTask(request: URLRequest,
                            fromFile fileURL: URL,
-                           completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionUploadTaskProtocol {
+                           completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
         let uploadTask: URLSessionUploadTask = uploadTask(with: request,
                                                           fromFile: fileURL,
                                                           completionHandler: completionHandler)
