@@ -30,9 +30,34 @@ public class FakeFileManager: FileManagerProtocol {
     
     public var capturedFileExistsPath: String?
     
+    public var capturedCreateFilePath: String?
+    public var capturedCreateFileData: Data?
+    public var capturedCreateFileAttributes: [FileAttributeKey: Any]?
+    
     public var capturedCreateDirectoryURL: URL?
     public var capturedCreateDirectoryCreateIntermediates: Bool?
     public var capturedCreateDirectoryAttributes: [FileAttributeKey: Any]?
+    
+    public var capturedCopyItemSRCURL: URL?
+    public var capturedCopyItemDSTURL: URL?
+    
+    public var capturedCopyItemSRCPath: String?
+    public var capturedCopyItemDSTPath: String?
+    
+    public var capturedMoveItemSRCURL: URL?
+    public var capturedMoveItemDSTURL: URL?
+    
+    public var capturedMoveItemSRCPath: String?
+    public var capturedMoveItemDSTPath: String?
+    
+    public var capturedRemoveItemURL: URL?
+    public var capturedRemoveItemPath: String?
+    
+    public var capturedContentsPath: String?
+    
+    public var capturedContentsOfDirectoryURL: URL?
+    public var capturedContentsOfDirectoryKeys: [URLResourceKey]?
+    public var capturedContentsOfDirectoryOptions: FileManager.DirectoryEnumerationOptions?
     
     // MARK: - Stubbed properties
         
@@ -40,12 +65,26 @@ public class FakeFileManager: FileManagerProtocol {
         var components = URLComponents()
         components.scheme = "file"
         components.host = ""
-        components.path = "/fake-temp-directory"
+        components.path = "/fake-temp-directory/"
         
         return components.url!
     }()
     
     public var stubbedFileExistsPath = false
+    
+    public var stubbedCreateFile = false
+    
+    public var stubbedContentsData: Data? = "fred-fks".data(using: .utf8)
+    
+    public var stubbedContentsOfDirectoryURLs: [URL] = []
+    
+    // MARK: - Public properties
+    
+    public var shouldThrowCreateDirectoryError = false
+    public var shouldThrowCopyError = false
+    public var shouldThrowMoveError = false
+    public var shouldThrowRemoveError = false
+    public var shouldThrowContentsOfDirectoryError = false
     
     // MARK: - Init methods
     
@@ -71,12 +110,98 @@ public class FakeFileManager: FileManagerProtocol {
         return stubbedFileExistsPath
     }
     
+    public func createFile(atPath path: String,
+                           contents data: Data?,
+                           attributes attr: [FileAttributeKey: Any]?) -> Bool {
+        capturedCreateFilePath = path
+        capturedCreateFileData = data
+        capturedCreateFileAttributes = attr
+        
+        return stubbedCreateFile
+    }
+    
     public func createDirectory(at url: URL,
                                 withIntermediateDirectories createIntermediates: Bool,
                                 attributes: [FileAttributeKey: Any]?) throws {
         capturedCreateDirectoryURL = url
         capturedCreateDirectoryCreateIntermediates = createIntermediates
         capturedCreateDirectoryAttributes = attributes
+        
+        if shouldThrowCreateDirectoryError {
+            throw FakeGenericError.whoCares
+        }
+    }
+    
+    public func copyItem(at srcURL: URL, to dstURL: URL) throws {
+        capturedCopyItemSRCURL = srcURL
+        capturedCopyItemDSTURL = dstURL
+        
+        if shouldThrowCopyError {
+            throw FakeGenericError.whoCares
+        }
+    }
+    
+    public func copyItem(atPath srcPath: String, toPath dstPath: String) throws {
+        capturedCopyItemSRCPath = srcPath
+        capturedCopyItemDSTPath = dstPath
+        
+        if shouldThrowCopyError {
+            throw FakeGenericError.whoCares
+        }
+    }
+    
+    public func moveItem(at srcURL: URL, to dstURL: URL) throws {
+        capturedMoveItemSRCURL = srcURL
+        capturedMoveItemDSTURL = dstURL
+        
+        if shouldThrowMoveError {
+            throw FakeGenericError.whoCares
+        }
+    }
+    
+    public func moveItem(atPath srcPath: String, toPath dstPath: String) throws {
+        capturedMoveItemSRCPath = srcPath
+        capturedMoveItemDSTPath = dstPath
+        
+        if shouldThrowMoveError {
+            throw FakeGenericError.whoCares
+        }
+    }
+    
+    public func removeItem(at URL: URL) throws {
+        capturedRemoveItemURL = URL
+        
+        if shouldThrowRemoveError {
+            throw FakeGenericError.whoCares
+        }
+    }
+    
+    public func removeItem(atPath path: String) throws {
+        capturedRemoveItemPath = path
+        
+        if shouldThrowRemoveError {
+            throw FakeGenericError.whoCares
+        }
+    }
+    
+    public func contents(atPath path: String) -> Data? {
+        capturedContentsPath = path
+        
+        return stubbedContentsData
+    }
+    
+    public func contentsOfDirectory(at url: URL,
+                                    includingPropertiesForKeys keys: [URLResourceKey]?,
+                                    options mask: FileManager.DirectoryEnumerationOptions) throws -> [URL] {
+        capturedContentsOfDirectoryURL = url
+        capturedContentsOfDirectoryKeys = keys
+        capturedContentsOfDirectoryOptions = mask
+        
+        if shouldThrowContentsOfDirectoryError {
+            throw FakeGenericError.whoCares
+        }
+        
+        return stubbedContentsOfDirectoryURLs
     }
     
     // MARK: - Private stub methods
@@ -87,13 +212,13 @@ public class FakeFileManager: FileManagerProtocol {
         components.host = ""
         
         if searchPathDirectory == .documentDirectory {
-            components.path = "/fake-documents-directory"
+            components.path = "/fake-documents-directory/"
         } else if searchPathDirectory == .libraryDirectory {
-            components.path = "/fake-library-directory"
+            components.path = "/fake-library-directory/"
         } else if searchPathDirectory == .cachesDirectory {
-            components.path = "/fake-caches-directory"
+            components.path = "/fake-caches-directory/"
         } else if searchPathDirectory == .applicationSupportDirectory {
-            components.path = "/fake-application-support-directory"
+            components.path = "/fake-application-support-directory/"
         } else {
             preconditionFailure("Attempted to create invalid iOS searchPathDirectory: \(searchPathDirectory)")
         }

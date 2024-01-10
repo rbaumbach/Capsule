@@ -413,9 +413,9 @@ public class FakeURLSession: URLSessionProtocol {
         return stubbedExtendedDataTaskForURL
     }
     
-    public func dataTask(request: URLRequest,
+    public func dataTask(urlRequest: URLRequest,
                          completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
-        capturedExtendedDataTaskURLRequest = request
+        capturedExtendedDataTaskURLRequest = urlRequest
         capturedExtendedDataTaskURLRequestCompletionHandler = completionHandler
         
         if shouldExecuteCompletionHandlersImmediately {
@@ -441,9 +441,9 @@ public class FakeURLSession: URLSessionProtocol {
         return stubbedExtendedDownloadTaskForURL
     }
     
-    public func downloadTask(request: URLRequest,
+    public func downloadTask(urlRequest: URLRequest,
                              completionHandler: @escaping @Sendable (URL?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
-        capturedExtendedDownloadTaskURLRequest = request
+        capturedExtendedDownloadTaskURLRequest = urlRequest
         capturedExtendedDownloadTaskURLRequestCompletionHandler = completionHandler
         
         if shouldExecuteCompletionHandlersImmediately {
@@ -455,10 +455,10 @@ public class FakeURLSession: URLSessionProtocol {
         return stubbedExtendedDownloadTaskForURLRequest
     }
     
-    public func uploadTask(request: URLRequest,
+    public func uploadTask(urlRequest: URLRequest,
                            from bodyData: Data?,
                            completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
-        capturedExtendedUploadTaskURLRequest = request
+        capturedExtendedUploadTaskURLRequest = urlRequest
         capturedExtendedUploadTaskURLRequestBodyData = bodyData
         capturedExtendedUploadTaskURLRequestCompletionHandler = completionHandler
         
@@ -471,10 +471,10 @@ public class FakeURLSession: URLSessionProtocol {
         return stubbedExtendedUploadTaskForURLRequest
     }
     
-    public func uploadTask(request: URLRequest,
+    public func uploadTask(urlRequest: URLRequest,
                            fromFile fileURL: URL,
                            completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
-        capturedExtendedUploadTaskFileURLRequest = request
+        capturedExtendedUploadTaskFileURLRequest = urlRequest
         capturedExtendedUploadTaskFileURL = fileURL
         capturedExtendedUploadTaskFileURLRequestCompletionHandler = completionHandler
         
@@ -591,7 +591,7 @@ public class FakeURLSession: URLSessionProtocol {
         return stubbedExtendedDataTaskForURL
     }
     
-    public func dataTask(request: URLRequest,
+    public func dataTask(urlRequest: URLRequest,
                          completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
         capturedExtendedDataTaskURLRequest = request
         capturedExtendedDataTaskURLRequestCompletionHandler = completionHandler
@@ -619,7 +619,7 @@ public class FakeURLSession: URLSessionProtocol {
         return stubbedExtendedDownloadTaskForURL
     }
     
-    public func downloadTask(request: URLRequest,
+    public func downloadTask(urlRequest: URLRequest,
                              completionHandler: @escaping (URL?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
         capturedExtendedDownloadTaskURLRequest = request
         capturedExtendedDownloadTaskURLRequestCompletionHandler = completionHandler
@@ -633,7 +633,7 @@ public class FakeURLSession: URLSessionProtocol {
         return stubbedExtendedDownloadTaskForURLRequest
     }
     
-    public func uploadTask(request: URLRequest,
+    public func uploadTask(urlRequest: URLRequest,
                            from bodyData: Data?,
                            completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
         capturedExtendedUploadTaskURLRequest = request
@@ -649,7 +649,7 @@ public class FakeURLSession: URLSessionProtocol {
         return stubbedExtendedUploadTaskForURLRequest
     }
     
-    public func uploadTask(request: URLRequest,
+    public func uploadTask(urlRequest: URLRequest,
                            fromFile fileURL: URL,
                            completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionTaskProtocol {
         capturedExtendedUploadTaskFileURLRequest = request
