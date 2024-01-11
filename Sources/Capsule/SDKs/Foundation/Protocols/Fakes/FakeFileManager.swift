@@ -22,7 +22,7 @@
 
 import Foundation
 
-open class FakeFileManager: FileManagerProtocol {
+open class FakeFileManager: Fake, FileManagerProtocol {
     // MARK: - Captured properties
     
     public var capturedSearchPathDirectory: FileManager.SearchPathDirectory?
@@ -88,7 +88,7 @@ open class FakeFileManager: FileManagerProtocol {
     
     // MARK: - Init methods
     
-    public init() { }
+    public override init() { }
     
     // MARK: - <FileManagerProtocol>
     

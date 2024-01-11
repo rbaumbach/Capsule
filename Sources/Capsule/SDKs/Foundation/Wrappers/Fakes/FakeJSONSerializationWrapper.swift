@@ -22,7 +22,7 @@
 
 import Foundation
 
-open class FakeJSONSerializationWrapper: JSONSerializationWrapperProtocol {
+open class FakeJSONSerializationWrapper: Fake, JSONSerializationWrapperProtocol {
     // MARK: - Captured properties
     
     public var capturedJSONObject: Any?
@@ -44,7 +44,7 @@ open class FakeJSONSerializationWrapper: JSONSerializationWrapperProtocol {
     
     // MARK: - Init methods
     
-    public init() { }
+    public override init() { }
     
     // MARK: - <JSONSerializationWrapperProtocol>
     

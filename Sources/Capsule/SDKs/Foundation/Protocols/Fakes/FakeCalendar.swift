@@ -22,7 +22,7 @@
 
 import Foundation
 
-open class FakeCalendar: CalendarProtocol {
+open class FakeCalendar: Fake, CalendarProtocol {
     // MARK: - Captured properties
     
     public var capturedComponent: Calendar.Component?
@@ -34,7 +34,7 @@ open class FakeCalendar: CalendarProtocol {
     
     // MARK: - Init methods
     
-    public init() { }
+    public override init() { }
     
     // MARK: - <CalendarProtocol>
     

@@ -22,14 +22,14 @@
 
 import Foundation
 
-open class FakeSleepWrapper: SleepWrapperProtocol {
+open class FakeSleepWrapper: Fake, SleepWrapperProtocol {
     // MARK: - Captured properties
     
     public var capturedSleepSeconds: Int?
     
     // MARK: - Init methods
     
-    public init() { }
+    public override init() { }
     
     // MARK: - <SleeperProtocol>
     

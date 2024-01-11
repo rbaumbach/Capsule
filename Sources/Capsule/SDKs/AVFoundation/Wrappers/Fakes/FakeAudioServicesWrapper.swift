@@ -22,14 +22,14 @@
 
 import Foundation
 
-open class FakeAudioServicesWrapper: AudioServicesWrapperProtocol {
+open class FakeAudioServicesWrapper: Fake, AudioServicesWrapperProtocol {
     // MARK: - Captured properties
     
     public var didCallVibrate = false
     
     // MARK: - Init methods
     
-    public init() { }
+    public override init() { }
     
     // MARK: - <AudioServicesWrapperProtocol>
     

@@ -22,7 +22,7 @@
 
 import Foundation
 
-open class FakeBundle: BundleProtocol {
+open class FakeBundle: Fake, BundleProtocol {
     // MARK: - Captured properties
     
     public var capturedPathForResource: String?
@@ -36,7 +36,7 @@ open class FakeBundle: BundleProtocol {
     
     // MARK: - Init methods
     
-    public init() { }
+    public override init() { }
     
     // MARK: - <BundleProtocol>
     

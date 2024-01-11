@@ -22,7 +22,7 @@
 
 import Foundation
 
-open class FakeUserDefaults: UserDefaultsProtocol {
+open class FakeUserDefaults: Fake, UserDefaultsProtocol {
     // MARK: - Captured properties
     
     public var capturedInitSuiteName: String?
@@ -99,7 +99,7 @@ open class FakeUserDefaults: UserDefaultsProtocol {
     
     // MARK: - Init methods
     
-    public init() { }
+    public override init() { }
     
     required public init?(suiteName suitename: String?) {
         capturedInitSuiteName = suitename

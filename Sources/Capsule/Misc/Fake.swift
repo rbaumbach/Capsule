@@ -22,27 +22,26 @@
 
 import Foundation
 
-open class FakeDispatchWorkItemWrapper: Fake, DispatchWorkItemWrapperProtocol {
-    // MARK: - Captured properties
+open class Fake: Equatable {
+    // MARK: - Readonly properties
     
-    public var capturedInitQOS: DispatchQoS?
-    public var capturedInitWork: (() -> Void)?
+    // Note: This is lazy so that the UUID 'generator' won't execute unless it is used.
+    // This allows this property to be available without affecting performance on all fakes
+    // that subclass this fake.
     
-    public var didCallCancel = false
-    
-    // MARK: - Public properties
-    
-    public var dispatchWorkItemWrapperID: Int?
+    public lazy private(set) var id: String = {
+        return UUID().uuidString
+    }()
     
     // MARK: - Init methods
     
-    public override init() { }
-        
-    // MARK: - <DispatchWorkItemWrapperProtocol>
+    public init() { }
     
-    public var dispatchWorkItem: DispatchWorkItem =  DispatchWorkItem(block: { })
+    // MARK: - <Equatable>
     
-    public func cancel() {
-        didCallCancel = true
+    // Note: For ease of determining equality, the simpliest check is using uuid (id)
+    
+    public static func == (lhs: Fake, rhs: Fake) -> Bool {
+        return lhs.id == rhs.id
     }
 }

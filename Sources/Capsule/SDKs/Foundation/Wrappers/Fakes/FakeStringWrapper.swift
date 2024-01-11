@@ -22,7 +22,7 @@
 
 import Foundation
 
-open class FakeStringWrapper: StringWrapperProtocol {
+open class FakeStringWrapper: Fake, StringWrapperProtocol {
     // MARK: - Captured properties
     
     public var capturedLoadStringPath: String?
@@ -44,7 +44,7 @@ open class FakeStringWrapper: StringWrapperProtocol {
     
     // MARK: - Init methods
     
-    public init() { }
+    public override init() { }
     
     // MARK: - <StringWrapperaProtocol>
     

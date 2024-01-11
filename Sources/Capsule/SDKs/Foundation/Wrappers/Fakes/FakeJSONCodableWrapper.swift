@@ -22,7 +22,7 @@
 
 import Foundation
 
-open class FakeJSONCodableWrapper: JSONCodableWrapperProtocol {
+open class FakeJSONCodableWrapper: Fake, JSONCodableWrapperProtocol {
     // MARK: - Captured properties
     
     public var capturedOutputFormat: JSONCodableWrapper.OutputFormat?
@@ -49,7 +49,7 @@ open class FakeJSONCodableWrapper: JSONCodableWrapperProtocol {
         
     // MARK: - Init methods
     
-    public init() { }
+    public override init() { }
     
     // MARK: - <JSONCodableWrapperProtocol>
     

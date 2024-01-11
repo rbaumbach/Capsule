@@ -22,14 +22,14 @@
 
 import Foundation
 
-open class FakeUUID: UUIDProtocol {
+open class FakeUUID: Fake, UUIDProtocol {
     // MARK: - Stubbed properties
     
     public var stubbedUUIDString = "uuid-amigos-012345"
     
     // MARK: - Init methods
     
-    public init() { }
+    public override init() { }
     
     // MARK: - <UUIDProtocol>
     
