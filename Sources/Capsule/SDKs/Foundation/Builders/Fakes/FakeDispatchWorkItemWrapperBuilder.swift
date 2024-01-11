@@ -22,7 +22,7 @@
 
 import Foundation
 
-public class FakeDispatchWorkItemWrapperBuilder: DispatchWorkItemWrapperBuilderProtocol {
+open class FakeDispatchWorkItemWrapperBuilder: DispatchWorkItemWrapperBuilderProtocol {
     // MARK: - Captured properties
     
     public var capturedBuildQOS: DispatchQoS?

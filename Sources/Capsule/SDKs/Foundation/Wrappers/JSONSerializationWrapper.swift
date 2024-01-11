@@ -29,7 +29,7 @@ public protocol JSONSerializationWrapperProtocol {
                     options opt: JSONSerialization.ReadingOptions) throws -> Any
 }
 
-public class JSONSerializationWrapper: JSONSerializationWrapperProtocol {
+open class JSONSerializationWrapper: JSONSerializationWrapperProtocol {
     // MARK: - Init methods
     
     public init() { }

@@ -26,7 +26,7 @@ public protocol AudioServicesWrapperProtocol {
     func vibrate()
 }
 
-public class AudioServicesWrapper: AudioServicesWrapperProtocol {
+open class AudioServicesWrapper: AudioServicesWrapperProtocol {
     // MARK: - Init methods
     
     public init() { }

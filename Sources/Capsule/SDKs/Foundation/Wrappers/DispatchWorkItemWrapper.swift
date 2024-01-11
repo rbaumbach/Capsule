@@ -28,7 +28,7 @@ public protocol DispatchWorkItemWrapperProtocol {
     func cancel()
 }
 
-public class DispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol {
+open class DispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol {
     // MARK: - Private properties
     
     public let dispatchWorkItem: DispatchWorkItem

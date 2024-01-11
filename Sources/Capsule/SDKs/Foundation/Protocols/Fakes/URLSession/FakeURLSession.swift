@@ -24,7 +24,7 @@ import Foundation
 
 // swiftlint:disable file_length
 // swiftlint:disable type_body_length
-public class FakeURLSession: URLSessionProtocol {
+open class FakeURLSession: URLSessionProtocol {
     // MARK: - Captured properties
     
     public var capturedInitConfiguration: URLSessionConfiguration?

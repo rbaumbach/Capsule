@@ -22,7 +22,7 @@
 
 import Foundation
 
-public class FakeJSONEncoder: JSONEncoderProtocol {
+open class FakeJSONEncoder: JSONEncoderProtocol {
     // MARK: - Captured properties
     
     public var capturedOutputFormatting: JSONEncoder.OutputFormatting?

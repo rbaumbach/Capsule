@@ -34,7 +34,7 @@ public protocol JSONCodableWrapperProtocol {
     func decode<T: Codable>(_ type: T.Type, from data: Data) throws -> T
 }
 
-public class JSONCodableWrapper: JSONCodableWrapperProtocol {
+open class JSONCodableWrapper: JSONCodableWrapperProtocol {
     // MARK: - Public enums
     
     public enum OutputFormat {

@@ -22,7 +22,7 @@
 
 import Foundation
 
-public class FakeURLSessionDelegate: NSObject, URLSessionDelegate {
+open class FakeURLSessionDelegate: NSObject, URLSessionDelegate {
     // MARK: - Captured properties
     
     public var capturedURLSession: URLSession?

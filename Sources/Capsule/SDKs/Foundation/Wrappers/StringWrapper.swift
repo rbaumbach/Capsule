@@ -28,7 +28,7 @@ public protocol StringWrapperProtocol {
                   encoding: String.Encoding) throws -> Data?
 }
 
-public class StringWrapper: StringWrapperProtocol {
+open class StringWrapper: StringWrapperProtocol {
     // MARK: - Init methods
     
     public init() { }

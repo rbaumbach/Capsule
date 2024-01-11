@@ -22,7 +22,7 @@
 
 import Foundation
 
-public class FakeUserDefaults: UserDefaultsProtocol {
+open class FakeUserDefaults: UserDefaultsProtocol {
     // MARK: - Captured properties
     
     public var capturedInitSuiteName: String?

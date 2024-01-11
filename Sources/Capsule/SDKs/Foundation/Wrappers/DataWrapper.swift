@@ -27,7 +27,7 @@ public protocol DataWrapperProtocol {
     func write(data: Data, toPath path: URL) throws
 }
 
-public class DataWrapper: DataWrapperProtocol {
+open class DataWrapper: DataWrapperProtocol {
     // MARK: - Init methods
     
     public init() { }

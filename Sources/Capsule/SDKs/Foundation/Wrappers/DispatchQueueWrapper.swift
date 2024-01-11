@@ -39,7 +39,7 @@ public protocol DispatchQueueWrapperProtocol {
     func customSync(flags: DispatchWorkItemFlags, execute: @escaping () -> Void)
 }
 
-public class DispatchQueueWrapper: DispatchQueueWrapperProtocol {
+open class DispatchQueueWrapper: DispatchQueueWrapperProtocol {
     // MARK: - Private properties
     
     private let mainDispatchQueue = DispatchQueue.main

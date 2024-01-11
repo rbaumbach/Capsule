@@ -22,7 +22,7 @@
 
 import Foundation
 
-public class FakeSleepWrapper: SleepWrapperProtocol {
+open class FakeSleepWrapper: SleepWrapperProtocol {
     // MARK: - Captured properties
     
     public var capturedSleepSeconds: Int?

@@ -22,7 +22,7 @@
 
 import Foundation
 
-public class FakeCalendar: CalendarProtocol {
+open class FakeCalendar: CalendarProtocol {
     // MARK: - Captured properties
     
     public var capturedComponent: Calendar.Component?

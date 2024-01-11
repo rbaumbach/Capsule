@@ -22,7 +22,7 @@
 
 import Foundation
 
-public class FakeNSLocking: NSLocking {
+open class FakeNSLocking: NSLocking {
     // MARK: - Captured propertiers
     
     var didCallLock = false

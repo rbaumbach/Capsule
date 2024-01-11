@@ -22,7 +22,7 @@
 
 import Foundation
 
-public class FakeURLSessionTask: URLSessionTaskProtocol {
+open class FakeURLSessionTask: URLSessionTaskProtocol, Equatable {
     // MARK: - Captured properties
     
     public var didCallResume = false
@@ -50,6 +50,12 @@ public class FakeURLSessionTask: URLSessionTaskProtocol {
     public var stubbedTaskIdentifier = 99
     
     public var stubbedError: Error? = FakeGenericError.whoCares
+    
+    // MARK: - Public properties
+    
+    // Note: This is an easy way to conform to Equatable
+    
+    public let uniqueID = UUID().uuidString
     
     // MARK: - Init methods
     
@@ -115,5 +121,11 @@ public class FakeURLSessionTask: URLSessionTaskProtocol {
     
     public func suspend() {
         didCallSuspend = true
+    }
+    
+    // MARK: - <Equatable>
+    
+    public static func == (lhs: FakeURLSessionTask, rhs: FakeURLSessionTask) -> Bool {
+        return lhs.uniqueID == rhs.uniqueID
     }
 }

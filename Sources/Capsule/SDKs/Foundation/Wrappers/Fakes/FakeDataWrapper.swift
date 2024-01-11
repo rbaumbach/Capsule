@@ -22,7 +22,7 @@
 
 import Foundation
 
-public class FakeDataWrapper: DataWrapperProtocol {
+open class FakeDataWrapper: DataWrapperProtocol {
     // MARK: - Captured properties
     
     public var capturedLoadDataURL = URL(string: "file://junk")

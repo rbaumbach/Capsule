@@ -22,7 +22,7 @@
 
 import UIKit
 
-public class FakeStoyboardBuilder: StoryboardBuilderProtocol {
+open class FakeStoyboardBuilder: StoryboardBuilderProtocol {
     // MARK: - Captured properties
     
     public var capturedBuildInitialViewControllerName: String?

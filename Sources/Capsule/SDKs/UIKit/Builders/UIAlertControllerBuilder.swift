@@ -29,7 +29,7 @@ public protocol UIAlertControllerBuilderProtocol {
                               actions: [UIAlertActionWrapper]) -> UIAlertController
 }
 
-public class UIAlertControllerBuilder: UIAlertControllerBuilderProtocol {
+open class UIAlertControllerBuilder: UIAlertControllerBuilderProtocol {
     // MARK: - Init methids
     
     public init() { }

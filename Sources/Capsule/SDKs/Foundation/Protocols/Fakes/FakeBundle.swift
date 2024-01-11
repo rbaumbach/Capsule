@@ -22,7 +22,7 @@
 
 import Foundation
 
-public class FakeBundle: BundleProtocol {
+open class FakeBundle: BundleProtocol {
     // MARK: - Captured properties
     
     public var capturedPathForResource: String?

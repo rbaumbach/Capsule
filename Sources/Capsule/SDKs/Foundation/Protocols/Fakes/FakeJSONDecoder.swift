@@ -22,7 +22,7 @@
 
 import Foundation
 
-public class FakeJSONDecoder: JSONDecoderProtocol {
+open class FakeJSONDecoder: JSONDecoderProtocol {
     // MARK: - Captured properties
     
     public var capturedDateDecodingStrategy: JSONDecoder.DateDecodingStrategy?

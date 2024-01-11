@@ -42,6 +42,4 @@ public protocol URLSessionTaskProtocol {
     func suspend()
 }
 
-// I 'git' stashed this
-
 extension URLSessionTask: URLSessionTaskProtocol { }

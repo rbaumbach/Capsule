@@ -22,7 +22,7 @@
 
 import Foundation
 
-public class FakeSimulatorWrapper: SimulatorWrapperProtocol {
+open class FakeSimulatorWrapper: SimulatorWrapperProtocol {
     // MARK: - Stubbed properties
     
     public var stubbedIsSimulatorEnvironment = false

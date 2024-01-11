@@ -22,7 +22,7 @@
 
 import Foundation
 
-public class FakeTimerWrapper: TimerWrapperProtocol {
+open class FakeTimerWrapper: TimerWrapperProtocol {
     // MARK: - Captured properties
     
     public var capturedScheduledTimerSeconds: Double?

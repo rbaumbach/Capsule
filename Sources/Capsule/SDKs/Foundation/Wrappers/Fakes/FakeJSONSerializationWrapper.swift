@@ -22,7 +22,7 @@
 
 import Foundation
 
-public class FakeJSONSerializationWrapper: JSONSerializationWrapperProtocol {
+open class FakeJSONSerializationWrapper: JSONSerializationWrapperProtocol {
     // MARK: - Captured properties
     
     public var capturedJSONObject: Any?

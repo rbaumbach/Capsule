@@ -22,7 +22,7 @@
 
 import Foundation
 
-public class FakeAudioServicesWrapper: AudioServicesWrapperProtocol {
+open class FakeAudioServicesWrapper: AudioServicesWrapperProtocol {
     // MARK: - Captured properties
     
     public var didCallVibrate = false

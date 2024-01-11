@@ -22,7 +22,7 @@
 
 import UIKit
 
-public class UIAlertActionWrapper {
+open class UIAlertActionWrapper {
     // MARK: - Readonly properties
         
     public let title: String

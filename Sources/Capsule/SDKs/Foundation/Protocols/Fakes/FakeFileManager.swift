@@ -22,7 +22,7 @@
 
 import Foundation
 
-public class FakeFileManager: FileManagerProtocol {
+open class FakeFileManager: FileManagerProtocol {
     // MARK: - Captured properties
     
     public var capturedSearchPathDirectory: FileManager.SearchPathDirectory?

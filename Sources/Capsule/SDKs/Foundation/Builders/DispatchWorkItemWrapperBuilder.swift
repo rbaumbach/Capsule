@@ -26,7 +26,7 @@ public protocol DispatchWorkItemWrapperBuilderProtocol {
     func build(qos: DispatchQoS, work: @escaping () -> Void) -> DispatchWorkItemWrapperProtocol
 }
 
-public class DispatchWorkItemWrapperBuilder: DispatchWorkItemWrapperBuilderProtocol {
+open class DispatchWorkItemWrapperBuilder: DispatchWorkItemWrapperBuilderProtocol {
     // MARK: - Init methods
     
     public init() { }

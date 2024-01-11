@@ -22,7 +22,7 @@
 
 import UIKit
 
-public class FakeTableViewCellBuilder: TableViewCellBuilderProtocol {
+open class FakeTableViewCellBuilder: TableViewCellBuilderProtocol {
     // MARK: - Captured properties
     
     public var capturedBuildName: String?

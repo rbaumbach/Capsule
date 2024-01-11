@@ -22,7 +22,7 @@
 
 import Foundation
 
-public class FakeDispatchQueueWrapper: DispatchQueueWrapperProtocol {
+open class FakeDispatchQueueWrapper: DispatchQueueWrapperProtocol {
     // MARK: - Captured properties
     
     // MARK: - Main Queue
