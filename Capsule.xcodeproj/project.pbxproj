@@ -71,7 +71,7 @@
 		9464C1882B1F8E250096F8AF /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9464C1872B1F8E250096F8AF /* Bundle.swift */; };
 		9472664E2B504EF200353F4E /* Fake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9472664C2B504E3200353F4E /* Fake.swift */; };
 		9472665A2B506CD800353F4E /* URL+Capsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947266592B506CD800353F4E /* URL+Capsule.swift */; };
-		947266602B5188E400353F4E /* DoomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9472665F2B5188E400353F4E /* DoomError.swift */; };
+		947266602B5188E400353F4E /* Doom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9472665F2B5188E400353F4E /* Doom.swift */; };
 		949A594123A729CA0039E542 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949A594023A729CA0039E542 /* Atomic.swift */; };
 		949A594523A72AA80039E542 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949A594423A72AA80039E542 /* Builder.swift */; };
 		94F0B75B256817E900C47488 /* FakeNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F0B75A256817E900C47488 /* FakeNotificationCenter.swift */; };
@@ -148,7 +148,7 @@
 		9464C1872B1F8E250096F8AF /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		9472664C2B504E3200353F4E /* Fake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fake.swift; sourceTree = "<group>"; };
 		947266592B506CD800353F4E /* URL+Capsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Capsule.swift"; sourceTree = "<group>"; };
-		9472665F2B5188E400353F4E /* DoomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoomError.swift; sourceTree = "<group>"; };
+		9472665F2B5188E400353F4E /* Doom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doom.swift; sourceTree = "<group>"; };
 		94872AEC290F7C4400D3528B /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		949A594023A729CA0039E542 /* Atomic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
 		949A594423A72AA80039E542 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
@@ -249,7 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				9472665E2B5188CE00353F4E /* Fakes */,
-				9472665F2B5188E400353F4E /* DoomError.swift */,
+				9472665F2B5188E400353F4E /* Doom.swift */,
 				94569E3C2B2DE3CE008494E1 /* EmptyError.swift */,
 			);
 			path = Errors;
@@ -711,7 +711,7 @@
 				35A4B1A8398826F9F9CFD342 /* SleepWrapper.swift in Sources */,
 				35A4B6983FDE5975ADAC5500 /* StringWrapper.swift in Sources */,
 				35A4B9D6D95EFF5341179EBF /* TimerWrapper.swift in Sources */,
-				947266602B5188E400353F4E /* DoomError.swift in Sources */,
+				947266602B5188E400353F4E /* Doom.swift in Sources */,
 				9472665A2B506CD800353F4E /* URL+Capsule.swift in Sources */,
 				35A4BD050ED302C3ABA87E26 /* FakeStoryboardBuilder.swift in Sources */,
 				35A4B327954D1A37A0035B16 /* FakeTableViewCellBuilder.swift in Sources */,

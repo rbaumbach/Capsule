@@ -24,13 +24,13 @@ import Foundation
 
 // Note: The purpose of this DrDoo, eh I mean Doom error is to be used as a "catch-all" for unrecoverable situations
 
-public enum DoomError: Error, CaseIterable, LocalizedError, Equatable {
-    case doom(_ info: Any? = nil)
+public enum Doom: Error, CaseIterable, LocalizedError, Equatable {
+    case error(_ info: Any? = nil)
     
     // MARK: - <CaseIterable>
     
-    public static var allCases: [DoomError] {
-        return [.doom()]
+    public static var allCases: [Doom] {
+        return [.error()]
     }
     
     // MARK: - <Error>
@@ -39,7 +39,7 @@ public enum DoomError: Error, CaseIterable, LocalizedError, Equatable {
         var localizedDescription = "Something seriously went wrong"
         
         switch self {
-        case .doom(let info):
+        case .error(let info):
             if let info = info {
                 localizedDescription.append(", info:\n\(info)")
             }
@@ -63,12 +63,12 @@ public enum DoomError: Error, CaseIterable, LocalizedError, Equatable {
         There doesnt' seem to be any recovery for this error. Check
         your environemnt and/or software implementation
         """
-        return "There doesn't seem to be any recovery for this error."
+        return suggesstion
     }
     
     // MARK: - <Equatable>
     
-    public static func == (lhs: DoomError, rhs: DoomError) -> Bool {
+    public static func == (lhs: Doom, rhs: Doom) -> Bool {
         return lhs.localizedDescription == rhs.localizedDescription
     }
 }
