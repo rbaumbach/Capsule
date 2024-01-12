@@ -65,10 +65,12 @@ open class FakeFileManager: Fake, FileManagerProtocol {
         var components = URLComponents()
         components.scheme = "file"
         components.host = ""
-        components.path = "/fake-temp-directory/"
+        components.path = "/fake-temp-directory/data/tmp/"
         
         return components.url!
     }()
+    
+    public var stubbedSimpleSearchPathDirectoryURLS: [URL] = []
     
     public var stubbedFileExistsPath = false
     
@@ -79,6 +81,8 @@ open class FakeFileManager: Fake, FileManagerProtocol {
     public var stubbedContentsOfDirectoryURLs: [URL] = []
     
     // MARK: - Public properties
+    
+    public var shouldUseSimpleStubForSearchPathDirectoryURLS = false
     
     public var shouldThrowCreateDirectoryError = false
     public var shouldThrowCopyError = false
@@ -100,8 +104,12 @@ open class FakeFileManager: Fake, FileManagerProtocol {
                      in domainMask: FileManager.SearchPathDomainMask) -> [URL] {
         capturedSearchPathDirectory = directory
         capturedSearchPathDomainMask = domainMask
-                        
-        return [stubSystemDirectory(for: directory)]
+        
+        if shouldUseSimpleStubForSearchPathDirectoryURLS {
+            return stubbedSimpleSearchPathDirectoryURLS
+        } else {
+            return [stubSystemDirectory(for: directory)]
+        }
     }
     
     public func fileExists(atPath path: String) -> Bool {

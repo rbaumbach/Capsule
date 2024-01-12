@@ -22,14 +22,6 @@
 
 import Foundation
 
-public extension String {
-    static var empty = ""
-    
-    static var singleSpace = " "
-    
-    static var tab = "\t"
-    
-    static var carriageReturn = "\r"
-    
-    static var newLine = "\n"
+public extension URL {
+    static var empty = URL(string: String.singleSpace)!
 }
