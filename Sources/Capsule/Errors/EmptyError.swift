@@ -22,6 +22,8 @@
 
 import Foundation
 
+// TODO: Create "DrDOOM error
+
 public enum EmptyError: Error, CaseIterable, LocalizedError, Equatable {
     case empty
     
