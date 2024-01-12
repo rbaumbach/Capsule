@@ -22,7 +22,7 @@
 
 import Foundation
 
-// Note: The purpose of this error is to be used as a "catch-all" for unrecoverable situations
+// Note: The purpose of this DrDoo, eh I mean Doom error is to be used as a "catch-all" for unrecoverable situations
 
 public enum DoomError: Error, CaseIterable, LocalizedError, Equatable {
     case doom(_ info: Any? = nil)
@@ -36,7 +36,16 @@ public enum DoomError: Error, CaseIterable, LocalizedError, Equatable {
     // MARK: - <Error>
     
     public var localizedDescription: String {
-        return "Something seriously went wrong"
+        var localizedDescription = "Something seriously went wrong"
+        
+        switch self {
+        case .doom(let info):
+            if let info = info {
+                localizedDescription.append(", info:\n\(info)")
+            }
+        }
+        
+        return localizedDescription
     }
     
     // MARK: - <LocalizedError>
