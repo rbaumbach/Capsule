@@ -22,7 +22,7 @@
 
 import Foundation
 
-public class FakeNotificationCenter: NotificationCenterProtocol {
+open class FakeNotificationCenter: Fake, NotificationCenterProtocol {
     // MARK: - Captured properties
     
     public var capturedAddObserver: Any?
@@ -53,7 +53,7 @@ public class FakeNotificationCenter: NotificationCenterProtocol {
     
     // MARK: - Init methods
     
-    public init() { }
+    public override init() { }
         
     // MARK: - <NotificationCenterProtocol>
     

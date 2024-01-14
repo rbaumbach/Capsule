@@ -26,7 +26,7 @@ public protocol TableViewCellBuilderProtocol {
     func build<T: UITableViewCell>(name: String) -> T
 }
 
-public class TableViewCellBuilder: TableViewCellBuilderProtocol {
+open class TableViewCellBuilder: TableViewCellBuilderProtocol {
     // MARK: - Init methods
     
     public init() { }

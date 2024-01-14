@@ -22,7 +22,7 @@
 
 import UIKit
 
-public class FakeUIPasteboard: UIPasteboardProtocol {
+open class FakeUIPasteboard: Fake, UIPasteboardProtocol {
     // MARK: - Captured properties
     
     public var capturedString: String?
@@ -33,7 +33,7 @@ public class FakeUIPasteboard: UIPasteboardProtocol {
     
     // MARK: - Init methods
     
-    public init() { }
+    public override init() { }
     
     // MARK: - <UIPasteboardProtocol>
     

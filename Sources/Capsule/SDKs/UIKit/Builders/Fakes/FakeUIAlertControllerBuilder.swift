@@ -22,7 +22,7 @@
 
 import UIKit
 
-public class FakeUIAlertControllerBuilderProtocol: UIAlertControllerBuilderProtocol {
+open class FakeUIAlertControllerBuilderProtocol: Fake, UIAlertControllerBuilderProtocol {
     // MARK: - Captured properties
     
     public var buildAlertTitle: String?
@@ -36,7 +36,7 @@ public class FakeUIAlertControllerBuilderProtocol: UIAlertControllerBuilderProto
     
     // MARK: - Init methods
     
-    public init() { }
+    public override init() { }
     
     // MARK: - <UIAlertControllerBuilderProtocol>
     

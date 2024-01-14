@@ -22,27 +22,24 @@
 
 import Foundation
 
-open class FakeDispatchWorkItemWrapper: Fake, DispatchWorkItemWrapperProtocol {
-    // MARK: - Captured properties
+public protocol URLSessionTaskProtocol {
+    var state: URLSessionTask.State { get }
+    var progress: Progress { get }
+    var priority: Float { get set }
     
-    public var capturedInitQOS: DispatchQoS?
-    public var capturedInitWork: (() -> Void)?
+    var currentRequest: URLRequest? { get }
+    var originalRequest: URLRequest? { get }
     
-    public var didCallCancel = false
+    var response: URLResponse? { get }
     
-    // MARK: - Public properties
+    var taskDescription: String? { get set }
+    var taskIdentifier: Int { get }
     
-    public var dispatchWorkItemWrapperID: Int?
+    var error: Error? { get }
     
-    // MARK: - Init methods
-    
-    public override init() { }
-        
-    // MARK: - <DispatchWorkItemWrapperProtocol>
-    
-    public var dispatchWorkItem: DispatchWorkItem =  DispatchWorkItem(block: { })
-    
-    public func cancel() {
-        didCallCancel = true
-    }
+    func resume()
+    func cancel()
+    func suspend()
 }
+
+extension URLSessionTask: URLSessionTaskProtocol { }

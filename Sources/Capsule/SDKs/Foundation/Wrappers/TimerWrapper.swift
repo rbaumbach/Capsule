@@ -26,7 +26,7 @@ public protocol TimerWrapperProtocol {
     func scheduledTimer(seconds: Double, shouldRepeat: Bool, onTimerFiring: @escaping (Timer) -> Void)
 }
 
-public class TimerWrapper: TimerWrapperProtocol {
+open class TimerWrapper: TimerWrapperProtocol {
     // MARK: - Private properties
     
     private var timer: Timer?

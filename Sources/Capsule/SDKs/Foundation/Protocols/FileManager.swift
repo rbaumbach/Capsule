@@ -32,9 +32,28 @@ public protocol FileManagerProtocol {
     
     func fileExists(atPath path: String) -> Bool
     
+    func createFile(atPath path: String,
+                    contents data: Data?,
+                    attributes attr: [FileAttributeKey: Any]?) -> Bool
+    
     func createDirectory(at url: URL,
                          withIntermediateDirectories createIntermediates: Bool,
                          attributes: [FileAttributeKey: Any]?) throws
+    
+    func copyItem(at srcURL: URL, to dstURL: URL) throws
+    func copyItem(atPath srcPath: String, toPath dstPath: String) throws
+    
+    func moveItem(at srcURL: URL, to dstURL: URL) throws
+    func moveItem(atPath srcPath: String, toPath dstPath: String) throws
+    
+    func removeItem(at URL: URL) throws
+    func removeItem(atPath path: String) throws
+    
+    func contents(atPath path: String) -> Data?
+    
+    func contentsOfDirectory(at url: URL,
+                             includingPropertiesForKeys keys: [URLResourceKey]?,
+                             options mask: FileManager.DirectoryEnumerationOptions) throws -> [URL]
 }
 
 extension FileManager: FileManagerProtocol { }

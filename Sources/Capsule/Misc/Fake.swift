@@ -22,18 +22,26 @@
 
 import Foundation
 
-public class FakeURLSessionDataTask: URLSessionDataTaskProtocol {
-    // MARK: - Captured properties
+open class Fake: Equatable {
+    // MARK: - Readonly properties
     
-    public var didCallResume = false
+    // Note: This is lazy so that the UUID 'generator' won't execute unless it is used.
+    // This allows this property to be available without affecting performance on all fakes
+    // that subclass this fake.
+    
+    public lazy private(set) var id: String = {
+        return UUID().uuidString
+    }()
     
     // MARK: - Init methods
     
     public init() { }
     
-    // MARK: - <URLSessionDataTaskProtocol>
+    // MARK: - <Equatable>
     
-    public func resume() {
-        didCallResume = true
+    // Note: For ease of determining equality, the simpliest check is using uuid (id)
+    
+    public static func == (lhs: Fake, rhs: Fake) -> Bool {
+        return lhs.id == rhs.id
     }
 }

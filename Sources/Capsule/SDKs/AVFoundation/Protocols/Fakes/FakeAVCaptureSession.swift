@@ -22,7 +22,7 @@
 
 import Foundation
 
-public class FakeAVCaptureSession: AVCaptureSessionProtocol {
+open class FakeAVCaptureSession: Fake, AVCaptureSessionProtocol {
     // MARK: - Captured properties
     
     public var didCallStartRunning = false
@@ -31,7 +31,7 @@ public class FakeAVCaptureSession: AVCaptureSessionProtocol {
     
     // MARK: - Init methods
 
-    public init() { }
+    public override init() { }
     
     // MARK: - <AVCaptureSessionProtocol>
     

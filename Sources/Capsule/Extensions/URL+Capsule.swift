@@ -22,8 +22,6 @@
 
 import Foundation
 
-public protocol URLSessionDataTaskProtocol {
-    func resume()
+public extension URL {
+    static var empty = URL(string: String.singleSpace)!
 }
-
-extension URLSessionDataTask: URLSessionDataTaskProtocol { }

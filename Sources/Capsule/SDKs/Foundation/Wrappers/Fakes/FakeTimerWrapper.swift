@@ -22,7 +22,7 @@
 
 import Foundation
 
-public class FakeTimerWrapper: TimerWrapperProtocol {
+open class FakeTimerWrapper: Fake, TimerWrapperProtocol {
     // MARK: - Captured properties
     
     public var capturedScheduledTimerSeconds: Double?
@@ -39,7 +39,7 @@ public class FakeTimerWrapper: TimerWrapperProtocol {
     
     // MARK: - Init methods
     
-    public init() { }
+    public override init() { }
     
     // MARK: - <TimerWrapperProtocol>
     

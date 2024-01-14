@@ -22,7 +22,7 @@
 
 import UIKit
 
-public class FakeUIViewWrapper: UIViewWrapperProtocol {
+open class FakeUIViewWrapper: Fake, UIViewWrapperProtocol {
     // MARK: - Captured properties
     
     public var capturedAnimateDuration: TimeInterval?
@@ -39,7 +39,7 @@ public class FakeUIViewWrapper: UIViewWrapperProtocol {
     
     // MARK: - Init methods
     
-    public init() { }
+    public override init() { }
     
     // MARK: - <UIViewWrapperProtocol>
     

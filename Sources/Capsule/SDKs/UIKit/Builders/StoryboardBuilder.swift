@@ -27,7 +27,7 @@ public protocol StoryboardBuilderProtocol {
     func buildViewController<T: UIViewController>(name: String, identifier: String) -> T
 }
 
-public class StoryboardBuilder: StoryboardBuilderProtocol {
+open class StoryboardBuilder: StoryboardBuilderProtocol {
     // MARK: - Init methods
     
     public init() { }

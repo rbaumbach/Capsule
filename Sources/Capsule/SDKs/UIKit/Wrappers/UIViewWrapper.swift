@@ -26,7 +26,7 @@ public protocol UIViewWrapperProtocol {
     func animate(duration: TimeInterval, animations: @escaping () -> Void)
 }
 
-public class UIViewWrapper: UIViewWrapperProtocol {
+open class UIViewWrapper: UIViewWrapperProtocol {
     // MARK: - Init methods
     
     public init() { }

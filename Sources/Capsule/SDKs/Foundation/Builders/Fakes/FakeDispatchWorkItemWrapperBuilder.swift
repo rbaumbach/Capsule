@@ -22,7 +22,7 @@
 
 import Foundation
 
-public class FakeDispatchWorkItemWrapperBuilder: DispatchWorkItemWrapperBuilderProtocol {
+open class FakeDispatchWorkItemWrapperBuilder: Fake, DispatchWorkItemWrapperBuilderProtocol {
     // MARK: - Captured properties
     
     public var capturedBuildQOS: DispatchQoS?
@@ -33,7 +33,7 @@ public class FakeDispatchWorkItemWrapperBuilder: DispatchWorkItemWrapperBuilderP
     public var stubbedDispatchWorkItemWrappersArray: [FakeDispatchWorkItemWrapper] = {
         let fakeDispatchWorkItemWrappers = Array(0...4).map { number -> FakeDispatchWorkItemWrapper in
             let fakeDispatchWorkItemWrapper = FakeDispatchWorkItemWrapper()
-            fakeDispatchWorkItemWrapper.id = number
+            fakeDispatchWorkItemWrapper.dispatchWorkItemWrapperID = number
 
             return fakeDispatchWorkItemWrapper
         }
@@ -48,7 +48,7 @@ public class FakeDispatchWorkItemWrapperBuilder: DispatchWorkItemWrapperBuilderP
         
     // MARK: - Init methods
     
-    public init() { }
+    public override init() { }
     
     // MARK: - <DispatchWorkItemBuilderProtocol>
     

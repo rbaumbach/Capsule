@@ -22,14 +22,14 @@
 
 import Foundation
 
-public class FakeSimulatorWrapper: SimulatorWrapperProtocol {
+open class FakeSimulatorWrapper: Fake, SimulatorWrapperProtocol {
     // MARK: - Stubbed properties
     
     public var stubbedIsSimulatorEnvironment = false
     
     // MARK: - Init methods
     
-    public init() { }
+    public override init() { }
     
     // MARK: - <SimulatorWrapperProtocol>
     

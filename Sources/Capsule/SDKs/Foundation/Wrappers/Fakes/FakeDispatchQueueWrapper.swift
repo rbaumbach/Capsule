@@ -22,7 +22,7 @@
 
 import Foundation
 
-public class FakeDispatchQueueWrapper: DispatchQueueWrapperProtocol {
+open class FakeDispatchQueueWrapper: Fake, DispatchQueueWrapperProtocol {
     // MARK: - Captured properties
     
     // MARK: - Main Queue
@@ -76,7 +76,7 @@ public class FakeDispatchQueueWrapper: DispatchQueueWrapperProtocol {
     
     // MARK: - Init methods
     
-    public init() { }
+    public override init() { }
     
     // MARK: - <DispatcherProtocol>
 
