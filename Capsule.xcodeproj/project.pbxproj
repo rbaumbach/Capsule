@@ -157,6 +157,7 @@
 		9471F4D62B7658950065CD44 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		9471F4DD2B7658BB0065CD44 /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Fastfile; path = fastlane/Fastfile; sourceTree = "<group>"; };
 		9471F4DE2B7658D10065CD44 /* Capsule.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Capsule.podspec; sourceTree = "<group>"; };
+		9471F4DF2B7660440065CD44 /* .ruby-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".ruby-version"; sourceTree = "<group>"; };
 		94872AEC290F7C4400D3528B /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		949A594023A729CA0039E542 /* Atomic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
 		949A594423A72AA80039E542 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
@@ -266,6 +267,7 @@
 		9471F4D12B7658260065CD44 /* Additional Files */ = {
 			isa = PBXGroup;
 			children = (
+				9471F4DF2B7660440065CD44 /* .ruby-version */,
 				9471F4D62B7658950065CD44 /* .swiftlint.yml */,
 				9471F4DE2B7658D10065CD44 /* Capsule.podspec */,
 				9471F4DD2B7658BB0065CD44 /* Fastfile */,
