@@ -43,7 +43,9 @@ open class FakeTimerWrapper: Fake, TimerWrapperProtocol {
     
     // MARK: - <TimerWrapperProtocol>
     
-    public func scheduledTimer(seconds: Double, shouldRepeat: Bool, onTimerFiring: @escaping (Timer) -> Void) {
+    public func scheduledTimer(seconds: Double,
+                               shouldRepeat: Bool,
+                               onTimerFiring: @escaping @Sendable (Timer) -> Void) {
         capturedScheduledTimerSeconds = seconds
         capturedScheduledTimerShouldRepeat = shouldRepeat
         capturedScheduledTimerOnTimerFiring = onTimerFiring

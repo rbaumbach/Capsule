@@ -51,7 +51,6 @@ open class FakeURLSessionDelegate: NSObject, URLSessionDelegate {
         capturedURLSessionDidBecomeInvalidError = error
     }
 
-#if swift(>=5.5)
     public func urlSession(_ session: URLSession,
                            didReceive challenge: URLAuthenticationChallenge,
                            completionHandler: @escaping @Sendable (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
@@ -63,19 +62,6 @@ open class FakeURLSessionDelegate: NSObject, URLSessionDelegate {
             completionHandler(stubbedAuthChallengeDisposition, stubbedURLCredential)
         }
     }
-#else
-    public func urlSession(_ session: URLSession,
-                           didReceive challenge: URLAuthenticationChallenge,
-                           completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
-        capturedURLSessionWithCompletionHandlerURLSession = session
-        capturedURLSessionWithCompletionHandlerChallenge = challenge
-        capturedURLSessionWithCompletionHandlerCompletionHandler = completionHandler
-        
-        if shouldExecuteCompletionHandlersImmediately {
-            completionHandler(stubbedAuthChallengeDisposition, stubbedURLCredential)
-        }
-    }
-#endif
 
     public func urlSessionDidFinishEvents(forBackgroundURLSession session: URLSession) {
         capturedURLSessionDidFinishEventsBackgoundURLSession = session

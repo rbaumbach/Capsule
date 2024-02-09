@@ -23,7 +23,7 @@
 import UIKit
 
 public protocol UIViewWrapperProtocol {
-    func animate(duration: TimeInterval, animations: @escaping () -> Void)
+    func animate(duration: TimeInterval, animations: @escaping @Sendable () -> Void)
 }
 
 open class UIViewWrapper: UIViewWrapperProtocol {
@@ -33,7 +33,7 @@ open class UIViewWrapper: UIViewWrapperProtocol {
     
     // MARK: - Public methods
     
-    public func animate(duration: TimeInterval, animations: @escaping () -> Void) {
+    public func animate(duration: TimeInterval, animations: @escaping @Sendable () -> Void) {
         UIView.animate(withDuration: duration, animations: animations)
     }
 }

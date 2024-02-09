@@ -23,20 +23,20 @@
 import Foundation
 
 public protocol DispatchQueueWrapperProtocol {
-    func mainAsync(execute: @escaping () -> Void)
-    func mainAfter(seconds: Int, execute: @escaping () -> Void)
-    func mainAfter(seconds: Double, execute: @escaping () -> Void)
+    func mainAsync(execute: @escaping @Sendable () -> Void)
+    func mainAfter(seconds: Int, execute: @escaping @Sendable () -> Void)
+    func mainAfter(seconds: Double, execute: @escaping @Sendable () -> Void)
     func mainAfter(seconds: Int, dispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol)
     func mainAfter(seconds: Double, dispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol)
     
-    func globalAsync(qos: DispatchQoS, execute: @escaping () -> Void)
-    func globalAsyncAfter(seconds: Int, qos: DispatchQoS, execute: @escaping () -> Void)
-    func globalAsyncAfter(seconds: Double, qos: DispatchQoS, execute: @escaping () -> Void)
+    func globalAsync(qos: DispatchQoS, execute: @escaping @Sendable () -> Void)
+    func globalAsyncAfter(seconds: Int, qos: DispatchQoS, execute: @escaping @Sendable () -> Void)
+    func globalAsyncAfter(seconds: Double, qos: DispatchQoS, execute: @escaping @Sendable () -> Void)
     func globalAsyncAfter(seconds: Int, qos: DispatchQoS, dispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol)
     func globalAsyncAfter(seconds: Double, qos: DispatchQoS, dispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol)
     
-    func customAsync(flags: DispatchWorkItemFlags, execute: @escaping () -> Void)
-    func customSync(flags: DispatchWorkItemFlags, execute: @escaping () -> Void)
+    func customAsync(flags: DispatchWorkItemFlags, execute: @escaping @Sendable () -> Void)
+    func customSync(flags: DispatchWorkItemFlags, execute: @escaping @Sendable () -> Void)
 }
 
 open class DispatchQueueWrapper: DispatchQueueWrapperProtocol {
@@ -59,15 +59,15 @@ open class DispatchQueueWrapper: DispatchQueueWrapperProtocol {
     
     // MARK: - Main Queue
     
-    public func mainAsync(execute: @escaping () -> Void) {
+    public func mainAsync(execute: @escaping @Sendable () -> Void) {
         mainDispatchQueue.async(execute: execute)
     }
     
-    public func mainAfter(seconds: Int, execute: @escaping () -> Void) {
+    public func mainAfter(seconds: Int, execute: @escaping @Sendable () -> Void) {
         mainDispatchQueue.asyncAfter(deadline: .now() + Double(seconds), execute: execute)
     }
     
-    public func mainAfter(seconds: Double, execute: @escaping () -> Void) {
+    public func mainAfter(seconds: Double, execute: @escaping @Sendable () -> Void) {
         mainDispatchQueue.asyncAfter(deadline: .now() + seconds, execute: execute)
     }
     
@@ -85,15 +85,15 @@ open class DispatchQueueWrapper: DispatchQueueWrapperProtocol {
     
     // MARK: - Global Queue
     
-    public func globalAsync(qos: DispatchQoS, execute: @escaping () -> Void) {
+    public func globalAsync(qos: DispatchQoS, execute: @escaping @Sendable () -> Void) {
         DispatchQueue.global(qos: qos.qosClass).async(execute: execute)
     }
     
-    public func globalAsyncAfter(seconds: Int, qos: DispatchQoS, execute: @escaping () -> Void) {
+    public func globalAsyncAfter(seconds: Int, qos: DispatchQoS, execute: @escaping @Sendable () -> Void) {
         DispatchQueue.global(qos: qos.qosClass).asyncAfter(deadline: .now() + Double(seconds), execute: execute)
     }
     
-    public func globalAsyncAfter(seconds: Double, qos: DispatchQoS, execute: @escaping () -> Void) {
+    public func globalAsyncAfter(seconds: Double, qos: DispatchQoS, execute: @escaping @Sendable () -> Void) {
         DispatchQueue.global(qos: qos.qosClass).asyncAfter(deadline: .now() + seconds, execute: execute)
     }
     
@@ -111,11 +111,11 @@ open class DispatchQueueWrapper: DispatchQueueWrapperProtocol {
     
     // MARK: - Custom Queue
     
-    public func customAsync(flags: DispatchWorkItemFlags, execute: @escaping () -> Void) {
+    public func customAsync(flags: DispatchWorkItemFlags, execute: @escaping @Sendable () -> Void) {
         customQueue.async(flags: flags, execute: execute)
     }
     
-    public func customSync(flags: DispatchWorkItemFlags, execute: @escaping () -> Void) {
+    public func customSync(flags: DispatchWorkItemFlags, execute: @escaping @Sendable () -> Void) {
         customQueue.sync(flags: flags, execute: execute)
     }
 }

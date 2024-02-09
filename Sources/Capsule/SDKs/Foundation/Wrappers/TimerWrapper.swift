@@ -23,7 +23,9 @@
 import Foundation
 
 public protocol TimerWrapperProtocol {
-    func scheduledTimer(seconds: Double, shouldRepeat: Bool, onTimerFiring: @escaping (Timer) -> Void)
+    func scheduledTimer(seconds: Double, 
+                        shouldRepeat: Bool,
+                        onTimerFiring: @escaping @Sendable (Timer) -> Void)
 }
 
 open class TimerWrapper: TimerWrapperProtocol {
@@ -39,7 +41,9 @@ open class TimerWrapper: TimerWrapperProtocol {
     
     // MARK: - Public methods
     
-    public func scheduledTimer(seconds: Double, shouldRepeat: Bool, onTimerFiring: @escaping (Timer) -> Void) {
+    public func scheduledTimer(seconds: Double, 
+                               shouldRepeat: Bool,
+                               onTimerFiring: @escaping @Sendable (Timer) -> Void) {
         self.onTimerFiring = onTimerFiring
         
         timer = Timer.scheduledTimer(timeInterval: seconds,
