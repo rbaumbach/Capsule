@@ -150,6 +150,13 @@
 		94455B64238C45920063BB6E /* Capsule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capsule.h; sourceTree = "<group>"; };
 		94455B65238C45920063BB6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9464C1872B1F8E250096F8AF /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		9471F4D22B7658430065CD44 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		9471F4D32B7658430065CD44 /* MIT-LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "MIT-LICENSE.txt"; sourceTree = "<group>"; };
+		9471F4D42B7658430065CD44 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
+		9471F4D52B7658430065CD44 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9471F4D62B7658950065CD44 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		9471F4DD2B7658BB0065CD44 /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Fastfile; path = fastlane/Fastfile; sourceTree = "<group>"; };
+		9471F4DE2B7658D10065CD44 /* Capsule.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Capsule.podspec; sourceTree = "<group>"; };
 		94872AEC290F7C4400D3528B /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		949A594023A729CA0039E542 /* Atomic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
 		949A594423A72AA80039E542 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
@@ -230,9 +237,9 @@
 		94455B57238C45920063BB6E = {
 			isa = PBXGroup;
 			children = (
-				94872AEC290F7C4400D3528B /* Package.swift */,
 				94455B63238C45920063BB6E /* Capsule */,
 				940F9CE3239968950028937B /* Sources */,
+				9471F4D12B7658260065CD44 /* Additional Files */,
 				94455B62238C45920063BB6E /* Products */,
 				FF06512646E3A75D78A80E83 /* Pods */,
 				A0C0F8F733D544C3B4D5809C /* Frameworks */,
@@ -254,6 +261,21 @@
 				94455B65238C45920063BB6E /* Info.plist */,
 			);
 			path = Capsule;
+			sourceTree = "<group>";
+		};
+		9471F4D12B7658260065CD44 /* Additional Files */ = {
+			isa = PBXGroup;
+			children = (
+				9471F4D62B7658950065CD44 /* .swiftlint.yml */,
+				9471F4DE2B7658D10065CD44 /* Capsule.podspec */,
+				9471F4DD2B7658BB0065CD44 /* Fastfile */,
+				9471F4D42B7658430065CD44 /* Gemfile */,
+				9471F4D32B7658430065CD44 /* MIT-LICENSE.txt */,
+				94872AEC290F7C4400D3528B /* Package.swift */,
+				9471F4D22B7658430065CD44 /* Podfile */,
+				9471F4D52B7658430065CD44 /* README.md */,
+			);
+			name = "Additional Files";
 			sourceTree = "<group>";
 		};
 		9484AC5F2B1F8AEC009DAB1A /* Extensions */ = {
@@ -777,7 +799,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.4.1;
+				MARKETING_VERSION = 1.6.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -838,7 +860,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.4.1;
+				MARKETING_VERSION = 1.6.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -872,7 +894,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.1;
+				MARKETING_VERSION = 1.6.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = teamthick.capsule;
@@ -909,7 +931,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.1;
+				MARKETING_VERSION = 1.6.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = teamthick.capsule;
