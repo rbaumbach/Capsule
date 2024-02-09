@@ -23,7 +23,7 @@
 import Foundation
 
 public protocol DispatchWorkItemWrapperBuilderProtocol {
-    func build(qos: DispatchQoS, work: @escaping () -> Void) -> DispatchWorkItemWrapperProtocol
+    func build(qos: DispatchQoS, work: @escaping @Sendable () -> Void) -> DispatchWorkItemWrapperProtocol
 }
 
 open class DispatchWorkItemWrapperBuilder: DispatchWorkItemWrapperBuilderProtocol {
@@ -33,7 +33,7 @@ open class DispatchWorkItemWrapperBuilder: DispatchWorkItemWrapperBuilderProtoco
     
     // MARK: - Public methods
     
-    public func build(qos: DispatchQoS = .unspecified, work: @escaping () -> Void) -> DispatchWorkItemWrapperProtocol {
+    public func build(qos: DispatchQoS = .unspecified, work: @escaping @Sendable () -> Void) -> DispatchWorkItemWrapperProtocol {
         return DispatchWorkItemWrapper(qos: qos, work: work)
     }
 }

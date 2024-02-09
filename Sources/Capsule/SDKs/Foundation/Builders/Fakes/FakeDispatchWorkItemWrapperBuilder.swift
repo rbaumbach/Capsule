@@ -52,7 +52,7 @@ open class FakeDispatchWorkItemWrapperBuilder: Fake, DispatchWorkItemWrapperBuil
     
     // MARK: - <DispatchWorkItemBuilderProtocol>
     
-    public func build(qos: DispatchQoS = .unspecified, work: @escaping () -> Void) -> DispatchWorkItemWrapperProtocol {
+    public func build(qos: DispatchQoS = .unspecified, work: @escaping @Sendable () -> Void) -> DispatchWorkItemWrapperProtocol {
         capturedBuildQOS = qos
         capturedBuildWork = work
         

@@ -41,7 +41,7 @@ open class DispatchWorkItemWrapper: DispatchWorkItemWrapperProtocol {
     
     // MARK: - Init methods
     
-    public init(qos: DispatchQoS = .unspecified, work: @escaping () -> Void) {
+    public init(qos: DispatchQoS = .unspecified, work: @escaping @Sendable () -> Void) {
         self.dispatchWorkItem = DispatchWorkItem(qos: qos, block: work)
     }
     

@@ -70,7 +70,7 @@ open class FakeNotificationCenter: Fake, NotificationCenterProtocol {
     public func addObserver(forName name: NSNotification.Name?,
                             object obj: Any?,
                             queue: OperationQueue?,
-                            using block: @escaping (Notification) -> Void) -> NSObjectProtocol {
+                            using block: @escaping @Sendable (Notification) -> Void) -> NSObjectProtocol {
         capturedAddObserverWithQueueName = name
         capturedAddObserverWithQueueObject = obj
         capturedAddObserverWithQueue = queue

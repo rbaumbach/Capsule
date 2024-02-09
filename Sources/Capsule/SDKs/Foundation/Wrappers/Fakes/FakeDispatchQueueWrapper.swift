@@ -82,7 +82,7 @@ open class FakeDispatchQueueWrapper: Fake, DispatchQueueWrapperProtocol {
 
     // MARK: - Main Queue
     
-    public func mainAsync(execute: @escaping () -> Void) {
+    public func mainAsync(execute: @escaping @Sendable () -> Void) {
         capturedMainAsyncExecutionBlock = execute
         
         if shouldExecuteImmediately {
@@ -90,7 +90,7 @@ open class FakeDispatchQueueWrapper: Fake, DispatchQueueWrapperProtocol {
         }
     }
     
-    public func mainAfter(seconds: Int, execute: @escaping () -> Void) {
+    public func mainAfter(seconds: Int, execute: @escaping @Sendable () -> Void) {
         capturedMainAfterSecondsInt = seconds
         capturedMainAfterSecondsIntExecutionBlock = execute
         
@@ -99,7 +99,7 @@ open class FakeDispatchQueueWrapper: Fake, DispatchQueueWrapperProtocol {
         }
     }
     
-    public func mainAfter(seconds: Double, execute: @escaping () -> Void) {
+    public func mainAfter(seconds: Double, execute: @escaping @Sendable () -> Void) {
         capturedMainAfterSecondsDouble = seconds
         capturedMainAfterSecondsDoubleExecutionBlock = execute
         
@@ -120,7 +120,7 @@ open class FakeDispatchQueueWrapper: Fake, DispatchQueueWrapperProtocol {
     
     // MARK: - Global Queue
     
-    public func globalAsync(qos: DispatchQoS, execute: @escaping () -> Void) {
+    public func globalAsync(qos: DispatchQoS, execute: @escaping @Sendable () -> Void) {
         capturedGlobalAsyncQOS = qos
         capturedGlobalAsyncExecutionBlock = execute
         
@@ -129,7 +129,7 @@ open class FakeDispatchQueueWrapper: Fake, DispatchQueueWrapperProtocol {
         }
     }
     
-    public func globalAsyncAfter(seconds: Int, qos: DispatchQoS, execute: @escaping () -> Void) {
+    public func globalAsyncAfter(seconds: Int, qos: DispatchQoS, execute: @escaping @Sendable () -> Void) {
         capturedGlobalAsyncAfterSecondsInt = seconds
         capturedGlobalAsyncAfterSecondsIntQOS = qos
         capturedGlobalAsyncAfterSecondsIntExecutionBlock = execute
@@ -139,7 +139,7 @@ open class FakeDispatchQueueWrapper: Fake, DispatchQueueWrapperProtocol {
         }
     }
     
-    public func globalAsyncAfter(seconds: Double, qos: DispatchQoS, execute: @escaping () -> Void) {
+    public func globalAsyncAfter(seconds: Double, qos: DispatchQoS, execute: @escaping @Sendable () -> Void) {
         capturedGlobalAsyncAfterSecondsDouble = seconds
         capturedGlobalAsyncAfterSecondsDoubleQOS = qos
         capturedGlobalAsyncAfterSecondsDoubleExecutionBlock = execute
@@ -163,7 +163,7 @@ open class FakeDispatchQueueWrapper: Fake, DispatchQueueWrapperProtocol {
     
     // MARK: - Custom Queue
     
-    public func customAsync(flags: DispatchWorkItemFlags, execute: @escaping () -> Void) {
+    public func customAsync(flags: DispatchWorkItemFlags, execute: @escaping @Sendable () -> Void) {
         capturedCustomAsyncFlags = flags
         capturedCustomAsyncExecutionBlock = execute
         
@@ -172,7 +172,7 @@ open class FakeDispatchQueueWrapper: Fake, DispatchQueueWrapperProtocol {
         }
     }
     
-    public func customSync(flags: DispatchWorkItemFlags, execute: @escaping () -> Void) {
+    public func customSync(flags: DispatchWorkItemFlags, execute: @escaping @Sendable () -> Void) {
         capturedCustomSyncFlags = flags
         capturedCustomSyncExecutionBlock = execute
         

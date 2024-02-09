@@ -43,7 +43,7 @@ open class FakeUIViewWrapper: Fake, UIViewWrapperProtocol {
     
     // MARK: - <UIViewWrapperProtocol>
     
-    public func animate(duration: TimeInterval, animations: @escaping () -> Void) {
+    public func animate(duration: TimeInterval, animations: @escaping @Sendable () -> Void) {
         capturedAnimateDuration = duration
         capturedAnimateAnimations = animations
         
