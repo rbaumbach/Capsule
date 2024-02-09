@@ -26,9 +26,10 @@ open class FakeJSONSerializationWrapper: Fake, JSONSerializationWrapperProtocol 
     // MARK: - Captured properties
     
     public var capturedJSONObject: Any?
+    public var capturedJSONObjectOptions: JSONSerialization.WritingOptions?
     
     public var capturedJSONObjectData: Data?
-    public var capturedJSONObjectOptions: JSONSerialization.ReadingOptions?
+    public var capturedJSONObjectDataOptions: JSONSerialization.ReadingOptions?
     
     // MARK: - Stubbed properties
     
@@ -48,8 +49,10 @@ open class FakeJSONSerializationWrapper: Fake, JSONSerializationWrapperProtocol 
     
     // MARK: - <JSONSerializationWrapperProtocol>
     
-    public func data(withJSONObject: Any) throws -> Data {
+    public func data(withJSONObject: Any,
+                     options opt: JSONSerialization.WritingOptions) throws -> Data {
         capturedJSONObject = withJSONObject
+        capturedJSONObjectOptions = opt
         
         if shouldThrowJSONDataException {
             throw FakeGenericError.whoCares
@@ -61,7 +64,7 @@ open class FakeJSONSerializationWrapper: Fake, JSONSerializationWrapperProtocol 
     public func jsonObject(with data: Data,
                            options opt: JSONSerialization.ReadingOptions) throws -> Any {
         capturedJSONObjectData = data
-        capturedJSONObjectOptions = opt
+        capturedJSONObjectDataOptions = opt
         
         if shouldThrowJSONObjectException {
             throw FakeGenericError.whoCares
