@@ -24,10 +24,6 @@ import Foundation
 
 // MARK: - Generic Builder
 
-public protocol Initializable {
-    init()
-}
-
 public protocol Builder {
     associatedtype BuildType: Initializable
     

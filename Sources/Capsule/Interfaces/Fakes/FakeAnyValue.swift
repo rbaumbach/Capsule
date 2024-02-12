@@ -22,50 +22,34 @@
 
 import Foundation
 
-@propertyWrapper
-public struct Atomic<T> {
-    // MARK: - Private properties
+open class FakeAnyValue: Fake, AnyValue {
+    // MARK: - Captured properties
     
-    private var value: T
-    private let lock: NSLocking = NSLock()
+    public var capturedValue: Any?
+    
+    public var capturedInitValue: Any?
+    
+    // MARK: - Stubbed properties
+    
+    public var stubbedValue: Any = ()
     
     // MARK: - Init methods
     
-    public init(wrappedValue value: T) {
-        self.value = value
-    }
+    public override init() { }
     
-    // MARK: - Public properties
+    // MARK: - <AnyValue>
     
-    public var wrappedValue: T {
+    public var value: Any {
         get {
-            atomicGet()
+            return stubbedValue
         }
         
         set {
-            atomicSet(newValue)
+            capturedValue = newValue
         }
     }
     
-    // MARK: - Private properties
-    
-    private func atomicGet() -> T {
-        defer {
-            lock.unlock()
-        }
-        
-        lock.lock()
-
-        return value
-    }
-    
-    private mutating func atomicSet(_ value: T) {
-        defer {
-            lock.unlock()
-        }
-        
-        lock.lock()
-        
-        self.value = value
+    public required init<T>(value: T?) {
+        capturedInitValue = value
     }
 }

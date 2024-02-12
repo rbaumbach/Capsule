@@ -73,6 +73,10 @@
 		940F9DEA239AFB8A0028937B /* Capsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F9DE9239AFB8A0028937B /* Capsule.swift */; };
 		94455B66238C45920063BB6E /* Capsule.h in Headers */ = {isa = PBXBuildFile; fileRef = 94455B64238C45920063BB6E /* Capsule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9464C1882B1F8E250096F8AF /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9464C1872B1F8E250096F8AF /* Bundle.swift */; };
+		9471F4F02B7A6B040065CD44 /* Initializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471F4EF2B7A6B040065CD44 /* Initializable.swift */; };
+		9471F4F32B7A6B3B0065CD44 /* AnyValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471F4F22B7A6B3B0065CD44 /* AnyValue.swift */; };
+		9471F4F62B7A6DC50065CD44 /* FakeAnyValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471F4F52B7A6DC50065CD44 /* FakeAnyValue.swift */; };
+		9471F4F82B7A6E670065CD44 /* FakeInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9471F4F72B7A6E670065CD44 /* FakeInitializable.swift */; };
 		949A594123A729CA0039E542 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949A594023A729CA0039E542 /* Atomic.swift */; };
 		949A594523A72AA80039E542 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949A594423A72AA80039E542 /* Builder.swift */; };
 		94F0B75E256817F900C47488 /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F0B75D256817F900C47488 /* NotificationCenter.swift */; };
@@ -158,6 +162,10 @@
 		9471F4DD2B7658BB0065CD44 /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Fastfile; path = fastlane/Fastfile; sourceTree = "<group>"; };
 		9471F4DE2B7658D10065CD44 /* Capsule.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Capsule.podspec; sourceTree = "<group>"; };
 		9471F4DF2B7660440065CD44 /* .ruby-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".ruby-version"; sourceTree = "<group>"; };
+		9471F4EF2B7A6B040065CD44 /* Initializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initializable.swift; sourceTree = "<group>"; };
+		9471F4F22B7A6B3B0065CD44 /* AnyValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyValue.swift; sourceTree = "<group>"; };
+		9471F4F52B7A6DC50065CD44 /* FakeAnyValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAnyValue.swift; sourceTree = "<group>"; };
+		9471F4F72B7A6E670065CD44 /* FakeInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeInitializable.swift; sourceTree = "<group>"; };
 		94872AEC290F7C4400D3528B /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		949A594023A729CA0039E542 /* Atomic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
 		949A594423A72AA80039E542 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
@@ -226,11 +234,12 @@
 			isa = PBXGroup;
 			children = (
 				94872B002918107200D3528B /* Constants */,
+				35A4B400219F897567E4C4B4 /* Errors */,
 				9484AC5F2B1F8AEC009DAB1A /* Extensions */,
+				9471F4F12B7A6B250065CD44 /* Interfaces */,
 				94872B04291810BB00D3528B /* Misc */,
 				94872B05291810E100D3528B /* Property Wrappers */,
 				94872B062918110100D3528B /* SDKs */,
-				35A4B400219F897567E4C4B4 /* Errors */,
 			);
 			path = Capsule;
 			sourceTree = "<group>";
@@ -278,6 +287,25 @@
 				9471F4D52B7658430065CD44 /* README.md */,
 			);
 			name = "Additional Files";
+			sourceTree = "<group>";
+		};
+		9471F4F12B7A6B250065CD44 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				9471F4F42B7A6DBA0065CD44 /* Fakes */,
+				9471F4F22B7A6B3B0065CD44 /* AnyValue.swift */,
+				9471F4EF2B7A6B040065CD44 /* Initializable.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		9471F4F42B7A6DBA0065CD44 /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				9471F4F52B7A6DC50065CD44 /* FakeAnyValue.swift */,
+				9471F4F72B7A6E670065CD44 /* FakeInitializable.swift */,
+			);
+			path = Fakes;
 			sourceTree = "<group>";
 		};
 		9484AC5F2B1F8AEC009DAB1A /* Extensions */ = {
@@ -710,6 +738,7 @@
 				35A4BAD0FBCFECF7CEFE01ED /* FakeURLSessionDelegate.swift in Sources */,
 				35A4B607F6E2D3950799BB23 /* FakeURLSessionTask.swift in Sources */,
 				35A4B18F099303FCCD3ACE8D /* FileManager.swift in Sources */,
+				9471F4F62B7A6DC50065CD44 /* FakeAnyValue.swift in Sources */,
 				35A4BEB2C91E56406FB38BAE /* URLSession.swift in Sources */,
 				35A4BEE7989A465D3CC48098 /* URLSessionTask.swift in Sources */,
 				35A4B90AFC3387AF986D7C15 /* DataWrapper.swift in Sources */,
@@ -721,6 +750,7 @@
 				35A4B5020ADB7F728B064C08 /* FakeJSONCodableWrapper.swift in Sources */,
 				35A4B83A637465EAACFEA86B /* FakeJSONSerializationWrapper.swift in Sources */,
 				35A4BB7C467D39655A50893B /* FakeSimulatorWrapper.swift in Sources */,
+				9471F4F82B7A6E670065CD44 /* FakeInitializable.swift in Sources */,
 				35A4B937ACAED4B9B6008BCC /* FakeSleepWrapper.swift in Sources */,
 				35A4B031D52B4DB6848822D7 /* FakeStringWrapper.swift in Sources */,
 				35A4B2AEFC2E33C9C5651114 /* FakeTimerWrapper.swift in Sources */,
@@ -730,12 +760,14 @@
 				35A4B71B6C9792BBE9669B22 /* SleepWrapper.swift in Sources */,
 				35A4BAB151B6CDD054FBA8F6 /* StringWrapper.swift in Sources */,
 				35A4BED5D122674486C39D1D /* TimerWrapper.swift in Sources */,
+				9471F4F02B7A6B040065CD44 /* Initializable.swift in Sources */,
 				35A4B329DD8129CF9E4CBC43 /* FakeStoryboardBuilder.swift in Sources */,
 				35A4B4BD0B948B833CC5B304 /* FakeTableViewCellBuilder.swift in Sources */,
 				35A4B4677C40193B05E319A4 /* FakeUIAlertControllerBuilder.swift in Sources */,
 				35A4B5C0921945DD85446B53 /* StoryboardBuilder.swift in Sources */,
 				35A4B4CE273828A75515AD30 /* TableViewCellBuilder.swift in Sources */,
 				35A4BA6C4E1624FA15874E69 /* UIAlertControllerBuilder.swift in Sources */,
+				9471F4F32B7A6B3B0065CD44 /* AnyValue.swift in Sources */,
 				35A4BEDEB5A5167D02F0460F /* FakeUIPasteboard.swift in Sources */,
 				35A4B408DCBE8D6428B54FB3 /* FakeUIViewWrapper.swift in Sources */,
 				35A4BC818C358DC1265C5889 /* UIAlertActionWrapper.swift in Sources */,
@@ -801,7 +833,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.6.0;
+				MARKETING_VERSION = 1.6.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -862,7 +894,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.6.0;
+				MARKETING_VERSION = 1.6.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -896,7 +928,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.0;
+				MARKETING_VERSION = 1.6.1;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = teamthick.capsule;
@@ -933,7 +965,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.0;
+				MARKETING_VERSION = 1.6.1;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = teamthick.capsule;
