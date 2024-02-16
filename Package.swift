@@ -1,4 +1,4 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.7
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 //MIT License
@@ -23,8 +23,6 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 
-// swift-tools-version:5.7
-
 import PackageDescription
 
 let package = Package(
@@ -43,5 +41,5 @@ let package = Package(
             name: "Capsule"
         )
     ],
-    swiftLanguageVersions: [.v5, .upToNextMajor(from: "5.7")]
+    swiftLanguageVersions: [.v5]
 )
